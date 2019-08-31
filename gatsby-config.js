@@ -59,7 +59,7 @@ module.exports = {
         background_color: '#FFFFFF',
         theme_color: '#59C9A5',
         display: 'minimal-ui',
-        icon: 'src/assets/images/logo_512px.png'
+        icon: 'src/assets/images/logo-512px.png'
       }
     },
     {
