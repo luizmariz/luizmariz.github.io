@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: 'http://localhost:8000'
+    siteUrl: 'http://localhost:8000',
+    title: 'Luiz Ipsum'
   },
   plugins: [
     `gatsby-plugin-styled-components`,
@@ -57,7 +58,7 @@ module.exports = {
         short_name: 'LuizIpsum',
         start_url: '/',
         background_color: '#FFFFFF',
-        theme_color: '#59C9A5',
+        theme_color: '#4B334C',
         display: 'minimal-ui',
         icon: 'src/assets/images/logo-512px.png'
       }
@@ -77,7 +78,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-nprogress`,
       options: {
-        color: `darkorange`,
+        color: `#755671`,
         showSpinner: false
       }
     }

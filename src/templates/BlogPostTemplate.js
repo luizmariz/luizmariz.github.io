@@ -18,15 +18,16 @@ function BlogPostTemplate ({ data }) {
 };
 
 export default BlogPostTemplate;
-export const pageQuery = graphql`
-  query($slug: String!) {
-    markdownRemark(fields: { slug: { eq: $slug } }) {
-      id
-      html
-      frontmatter {
-        date(formatString: "MMMM DD, YYYY")
-        title
-      }
-    }
-  }
-`;
+
+// No articles yet 😢
+// export const pageQuery = graphql`
+//   query BlogPostBySlug($slug: String!) {
+//     markdownRemark(fields: { slug: { eq: $slug } }) {
+//       html
+//       frontmatter {
+//         date(formatString: "MMMM DD, YYYY")
+//         title
+//       }
+//     }
+//   }
+// `;
