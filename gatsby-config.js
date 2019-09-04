@@ -1,7 +1,9 @@
 module.exports = {
   siteMetadata: {
+    title: 'Luiz Ipsum',
+    author: 'Luiz Mariz',
+    description: '',
     siteUrl: 'http://localhost:8000',
-    title: 'Luiz Ipsum'
   },
   plugins: [
     `gatsby-plugin-styled-components`,
@@ -57,8 +59,6 @@ module.exports = {
         name: 'Luiz Ipsum',
         short_name: 'LuizIpsum',
         start_url: '/',
-        background_color: '#FFFFFF',
-        theme_color: '#4B334C',
         display: 'minimal-ui',
         icon: 'src/assets/images/logo-512px.png'
       }
