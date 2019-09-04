@@ -1,12 +1,13 @@
 {
-  "name": "gatsby-starter-hello-world",
+  "name": "luiz-ipsum",
   "private": true,
-  "description": "A simplified bare-bones starter for Gatsby",
-  "version": "0.1.0",
+  "description": "Luiz Ipsum",
+  "version": "1.0.0",
+  "author": "Luiz Mariz",
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
-    "develop": "gatsby develop",
+    "develop": "gatsby develop -H 172.18.0.56 -p 8000",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",

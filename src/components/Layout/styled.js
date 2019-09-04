@@ -1,11 +1,7 @@
-import React, { useState } from 'react';
-import styled, { createGlobalStyle, ThemeProvider } from 'styled-components';
-import { Link } from "gatsby"
-import linkSvg from '../assets/images/link.svg';
-import logo from '../assets/images/logo-purple.svg';
-import lightTheme from '../utils/light';
+import styled, { createGlobalStyle } from 'styled-components';
+import linkSvg from '../../assets/images/link.svg';
 
-const GlobalStyles = createGlobalStyle`
+export const GlobalStyles = createGlobalStyle`
   html {
     font: 100%/1.75 'Fira Code';
     box-sizing: border-box;
@@ -34,6 +30,7 @@ const GlobalStyles = createGlobalStyle`
     text-rendering: optimizeLegibility;
     font-size: 2.5rem;
     line-height: 1.1;
+    font-weight: normal;
   }
 
   p {
@@ -55,7 +52,17 @@ const GlobalStyles = createGlobalStyle`
   }
 
   a.anchor {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     border-bottom: none;
+    float: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  a.anchor:hover {
+    opacity: 1;
   }
 
   a.anchor::before {
@@ -83,6 +90,7 @@ const GlobalStyles = createGlobalStyle`
     border: none;
     height: 1px;
   }
+
 
   /* Code */
   blockquote {
@@ -145,48 +153,26 @@ const GlobalStyles = createGlobalStyle`
       padding-left: 1rem;
     }
   }
-`
-const Container = styled.div`
+`;
+
+export const Container = styled.div`
   margin: 0 auto;
   max-width: 42rem;
   padding: 2.6rem 1.3rem;
-`
-const Row = styled.div`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-`
-const Logo = styled.img`
-  width: 4.5rem;
-`
-const BlogTitle = styled.h1`
+`;
+
+export const PageContent = styled.div`
+  margin-top: 3rem;
+`;
+
+export const BlogTitle = styled.h1`
   font-family: 'Fira Code Medium';
-  font-size: 1.2rem;
+  font-size: 1rem;
   margin-left: 1rem;
   margin-bottom: 0;
   margin-right: 0;
-`
+`;
 
-function Layout ({children}) {
-  const [ theme, setTheme ] =  useState('light');
-
-  return (
-    <ThemeProvider theme={ theme === 'light' ? lightTheme : {} }>
-      {/* ThemeProvider allows just a single child */}
-      <React.Fragment>
-        <GlobalStyles />
-        <Container>
-          <Link to='/' className='link'>
-            <Row>
-              <Logo src={logo} />
-              <BlogTitle>LUIZ IPSUM</BlogTitle>
-            </Row>
-          </Link>
-          {children}
-        </Container>
-      </React.Fragment>
-    </ThemeProvider>
-  );
-}
-
-export default Layout;
+export const Logo = styled.img`
+  width: 70px;
+`;
