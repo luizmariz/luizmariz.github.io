@@ -1,11 +1,19 @@
 import React, { useState } from 'react';
 import { ThemeProvider } from 'styled-components';
 import { Link } from "gatsby";
-import { GlobalStyles, Container, PageContent, BlogTitle, Logo} from './styled';
 import Helmet from 'react-helmet';
 import logoLight from '../../assets/images/logo-purple.png';
 import lightTheme from '../../utils/light';
 import Nav from  '../Nav';
+import Footer from '../Footer';
+import {
+  GlobalStyles,
+  Container,
+  PageContent,
+  BlogTitle,
+  Logo,
+  LogoContainer
+} from './styled';
 
 
 function Layout ({children}) {
@@ -26,12 +34,17 @@ function Layout ({children}) {
         />
         <Container>
           <Nav />
-          <Link to='/' className='anchor'>
-            <Logo src={ theme === 'light' ? logoLight : null } />
-            <BlogTitle>LUIZ IPSUM</BlogTitle>
-          </Link>
+          <LogoContainer>
+            <Link to='/' className='anchor'>
+              <Logo src={ theme === 'light' ? logoLight : null } />
+            </Link>
+            <Link to='/' className='anchor'>
+              <BlogTitle>LUIZ IPSUM</BlogTitle>
+            </Link>
+          </LogoContainer>
           <PageContent>{children}</PageContent>
         </Container>
+        <Footer />
       </React.Fragment>
     </ThemeProvider>
   );
