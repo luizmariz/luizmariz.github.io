@@ -91,7 +91,6 @@ export const GlobalStyles = createGlobalStyle`
     height: 1px;
   }
 
-
   /* Code */
   blockquote {
     margin-left: -1.75rem;
@@ -162,7 +161,7 @@ export const Container = styled.div`
 `;
 
 export const PageContent = styled.div`
-  margin-top: 3rem;
+  margin-top: 4.5rem;
 `;
 
 export const BlogTitle = styled.h1`
@@ -175,4 +174,11 @@ export const BlogTitle = styled.h1`
 
 export const Logo = styled.img`
   width: 70px;
+`;
+
+export const LogoContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
 `;

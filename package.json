@@ -7,7 +7,7 @@
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
-    "develop": "gatsby develop -H 172.19.0.217 -p 8000",
+    "develop": "gatsby develop -H 172.17.0.33 -p 8000",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",
