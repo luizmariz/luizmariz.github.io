@@ -49,6 +49,7 @@ export const Github = styled(DiGithubBadge)`
   font-size: 2.6rem;
   border: 1px solid ${props => props.theme.text.concat('33')};
   border-radius: 5px;
+  padding: 3px;
 
   &:hover {
     opacity: .6;
@@ -61,7 +62,7 @@ export const Linkedin = styled(FaLinkedin)`
   font-size: 2.6rem;
   border: 1px solid ${props => props.theme.text.concat('33')};
   border-radius: 5px;
-  padding: 5px;
+  padding: 7px;
   margin-right: 1rem;
 
   &:hover {

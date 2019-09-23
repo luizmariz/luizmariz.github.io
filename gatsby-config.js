@@ -2,8 +2,17 @@ module.exports = {
   siteMetadata: {
     title: 'Luiz Ipsum',
     author: 'Luiz Mariz',
-    description: '',
+    siteDescription: '',
     siteUrl: 'http://localhost:8000',
+    portfolioData: {
+      authorFullName: 'Luiz Gustavo Oliveira Mariz',
+      imagePath: `${__dirname}/src/assets/images/photo.png`,
+      languages: [ 'react', 'node', 'angular', 'python', 'go', 'C++', 'java' ],
+      aboutMe: 'Mussum Ipsum, cacilds vidis litro abertis. Viva Forevis aptent taciti sociosqu ad litora torquent. Vehicula non. Ut sed ex eros. Vivamus sit amet nibh non tellus tristique interdum. Atirei o pau no gatis, per gatis num morreus. Todo mundo vê os porris que eu tomo, mas ninguém vê os tombis que eu levo!',
+      portfolio: {
+        'example': 'https://www.google.com'
+      },
+    }
   },
   plugins: [
     `gatsby-plugin-styled-components`,
