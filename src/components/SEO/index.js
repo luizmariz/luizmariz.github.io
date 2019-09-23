@@ -9,7 +9,7 @@ const query = graphql`
       siteMetadata {
         title
         author
-        description
+        siteDescription
         siteUrl
       }
     }
@@ -20,7 +20,7 @@ function SEO ({ meta, title, description, image, keywords, slug, lang='pt-br'}) 
   const data = useStaticQuery(query);
   const { siteMetadata } = data.site;
   const url = `${siteMetadata.siteUrl}${slug}`;
-  const siteDescription = description || siteMetadata.description;
+  const siteDescription = description || siteMetadata.siteDescription;
   const siteImage = image ? `${siteMetadata.siteUrl}/${image}` : null;
 
   return (

@@ -11,7 +11,7 @@ import {
 
 function Footer () {
   return (
-    <React.Fragment>
+    <footer>
       <MainRow>
         <div>
           <Title>contato</Title>
@@ -26,7 +26,7 @@ function Footer () {
           Feito com react e <Hearth />
         </div>
       </BonusRow>
-    </React.Fragment>
+    </footer>
   );
 }
 
