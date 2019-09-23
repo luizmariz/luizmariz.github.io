@@ -2,14 +2,14 @@ import React from 'react';
 import Layout from '../components/Layout';
 import styled from 'styled-components';
 
-const Title = styled.h2`
+const Title = styled.h1`
   color: #FFFFFF;
   padding: 1.3rem;
   /* want one word per line */
   word-spacing: 100vw;
   margin-block-end: 0;
   margin-block-start: 3rem;
-  line-height: 2rem;
+  line-height: 2.5rem;
 `
 
 function AboutPage () {
