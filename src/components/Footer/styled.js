@@ -12,7 +12,6 @@ export const MainRow = styled.section`
     padding: 2.6rem 1.3rem;
   }
 `;
-
 export const BonusRow = styled(MainRow)`
   margin-top: 1px;
   font-size: 0.8rem;
@@ -22,12 +21,10 @@ export const BonusRow = styled(MainRow)`
     align-items: center;
   }
 `;
-
 export const Hearth = styled(MdFavorite)`
   color: ${props => props.theme.hearth};
   margin-left: 0.5rem;
 `;
-
 export const Row = styled.div`
   display: flex;
   flex-direction: row;
@@ -36,13 +33,6 @@ export const Row = styled.div`
   margin-top: 1.1rem !important;
   padding: 0 0 !important;
 `;
-
-export const Title = styled.span`
-  text-transform: uppercase;
-  font-family: 'Fira Code Bold';
-  color: ${props => props.theme.secondary};
-`;
-
 export const Github = styled(DiGithubBadge)`
   color: ${props => props.theme.text};
   cursor: pointer;
@@ -55,7 +45,6 @@ export const Github = styled(DiGithubBadge)`
     opacity: .6;
   }
 `;
-
 export const Linkedin = styled(FaLinkedin)`
   color: ${props => props.theme.text};
   cursor: pointer;

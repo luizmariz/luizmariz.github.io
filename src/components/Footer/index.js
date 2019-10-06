@@ -1,9 +1,9 @@
 import React from 'react';
+import { SubTitle } from '../shared/styled';
 import {
   MainRow,
   BonusRow,
   Hearth,
-  Title,
   Row,
   Github,
   Linkedin
@@ -14,7 +14,7 @@ function Footer () {
     <footer>
       <MainRow>
         <div>
-          <Title>contato</Title>
+          <SubTitle>contato</SubTitle>
           <Row>
             <Linkedin />
             <Github />

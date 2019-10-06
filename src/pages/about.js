@@ -2,6 +2,7 @@ import React from 'react';
 import Layout from '../components/Layout';
 import styled from 'styled-components';
 import img from '../assets/images/photo.png';
+import { SubTitle } from '../components/shared/styled';
 
 const Title = styled.h1`
   color: #FFFFFF;
@@ -18,6 +19,7 @@ const Row = styled.div`
   align-items: center;
   justify-content: center;
   padding: 2rem 0;
+  margin-bottom: 1.75rem;
 `;
 const Column = styled.div`
   display: flex;
@@ -44,6 +46,20 @@ const Description = styled.div`
   text-transform: uppercase;
   opacity: 0.5;
 `;
+const StyledHr = styled.hr`
+  margin-bottom: 0;
+`;
+const Skills = styled.p`
+  opacity: 0.4;
+`;
+const AnchorList = styled.div`
+  margin-block-end: 1rem;
+  margin-block-start: 1rem;
+
+  &>a {
+    margin-right: 1rem;
+  }
+`;
 
 function AboutPage () {
   return (
@@ -58,6 +74,25 @@ function AboutPage () {
           <Description>desenvolvedor frontend</Description>
         </Column>
       </Row>
+      <StyledHr />
+      <Skills>react, node, angular, python, go, c++, java...</Skills>
+      <p>
+        Mussum Ipsum, cacilds vidis litro abertis. Viva Forevis aptent taciti
+        sociosqu ad litora torquent. Vehicula non. Ut sed ex eros. Vivamus sit
+        amet nibh non tellus tristique interdum. Atirei o pau no gatis, per
+        gatis num morreus. Todo mundo vê os porris que eu tomo, mas ninguém vê
+        os tombis que eu levo!
+      </p>
+      <SubTitle>projetos</SubTitle>
+      <AnchorList>
+        <a href='http://www.google.com.br' target='_blank'>example</a>
+        <a href='http://www.google.com.br' target='_blank'>example</a>
+        <a href='http://www.google.com.br' target='_blank'>example</a>
+        <a href='http://www.google.com.br' target='_blank'>example</a>
+        <a href='http://www.google.com.br' target='_blank'>example</a>
+        <a href='http://www.google.com.br' target='_blank'>example</a>
+        <a href='http://www.google.com.br' target='_blank'>example</a>
+      </AnchorList>
     </Layout>
   );
 }
