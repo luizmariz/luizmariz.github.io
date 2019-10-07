@@ -5,11 +5,10 @@ import { MdBrightnessLow, MdBrightness2 } from 'react-icons/md';
 function ToggleThemeBtn ({ darkMode, onToggle }) {
   return (
     <Switch>
-      <input type='checkbox' />
+      <input defaultChecked={darkMode} type='checkbox' />
       <Slider
         darkMode={darkMode}
         onClick={onToggle}
-        checked
       >
         <MdBrightnessLow
           color='#D4D400'

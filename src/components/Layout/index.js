@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { ThemeProvider } from 'styled-components';
 import { Link } from "gatsby";
 import Helmet from 'react-helmet';
@@ -20,17 +20,15 @@ import {
   Row
 } from './styled';
 
+function Layout ({ children }) {
+  const [ theme, setTheme ] =  useState(window.__theme);
+  const isMobile = useMediaQuery({ query: '(max-width: 672px)' });
 
-function Layout ({children}) {
-  const [ theme, setTheme ] =  useState('light');
-
-  const toggleTheme = e => {
-    setTheme(theme => theme !== 'light' ? 'light' : 'dark');
+  const handleToggleTheme = () => {
+    const newTheme = theme === 'light' ? 'dark' : 'light';
+    localStorage.setItem('theme', newTheme);
+    setTheme(newTheme);
   }
-
-  const isMobile = useMediaQuery({
-    query: '(max-width: 672px)'
-  });
 
   return (
     <ThemeProvider theme={ theme === 'light' ? lightTheme : darkTheme }>
@@ -46,7 +44,10 @@ function Layout ({children}) {
           ]}
         />
         <Container>
-          <Nav />
+          <Nav
+            darkMode={theme !== 'light'}
+            onToggle={handleToggleTheme}
+          />
           <LogoContainer>
             <Row>
               <Link to='/' className='anchor'>
@@ -59,7 +60,7 @@ function Layout ({children}) {
             { !isMobile &&
               <ToggleThemeBtn
                 darkMode={theme !== 'light'}
-                onToggle={toggleTheme}
+                onToggle={handleToggleTheme}
               />
             }
           </LogoContainer>

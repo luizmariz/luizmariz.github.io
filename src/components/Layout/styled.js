@@ -13,6 +13,10 @@ export const GlobalStyles = createGlobalStyle`
     padding: 0;
     margin: 0;
     background-color: ${props => props.theme.bg};
+
+    @media (min-width: 672px) {
+      transition: background-color ease-in .25s;
+    }
   }
 
   * {
@@ -153,17 +157,14 @@ export const GlobalStyles = createGlobalStyle`
     }
   }
 `;
-
 export const Container = styled.div`
   margin: 0 auto;
   max-width: 42rem;
   padding: 2.6rem 1.3rem;
 `;
-
 export const PageContent = styled.div`
   margin-top: 4.5rem;
 `;
-
 export const BlogTitle = styled.h1`
   font-family: 'Fira Code Medium';
   font-size: 1rem;
@@ -171,11 +172,9 @@ export const BlogTitle = styled.h1`
   margin-bottom: 0;
   margin-right: 0;
 `;
-
 export const Logo = styled.img`
   width: 70px;
 `;
-
 export const LogoContainer = styled.div`
   display: flex;
   flex-direction: row;
@@ -183,7 +182,6 @@ export const LogoContainer = styled.div`
   justify-content: space-between;
   margin-top: 2.6rem;
 `;
-
 export const Row = styled.div`
   display: flex;
   flex-direction: row;
