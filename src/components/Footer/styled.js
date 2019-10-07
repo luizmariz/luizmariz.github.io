@@ -4,7 +4,7 @@ import { DiGithubBadge } from 'react-icons/di';
 import { FaLinkedin } from 'react-icons/fa';
 
 export const MainRow = styled.section`
-  background-color: ${props => props.theme.footer.concat('55')};
+  background-color: ${props => props.theme.footer};
 
   & div {
     margin: 0 auto;

@@ -86,7 +86,7 @@ export const GlobalStyles = createGlobalStyle`
   hr {
     margin-top: 0;
     margin-bottom: calc(1.75rem - 1px);
-    background: rgba(0,0,0,0.2);
+    background: ${props => props.theme.text.concat('44')};
     border: none;
     height: 1px;
   }
@@ -137,7 +137,7 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   :not(pre) > code[class*='language-'] {
-    background: ${props => props.theme.tertiary.concat('BF')};
+    background: ${props => props.theme.tertiary};
     color: inherit;
   }
 
@@ -180,5 +180,12 @@ export const LogoContainer = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: space-between;
+  margin-top: 2.6rem;
+`;
+
+export const Row = styled.div`
+  display: flex;
+  flex-direction: row;
   justify-content: flex-start;
 `;

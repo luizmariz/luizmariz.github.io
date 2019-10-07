@@ -1,8 +1,21 @@
 import React from 'react';
-import { NavContainer, NavLink } from './styled';
+import { NavContainer, NavLink, NavSideMenu } from './styled';
+import { useMediaQuery } from 'react-responsive';
+import { MdMenu } from 'react-icons/md';
 
-// TODO: mobile sidemenu mode, polish desktop nav
 function Nav () {
+  const isMobile = useMediaQuery({
+    query: '(max-width: 672px)'
+  });
+
+  if (isMobile) {
+    return (
+      <NavSideMenu>
+        <MdMenu size="2.1rem" />
+      </NavSideMenu>
+    );
+  }
+
   return (
     <NavContainer>
       <NavLink>Início</NavLink>

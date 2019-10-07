@@ -19,7 +19,8 @@ const Row = styled.div`
   align-items: center;
   justify-content: center;
   padding: 2rem 0;
-  margin-bottom: 1.75rem;
+  margin-bottom: 2.65rem;
+  margin-top: 3rem;
 `;
 const Column = styled.div`
   display: flex;
@@ -56,7 +57,7 @@ const AnchorList = styled.div`
   margin-block-end: 1rem;
   margin-block-start: 1rem;
 
-  &>a {
+  & > a {
     margin-right: 1rem;
   }
 `;
@@ -85,13 +86,13 @@ function AboutPage () {
       </p>
       <SubTitle>projetos</SubTitle>
       <AnchorList>
-        <a href='http://www.google.com.br' target='_blank'>example</a>
-        <a href='http://www.google.com.br' target='_blank'>example</a>
-        <a href='http://www.google.com.br' target='_blank'>example</a>
-        <a href='http://www.google.com.br' target='_blank'>example</a>
-        <a href='http://www.google.com.br' target='_blank'>example</a>
-        <a href='http://www.google.com.br' target='_blank'>example</a>
-        <a href='http://www.google.com.br' target='_blank'>example</a>
+        <a href='http://www.google.com.br' target='noopener'>example</a>
+        <a href='http://www.google.com.br' target='noopener'>example</a>
+        <a href='http://www.google.com.br' target='noopener'>example</a>
+        <a href='http://www.google.com.br' target='noopener'>example</a>
+        <a href='http://www.google.com.br' target='noopener'>example</a>
+        <a href='http://www.google.com.br' target='noopener'>example</a>
+        <a href='http://www.google.com.br' target='noopener'>example</a>
       </AnchorList>
     </Layout>
   );
