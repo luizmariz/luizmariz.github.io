@@ -86,13 +86,13 @@ function AboutPage () {
       </p>
       <SubTitle>projetos</SubTitle>
       <AnchorList>
-        <a href='http://www.google.com.br' target='noopener'>example</a>
-        <a href='http://www.google.com.br' target='noopener'>example</a>
-        <a href='http://www.google.com.br' target='noopener'>example</a>
-        <a href='http://www.google.com.br' target='noopener'>example</a>
-        <a href='http://www.google.com.br' target='noopener'>example</a>
-        <a href='http://www.google.com.br' target='noopener'>example</a>
-        <a href='http://www.google.com.br' target='noopener'>example</a>
+        <a href='http://www.google.com.br' target='_blank' rel='noopener noreferrer'>example</a>
+        <a href='http://www.google.com.br' target='_blank' rel='noopener noreferrer'>example</a>
+        <a href='http://www.google.com.br' target='_blank' rel='noopener noreferrer'>example</a>
+        <a href='http://www.google.com.br' target='_blank' rel='noopener noreferrer'>example</a>
+        <a href='http://www.google.com.br' target='_blank' rel='noopener noreferrer'>example</a>
+        <a href='http://www.google.com.br' target='_blank' rel='noopener noreferrer'>example</a>
+        <a href='http://www.google.com.br' target='_blank' rel='noopener noreferrer'>example</a>
       </AnchorList>
     </Layout>
   );
