@@ -1,18 +1,62 @@
 import React from 'react';
-import { graphql } from 'gatsby';
+import { graphql, Link } from 'gatsby';
 import Layout from '../components/Layout';
+import styled from 'styled-components';
+import { formatDate } from '../utils/helpers';
 
-function BlogPostTemplate ({ data }) {
+const Date = styled.span`
+  font-size: .88rem;
+`;
+
+function BlogPostTemplate ({ data, pageContext }) {
   const { markdownRemark } = data;
   const { frontmatter, html } = markdownRemark;
+  const { minutes } = markdownRemark.fields.readingTime;
+  const { previous, next, slug } = pageContext;
 
   return (
     <Layout>
-      <div>
-        <h1>{frontmatter.title}</h1>
-        <span>{frontmatter.date}</span>
-      </div>
-      <div dangerouslySetInnerHTML={{ __html: html }} />
+      <main>
+        <article>
+          <header>
+            <h1>{frontmatter.title}</h1>
+            <Date>{formatDate(frontmatter.date, 'pt-br')} · Leitura de {Math.ceil(minutes)} min</Date>
+          </header>
+          <div dangerouslySetInnerHTML={{ __html: html }} />
+        </article>
+      </main>
+      <aside>
+        <nav>
+          <ul
+            style={{
+              display: 'flex',
+              flexWrap: 'wrap',
+              justifyContent: 'space-between',
+              listStyle: 'none',
+              padding: 0,
+            }}
+          >
+            <li>
+              {previous && (
+                <Link
+                  to={previous.fields.slug}
+                  rel="prev"
+                  style={{ marginRight: 20 }}
+                >
+                  ← {previous.frontmatter.title}
+                </Link>
+              )}
+            </li>
+            <li>
+              {next && (
+                <Link to={next.fields.slug} rel="next">
+                  {next.frontmatter.title} →
+                </Link>
+              )}
+            </li>
+          </ul>
+        </nav>
+      </aside>
     </Layout>
   );
 };
@@ -27,6 +71,11 @@ export const pageQuery = graphql`
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
         title
+      }
+      fields {
+        readingTime {
+          minutes
+        }
       }
     }
   }

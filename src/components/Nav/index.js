@@ -26,22 +26,20 @@ function Nav ({ darkMode, onToggle }) {
         <NavSideMenu onClick={toggleMenu}>
           <MdMenu />
         </NavSideMenu>
-        { showMobMenu &&
-          <MobMenuContainer>
-            <MdClose onClick={toggleMenu} />
-            <Row>
-              <MenuTitle>m e n u</MenuTitle>
-              <ToggleThemeBtn
-                darkMode={darkMode}
-                onToggle={onToggle}
-              />
-            </Row>
-            <p>Início</p>
-            <hr/>
-            <p>Sobre mim</p>
-            <hr/>
-          </MobMenuContainer>
-        }
+        <MobMenuContainer animate={showMobMenu}>
+          <MdClose onClick={toggleMenu} />
+          <Row>
+            <MenuTitle>m e n u</MenuTitle>
+            <ToggleThemeBtn
+              darkMode={darkMode}
+              onToggle={onToggle}
+            />
+          </Row>
+          <p>Início</p>
+          <hr/>
+          <p>Sobre mim</p>
+          <hr/>
+        </MobMenuContainer>
       </React.Fragment>
     );
   }

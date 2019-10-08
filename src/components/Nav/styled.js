@@ -34,14 +34,14 @@ export const NavSideMenu = styled.div`
 `;
 export const MobMenuContainer = styled.div`
   position: fixed;
-  top:0;
-  left:0;
+  top: 0;
+  right: 0;
   z-index: 100;
-  height: 100vh;
-  width: 100vw;
   background-color: ${props => props.theme.bg};
-  transition: background-color ease-in .25s;
   padding: 2.35rem 3rem;
+	width: 100vw;
+	height: 100vh;
+	opacity: ${props => props.animate ? '1' : '0'};;
 
   & > svg {
     position: absolute;
@@ -49,6 +49,12 @@ export const MobMenuContainer = styled.div`
     font-size: 2.1rem;
     color: ${props => props.theme.text};
   }
+
+  -webkit-transition: background-color .25s ease-in, opacity .3s cubic-bezier(0.000, 0.995, 0.990, 1.000);
+     -moz-transition: background-color .25s ease-in, opacity .3s cubic-bezier(0.000, 0.995, 0.990, 1.000);
+      -ms-transition: background-color .25s ease-in, opacity .3s cubic-bezier(0.000, 0.995, 0.990, 1.000);
+       -o-transition: background-color .25s ease-in, opacity .3s cubic-bezier(0.000, 0.995, 0.990, 1.000);
+          transition: background-color .25s ease-in, opacity .3s cubic-bezier(0.000, 0.995, 0.990, 1.000);
 `;
 export const MenuTitle = styled(SubTitle)`
   color: ${props => props.theme.text};
@@ -59,6 +65,6 @@ export const Row = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  margin-top: 8rem;
+  margin-top: 6rem;
   margin-bottom: 6rem;
 `;
