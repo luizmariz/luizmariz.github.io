@@ -36,12 +36,12 @@ export const MobMenuContainer = styled.div`
   position: fixed;
   top: 0;
   right: 0;
-  z-index: 100;
+  z-index: ${props => props.animate ? '100' : '-100'};;
   background-color: ${props => props.theme.bg};
   padding: 2.35rem 3rem;
 	width: 100vw;
 	height: 100vh;
-	opacity: ${props => props.animate ? '1' : '0'};;
+	opacity: ${props => props.animate ? '1' : '0'};
 
   & > svg {
     position: absolute;
@@ -50,11 +50,11 @@ export const MobMenuContainer = styled.div`
     color: ${props => props.theme.text};
   }
 
-  -webkit-transition: background-color .25s ease-in, opacity .3s cubic-bezier(0.000, 0.995, 0.990, 1.000);
-     -moz-transition: background-color .25s ease-in, opacity .3s cubic-bezier(0.000, 0.995, 0.990, 1.000);
-      -ms-transition: background-color .25s ease-in, opacity .3s cubic-bezier(0.000, 0.995, 0.990, 1.000);
-       -o-transition: background-color .25s ease-in, opacity .3s cubic-bezier(0.000, 0.995, 0.990, 1.000);
-          transition: background-color .25s ease-in, opacity .3s cubic-bezier(0.000, 0.995, 0.990, 1.000);
+  -webkit-transition: background-color .2s ease-in, opacity .3s cubic-bezier(0.000, 0.995, 0.990, 1.000);
+     -moz-transition: background-color .2s ease-in, opacity .3s cubic-bezier(0.000, 0.995, 0.990, 1.000);
+      -ms-transition: background-color .2s ease-in, opacity .3s cubic-bezier(0.000, 0.995, 0.990, 1.000);
+       -o-transition: background-color .2s ease-in, opacity .3s cubic-bezier(0.000, 0.995, 0.990, 1.000);
+          transition: background-color .2s ease-in, opacity .3s cubic-bezier(0.000, 0.995, 0.990, 1.000);
 `;
 export const MenuTitle = styled(SubTitle)`
   color: ${props => props.theme.text};

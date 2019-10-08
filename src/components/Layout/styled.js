@@ -1,5 +1,6 @@
 import styled, { createGlobalStyle } from 'styled-components';
-import linkSvg from '../../assets/images/link.svg';
+import lightLink from '../../assets/images/light-link.svg';
+import darkLink from '../../assets/images/dark-link.svg';
 
 export const GlobalStyles = createGlobalStyle`
   html {
@@ -15,11 +16,11 @@ export const GlobalStyles = createGlobalStyle`
     background-color: ${props => props.theme.bg};
 
     @media (min-width: 672px) {
-      -webkit-transition: background-color .25s ease-in;
-	       -moz-transition: background-color .25s ease-in;
-	        -ms-transition: background-color .25s ease-in;
-	         -o-transition: background-color .25s ease-in;
-	            transition: background-color .25s ease-in;
+      -webkit-transition: background-color .2s ease-in;
+	       -moz-transition: background-color .2s ease-in;
+	        -ms-transition: background-color .2s ease-in;
+	         -o-transition: background-color .2s ease-in;
+	            transition: background-color .2s ease-in;
     }
   }
 
@@ -41,22 +42,26 @@ export const GlobalStyles = createGlobalStyle`
     font-weight: normal;
   }
 
+  h2 {
+    margin-top: 2rem;
+  }
+
   p {
     margin-bottom: 1.7rem;
   }
 
   a {
     text-decoration: none;
-    color: inherit;
-    border-bottom: 2px dotted #755671;
+    color: ${props => props.theme.secondary};
+    border-bottom: 2px dotted ${props => props.theme.secondary};
   }
 
   a::before {
-    content: url(${linkSvg});
+    content: url(${props => props.theme.bg === '#FFFFFF' ? lightLink : darkLink });
   }
 
   a:hover {
-    opacity: 0.8;
+    opacity: 0.7;
   }
 
   a.anchor {
@@ -65,7 +70,6 @@ export const GlobalStyles = createGlobalStyle`
     align-items: center;
     border-bottom: none;
     float: none;
-    padding: 0;
     margin: 0;
   }
 
@@ -81,14 +85,6 @@ export const GlobalStyles = createGlobalStyle`
   svg[aria-hidden="true"] {
     stroke: ${props=> props.theme.text.concat('99')};
     padding-right: 2px;
-  }
-
-  a.link {
-    border-bottom: none;
-  }
-
-  a.link::before {
-    content: none;
   }
 
   hr {
@@ -175,6 +171,8 @@ export const BlogTitle = styled.h1`
   margin-left: 1rem;
   margin-bottom: 0;
   margin-right: 0;
+  text-transform: uppercase;
+  color: ${props => props.theme.primary}
 `;
 export const Logo = styled.img`
   width: 70px;

@@ -54,7 +54,7 @@ function Layout ({ children }) {
                 <Logo src={ theme === 'light' ? logoLight : logoDark } />
               </Link>
               <Link to='/' className='anchor'>
-                <BlogTitle>LUIZ IPSUM</BlogTitle>
+                <BlogTitle>luiz ipsum</BlogTitle>
               </Link>
             </Row>
             { !isMobile &&

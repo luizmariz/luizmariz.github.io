@@ -2,10 +2,46 @@ import React from 'react';
 import { graphql, Link } from 'gatsby';
 import Layout from '../components/Layout';
 import styled from 'styled-components';
-import { formatDate } from '../utils/helpers';
+import { formatTimestamp } from '../utils/helpers';
+import { MdArrowBack, MdArrowForward} from 'react-icons/md';
+import Bio from '../components/shared/Bio';
 
-const Date = styled.span`
-  font-size: .88rem;
+const PostNav = styled.ul`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0;
+  margin-top: 3.5rem;
+  list-style-type: none;
+
+  svg {
+    margin: 0 .3rem;
+  }
+
+  li {
+    margin-top: 2.5rem;
+  }
+
+  li.prev {
+    text-align: right;
+  }
+
+  a::before {
+    content: none;
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+`;
+export const BlogIndex = styled(Link)`
+  font-family: 'Fira Code Medium';
+  text-transform: uppercase;
+  margin-bottom: 1.5rem !important;
+  margin-top: 4.5rem !important;
+  color: ${props => props.theme.primary};
 `;
 
 function BlogPostTemplate ({ data, pageContext }) {
@@ -20,41 +56,44 @@ function BlogPostTemplate ({ data, pageContext }) {
         <article>
           <header>
             <h1>{frontmatter.title}</h1>
-            <Date>{formatDate(frontmatter.date, 'pt-br')} · Leitura de {Math.ceil(minutes)} min</Date>
+            <small>{formatTimestamp(frontmatter.date, 'pt-br', minutes)}</small>
           </header>
           <div dangerouslySetInnerHTML={{ __html: html }} />
         </article>
       </main>
       <aside>
         <nav>
-          <ul
-            style={{
-              display: 'flex',
-              flexWrap: 'wrap',
-              justifyContent: 'space-between',
-              listStyle: 'none',
-              padding: 0,
-            }}
+          <BlogIndex
+            to='/'
+            className='anchor'
           >
-            <li>
+            luiz ipsum
+          </BlogIndex>
+          <Bio />
+          <PostNav>
+            <li className='prev'>
               {previous && (
                 <Link
                   to={previous.fields.slug}
-                  rel="prev"
-                  style={{ marginRight: 20 }}
+                  rel='prev'
                 >
-                  ← {previous.frontmatter.title}
+                  <MdArrowBack />
+                  {previous.frontmatter.title}
                 </Link>
               )}
             </li>
             <li>
               {next && (
-                <Link to={next.fields.slug} rel="next">
-                  {next.frontmatter.title} →
+                <Link
+                  to={next.fields.slug}
+                  rel='next'
+                >
+                  {next.frontmatter.title}
+                  <MdArrowForward />
                 </Link>
               )}
             </li>
-          </ul>
+          </PostNav>
         </nav>
       </aside>
     </Layout>
