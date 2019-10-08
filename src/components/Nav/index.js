@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
 import { MdMenu, MdClose } from 'react-icons/md';
 import ToggleThemeBtn from '../shared/ToggleThemeBtn';
+import { Link } from 'gatsby';
 import {
   NavContainer,
   NavLink,
@@ -35,9 +36,9 @@ function Nav ({ darkMode, onToggle }) {
               onToggle={onToggle}
             />
           </Row>
-          <p>Início</p>
+          <Link to='/' className='anchor'>Início</Link>
           <hr/>
-          <p>Sobre mim</p>
+          <Link to='/about' className='anchor'>Sobre mim</Link>
           <hr/>
         </MobMenuContainer>
       </React.Fragment>
@@ -46,8 +47,12 @@ function Nav ({ darkMode, onToggle }) {
 
   return (
     <NavContainer>
-      <NavLink>Início</NavLink>
-      <NavLink>Sobre mim</NavLink>
+      <NavLink>
+        <Link to='/' className='anchor'>Início</Link>
+      </NavLink>
+      <NavLink>
+        <Link to='/about' className='anchor'>Sobre mim</Link>
+      </NavLink>
     </NavContainer>
   );
 }

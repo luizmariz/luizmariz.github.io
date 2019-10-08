@@ -33,14 +33,14 @@ const Img = styled.img`
   vertical-align: middle;
   object-fit: cover;
   border-radius: 50%;
-  width: 5rem;
-  height: 5rem;
+  width: 4.5rem;
+  height: 4.5rem;
 `;
 const Name = styled.div`
   font-family: 'Fira Code Medium';
   max-width: 10rem;
   line-height: 1.4rem;
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.2rem;
 `;
 const Description = styled.div`
   font-family: 'Fira Code Medium';

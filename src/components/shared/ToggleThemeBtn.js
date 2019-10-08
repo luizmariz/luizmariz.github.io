@@ -1,6 +1,8 @@
+import React from 'react';
+import { MdBrightnessLow, MdBrightness2 } from 'react-icons/md';
 import styled from 'styled-components';
 
-export const Slider = styled.div`
+const Slider = styled.div`
   position: absolute;
   cursor: pointer;
   top: 0;
@@ -33,21 +35,44 @@ export const Slider = styled.div`
   }
 
 `;
-export const Switch = styled.label`
+const Switch = styled.label`
   position: relative;
   display: inline-block;
   width: 3.4rem;
   height: 1.63rem;;
 
-  & > input {
+  input {
     opacity: 0;
     width: 0;
     height: 0;
   }
 
-  & > input:checked + ${Slider}::before {
+  input:checked + ${Slider}::before {
     -webkit-transform: translateX(-1.68rem);
     -ms-transform: translateX(-1.68rem);
     transform: translateX(-1.68rem);
   }
 `;
+
+function ToggleThemeBtn ({ darkMode, onToggle }) {
+  return (
+    <Switch>
+      <input defaultChecked={darkMode} type='checkbox' />
+      <Slider
+        darkMode={darkMode}
+        onClick={onToggle}
+      >
+        <MdBrightnessLow
+          color='#D4D400'
+          size='1.2rem'
+        />
+        <MdBrightness2
+          color="#FFFFFF"
+          size="1.3rem"
+        />
+      </Slider>
+    </Switch>
+  );
+}
+
+export default ToggleThemeBtn;
