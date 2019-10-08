@@ -50,6 +50,7 @@ module.exports = {
               rel: 'noopener noreferrer'
             },
           },
+          `gatsby-remark-reading-time`,
         ],
       },
     },

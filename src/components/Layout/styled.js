@@ -15,7 +15,11 @@ export const GlobalStyles = createGlobalStyle`
     background-color: ${props => props.theme.bg};
 
     @media (min-width: 672px) {
-      transition: background-color ease-in .25s;
+      -webkit-transition: background-color .25s ease-in;
+	       -moz-transition: background-color .25s ease-in;
+	        -ms-transition: background-color .25s ease-in;
+	         -o-transition: background-color .25s ease-in;
+	            transition: background-color .25s ease-in;
     }
   }
 
@@ -28,7 +32,7 @@ export const GlobalStyles = createGlobalStyle`
     margin-right: 0;
     margin-top: 0;
     padding: 0;
-    margin-bottom: 1.75rem;
+    margin-bottom: 1.5rem;
     color: inherit;
     font-family: 'Fira Code SemiBold';
     text-rendering: optimizeLegibility;
@@ -117,7 +121,7 @@ export const GlobalStyles = createGlobalStyle`
   .gatsby-highlight-code-line {
     display: block;
     padding-right: 1em;
-    padding-left: 1.25em;
+    padding-left: 13em;
   }
 
   .gatsby-highlight {
