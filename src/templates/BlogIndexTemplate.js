@@ -5,31 +5,66 @@ import styled from 'styled-components';
 import { formatTimestamp } from '../utils/helpers';
 import Bio from '../components/shared/Bio';
 
-function BlogIndexTemplate ({ data }) {
+const PostsContainer = styled.div`
+  margin-top: 3.5rem;
+
+  article {
+    margin-top: 2rem;
+  }
+
+  h2 {
+    margin-bottom: 1.5rem;
+    font-family: 'Fira Code Medium';
+    color: ${props => props.theme.secondary};
+  }
+
+  p {
+    margin-top: 0.4rem;
+  }
+
+  a {
+    border: none;
+    color: inherit;
+  }
+
+  a::before {
+    content: none;
+  }
+`;
+const Card = styled.div`
+  border: 1px solid ${props => props.theme.text.concat('33')};
+  border-radius: 10px;
+  padding: 0rem 2rem;
+`;
+
+function BlogIndexTemplate ({ data, location }) {
   const posts = data.allMarkdownRemark.edges;
 
   return (
-    <Layout>
+    <Layout location={location}>
       <aside>
         <Bio />
       </aside>
       <main>
-      {posts.map(({ node }) => {
-            const title = node.frontmatter.title;
+        <PostsContainer>
+          {posts.map(({ node }) => {
             return (
               <article key={node.fields.slug}>
-                <header>
-                  <h3>
-                  </h3>
-                  <small>
-                  </small>
-                </header>
-                <p
-                  dangerouslySetInnerHTML={{ __html: node.frontmatter.spoiler }}
-                />
+                <Link to={node.fields.slug}>
+                  <Card>
+                    <header>
+                      <h2>{node.frontmatter.title}</h2>
+                      <small>
+                        {formatTimestamp(node.frontmatter.date, node.fields.readingTime.minutes)}
+                      </small>
+                    </header>
+                    <p>{node.frontmatter.summary}</p>
+                  </Card>
+                </Link>
               </article>
             );
           })}
+        </PostsContainer>
       </main>
     </Layout>
   );

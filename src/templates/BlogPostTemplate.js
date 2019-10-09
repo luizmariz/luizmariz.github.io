@@ -37,26 +37,30 @@ const PostNav = styled.ul`
   }
 `;
 export const BlogIndex = styled(Link)`
-  font-family: 'Fira Code Medium';
   text-transform: uppercase;
-  margin-bottom: 1.5rem !important;
-  margin-top: 4.5rem !important;
-  color: ${props => props.theme.primary};
+  margin-top: 2rem !important;
+
+  h3 {
+    font-size: 1.5rem;
+    color: ${props => props.theme.primary};
+    font-weight: normal;
+    font-family: 'Fira Code SemiBold'
+  }
 `;
 
-function BlogPostTemplate ({ data, pageContext }) {
+function BlogPostTemplate ({ data, pageContext, location }) {
   const { markdownRemark } = data;
   const { frontmatter, html } = markdownRemark;
   const { minutes } = markdownRemark.fields.readingTime;
   const { previous, next, slug } = pageContext;
 
   return (
-    <Layout>
+    <Layout location={location}>
       <main>
         <article>
           <header>
             <h1>{frontmatter.title}</h1>
-            <small>{formatTimestamp(frontmatter.date, 'pt-br', minutes)}</small>
+            <small>{formatTimestamp(frontmatter.date, minutes)}</small>
           </header>
           <div dangerouslySetInnerHTML={{ __html: html }} />
         </article>
@@ -67,7 +71,7 @@ function BlogPostTemplate ({ data, pageContext }) {
             to='/'
             className='anchor'
           >
-            luiz ipsum
+            <h3>luiz ipsum</h3>
           </BlogIndex>
           <Bio />
           <PostNav>

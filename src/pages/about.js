@@ -13,7 +13,7 @@ const Title = styled.h1`
   margin-block-start: 3rem;
   line-height: 2.5rem;
 `;
-const Row = styled.div`
+const Row = styled.aside`
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -53,21 +53,28 @@ const StyledHr = styled.hr`
 const Skills = styled.p`
   opacity: 0.4;
 `;
-const AnchorList = styled.div`
+const AnchorList = styled.section`
   margin-block-end: 1rem;
   margin-block-start: 1rem;
 
-  & > a {
+  a {
     margin-right: 1rem;
   }
 `;
+const Content = styled.article`
+  h2 {
+    margin-top: 3rem;
+  }
+`;
 
-function AboutPage () {
+function AboutPage ({ location }) {
   return (
-    <Layout>
-      <div className='gatsby-highlight'>
-        <Title>sobre mim</Title>
-      </div>
+    <Layout location={location}>
+      <header>
+        <div className='gatsby-highlight'>
+          <Title>sobre mim</Title>
+        </div>
+      </header>
       <Row>
         <Img src={img} alt="blog author image" />
         <Column>
@@ -75,25 +82,27 @@ function AboutPage () {
           <Description>desenvolvedor frontend</Description>
         </Column>
       </Row>
-      <StyledHr />
-      <Skills>react, node, angular, python, go, c++, java...</Skills>
-      <p>
-        Mussum Ipsum, cacilds vidis litro abertis. Viva Forevis aptent taciti
-        sociosqu ad litora torquent. Vehicula non. Ut sed ex eros. Vivamus sit
-        amet nibh non tellus tristique interdum. Atirei o pau no gatis, per
-        gatis num morreus. Todo mundo vê os porris que eu tomo, mas ninguém vê
-        os tombis que eu levo!
-      </p>
-      <SubTitle>projetos</SubTitle>
-      <AnchorList>
-        <a href='http://www.google.com.br' target='_blank' rel='noopener noreferrer'>example</a>
-        <a href='http://www.google.com.br' target='_blank' rel='noopener noreferrer'>example</a>
-        <a href='http://www.google.com.br' target='_blank' rel='noopener noreferrer'>example</a>
-        <a href='http://www.google.com.br' target='_blank' rel='noopener noreferrer'>example</a>
-        <a href='http://www.google.com.br' target='_blank' rel='noopener noreferrer'>example</a>
-        <a href='http://www.google.com.br' target='_blank' rel='noopener noreferrer'>example</a>
-        <a href='http://www.google.com.br' target='_blank' rel='noopener noreferrer'>example</a>
-      </AnchorList>
+      <Content>
+        <StyledHr />
+        <Skills>react, node, angular, python, go, c++, java...</Skills>
+        <p>
+          Mussum Ipsum, cacilds vidis litro abertis. Viva Forevis aptent taciti
+          sociosqu ad litora torquent. Vehicula non. Ut sed ex eros. Vivamus sit
+          amet nibh non tellus tristique interdum. Atirei o pau no gatis, per
+          gatis num morreus. Todo mundo vê os porris que eu tomo, mas ninguém vê
+          os tombis que eu levo!
+        </p>
+        <SubTitle>projetos</SubTitle>
+        <AnchorList>
+          <a href='http://www.google.com.br' target='_blank' rel='noopener noreferrer'>example</a>
+          <a href='http://www.google.com.br' target='_blank' rel='noopener noreferrer'>example</a>
+          <a href='http://www.google.com.br' target='_blank' rel='noopener noreferrer'>example</a>
+          <a href='http://www.google.com.br' target='_blank' rel='noopener noreferrer'>example</a>
+          <a href='http://www.google.com.br' target='_blank' rel='noopener noreferrer'>example</a>
+          <a href='http://www.google.com.br' target='_blank' rel='noopener noreferrer'>example</a>
+          <a href='http://www.google.com.br' target='_blank' rel='noopener noreferrer'>example</a>
+        </AnchorList>
+      </Content>
     </Layout>
   );
 }
