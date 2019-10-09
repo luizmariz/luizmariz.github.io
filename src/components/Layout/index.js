@@ -1,15 +1,19 @@
 import React, { useState } from 'react';
 import { ThemeProvider } from 'styled-components';
+import { useMediaQuery } from 'react-responsive';
 import { Link } from "gatsby";
 import Helmet from 'react-helmet';
-import logoLight from '../../assets/images/logo-purple.png';
-import logoDark from '../../assets/images/logo-cute-purple.png';
+
 import lightTheme from '../../utils/light';
 import darkTheme from '../../utils/dark';
+import logoLight from '../../assets/images/logo-purple.png';
+import logoDark from '../../assets/images/logo-cute-purple.png';
+// import logoWhite from '../../assets/images/logo-white.png';
+// import logoGrey from '../../assets/images/logo-grey.png';
+
 import Nav from  '../Nav';
 import Footer from '../Footer';
 import ToggleThemeBtn from '../shared/ToggleThemeBtn';
-import { useMediaQuery } from 'react-responsive';
 import {
   GlobalStyles,
   Container,
@@ -20,7 +24,7 @@ import {
   Row
 } from './styled';
 
-function Layout ({ children }) {
+function Layout ({ children, location }) {
   const [ theme, setTheme ] =  useState(window.__theme);
   const isMobile = useMediaQuery({ query: '(max-width: 672px)' });
 
@@ -29,6 +33,12 @@ function Layout ({ children }) {
     localStorage.setItem('theme', newTheme);
     setTheme(newTheme);
   }
+
+  const renderTitle = () => location.pathname === '/'
+    ? (<h1>luiz ipsum</h1>)
+    : (<h3>luiz ipsum</h3>);
+
+  const renderLogo = () => theme === 'light' ? logoLight : logoDark;
 
   return (
     <ThemeProvider theme={ theme === 'light' ? lightTheme : darkTheme }>
@@ -44,26 +54,30 @@ function Layout ({ children }) {
           ]}
         />
         <Container>
-          <Nav
-            darkMode={theme !== 'light'}
-            onToggle={handleToggleTheme}
-          />
-          <LogoContainer>
-            <Row>
-              <Link to='/' className='anchor'>
-                <Logo src={ theme === 'light' ? logoLight : logoDark } />
-              </Link>
-              <Link to='/' className='anchor'>
-                <BlogTitle>luiz ipsum</BlogTitle>
-              </Link>
-            </Row>
-            { !isMobile &&
-              <ToggleThemeBtn
-                darkMode={theme !== 'light'}
-                onToggle={handleToggleTheme}
-              />
-            }
-          </LogoContainer>
+          <header>
+            <Nav
+              darkMode={theme !== 'light'}
+              onToggle={handleToggleTheme}
+            />
+            <LogoContainer>
+              <Row>
+                <Link to='/' className='anchor'>
+                  <Logo src={renderLogo()} />
+                </Link>
+                  <BlogTitle>
+                    <Link to='/' className='anchor'>
+                      {renderTitle()}
+                    </Link>
+                  </BlogTitle>
+              </Row>
+              { !isMobile &&
+                <ToggleThemeBtn
+                  darkMode={theme !== 'light'}
+                  onToggle={handleToggleTheme}
+                />
+              }
+            </LogoContainer>
+          </header>
           <PageContent>{children}</PageContent>
         </Container>
         <Footer />

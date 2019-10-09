@@ -1,6 +1,5 @@
-export function formatTimestamp(date, lang, readTime) {
+export function formatTimestamp (date, readTime, lang='pt-br') {
   date = new Date(date);
   const args = { day: 'numeric', month: 'long', year: 'numeric' };
-  console.log('oi');
   return `${date.toLocaleDateString([lang], args)} · Leitura de ${Math.ceil(readTime)} min`;
 }

@@ -35,7 +35,7 @@ export const GlobalStyles = createGlobalStyle`
     padding: 0;
     margin-bottom: 1.5rem;
     color: inherit;
-    font-family: 'Fira Code SemiBold';
+    font-family: 'Fira Code Bold';
     text-rendering: optimizeLegibility;
     font-size: 2.5rem;
     line-height: 1.1;
@@ -44,6 +44,9 @@ export const GlobalStyles = createGlobalStyle`
 
   h2 {
     margin-top: 2rem;
+    font-weight: normal;
+    font-family: 'Fira Code SemiBold';
+    line-height: 2rem;
   }
 
   p {
@@ -163,19 +166,36 @@ export const Container = styled.div`
   padding: 2.6rem 1.3rem;
 `;
 export const PageContent = styled.div`
-  margin-top: 4.5rem;
+  margin-top: 2.5rem;
 `;
-export const BlogTitle = styled.h1`
-  font-family: 'Fira Code Medium';
-  font-size: 1rem;
-  margin-left: 1rem;
-  margin-bottom: 0;
-  margin-right: 0;
+export const BlogTitle = styled.div`
+  margin-left: 0.5rem;
   text-transform: uppercase;
-  color: ${props => props.theme.primary}
+  display: flex;
+
+  h1 {
+    margin: 0;
+    color: ${props => props.theme.primary};
+    font-size: 1.5rem;
+    font-family: 'Fira Code SemiBold';
+  }
+
+  h3 {
+    margin: 0;
+    width: 0;
+    height: 0;
+    display: none;
+    font-size: 1.5rem;
+    color: ${props => props.theme.primary};
+    font-weight: normal;
+    font-family: 'Fira Code SemiBold';
+    -webkit-tap-highlight-color: transparent;
+  }
 `;
 export const Logo = styled.img`
   width: 70px;
+  /* Oops */
+  margin-left: -.4rem;
 `;
 export const LogoContainer = styled.div`
   display: flex;

@@ -11,6 +11,10 @@ export const NavLink = styled.li`
   list-style-type: none;
   font-size: 1rem;
   margin-left: 2rem;
+
+  a.anchor {
+    color: ${props => props.theme.text};
+  }
 `;
 export const NavSideMenu = styled.div`
   position: fixed;
@@ -50,11 +54,16 @@ export const MobMenuContainer = styled.div`
     color: ${props => props.theme.text};
   }
 
-  -webkit-transition: background-color .2s ease-in, opacity .3s cubic-bezier(0.000, 0.995, 0.990, 1.000);
-     -moz-transition: background-color .2s ease-in, opacity .3s cubic-bezier(0.000, 0.995, 0.990, 1.000);
-      -ms-transition: background-color .2s ease-in, opacity .3s cubic-bezier(0.000, 0.995, 0.990, 1.000);
-       -o-transition: background-color .2s ease-in, opacity .3s cubic-bezier(0.000, 0.995, 0.990, 1.000);
-          transition: background-color .2s ease-in, opacity .3s cubic-bezier(0.000, 0.995, 0.990, 1.000);
+  & > a.anchor {
+    color: ${props => props.theme.text};
+    margin-bottom: 1.7rem;
+  }
+
+  -webkit-transition: background-color .2s ease-in, opacity .2s cubic-bezier(0.000, 0.995, 0.990, 1.000);
+     -moz-transition: background-color .2s ease-in, opacity .2s cubic-bezier(0.000, 0.995, 0.990, 1.000);
+      -ms-transition: background-color .2s ease-in, opacity .2s cubic-bezier(0.000, 0.995, 0.990, 1.000);
+       -o-transition: background-color .2s ease-in, opacity .2s cubic-bezier(0.000, 0.995, 0.990, 1.000);
+          transition: background-color .2s ease-in, opacity .2s cubic-bezier(0.000, 0.995, 0.990, 1.000);
 `;
 export const MenuTitle = styled(SubTitle)`
   color: ${props => props.theme.text};
