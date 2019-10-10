@@ -30,7 +30,7 @@ function Layout ({ children, location }) {
 
   const handleToggleTheme = () => {
     const newTheme = theme === 'light' ? 'dark' : 'light';
-    localStorage.setItem('theme', newTheme);
+    window.__setTheme(newTheme);
     setTheme(newTheme);
   }
 
@@ -39,6 +39,27 @@ function Layout ({ children, location }) {
     : (<h3>luiz ipsum</h3>);
 
   const renderLogo = () => theme === 'light' ? logoLight : logoDark;
+
+  if (location.pathname === '/404') {
+    return (
+      <ThemeProvider theme={ theme === 'light' ? lightTheme : darkTheme }>
+        <React.Fragment>
+          <GlobalStyles />
+          <Helmet
+            meta={[
+              {
+                name: 'theme-color',
+                content: theme === 'light' ? '#4B334C' : '#282C35'
+              }
+            ]}
+          />
+          <Container>
+            <PageContent>{children}</PageContent>
+          </Container>
+        </React.Fragment>
+      </ThemeProvider>
+    );
+  }
 
   return (
     <ThemeProvider theme={ theme === 'light' ? lightTheme : darkTheme }>

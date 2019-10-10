@@ -26,6 +26,12 @@ export default function HTML(props) {
             __html:`(() => {
               const preferredTheme = localStorage.getItem('theme');
               window.__theme = preferredTheme ? preferredTheme : 'light';
+              window.__setTheme = newTheme => {
+                window.__theme = newTheme;
+                try {
+                  localStorage.setItem('theme', newTheme);
+                } catch (err) {}
+              }
             })();
             `
           }}

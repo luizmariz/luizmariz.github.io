@@ -98,6 +98,10 @@ export const GlobalStyles = createGlobalStyle`
     height: 1px;
   }
 
+  time {
+    color: ${props => props.theme.text.concat('AA')};
+  }
+
   /* Code */
   blockquote {
     margin-left: -1.75rem;

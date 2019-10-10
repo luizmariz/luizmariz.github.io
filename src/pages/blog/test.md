@@ -2,6 +2,7 @@
 title: Isso é um post meramente ilustrativo
 date: 2019-08-02
 summary: Mussum Ipsum, cacilds vidis litro abertis
+tags: javascripto, python
 ---
 
 ##Aasdfadfadfdaf

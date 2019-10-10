@@ -38,7 +38,8 @@ const PostNav = styled.ul`
 `;
 export const BlogIndex = styled(Link)`
   text-transform: uppercase;
-  margin-top: 2rem !important;
+  margin-bottom: 1rem !important;
+  margin-top: 1rem !important;
 
   h3 {
     font-size: 1.5rem;
@@ -60,7 +61,7 @@ function BlogPostTemplate ({ data, pageContext, location }) {
         <article>
           <header>
             <h1>{frontmatter.title}</h1>
-            <small>{formatTimestamp(frontmatter.date, minutes)}</small>
+            <time>{formatTimestamp(frontmatter.date, minutes)}</time>
           </header>
           <div dangerouslySetInnerHTML={{ __html: html }} />
         </article>
