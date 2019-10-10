@@ -1,12 +1,14 @@
 import React from 'react';
 import { graphql, Link } from 'gatsby';
+import { MdLabel } from 'react-icons/md';
+import { formatTimestamp } from '../utils/helpers';
 import Layout from '../components/Layout';
 import styled from 'styled-components';
-import { formatTimestamp } from '../utils/helpers';
 import Bio from '../components/shared/Bio';
 
 const PostsContainer = styled.div`
   margin-top: 3.5rem;
+  margin-bottom: 0.9rem;
 
   article {
     margin-top: 2rem;
@@ -14,12 +16,14 @@ const PostsContainer = styled.div`
 
   h2 {
     margin-bottom: 1.5rem;
+    margin-top: 0;
     font-family: 'Fira Code Medium';
     color: ${props => props.theme.secondary};
   }
 
   p {
     margin-top: 0.4rem;
+    margin-bottom: 0;
   }
 
   a {
@@ -30,11 +34,27 @@ const PostsContainer = styled.div`
   a::before {
     content: none;
   }
+
+  small {
+    display: flex;
+    align-items: center;
+    margin-bottom: .5rem;
+    color: ${props => props.theme.text.concat('AA')};
+  }
+
+  svg {
+    color: ${props => props.theme.hearth.concat('AA')};
+    margin-right: .5rem;
+  }
 `;
 const Card = styled.div`
   border: 1px solid ${props => props.theme.text.concat('33')};
   border-radius: 10px;
-  padding: 0rem 2rem;
+  padding: 1.7rem 2rem;
+  transition: border .1s ease-in;
+  &:hover {
+    border: 1px solid ${props => props.theme.text.concat('99')};
+  }
 `;
 
 function BlogIndexTemplate ({ data, location }) {
@@ -53,10 +73,11 @@ function BlogIndexTemplate ({ data, location }) {
                 <Link to={node.fields.slug}>
                   <Card>
                     <header>
+                      <small><MdLabel />{node.frontmatter.tags}</small>
                       <h2>{node.frontmatter.title}</h2>
-                      <small>
+                      <time>
                         {formatTimestamp(node.frontmatter.date, node.fields.readingTime.minutes)}
-                      </small>
+                      </time>
                     </header>
                     <p>{node.frontmatter.summary}</p>
                   </Card>
@@ -87,6 +108,7 @@ export const pageQuery = graphql`
             date(formatString: "MMMM DD, YYYY")
             title
             summary
+            tags
           }
         }
       }

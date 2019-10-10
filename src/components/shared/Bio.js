@@ -27,7 +27,7 @@ const Column = styled.div`
   }
 
   code {
-    font-size: .85rem;
+    font-size: 1.1rem;
   }
 `;
 const Img = styled.img`
@@ -45,7 +45,7 @@ function Bio () {
       <Column>
         <p>
           Blog por <Link to='/about'>Luiz Gustavo</Link>{'\n'}
-          <code class="language-text">['🥚', '🐔'].sort()</code>
+          <code>['🥚', '🐔'].sort()</code>
         </p>
       </Column>
     </Row>
