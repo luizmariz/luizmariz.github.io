@@ -3,7 +3,7 @@ module.exports = {
     title: 'Luiz Ipsum',
     author: 'Luiz Mariz',
     siteDescription: 'Fábulas de um dev teimoso, e testes aleatórios',
-    siteUrl: 'https://luizmariz.github.io',
+    siteUrl: 'https://luizipsum.wtf',
   },
   plugins: [
     `gatsby-plugin-styled-components`,
