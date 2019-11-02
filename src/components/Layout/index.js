@@ -25,7 +25,7 @@ import {
 } from './styled';
 
 function Layout ({ children, location }) {
-  const [ theme, setTheme ] =  useState(window.__theme);
+  const [ theme, setTheme ] =  useState(typeof window != 'undefined' ? window.__theme : 'light');
   const isMobile = useMediaQuery({ query: '(max-width: 672px)' });
 
   const handleToggleTheme = () => {
