@@ -21,22 +21,6 @@ export default function HTML(props) {
           than useEffect on Layout.js
         */}
 
-        <script
-          dangerouslySetInnerHTML={{
-            __html:`(() => {
-              const preferredTheme = localStorage.getItem('theme');
-              window.__theme = preferredTheme ? preferredTheme : 'light';
-              window.__setTheme = newTheme => {
-                window.__theme = newTheme;
-                try {
-                  localStorage.setItem('theme', newTheme);
-                } catch (err) {}
-              }
-            })();
-            `
-          }}
-        />
-
         {props.preBodyComponents}
         <div
           key={`body`}

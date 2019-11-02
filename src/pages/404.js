@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
+import { useSelector } from 'react-redux';
 import ovniLight from '../assets/images/ovni404Light.svg';
 import ovniDark from '../assets/images/ovni404Dark.svg';
 import Layout from '../components/Layout';
@@ -46,13 +47,12 @@ const Container = styled.div`
 `;
 
 function PageNotFound () {
+  const theme = useSelector(state => state.theme)
+
   return (
     <Layout location={{ pathname: '/404' }}>
       <Container>
-        <OvniVector src={typeof window != 'undefined'
-          ? window.__theme === 'light' ? ovniLight : ovniDark
-          : ovniLight
-        }/>
+        <OvniVector src={theme === 'dark' ? ovniDark : ovniLight}/>
         <h1>404</h1>
         <p>Ixi, parece que essa página não existe.</p>
         <Link className='anchor'>me traz de volta!</Link>

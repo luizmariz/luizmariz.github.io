@@ -1,19 +1,19 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { ThemeProvider } from 'styled-components';
 import { useMediaQuery } from 'react-responsive';
 import { Link } from "gatsby";
+import { useSelector, useDispatch } from 'react-redux';
+import { setTheme } from '../../state/actions/theme';
 import Helmet from 'react-helmet';
 
 import lightTheme from '../../utils/light';
 import darkTheme from '../../utils/dark';
 import logoLight from '../../assets/images/logo-purple.png';
 import logoDark from '../../assets/images/logo-cute-purple.png';
-// import logoWhite from '../../assets/images/logo-white.png';
-// import logoGrey from '../../assets/images/logo-grey.png';
 
 import Nav from  '../Nav';
 import Footer from '../Footer';
-import ToggleThemeBtn from '../shared/ToggleThemeBtn';
+import ToggleThemeBtn from '../../components/shared/ToggleThemeBtn';
 import {
   GlobalStyles,
   Container,
@@ -25,13 +25,14 @@ import {
 } from './styled';
 
 function Layout ({ children, location }) {
-  const [ theme, setTheme ] =  useState(typeof window != 'undefined' ? window.__theme : 'light');
+  const theme = useSelector(state => state.theme);
   const isMobile = useMediaQuery({ query: '(max-width: 672px)' });
+  const dispatch = useDispatch();
 
   const handleToggleTheme = () => {
-    const newTheme = theme === 'light' ? 'dark' : 'light';
-    window.__setTheme(newTheme);
-    setTheme(newTheme);
+    const newTheme = theme === 'dark' ? 'light' : 'dark';
+    localStorage.setItem('theme', newTheme);
+    dispatch(setTheme(newTheme));
   }
 
   const renderTitle = () => location.pathname === '/'
