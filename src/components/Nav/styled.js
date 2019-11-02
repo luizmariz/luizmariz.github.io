@@ -7,15 +7,17 @@ export const NavContainer = styled.nav`
   align-items: center;
   justify-content: flex-end;
 `;
+
 export const NavLink = styled.li`
   list-style-type: none;
   font-size: 1rem;
   margin-left: 2rem;
 
   a.anchor {
-    color: ${props => props.theme.text};
+    color: rgb(var(--text));
   }
 `;
+
 export const NavSideMenu = styled.div`
   position: fixed;
   top: 0;
@@ -36,12 +38,13 @@ export const NavSideMenu = styled.div`
     color: #333333;
   }
 `;
+
 export const MobMenuContainer = styled.div`
   position: fixed;
   top: 0;
   right: 0;
   z-index: ${props => (props.animate ? '100' : '-100')};
-  background-color: ${props => props.theme.bg};
+  background-color: var(--bg);
   padding: 2.35rem 3rem;
   width: 100vw;
   height: 100vh;
@@ -51,11 +54,11 @@ export const MobMenuContainer = styled.div`
     position: absolute;
     right: 3rem;
     font-size: 2.1rem;
-    color: ${props => props.theme.text};
+    color: rgb(var(--text));
   }
 
   & > a.anchor {
-    color: ${props => props.theme.text};
+    color: rgb(var(--text));
     margin-bottom: 1.7rem;
   }
 
@@ -70,10 +73,12 @@ export const MobMenuContainer = styled.div`
   transition: background-color 0.2s ease-in,
     opacity 0.2s cubic-bezier(0, 0.995, 0.99, 1);
 `;
+
 export const MenuTitle = styled(SubTitle)`
-  color: ${props => props.theme.text};
+  color: rgb(var(--text));
   font-size: 1.2rem;
 `;
+
 export const Row = styled.div`
   display: flex;
   flex-direction: row;

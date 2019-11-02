@@ -10,15 +10,7 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-robots-txt`,
-    {
-      resolve: 'gatsby-plugin-use-dark-mode',
-      options: {
-        classNameDark: 'dark',
-        classNameLight: 'light',
-        storageKey: 'theme',
-        minify: true,
-      },
-    },
+    'gatsby-plugin-use-dark-mode',
     {
       resolve: `gatsby-source-filesystem`,
       options: {

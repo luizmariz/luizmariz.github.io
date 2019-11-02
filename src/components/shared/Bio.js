@@ -9,6 +9,7 @@ const Row = styled.div`
   flex-direction: row;
   align-items: center;
 `;
+
 const Column = styled.div`
   display: flex;
   flex-direction: column;
@@ -30,6 +31,7 @@ const Column = styled.div`
     font-size: 1.1rem;
   }
 `;
+
 const Img = styled.img`
   vertical-align: middle;
   object-fit: cover;

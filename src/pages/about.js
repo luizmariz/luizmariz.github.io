@@ -14,6 +14,7 @@ const Title = styled.h1`
   margin-block-start: 3rem;
   line-height: 2.5rem;
 `;
+
 const Row = styled.aside`
   display: flex;
   flex-direction: row;
@@ -23,6 +24,7 @@ const Row = styled.aside`
   margin-bottom: 2.65rem;
   margin-top: 3rem;
 `;
+
 const Column = styled.div`
   display: flex;
   flex-direction: column;
@@ -30,6 +32,7 @@ const Column = styled.div`
   justify-content: center;
   padding-left: 1rem;
 `;
+
 const Img = styled.img`
   vertical-align: middle;
   object-fit: cover;
@@ -37,23 +40,28 @@ const Img = styled.img`
   width: 4.5rem;
   height: 4.5rem;
 `;
+
 const Name = styled.div`
   font-family: 'Fira Code Medium';
   max-width: 10rem;
   line-height: 1.4rem;
   margin-bottom: 0.2rem;
 `;
+
 const Description = styled.div`
   font-family: 'Fira Code Medium';
   text-transform: uppercase;
   opacity: 0.4;
 `;
+
 const StyledHr = styled.hr`
   margin-bottom: 0;
 `;
+
 const Skills = styled.p`
   opacity: 0.4;
 `;
+
 const AnchorList = styled.section`
   margin-block-end: 1rem;
   margin-block-start: 1rem;
@@ -62,6 +70,7 @@ const AnchorList = styled.section`
     margin-right: 1.2rem;
   }
 `;
+
 const Content = styled.article`
   h2 {
     margin-top: 3rem;

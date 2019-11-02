@@ -1,6 +1,7 @@
 import React from 'react';
 import { MdBrightnessLow, MdBrightness2 } from 'react-icons/md';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 const Slider = styled.div`
   position: absolute;
@@ -34,6 +35,7 @@ const Slider = styled.div`
     transition: 0.3s ease-in-out;
   }
 `;
+
 const Switch = styled.label`
   position: relative;
   display: inline-block;
@@ -63,6 +65,11 @@ function ToggleThemeBtn({ darkMode, onToggle }) {
       </Slider>
     </Switch>
   );
+}
+
+ToggleThemeBtn.propTypes = {
+  darkMode: PropTypes.bool.isRequired,
+  onToggle: PropTypes.func
 }
 
 export default ToggleThemeBtn;

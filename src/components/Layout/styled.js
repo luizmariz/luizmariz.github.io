@@ -7,13 +7,41 @@ export const GlobalStyles = createGlobalStyle`
     font: 100%/1.75 'Fira Code';
     box-sizing: border-box;
     overflow-y: scroll;
-    color: ${props => props.theme.text};
+  }
+
+  .light-mode {
+    --bg: #FFFFFF;
+    --footer: #C3C3C355;
+    --text: 51, 51, 51;
+    --primary: #4B334C;
+    --secondary: #755671;
+    --tertiary: #FFD1D0BF;
+    --heart: 75, 51, 76;
+
+    a::before {
+      content: url(${lightLink});
+    }
+  }
+
+  .dark-mode {
+    --bg: #282C35;
+    --footer: #F6F6F611;
+    --text: 255, 255, 255;
+    --primary: #755671;
+    --secondary: #FFD1D0;
+    --tertiary: #FFFFFF22;
+    --heart: 232, 113, 92;
+
+    a::before {
+      content: url(${darkLink});
+    }
   }
 
   body {
     padding: 0;
     margin: 0;
-    background-color: ${props => props.theme.bg};
+    color: rgb(var(--text));
+    background-color: var(--bg);
 
     @media (min-width: 672px) {
       -webkit-transition: background-color .2s ease-in;
@@ -55,13 +83,8 @@ export const GlobalStyles = createGlobalStyle`
 
   a {
     text-decoration: none;
-    color: ${props => props.theme.secondary};
-    border-bottom: 2px dotted ${props => props.theme.secondary};
-  }
-
-  a::before {
-    content: url(${props =>
-      props.theme.bg === '#FFFFFF' ? lightLink : darkLink});
+    color: var(--secondary);
+    border-bottom: 2px dotted var(--primary);
   }
 
   a:hover {
@@ -91,20 +114,20 @@ export const GlobalStyles = createGlobalStyle`
 
   a.anchor
   svg[aria-hidden="true"] {
-    stroke: ${props => props.theme.text.concat('99')};
+    stroke: rgba(var(--text), .5);
     padding-right: 2px;
   }
 
   hr {
     margin-top: 0;
     margin-bottom: calc(1.75rem - 1px);
-    background: ${props => props.theme.text.concat('44')};
+    background: rgba(var(--text), .2);
     border: none;
     height: 1px;
   }
 
   time {
-    color: ${props => props.theme.text.concat('AA')};
+    color: rgba(var(--text), .5);
   }
 
   /* Code */
@@ -153,7 +176,7 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   :not(pre) > code[class*='language-'] {
-    background: ${props => props.theme.tertiary};
+    background: var(--tertiary);
     color: inherit;
   }
 
@@ -169,14 +192,17 @@ export const GlobalStyles = createGlobalStyle`
     }
   }
 `;
+
 export const Container = styled.div`
   margin: 0 auto;
   max-width: 42rem;
   padding: 2.6rem 1.3rem;
 `;
+
 export const PageContent = styled.div`
   margin-top: 2.5rem;
 `;
+
 export const BlogTitle = styled.div`
   margin-left: 0.5rem;
   text-transform: uppercase;
@@ -184,7 +210,7 @@ export const BlogTitle = styled.div`
 
   h1 {
     margin: 0;
-    color: ${props => props.theme.primary};
+    color: var(--primary);
     font-size: 1.5rem;
     font-family: 'Fira Code SemiBold';
   }
@@ -195,17 +221,19 @@ export const BlogTitle = styled.div`
     height: 0;
     display: none;
     font-size: 1.5rem;
-    color: ${props => props.theme.primary};
+    color: var(--primary);
     font-weight: normal;
     font-family: 'Fira Code SemiBold';
     -webkit-tap-highlight-color: transparent;
   }
 `;
+
 export const Logo = styled.img`
   width: 70px;
   /* Oops */
   margin-left: -0.4rem;
 `;
+
 export const LogoContainer = styled.div`
   display: flex;
   flex-direction: row;
@@ -217,6 +245,7 @@ export const LogoContainer = styled.div`
     opacity: 1;
   }
 `;
+
 export const Row = styled.div`
   display: flex;
   flex-direction: row;

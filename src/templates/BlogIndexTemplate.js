@@ -19,34 +19,37 @@ const PostsContainer = styled.div`
     margin-bottom: 1.5rem;
     margin-top: 0;
     font-family: 'Fira Code Medium';
-    color: ${props => props.theme.secondary};
+    color: var(--secondary);
   }
 
   p {
     margin-top: 0.4rem;
     margin-bottom: 0;
+    color: rgb(var(--text));
   }
 
   small {
     display: flex;
     align-items: center;
     margin-bottom: 0.5rem;
-    color: ${props => props.theme.text.concat('AA')};
+    color: rgba(var(--text), .5);
   }
 
   svg {
-    color: ${props => props.theme.hearth.concat('AA')};
+    color: rgba(var(--heart), .5);
     margin-right: 0.5rem;
   }
 `;
+
 const Card = styled.div`
   width: 100%;
-  border: 1px solid ${props => props.theme.text.concat('33')};
+  border: 1px solid rgba(var(--text), .2);
   border-radius: 10px;
   padding: 1.7rem 2rem;
   transition: border 0.1s ease-in;
+
   &:hover {
-    border: 1px solid ${props => props.theme.text.concat('99')};
+    border: 1px solid rgba(var(--text), .5);
   }
 `;
 

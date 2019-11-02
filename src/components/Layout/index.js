@@ -1,11 +1,9 @@
 import React from 'react';
-import { ThemeProvider } from 'styled-components';
 import { useMediaQuery } from 'react-responsive';
 import { Link } from 'gatsby';
+import PropTypes, { func } from 'prop-types';
 import useDarkMode from 'use-dark-mode';
 import Helmet from 'react-helmet';
-import lightTheme from '../../utils/light';
-import darkTheme from '../../utils/dark';
 import logoLight from '../../assets/images/logo-purple.png';
 import logoDark from '../../assets/images/logo-cute-purple.png';
 import Nav from '../Nav';
@@ -21,77 +19,82 @@ import {
   Row,
 } from './styled';
 
-function Layout({ children, location }) {
+
+function BasicLayout ({ render, children, darkMode }) {
+  return (
+    <React.Fragment>
+      <GlobalStyles />
+      <Helmet
+        meta={[
+          {
+            name: 'theme-color',
+            content: darkMode ? '#282C35' : '#4B334C',
+          },
+        ]}
+      />
+      <Container>
+        {render()}
+        <PageContent>{children}</PageContent>
+      </Container>
+    </React.Fragment>
+  );
+}
+
+BasicLayout.defaultProps = {
+  render: () => {}
+}
+
+BasicLayout.propTypes = {
+  render: PropTypes.func,
+  children: PropTypes.any,
+  darkMode: PropTypes.bool
+}
+
+function Layout ({ children, location }) {
   const darkMode = useDarkMode(false);
-  const theme = darkMode.value ? 'dark' : 'light';
   const isMobile = useMediaQuery({ query: '(max-width: 672px)' });
 
   const handleToggleTheme = () => {
     darkMode.toggle();
   };
 
-  const renderTitle = () =>
-    location.pathname === '/' ? <h1>luiz ipsum</h1> : <h3>luiz ipsum</h3>;
-
-  const renderLogo = () => (theme === 'light' ? logoLight : logoDark);
-
   if (location.pathname === '/404') {
-    return (
-      <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
-        <React.Fragment>
-          <GlobalStyles />
-          <Helmet
-            meta={[
-              {
-                name: 'theme-color',
-                content: theme === 'light' ? '#4B334C' : '#282C35',
-              },
-            ]}
-          />
-          <Container>
-            <PageContent>{children}</PageContent>
-          </Container>
-        </React.Fragment>
-      </ThemeProvider>
-    );
+    return <BasicLayout children={children} darkMode={darkMode.value} />
   }
 
   return (
-    <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
-      {/* ThemeProvider allows just a single child */}
       <React.Fragment>
-        <GlobalStyles />
-        <Helmet
-          meta={[
-            {
-              name: 'theme-color',
-              content: theme === 'light' ? '#4B334C' : '#282C35',
-            },
-          ]}
+        <BasicLayout
+          children={children}
+          darkMode={darkMode.value}
+          render={() => (
+            <header>
+              <Nav darkMode={darkMode.value} onToggle={handleToggleTheme} />
+              <LogoContainer>
+                <Row>
+                  <Link to="/" className="anchor">
+                    <Logo src={darkMode.value ? logoDark : logoLight} />
+                  </Link>
+                  <BlogTitle>
+                    {
+                      location.pathname === '/'
+                        ? <h1>luiz ipsum</h1>
+                        : <h3>luiz ipsum</h3>
+                    }
+                  </BlogTitle>
+                </Row>
+                {!isMobile && (
+                  <ToggleThemeBtn
+                    darkMode={darkMode.value}
+                    onToggle={handleToggleTheme}
+                  />
+                )}
+              </LogoContainer>
+            </header>
+          )}
         />
-        <Container>
-          <header>
-            <Nav darkMode={theme !== 'light'} onToggle={handleToggleTheme} />
-            <LogoContainer>
-              <Row>
-                <Link to="/" className="anchor">
-                  <Logo src={renderLogo()} />
-                </Link>
-                <BlogTitle>{renderTitle()}</BlogTitle>
-              </Row>
-              {!isMobile && (
-                <ToggleThemeBtn
-                  darkMode={theme !== 'light'}
-                  onToggle={handleToggleTheme}
-                />
-              )}
-            </LogoContainer>
-          </header>
-          <PageContent>{children}</PageContent>
-        </Container>
         <Footer />
       </React.Fragment>
-    </ThemeProvider>
   );
 }
 

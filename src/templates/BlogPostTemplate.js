@@ -37,14 +37,17 @@ const PostNav = styled.ul`
     justify-content: space-evenly;
   }
 `;
+
 export const BlogIndex = styled(Link)`
   text-transform: uppercase;
   margin-bottom: 1rem !important;
   margin-top: 1rem !important;
 
   h3 {
+    margin-block-start: 1.8em;
+    margin-block-end: 0.2em;
     font-size: 1.5rem;
-    color: ${props => props.theme.primary};
+    color: var(--primary);
     font-weight: normal;
     font-family: 'Fira Code SemiBold';
   }

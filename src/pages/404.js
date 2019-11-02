@@ -15,6 +15,7 @@ const OvniVector = styled.img`
     width: 80vw;
   }
 `;
+
 const Container = styled.div`
   text-align: center;
   margin-top: -2rem;
@@ -32,7 +33,7 @@ const Container = styled.div`
   a {
     display: block;
     text-transform: uppercase;
-    border: 1px solid ${props => props.theme.text.concat('33')};
+    border: 1px solid rgba(var(--text), .2);
     border-radius: 5px;
     margin: 0 30%;
     padding: 0.5rem 0;
@@ -43,7 +44,7 @@ const Container = styled.div`
   }
 
   a:hover {
-    border-color: ${props => props.theme.text.concat('99')};
+    border-color: rgba(var(--text), .5);
   }
 `;
 
