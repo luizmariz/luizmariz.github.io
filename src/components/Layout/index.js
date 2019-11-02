@@ -5,12 +5,10 @@ import { Link } from 'gatsby';
 import { useSelector, useDispatch } from 'react-redux';
 import { setTheme } from '../../state/actions/theme';
 import Helmet from 'react-helmet';
-
 import lightTheme from '../../utils/light';
 import darkTheme from '../../utils/dark';
 import logoLight from '../../assets/images/logo-purple.png';
 import logoDark from '../../assets/images/logo-cute-purple.png';
-
 import Nav from '../Nav';
 import Footer from '../Footer';
 import ToggleThemeBtn from '../../components/shared/ToggleThemeBtn';

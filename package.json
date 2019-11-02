@@ -21,6 +21,7 @@
     "gatsby-plugin-google-analytics": "^2.1.12",
     "gatsby-plugin-manifest": "^2.2.12",
     "gatsby-plugin-nprogress": "^2.1.4",
+    "gatsby-plugin-offline": "^3.0.17",
     "gatsby-plugin-react-helmet": "^3.1.5",
     "gatsby-plugin-robots-txt": "^1.5.0",
     "gatsby-plugin-sharp": "^2.2.18",
@@ -53,7 +54,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/luizmariz/luizmariz.github.io/tree/Development"
+    "url": "https://github.com/luizmariz/luizmariz.github.io/"
   },
   "bugs": {
     "url": "https://github.com/luizmariz/luizmariz.github.io/issues"

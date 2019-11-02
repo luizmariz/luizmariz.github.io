@@ -22,10 +22,7 @@ import "errors"
 import "fmt"
 
 // Essa bela função admite apenas 1 como
-// argumento. Repare que ela recebe um
-// numero inteiro como argumento e retorna
-// um inteiro e um erro (que pode ser null,
-// vulgo nil). Caso não seja 1, retornamos um erro
+// argumento. Caso não seja 1, retornamos um erro
 
 func soAceitaUm (num int) (int, error) {
   if num != 1 {
