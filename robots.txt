@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Sitemap: https://luizipsum.wtf/sitemap.xml
+Host: https://luizipsum.wtf
