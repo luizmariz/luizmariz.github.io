@@ -2,8 +2,7 @@ import React from 'react';
 import { ThemeProvider } from 'styled-components';
 import { useMediaQuery } from 'react-responsive';
 import { Link } from 'gatsby';
-import { useSelector, useDispatch } from 'react-redux';
-import { setTheme } from '../../state/actions/theme';
+import useDarkMode from 'use-dark-mode';
 import Helmet from 'react-helmet';
 import lightTheme from '../../utils/light';
 import darkTheme from '../../utils/dark';
@@ -23,14 +22,12 @@ import {
 } from './styled';
 
 function Layout({ children, location }) {
-  const theme = useSelector(state => state.theme);
+  const darkMode = useDarkMode(false);
+  const theme = darkMode.value ? 'dark' : 'light';
   const isMobile = useMediaQuery({ query: '(max-width: 672px)' });
-  const dispatch = useDispatch();
 
   const handleToggleTheme = () => {
-    const newTheme = theme === 'dark' ? 'light' : 'dark';
-    localStorage.setItem('theme', newTheme);
-    dispatch(setTheme(newTheme));
+    darkMode.toggle();
   };
 
   const renderTitle = () =>

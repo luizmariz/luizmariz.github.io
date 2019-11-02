@@ -1,10 +1,11 @@
-import React from 'react';
-import styled from 'styled-components';
+import React, { Fragment } from 'react';
 import { Link } from 'gatsby';
-import { useSelector } from 'react-redux';
+import styled from 'styled-components';
+import useDarkMode from 'use-dark-mode';
 import ovniLight from '../assets/images/ovni404Light.svg';
 import ovniDark from '../assets/images/ovni404Dark.svg';
 import Layout from '../components/Layout';
+import SEO from '../components/SEO';
 
 const OvniVector = styled.img`
   height: auto;
@@ -47,17 +48,20 @@ const Container = styled.div`
 `;
 
 function PageNotFound() {
-  const theme = useSelector(state => state.theme);
+  const isDarkMode = useDarkMode(false);
 
   return (
-    <Layout location={{ pathname: '/404' }}>
-      <Container>
-        <OvniVector src={theme === 'dark' ? ovniDark : ovniLight} />
-        <h1>404</h1>
-        <p>Ixi, parece que essa página não existe.</p>
-        <Link className="anchor">me traz de volta!</Link>
-      </Container>
-    </Layout>
+    <Fragment>
+      <SEO title='404: Not found' />
+      <Layout location={{ pathname: '/404' }}>
+        <Container>
+          <OvniVector src={isDarkMode.value ? ovniDark : ovniLight} />
+          <h1>404</h1>
+          <p>Ixi, parece que essa página não existe.</p>
+          <Link className="anchor">me traz de volta!</Link>
+        </Container>
+      </Layout>
+    </Fragment>
   );
 }
 

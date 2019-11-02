@@ -40,6 +40,7 @@ const PostsContainer = styled.div`
   }
 `;
 const Card = styled.div`
+  width: 100%;
   border: 1px solid ${props => props.theme.text.concat('33')};
   border-radius: 10px;
   padding: 1.7rem 2rem;
