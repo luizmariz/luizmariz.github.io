@@ -9,17 +9,17 @@ import {
   NavSideMenu,
   MobMenuContainer,
   MenuTitle,
-  Row
+  Row,
 } from './styled';
 
-function Nav ({ darkMode, onToggle }) {
-  const [ showMobMenu, setShowMobMenu ] = useState(false);
+function Nav({ darkMode, onToggle }) {
+  const [showMobMenu, setShowMobMenu] = useState(false);
   const isMobile = useMediaQuery({ query: '(max-width: 672px)' });
 
   const toggleMenu = e => {
     e.preventDefault();
-    setShowMobMenu( showMobMenu => !showMobMenu );
-  }
+    setShowMobMenu(showMobMenu => !showMobMenu);
+  };
 
   if (isMobile) {
     return (
@@ -31,15 +31,16 @@ function Nav ({ darkMode, onToggle }) {
           <MdClose onClick={toggleMenu} />
           <Row>
             <MenuTitle>m e n u</MenuTitle>
-            <ToggleThemeBtn
-              darkMode={darkMode}
-              onToggle={onToggle}
-            />
+            <ToggleThemeBtn darkMode={darkMode} onToggle={onToggle} />
           </Row>
-          <Link to='/' className='anchor'>Início</Link>
-          <hr/>
-          <Link to='/about' className='anchor'>Sobre mim</Link>
-          <hr/>
+          <Link to="/" className="anchor">
+            Início
+          </Link>
+          <hr />
+          <Link to="/about" className="anchor">
+            Sobre mim
+          </Link>
+          <hr />
         </MobMenuContainer>
       </React.Fragment>
     );
@@ -48,10 +49,14 @@ function Nav ({ darkMode, onToggle }) {
   return (
     <NavContainer>
       <NavLink>
-        <Link to='/' className='anchor'>Início</Link>
+        <Link to="/" className="anchor">
+          Início
+        </Link>
       </NavLink>
       <NavLink>
-        <Link to='/about' className='anchor'>Sobre mim</Link>
+        <Link to="/about" className="anchor">
+          Sobre mim
+        </Link>
       </NavLink>
     </NavContainer>
   );

@@ -5,8 +5,4 @@ import reducer from './reducers';
 
 const store = createStore(reducer);
 
-export default ({ element }) => (
-  <Provider store={store}>
-    {element}
-  </Provider>
-);
+export default ({ element }) => <Provider store={store}>{element}</Provider>;

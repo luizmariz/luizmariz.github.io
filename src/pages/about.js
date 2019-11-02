@@ -6,7 +6,7 @@ import SEO from '../components/SEO';
 import { SubTitle } from '../components/shared/styled';
 
 const Title = styled.h1`
-  color: #FFFFFF;
+  color: #ffffff;
   padding: 1.3rem;
   /* want one word per line */
   word-spacing: 100vw;
@@ -68,7 +68,7 @@ const Content = styled.article`
   }
 `;
 
-function AboutPage ({ location }) {
+function AboutPage({ location }) {
   return (
     <Layout location={location}>
       <SEO
@@ -77,7 +77,7 @@ function AboutPage ({ location }) {
         description={'Um pouco sobre o criador desse humilde blog'}
       />
       <header>
-        <div className='gatsby-highlight'>
+        <div className="gatsby-highlight">
           <Title>sobre mim</Title>
         </div>
       </header>
@@ -93,30 +93,37 @@ function AboutPage ({ location }) {
         <Skills>react, node, python, go, angular, c++, java ...</Skills>
         <p>
           Oi, meu nome é Luiz, nasci no interior de Minas Gerais e atualmente
-          sou dev no time de growth hacking da  <a href='https://mjvinnovation.com' target='_blank' rel='noopener noreferrer'>MJV</a>, 
-          no Rio de Janeiro/RJ, além de ser um estudante em ciência da computação na UFRJ e técnico
-          em eletrônica pelo CEFET/RJ.
+          sou dev no time de growth hacking da{' '}
+          <a
+            href="https://mjvinnovation.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            MJV
+          </a>
+          , no Rio de Janeiro/RJ, além de ser um estudante em ciência da
+          computação na UFRJ e técnico em eletrônica pelo CEFET/RJ.
         </p>
         <p>
-          Apesar de vender meu peixe como dev react, lido bastante com backend, me aventurei em 
-          projetos de IoT e em outras perólas da programação. No fim, não 
-          importa a linguagem, tecnologia ou paradigma porque a sensação mais 
-          legal é ver alguma coisa que você fez funcionando linda e maravilhosa. E, no geral, 
-          aprendo bem as coisas.
+          Apesar de vender meu peixe como dev react, lido bastante com backend,
+          me aventurei em projetos de IoT e em outras perólas da programação. No
+          fim, não importa a linguagem, tecnologia ou paradigma porque a
+          sensação mais legal é ver alguma coisa que você fez funcionando linda
+          e maravilhosa. E, no geral, aprendo bem as coisas.
         </p>
         <SubTitle>projetos</SubTitle>
         <AnchorList>
           <a
-            href='https://github.com/luizmariz/luizmariz.github.io'
-            target='_blank'
-            rel='noopener noreferrer'
+            href="https://github.com/luizmariz/luizmariz.github.io"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             Esse blog
           </a>
           <a
-            href='https://github.com/luizmariz/reactnd-project-flashcards'
-            target='_blank'
-            rel='noopener noreferrer'
+            href="https://github.com/luizmariz/reactnd-project-flashcards"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             Um app simples de flashcards feito com React Native
           </a>

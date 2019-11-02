@@ -38,16 +38,24 @@ const Img = styled.img`
   height: 3.5rem;
 `;
 
-function Bio () {
+function Bio() {
   return (
     <Row>
       <Img src={img} alt="blog author image" />
       <Column>
         <p>
-          Blog por <Link to='/about'>Luiz Gustavo</Link>{'\n'}
+          Blog por <Link to="/about">Luiz Gustavo</Link>
+          {'\n'}
           <code>
-            ['<span role="img" aria-label="egg">🥚</span>',
-            '<span role="img" aria-label="chicken">🐔</span>'].sort()
+            ['
+            <span role="img" aria-label="egg">
+              🥚
+            </span>
+            ', '
+            <span role="img" aria-label="chicken">
+              🐔
+            </span>
+            '].sort()
           </code>
         </p>
       </Column>

@@ -1,15 +1,8 @@
 import React from 'react';
 import { SubTitle } from '../shared/styled';
-import {
-  MainRow,
-  BonusRow,
-  Hearth,
-  Row,
-  Github,
-  Linkedin
-} from './styled';
+import { MainRow, BonusRow, Hearth, Row, Github, Linkedin } from './styled';
 
-function Footer () {
+function Footer() {
   return (
     <footer>
       <MainRow>
@@ -17,18 +10,18 @@ function Footer () {
           <SubTitle>contato</SubTitle>
           <Row>
             <a
-              className='anchor'
-              href='https://linkedin.com/in/luiz-mariz'
-              target='_blank'
-              rel='noopener noreferrer'
+              className="anchor"
+              href="https://linkedin.com/in/luiz-mariz"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <Linkedin />
             </a>
             <a
-              className='anchor'
-              href='https://github.com/luizmariz'
-              target='_blank'
-              rel='noopener noreferrer'
+              className="anchor"
+              href="https://github.com/luizmariz"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <Github />
             </a>

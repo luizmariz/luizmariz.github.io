@@ -14,8 +14,8 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: 'pages',
-        path: `${__dirname}/src/pages`
-      }
+        path: `${__dirname}/src/pages`,
+      },
     },
     {
       resolve: `gatsby-transformer-remark`,
@@ -47,9 +47,9 @@ module.exports = {
             resolve: 'gatsby-remark-external-links',
             options: {
               target: '_blank',
-              rel: 'noopener noreferrer'
+              rel: 'noopener noreferrer',
             },
-          }
+          },
         ],
       },
     },
@@ -60,8 +60,8 @@ module.exports = {
         short_name: 'LuizIpsum',
         start_url: '/',
         display: 'minimal-ui',
-        icon: 'src/assets/images/logo-512px.png'
-      }
+        icon: 'src/assets/images/logo-512px.png',
+      },
     },
     {
       resolve: `gatsby-plugin-google-analytics`,
@@ -72,15 +72,15 @@ module.exports = {
         anonymize: true,
         respectDNT: true,
         // Avoids sending pageview hits from custom paths
-        exclude: ['/preview/**', '/do-not-track/me/too/']
-      }
+        exclude: ['/preview/**', '/do-not-track/me/too/'],
+      },
     },
     {
       resolve: `gatsby-plugin-nprogress`,
       options: {
         color: `#755671`,
-        showSpinner: false
-      }
-    }
+        showSpinner: false,
+      },
+    },
   ],
-}
+};

@@ -10,7 +10,7 @@ const OvniVector = styled.img`
   height: auto;
   width: 25vw;
 
-  @media ( max-width: 672px ) {
+  @media (max-width: 672px) {
     width: 80vw;
   }
 `;
@@ -25,7 +25,7 @@ const Container = styled.div`
   }
 
   p {
-    margin-top: .5rem;
+    margin-top: 0.5rem;
   }
 
   a {
@@ -34,9 +34,9 @@ const Container = styled.div`
     border: 1px solid ${props => props.theme.text.concat('33')};
     border-radius: 5px;
     margin: 0 30%;
-    padding: .5rem 0;
+    padding: 0.5rem 0;
 
-    @media ( max-width: 672px ) {
+    @media (max-width: 672px) {
       margin: 0 10%;
     }
   }
@@ -46,16 +46,16 @@ const Container = styled.div`
   }
 `;
 
-function PageNotFound () {
-  const theme = useSelector(state => state.theme)
+function PageNotFound() {
+  const theme = useSelector(state => state.theme);
 
   return (
     <Layout location={{ pathname: '/404' }}>
       <Container>
-        <OvniVector src={theme === 'dark' ? ovniDark : ovniLight}/>
+        <OvniVector src={theme === 'dark' ? ovniDark : ovniLight} />
         <h1>404</h1>
         <p>Ixi, parece que essa página não existe.</p>
-        <Link className='anchor'>me traz de volta!</Link>
+        <Link className="anchor">me traz de volta!</Link>
       </Container>
     </Layout>
   );

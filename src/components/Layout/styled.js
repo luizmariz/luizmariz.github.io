@@ -60,7 +60,8 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   a::before {
-    content: url(${props => props.theme.bg === '#FFFFFF' ? lightLink : darkLink });
+    content: url(${props =>
+      props.theme.bg === '#FFFFFF' ? lightLink : darkLink});
   }
 
   a:hover {
@@ -90,7 +91,7 @@ export const GlobalStyles = createGlobalStyle`
 
   a.anchor
   svg[aria-hidden="true"] {
-    stroke: ${props=> props.theme.text.concat('99')};
+    stroke: ${props => props.theme.text.concat('99')};
     padding-right: 2px;
   }
 
@@ -203,7 +204,7 @@ export const BlogTitle = styled.div`
 export const Logo = styled.img`
   width: 70px;
   /* Oops */
-  margin-left: -.4rem;
+  margin-left: -0.4rem;
 `;
 export const LogoContainer = styled.div`
   display: flex;

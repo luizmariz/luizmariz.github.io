@@ -6,7 +6,9 @@ exports.createPages = ({ actions, graphql }) => {
 
   return new Promise((resolve, reject) => {
     const BlogPostTemplate = path.resolve(`src/templates/BlogPostTemplate.js`);
-    const BlogIndexTemplate = path.resolve(`src/templates/BlogIndexTemplate.js`);
+    const BlogIndexTemplate = path.resolve(
+      `src/templates/BlogIndexTemplate.js`
+    );
 
     createPage({
       path: '/',
@@ -38,15 +40,15 @@ exports.createPages = ({ actions, graphql }) => {
 
         const posts = result.data.allMarkdownRemark.edges;
         posts.forEach(({ node }, i) => {
-          const next = i === posts.length - 1 ? null : posts[i+1].node;
-          const previous = i === 0 ? null : posts[i-1].node;
+          const next = i === posts.length - 1 ? null : posts[i + 1].node;
+          const previous = i === 0 ? null : posts[i - 1].node;
           createPage({
             path: node.fields.slug,
             component: BlogPostTemplate,
             context: {
               slug: node.fields.slug,
               previous,
-              next
+              next,
             },
           });
         });
@@ -56,7 +58,7 @@ exports.createPages = ({ actions, graphql }) => {
 };
 
 exports.onCreateNode = ({ node, getNode, actions }) => {
-  const { createNodeField } = actions
+  const { createNodeField } = actions;
 
   if (node.internal.type === `MarkdownRemark`) {
     const slug = createFilePath({ node, getNode, basePath: `pages` });
@@ -66,4 +68,4 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
       value: slug,
     });
   }
-}
+};

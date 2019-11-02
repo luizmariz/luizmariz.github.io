@@ -5,5 +5,5 @@ export default {
   primary: '#755671',
   secondary: '#FFD1D0',
   tertiary: '#FFFFFF22',
-  hearth: '#E8715C'
+  hearth: '#E8715C',
 };

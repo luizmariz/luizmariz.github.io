@@ -30,26 +30,26 @@ const PostsContainer = styled.div`
   small {
     display: flex;
     align-items: center;
-    margin-bottom: .5rem;
+    margin-bottom: 0.5rem;
     color: ${props => props.theme.text.concat('AA')};
   }
 
   svg {
     color: ${props => props.theme.hearth.concat('AA')};
-    margin-right: .5rem;
+    margin-right: 0.5rem;
   }
 `;
 const Card = styled.div`
   border: 1px solid ${props => props.theme.text.concat('33')};
   border-radius: 10px;
   padding: 1.7rem 2rem;
-  transition: border .1s ease-in;
+  transition: border 0.1s ease-in;
   &:hover {
     border: 1px solid ${props => props.theme.text.concat('99')};
   }
 `;
 
-function BlogIndexTemplate ({ data, location }) {
+function BlogIndexTemplate({ data, location }) {
   const posts = data.allMarkdownRemark.edges;
 
   return (
@@ -63,13 +63,19 @@ function BlogIndexTemplate ({ data, location }) {
           {posts.map(({ node }) => {
             return (
               <article key={node.fields.slug}>
-                <Link to={node.fields.slug} className='anchor'>
+                <Link to={node.fields.slug} className="anchor">
                   <Card>
                     <header>
-                      <small><MdLabel />{node.frontmatter.tags}</small>
+                      <small>
+                        <MdLabel />
+                        {node.frontmatter.tags}
+                      </small>
                       <h2>{node.frontmatter.title}</h2>
                       <time>
-                        {formatTimestamp(node.frontmatter.date, node.fields.readingTime.minutes)}
+                        {formatTimestamp(
+                          node.frontmatter.date,
+                          node.fields.readingTime.minutes
+                        )}
                       </time>
                     </header>
                     <p>{node.frontmatter.summary}</p>
@@ -82,13 +88,13 @@ function BlogIndexTemplate ({ data, location }) {
       </main>
     </Layout>
   );
-};
+}
 
 export default BlogIndexTemplate;
 
 export const pageQuery = graphql`
   {
-    allMarkdownRemark( sort: { fields: [frontmatter___date], order: DESC } ) {
+    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
       edges {
         node {
           fields {
