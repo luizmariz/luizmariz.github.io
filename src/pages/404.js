@@ -49,7 +49,10 @@ function PageNotFound () {
   return (
     <Layout location={{ pathname: '/404' }}>
       <Container>
-        <OvniVector src={window.__theme === 'light' ? ovniLight : ovniDark} />
+        <OvniVector src={typeof window != 'undefined'
+          ? window.__theme === 'light' ? ovniLight : ovniDark
+          : ovniLight
+        }/>
         <h1>404</h1>
         <p>Ixi, parece que essa página não existe.</p>
         <Link className='anchor'>me traz de volta!</Link>
