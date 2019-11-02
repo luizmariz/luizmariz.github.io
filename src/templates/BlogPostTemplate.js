@@ -1,10 +1,11 @@
 import React from 'react';
 import { graphql, Link } from 'gatsby';
-import Layout from '../components/Layout';
-import styled from 'styled-components';
 import { formatTimestamp } from '../utils/helpers';
 import { MdArrowBack, MdArrowForward} from 'react-icons/md';
+import Layout from '../components/Layout';
+import styled from 'styled-components';
 import Bio from '../components/shared/Bio';
+import SEO from '../components/SEO';
 
 const PostNav = styled.ul`
   display: flex;
@@ -57,6 +58,12 @@ function BlogPostTemplate ({ data, pageContext, location }) {
 
   return (
     <Layout location={location}>
+      <SEO
+        title={frontmatter.title}
+        description={frontmatter.summary}
+        slug={slug}
+        keywords={frontmatter.tags}
+      />
       <main>
         <article>
           <header>
@@ -115,6 +122,8 @@ export const pageQuery = graphql`
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
         title
+        summary
+        tags
       }
       fields {
         readingTime {

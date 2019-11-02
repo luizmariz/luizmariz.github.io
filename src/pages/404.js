@@ -51,7 +51,7 @@ function PageNotFound () {
       <Container>
         <OvniVector src={window.__theme === 'light' ? ovniLight : ovniDark} />
         <h1>404</h1>
-        <p>Ixi, essa página é de outro mundo.</p>
+        <p>Ixi, parece que essa página não existe.</p>
         <Link className='anchor'>me traz de volta!</Link>
       </Container>
     </Layout>

@@ -1,17 +1,18 @@
 {
   "name": "luiz-ipsum",
   "private": true,
-  "description": "Luiz Ipsum",
+  "description": "A blog about things and a really nice playground",
   "version": "1.0.0",
   "author": "Luiz Mariz",
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
-    "develop": "gatsby develop -H 192.168.0.104 -p 8000",
+    "develop": "gatsby develop -H 127.0.0.1 -p 8000",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
+    "deploy": "gatsby build && gh-pages -d public -b master"
   },
   "dependencies": {
     "babel-plugin-styled-components": "^1.10.6",
@@ -36,6 +37,7 @@
     "gatsby-remark-smartypants": "^2.1.5",
     "gatsby-source-filesystem": "^2.1.18",
     "gatsby-transformer-remark": "^2.6.19",
+    "gh-pages": "^2.1.1",
     "prismjs": "^1.17.1",
     "prop-types": "^15.7.2",
     "react": "^16.9.0",
@@ -50,9 +52,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-hello-world"
+    "url": "https://github.com/luizmariz/luizmariz.github.io"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/luizmariz/luizmariz.github.io/issues"
   }
 }
