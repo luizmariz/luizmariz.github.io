@@ -5,6 +5,7 @@ import { formatTimestamp } from '../utils/helpers';
 import Layout from '../components/Layout';
 import styled from 'styled-components';
 import Bio from '../components/shared/Bio';
+import SEO from '../components/SEO';
 
 const PostsContainer = styled.div`
   margin-top: 3.5rem;
@@ -62,6 +63,7 @@ function BlogIndexTemplate ({ data, location }) {
 
   return (
     <Layout location={location}>
+      <SEO />
       <aside>
         <Bio />
       </aside>

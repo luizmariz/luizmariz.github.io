@@ -2,6 +2,7 @@ import React from "react";
 import { graphql, useStaticQuery } from 'gatsby';
 import Helmet from "react-helmet";
 import PropTypes from 'prop-types';
+import img from '../../assets/images/default-img.png';
 
 const query = graphql`
   query GetSiteMetadata {
@@ -16,12 +17,13 @@ const query = graphql`
   }
 `;
 
-function SEO ({ meta, title, description, image, keywords, slug, lang='pt-br'}) {
+function SEO ({ meta, title, description, image, keywords, slug, lang }) {
   const data = useStaticQuery(query);
   const { siteMetadata } = data.site;
   const url = `${siteMetadata.siteUrl}${slug}`;
   const siteDescription = description || siteMetadata.siteDescription;
-  const siteImage = image ? `${siteMetadata.siteUrl}/${image}` : null;
+  const siteImage = image ? `${siteMetadata.siteUrl}/${image}`
+                          : `${siteMetadata.siteUrl}/${img}`;
 
   return (
     <Helmet
@@ -32,7 +34,7 @@ function SEO ({ meta, title, description, image, keywords, slug, lang='pt-br'}) 
             title
           }
         : {
-            title: `${siteMetadata.title} — A blog by Luiz Mariz`,
+            title: `${siteMetadata.title} — Um blog, por Luiz`,
           }
         )
       }
@@ -92,7 +94,8 @@ function SEO ({ meta, title, description, image, keywords, slug, lang='pt-br'}) 
 SEO.defaultProps = {
   meta: [],
   title: '',
-  slug: ''
+  slug: '',
+  lang: 'pt-br'
 };
 
 SEO.propTypes = {

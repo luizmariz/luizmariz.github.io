@@ -16,8 +16,22 @@ function Footer () {
         <div>
           <SubTitle>contato</SubTitle>
           <Row>
-            <Linkedin />
-            <Github />
+            <a
+              className='anchor'
+              href='https://linkedin.com/in/luiz-mariz'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              <Linkedin />
+            </a>
+            <a
+              className='anchor'
+              href='https://github.com/luizmariz'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              <Github />
+            </a>
           </Row>
         </div>
       </MainRow>

@@ -2,8 +2,8 @@ module.exports = {
   siteMetadata: {
     title: 'Luiz Ipsum',
     author: 'Luiz Mariz',
-    siteDescription: '',
-    siteUrl: 'http://localhost:8000',
+    siteDescription: 'Fábulas de um dev teimoso, e testes aleatórios',
+    siteUrl: 'https://luizmariz.github.io',
   },
   plugins: [
     `gatsby-plugin-styled-components`,

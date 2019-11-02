@@ -45,7 +45,10 @@ function Bio () {
       <Column>
         <p>
           Blog por <Link to='/about'>Luiz Gustavo</Link>{'\n'}
-          <code>['🥚', '🐔'].sort()</code>
+          <code>
+            ['<span role="img" aria-label="egg">🥚</span>',
+            '<span role="img" aria-label="chicken">🐔</span>'].sort()
+          </code>
         </p>
       </Column>
     </Row>

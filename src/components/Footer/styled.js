@@ -40,9 +40,10 @@ export const Github = styled(DiGithubBadge)`
   border: 1px solid ${props => props.theme.text.concat('33')};
   border-radius: 5px;
   padding: 3px;
+  transition: border .1s ease-in;
 
   &:hover {
-    opacity: .6;
+    border: 1px solid ${props => props.theme.text.concat('99')};
   }
 `;
 export const Linkedin = styled(FaLinkedin)`
@@ -53,8 +54,9 @@ export const Linkedin = styled(FaLinkedin)`
   border-radius: 5px;
   padding: 7px;
   margin-right: 1rem;
+  transition: border .1s ease-in;
 
   &:hover {
-    opacity: .6;
+    border: 1px solid ${props => props.theme.text.concat('99')};
   }
 `;
