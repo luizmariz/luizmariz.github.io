@@ -76,13 +76,16 @@ export const GlobalStyles = createGlobalStyle`
     margin: 0;
   }
 
-  a.anchor:hover {
+  a.anchor:hover,
+  a.gatsby-resp-image-link::hover {
     opacity: 1;
   }
 
-  a.anchor::before {
+  a.anchor::before,
+  a.gatsby-resp-image-link::before {
     content: none;
   }
+
 
   a.anchor
   svg[aria-hidden="true"] {
