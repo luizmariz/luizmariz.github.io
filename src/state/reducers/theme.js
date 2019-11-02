@@ -2,10 +2,12 @@ import { SET_THEME } from '../actions/theme';
 
 let state = 'light';
 
-try {
-  state = localStorage.getItem('theme');
-} catch {
-  localStorage.setItem('theme', state);
+if (typeof window !== "undefined") {
+  try {
+    state = localStorage.getItem('theme');
+  } catch {
+    localStorage.setItem('theme', state);
+  }
 }
 
 const initialState = state;
