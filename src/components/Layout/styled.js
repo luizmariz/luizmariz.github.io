@@ -67,7 +67,8 @@ export const GlobalStyles = createGlobalStyle`
     opacity: 0.7;
   }
 
-  a.anchor {
+  a.anchor,
+  a.gatsby-resp-image-link {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -77,7 +78,7 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   a.anchor:hover,
-  a.gatsby-resp-image-link::hover {
+  a.gatsby-resp-image-link:hover {
     opacity: 1;
   }
 
@@ -210,9 +211,14 @@ export const LogoContainer = styled.div`
   align-items: center;
   justify-content: space-between;
   margin-top: 2.6rem;
+
+  .anchor:hover {
+    opacity: 1;
+  }
 `;
 export const Row = styled.div`
   display: flex;
   flex-direction: row;
+  align-items: center;
   justify-content: flex-start;
 `;

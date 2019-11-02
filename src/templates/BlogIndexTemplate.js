@@ -27,15 +27,6 @@ const PostsContainer = styled.div`
     margin-bottom: 0;
   }
 
-  a {
-    border: none;
-    color: inherit;
-  }
-
-  a::before {
-    content: none;
-  }
-
   small {
     display: flex;
     align-items: center;
@@ -72,7 +63,7 @@ function BlogIndexTemplate ({ data, location }) {
           {posts.map(({ node }) => {
             return (
               <article key={node.fields.slug}>
-                <Link to={node.fields.slug}>
+                <Link to={node.fields.slug} className='anchor'>
                   <Card>
                     <header>
                       <small><MdLabel />{node.frontmatter.tags}</small>

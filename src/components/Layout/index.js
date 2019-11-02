@@ -87,9 +87,7 @@ function Layout ({ children, location }) {
                   <Logo src={renderLogo()} />
                 </Link>
                   <BlogTitle>
-                    <Link to='/' className='anchor'>
-                      {renderTitle()}
-                    </Link>
+                    {renderTitle()}
                   </BlogTitle>
               </Row>
               { !isMobile &&
