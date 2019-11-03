@@ -12,7 +12,7 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
-    "clean": "mkdir .\\public && del /f /s /q .\\public\\.",
+    "clean": "del /f /s /q .\\public\\. 2>NUL",
     "deploy": "yarn clean && gatsby build && echo luizipsum.wtf > .\\public\\CNAME && gh-pages -d public -b master"
   },
   "dependencies": {

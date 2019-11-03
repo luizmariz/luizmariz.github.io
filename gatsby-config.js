@@ -76,10 +76,14 @@ module.exports = {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: 'Luiz Ipsum',
-        short_name: 'LuizIpsum',
+        short_name: 'Luiz Ipsum',
         start_url: '/',
         display: 'minimal-ui',
         icon: 'src/assets/images/logo-512px.png',
+        background_color: `#ffffff`,
+        theme_color: `#4b334c`,
+        display: `minimal-ui`,
+        theme_color_in_head: false
       },
     },
     {
