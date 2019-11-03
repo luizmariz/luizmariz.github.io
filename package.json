@@ -12,7 +12,8 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
-    "deploy": "gatsby build && echo luizipsum.wtf > .\\public\\CNAME && gh-pages -d public -b master"
+    "clean": "rm -r dist/*",
+    "deploy": "yarn clean && gatsby build && echo luizipsum.wtf > .\\public\\CNAME && gh-pages -d public -b master"
   },
   "dependencies": {
     "babel-plugin-styled-components": "^1.10.6",

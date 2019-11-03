@@ -29,6 +29,10 @@ export const GlobalStyles = createGlobalStyle`
     a::before {
       content: url(${lightLink});
     }
+
+    .dark {
+      display: none !important;
+    }
   }
 
   .dark-mode {
@@ -42,6 +46,10 @@ export const GlobalStyles = createGlobalStyle`
 
     a::before {
       content: url(${darkLink});
+    }
+
+    .light {
+      display: none !important;
     }
   }
 

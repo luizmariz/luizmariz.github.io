@@ -70,8 +70,6 @@ function Layout({ children, location }) {
     `
   );
 
-  const logo = darkMode.value ? logoDark : logoLight;
-
   if (location.pathname === '/404') {
     return <BasicLayout children={children} darkMode={darkMode} />;
   }
@@ -93,8 +91,17 @@ function Layout({ children, location }) {
                   aria-label="Ir para a página principal"
                 >
                   <Logo
+                    className='dark'
                     alt="Luiz Ipsum"
-                    fixed={logo.childImageSharp.fixed}
+                    fixed={logoDark.childImageSharp.fixed}
+                    draggable={false}
+                    fadeIn={false}
+                    loading={"eager"}
+                  />
+                  <Logo
+                    className='light'
+                    alt="Luiz Ipsum"
+                    fixed={logoLight.childImageSharp.fixed}
                     draggable={false}
                     fadeIn={false}
                     loading={"eager"}

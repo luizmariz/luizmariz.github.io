@@ -2,7 +2,6 @@ import React from 'react';
 import { useStaticQuery, graphql, Link } from 'gatsby'
 import styled from 'styled-components';
 import Img from 'gatsby-image';
-import img from '../../assets/images/photo.png';
 
 const Row = styled.div`
   position: relative;

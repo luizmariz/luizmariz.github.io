@@ -56,12 +56,14 @@ function PageNotFound() {
       <SEO title="404: Not found" />
       <Layout location={{ pathname: '/404' }}>
         <Container>
-          { isDarkMode.value &&
-            <OvniVector src={ovniDark} />
-          }
-          { !isDarkMode.value &&
-            <OvniVector src={ovniLight} />
-          }
+          <OvniVector
+            src={ovniDark}
+            className="dark"
+          />
+          <OvniVector
+            src={ovniLight}
+            className="light"
+          />
           <h1>404</h1>
           <p>Ixi, parece que essa página não existe.</p>
           <Link className="anchor" aria-label="Ir para a página inicial">me traz de volta!</Link>
