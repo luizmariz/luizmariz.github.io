@@ -3,8 +3,6 @@ import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import useDarkMode from 'use-dark-mode';
 import Helmet from 'react-helmet';
-import logoLight from '../../assets/images/logo-purple.png';
-import logoDark from '../../assets/images/logo-cute-purple.png';
 import Nav from '../Nav';
 import Footer from '../Footer';
 import {
@@ -15,24 +13,24 @@ import {
   Logo,
   LogoContainer,
   Row,
-  ResponsiveToggleBtn
+  ResponsiveToggleBtn,
 } from './styled';
 
-
-function BasicLayout ({ render, children, darkMode }) {
+function BasicLayout({ render, children, darkMode, location }) {
   return (
     <React.Fragment>
-      <GlobalStyles />
+      {/* TODO: handle theme-color flash when in dark-mode */}
       <Helmet
         meta={[
           {
             name: 'theme-color',
-            content: darkMode ? '#282C35' : '#4B334C',
+            content: darkMode.value ? '#282C35' : '#4B334C',
           },
         ]}
       />
+      <GlobalStyles />
       <Container>
-        {render()}
+        {render(darkMode, location)}
         <PageContent>{children}</PageContent>
       </Container>
     </React.Fragment>
@@ -40,45 +38,47 @@ function BasicLayout ({ render, children, darkMode }) {
 }
 
 BasicLayout.defaultProps = {
-  render: () => {}
-}
+  render: () => {},
+};
 
 BasicLayout.propTypes = {
   render: PropTypes.func,
   children: PropTypes.any,
-  darkMode: PropTypes.bool
-}
+  location: PropTypes.object,
+  darkMode: PropTypes.object.isRequired,
+};
 
-function Layout ({ children, location }) {
+function Layout({ children, location }) {
   const darkMode = useDarkMode();
 
   if (location.pathname === '/404') {
-    return <BasicLayout children={children} darkMode={darkMode.value} />
+    return <BasicLayout children={children} darkMode={darkMode} />;
   }
 
   return (
-      <React.Fragment>
-        <BasicLayout
-          children={children}
-          darkMode={darkMode.value}
-          render={() => (
-            <header>
-              <Nav darkMode={darkMode.value} onToggle={darkMode.toggle} />
-              <LogoContainer>
+    <React.Fragment>
+      <BasicLayout
+        children={children}
+        darkMode={darkMode}
+        location={location}
+        render={(darkMode, location) => (
+          <header>
+            <Nav checked={darkMode.value} onToggle={darkMode.toggle} />
+            <LogoContainer>
               <Row>
                 <Link to="/" className="anchor">
-                  <Logo src={darkMode.value ? logoDark : logoLight} />
+                  <Logo />
                 </Link>
                 <BlogTitle>
-                  {
-                    location.pathname === '/'
-                      ? <h1>luiz ipsum</h1>
-                      : <h3>luiz ipsum</h3>
-                  }
+                  {location.pathname === '/' ? (
+                    <h1>luiz ipsum</h1>
+                  ) : (
+                    <h3>luiz ipsum</h3>
+                  )}
                 </BlogTitle>
               </Row>
               <ResponsiveToggleBtn
-                darkMode={darkMode.value}
+                checked={darkMode.value}
                 onToggle={darkMode.toggle}
               />
             </LogoContainer>

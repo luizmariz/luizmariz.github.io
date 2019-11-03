@@ -81,9 +81,9 @@ export const MobMenuContainer = styled.div`
   transition: background-color 0.2s ease-in,
     opacity 0.2s cubic-bezier(0, 0.995, 0.99, 1);
 
-    @media (min-width: 672px) {
-      display: none;
-    }
+  @media (min-width: 672px) {
+    display: none;
+  }
 `;
 
 export const MenuTitle = styled(SubTitle)`

@@ -41,13 +41,13 @@ export const Github = styled(DiGithubBadge)`
   color: rgb(var(--text));
   cursor: pointer;
   font-size: 2.6rem;
-  border: 1px solid rgba(var(--text), .2);
+  border: 1px solid rgba(var(--text), 0.2);
   border-radius: 5px;
   padding: 3px;
   transition: border 0.1s ease-in;
 
   &:hover {
-    border: 1px solid rgba(var(--text), .5);
+    border: 1px solid rgba(var(--text), 0.5);
   }
 `;
 
@@ -55,13 +55,13 @@ export const Linkedin = styled(FaLinkedin)`
   color: rgb(var(--text));
   cursor: pointer;
   font-size: 2.6rem;
-  border: 1px solid rgba(var(--text), .2);
+  border: 1px solid rgba(var(--text), 0.2);
   border-radius: 5px;
   padding: 7px;
   margin-right: 1rem;
   transition: border 0.1s ease-in;
 
   &:hover {
-    border: 1px solid rgba(var(--text), .5);
+    border: 1px solid rgba(var(--text), 0.5);
   }
 `;

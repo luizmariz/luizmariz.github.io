@@ -32,24 +32,24 @@ const PostsContainer = styled.div`
     display: flex;
     align-items: center;
     margin-bottom: 0.5rem;
-    color: rgba(var(--text), .5);
+    color: rgba(var(--text), 0.5);
   }
 
   svg {
-    color: rgba(var(--heart), .5);
+    color: rgba(var(--heart), 0.5);
     margin-right: 0.5rem;
   }
 `;
 
 const Card = styled.div`
   width: 100%;
-  border: 1px solid rgba(var(--text), .2);
+  border: 1px solid rgba(var(--text), 0.2);
   border-radius: 10px;
   padding: 1.7rem 2rem;
   transition: border 0.1s ease-in;
 
   &:hover {
-    border: 1px solid rgba(var(--text), .5);
+    border: 1px solid rgba(var(--text), 0.5);
   }
 `;
 

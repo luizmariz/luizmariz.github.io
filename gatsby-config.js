@@ -6,11 +6,19 @@ module.exports = {
     siteUrl: 'https://luizipsum.wtf',
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-use-dark-mode`,
+      options: {
+        classNameDark: `dark-mode`,
+        classNameLight: `light-mode`,
+        storageKey: `darkMode`,
+        minify: true,
+      },
+    },
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-robots-txt`,
-    'gatsby-plugin-use-dark-mode',
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -83,6 +91,6 @@ module.exports = {
         showSpinner: false,
       },
     },
-    `gatsby-plugin-remove-serviceworker`
+    `gatsby-plugin-remove-serviceworker`,
   ],
 };

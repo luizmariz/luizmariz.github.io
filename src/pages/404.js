@@ -33,7 +33,7 @@ const Container = styled.div`
   a {
     display: block;
     text-transform: uppercase;
-    border: 1px solid rgba(var(--text), .2);
+    border: 1px solid rgba(var(--text), 0.2);
     border-radius: 5px;
     margin: 0 30%;
     padding: 0.5rem 0;
@@ -44,7 +44,7 @@ const Container = styled.div`
   }
 
   a:hover {
-    border-color: rgba(var(--text), .5);
+    border-color: rgba(var(--text), 0.5);
   }
 `;
 
@@ -53,7 +53,7 @@ function PageNotFound() {
 
   return (
     <Fragment>
-      <SEO title='404: Not found' />
+      <SEO title="404: Not found" />
       <Layout location={{ pathname: '/404' }}>
         <Container>
           <OvniVector src={isDarkMode.value ? ovniDark : ovniLight} />

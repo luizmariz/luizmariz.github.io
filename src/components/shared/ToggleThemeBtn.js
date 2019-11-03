@@ -55,11 +55,11 @@ const Switch = styled.label`
   }
 `;
 
-function ToggleThemeBtn({ darkMode, onToggle, className }) {
+function ToggleThemeBtn({ checked, onToggle, className }) {
   return (
     <Switch className={className}>
-      <input defaultChecked={darkMode} type="checkbox" />
-      <Slider darkMode={darkMode} onClick={onToggle}>
+      <input checked={checked} type="checkbox" onChange={onToggle} />
+      <Slider darkMode={checked}>
         <MdBrightnessLow color="#D4D400" size="1.2rem" />
         <MdBrightness2 color="#FFFFFF" size="1.3rem" />
       </Slider>
@@ -68,8 +68,8 @@ function ToggleThemeBtn({ darkMode, onToggle, className }) {
 }
 
 ToggleThemeBtn.propTypes = {
-  darkMode: PropTypes.bool.isRequired,
-  onToggle: PropTypes.func
-}
+  checked: PropTypes.bool.isRequired,
+  onToggle: PropTypes.func.isRequired,
+};
 
 export default ToggleThemeBtn;

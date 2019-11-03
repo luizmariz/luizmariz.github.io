@@ -2,6 +2,14 @@ import styled, { createGlobalStyle } from 'styled-components';
 import ToggleThemeBtn from '../../components/shared/ToggleThemeBtn';
 import lightLink from '../../assets/images/light-link.svg';
 import darkLink from '../../assets/images/dark-link.svg';
+import logoLight from '../../assets/images/logo-purple.png';
+import logoDark from '../../assets/images/logo-cute-purple.png';
+
+export const Logo = styled.img`
+  width: 70px;
+  /* Oops */
+  margin-left: -0.4rem;
+`;
 
 export const GlobalStyles = createGlobalStyle`
   html {
@@ -19,6 +27,10 @@ export const GlobalStyles = createGlobalStyle`
     --tertiary: #FFD1D0BF;
     --heart: 75, 51, 76;
 
+    ${Logo} {
+      content: url(${logoLight})
+    }
+
     a::before {
       content: url(${lightLink});
     }
@@ -32,6 +44,10 @@ export const GlobalStyles = createGlobalStyle`
     --secondary: #FFD1D0;
     --tertiary: #FFFFFF22;
     --heart: 232, 113, 92;
+
+    ${Logo} {
+      content: url(${logoDark})
+    }
 
     a::before {
       content: url(${darkLink});
@@ -92,6 +108,7 @@ export const GlobalStyles = createGlobalStyle`
     opacity: 0.7;
   }
 
+  /* TODO: Refact classname anchor as a Anchor shareable component */
   a.anchor,
   a.gatsby-resp-image-link {
     display: flex;
@@ -227,12 +244,6 @@ export const BlogTitle = styled.div`
     font-family: 'Fira Code SemiBold';
     -webkit-tap-highlight-color: transparent;
   }
-`;
-
-export const Logo = styled.img`
-  width: 70px;
-  /* Oops */
-  margin-left: -0.4rem;
 `;
 
 export const LogoContainer = styled.div`
