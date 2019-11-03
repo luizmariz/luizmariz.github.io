@@ -26,7 +26,6 @@ import "fmt"
 
 func soAceitaUm (num int) (int, error) {
   if num != 1 {
-
     return -1, errors.New("Só aceita 1")
   }
 
