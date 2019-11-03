@@ -8,7 +8,7 @@ import {
   NavSideMenu,
   MobMenuContainer,
   MenuTitle,
-  Row,
+  Row
 } from './styled';
 
 function Nav({ checked, onToggle }) {

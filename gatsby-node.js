@@ -10,7 +10,7 @@ exports.createPages = ({ actions, graphql }) => {
 
     createPage({
       path: '/',
-      component: BlogIndexTemplate,
+      component: BlogIndexTemplate
     });
 
     resolve(
@@ -46,8 +46,8 @@ exports.createPages = ({ actions, graphql }) => {
             context: {
               slug: node.fields.slug,
               previous,
-              next,
-            },
+              next
+            }
           });
         });
       })
@@ -63,7 +63,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
     createNodeField({
       node,
       name: `slug`,
-      value: slug,
+      value: slug
     });
   }
 };

@@ -32,56 +32,56 @@ function SEO({ meta, title, description, image, keywords, slug, lang }) {
       {...(title
         ? {
             titleTemplate: `%s — ${siteMetadata.title}`,
-            title,
+            title
           }
         : {
-            title: `${siteMetadata.title} — Um blog, por Luiz`,
+            title: `${siteMetadata.title} — Um blog, por Luiz`
           })}
       meta={[
         {
           name: 'description',
-          content: siteDescription,
+          content: siteDescription
         },
         {
           name: 'keywords',
-          content: keywords,
+          content: keywords
         },
         {
           property: 'og:url',
-          content: url,
+          content: url
         },
         {
           property: 'og:title',
-          content: title || siteMetadata.title,
+          content: title || siteMetadata.title
         },
         {
           property: 'og:description',
-          content: siteDescription,
+          content: siteDescription
         },
         {
           name: 'twitter:card',
-          content: 'summary',
+          content: 'summary'
         },
         {
           name: 'twitter:title',
-          content: title || siteMetadata.title,
+          content: title || siteMetadata.title
         },
         {
           name: 'twitter:description',
-          content: siteDescription,
-        },
+          content: siteDescription
+        }
       ]
         .concat(
           siteImage
             ? [
                 {
                   property: 'og:image',
-                  content: siteImage,
+                  content: siteImage
                 },
                 {
                   name: 'twitter:image',
-                  content: siteImage,
-                },
+                  content: siteImage
+                }
               ]
             : []
         )
@@ -94,7 +94,7 @@ SEO.defaultProps = {
   meta: [],
   title: '',
   slug: '',
-  lang: 'pt-br',
+  lang: 'pt-br'
 };
 
 SEO.propTypes = {
@@ -103,7 +103,7 @@ SEO.propTypes = {
   meta: PropTypes.array,
   slug: PropTypes.string,
   title: PropTypes.string.isRequired,
-  keywords: PropTypes.string,
+  keywords: PropTypes.string
 };
 
 export default SEO;

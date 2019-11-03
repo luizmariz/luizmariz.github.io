@@ -3,7 +3,7 @@ module.exports = {
     title: 'Luiz Ipsum',
     author: 'Luiz Mariz',
     siteDescription: 'Fábulas de um dev teimoso, e testes aleatórios',
-    siteUrl: 'https://luizipsum.wtf',
+    siteUrl: 'https://luizipsum.wtf'
   },
   plugins: [
     {
@@ -12,8 +12,8 @@ module.exports = {
         classNameDark: `dark-mode`,
         classNameLight: `light-mode`,
         storageKey: `darkMode`,
-        minify: true,
-      },
+        minify: true
+      }
     },
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
@@ -24,8 +24,8 @@ module.exports = {
       resolve: 'gatsby-source-filesystem',
       options: {
         path: `${__dirname}/src/assets/images`,
-        name: 'images',
-      },
+        name: 'images'
+      }
     },
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
@@ -33,8 +33,8 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: 'pages',
-        path: `${__dirname}/src/pages`,
-      },
+        path: `${__dirname}/src/pages`
+      }
     },
     {
       resolve: `gatsby-transformer-remark`,
@@ -44,21 +44,21 @@ module.exports = {
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 590,
-            },
+              maxWidth: 590
+            }
           },
           {
             resolve: `gatsby-remark-responsive-iframe`,
             options: {
-              wrapperStyle: `margin-bottom: 1.0725rem`,
-            },
+              wrapperStyle: `margin-bottom: 1.0725rem`
+            }
           },
           'gatsby-remark-autolink-headers',
           {
             resolve: 'gatsby-remark-prismjs',
             options: {
-              inlineCodeMarker: '÷',
-            },
+              inlineCodeMarker: '÷'
+            }
           },
           'gatsby-remark-copy-linked-files',
           'gatsby-remark-smartypants',
@@ -66,11 +66,11 @@ module.exports = {
             resolve: 'gatsby-remark-external-links',
             options: {
               target: '_blank',
-              rel: 'noopener noreferrer',
-            },
-          },
-        ],
-      },
+              rel: 'noopener noreferrer'
+            }
+          }
+        ]
+      }
     },
     {
       resolve: `gatsby-plugin-manifest`,
@@ -84,7 +84,7 @@ module.exports = {
         theme_color: `#4b334c`,
         display: `minimal-ui`,
         theme_color_in_head: false
-      },
+      }
     },
     {
       resolve: `gatsby-plugin-google-analytics`,
@@ -95,15 +95,15 @@ module.exports = {
         anonymize: true,
         respectDNT: true,
         // Avoids sending pageview hits from custom paths
-        exclude: ['/preview/**', '/do-not-track/me/too/'],
-      },
+        exclude: ['/preview/**', '/do-not-track/me/too/']
+      }
     },
     {
       resolve: `gatsby-plugin-nprogress`,
       options: {
         color: `#755671`,
-        showSpinner: false,
-      },
+        showSpinner: false
+      }
     },
     `gatsby-plugin-remove-serviceworker`,
     {
@@ -131,7 +131,7 @@ module.exports = {
                   date: edge.node.frontmatter.date,
                   url: site.siteMetadata.siteUrl + edge.node.fields.slug,
                   guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
-                  custom_elements: [{ 'content:encoded': edge.node.html }],
+                  custom_elements: [{ 'content:encoded': edge.node.html }]
                 });
               });
             },
@@ -155,10 +155,10 @@ module.exports = {
               }
             `,
             output: '/feed.xml',
-            title: 'Luiz Ipsum Blog - RSS Feed',
-          },
-        ],
-      },
-    },
-  ],
+            title: 'Luiz Ipsum Blog - RSS Feed'
+          }
+        ]
+      }
+    }
+  ]
 };

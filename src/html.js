@@ -27,7 +27,7 @@ export default function HTML(props) {
               document.querySelector('meta[name="theme-color"]').setAttribute('content', color);
             } catch {}
           })()
-          `,
+          `
         }}
       />
       <body {...props.bodyAttributes}>
@@ -52,5 +52,5 @@ HTML.propTypes = {
   bodyAttributes: PropTypes.object,
   preBodyComponents: PropTypes.array,
   body: PropTypes.string,
-  postBodyComponents: PropTypes.array,
+  postBodyComponents: PropTypes.array
 };

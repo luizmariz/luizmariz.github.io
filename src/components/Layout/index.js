@@ -13,7 +13,7 @@ import {
   Logo,
   LogoContainer,
   Row,
-  ResponsiveToggleBtn,
+  ResponsiveToggleBtn
 } from './styled';
 
 function BasicLayout({ render, children, darkMode, location }) {
@@ -23,8 +23,8 @@ function BasicLayout({ render, children, darkMode, location }) {
         meta={[
           {
             name: 'theme-color',
-            content: darkMode.value ? '#282C35' : '#4B334C',
-          },
+            content: darkMode.value ? '#282C35' : '#4B334C'
+          }
         ]}
       />
       <GlobalStyles />
@@ -37,14 +37,14 @@ function BasicLayout({ render, children, darkMode, location }) {
 }
 
 BasicLayout.defaultProps = {
-  render: () => {},
+  render: () => {}
 };
 
 BasicLayout.propTypes = {
   render: PropTypes.func,
   children: PropTypes.any,
   location: PropTypes.object,
-  darkMode: PropTypes.object.isRequired,
+  darkMode: PropTypes.object.isRequired
 };
 
 function Layout({ children, location }) {

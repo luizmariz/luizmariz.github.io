@@ -75,7 +75,7 @@ function ToggleThemeBtn({ checked, onToggle, className }) {
 
 ToggleThemeBtn.propTypes = {
   checked: PropTypes.bool.isRequired,
-  onToggle: PropTypes.func.isRequired,
+  onToggle: PropTypes.func.isRequired
 };
 
 export default ToggleThemeBtn;

@@ -65,8 +65,8 @@ function BlogPostTemplate({ data, pageContext, location }) {
         meta={[
           {
             property: 'og:type',
-            content: 'article',
-          },
+            content: 'article'
+          }
         ]}
         title={frontmatter.title}
         description={frontmatter.summary}
