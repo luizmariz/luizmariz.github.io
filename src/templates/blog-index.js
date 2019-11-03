@@ -32,7 +32,7 @@ const PostsContainer = styled.div`
     display: flex;
     align-items: center;
     margin-bottom: 0.5rem;
-    color: rgba(var(--text), 0.5);
+    color: rgba(var(--text), 0.7);
   }
 
   svg {
@@ -67,7 +67,11 @@ function BlogIndexTemplate({ data, location }) {
           {posts.map(({ node }) => {
             return (
               <article key={node.fields.slug}>
-                <Link to={node.fields.slug} className="anchor">
+                <Link
+                  to={node.fields.slug}
+                  className="anchor"
+                  rel='bookmark'
+                >
                   <Card>
                     <header>
                       <small>

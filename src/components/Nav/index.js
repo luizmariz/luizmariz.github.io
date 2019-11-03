@@ -21,7 +21,10 @@ function Nav({ checked, onToggle }) {
 
   return (
     <React.Fragment>
-      <NavSideMenu onClick={toggleMenu}>
+      <NavSideMenu
+        onClick={toggleMenu}
+        aria-label="Side menu"
+      >
         <MdMenu />
       </NavSideMenu>
       <MobMenuContainer animate={showMobMenu}>
@@ -40,16 +43,18 @@ function Nav({ checked, onToggle }) {
         <hr />
       </MobMenuContainer>
       <NavContainer>
-        <NavLink>
-          <Link to="/" className="anchor">
-            Início
-          </Link>
-        </NavLink>
-        <NavLink>
-          <Link to="/about" className="anchor">
-            Sobre mim
-          </Link>
-        </NavLink>
+        <ul>
+          <NavLink>
+            <Link to="/" className="anchor">
+              Início
+            </Link>
+          </NavLink>
+          <NavLink>
+            <Link to="/about" className="anchor">
+              Sobre mim
+            </Link>
+          </NavLink>
+        </ul>
       </NavContainer>
     </React.Fragment>
   );

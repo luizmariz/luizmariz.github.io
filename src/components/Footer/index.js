@@ -13,6 +13,7 @@ function Footer() {
               className="anchor"
               href="https://linkedin.com/in/luiz-mariz"
               target="_blank"
+              title="LinkedIn"
               rel="noopener noreferrer"
             >
               <Linkedin />
@@ -21,6 +22,7 @@ function Footer() {
               className="anchor"
               href="https://github.com/luizmariz"
               target="_blank"
+              title="Github"
               rel="noopener noreferrer"
             >
               <Github />

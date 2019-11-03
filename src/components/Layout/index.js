@@ -65,8 +65,12 @@ function Layout({ children, location }) {
             <Nav checked={darkMode.value} onToggle={darkMode.toggle} />
             <LogoContainer>
               <Row>
-                <Link to="/" className="anchor">
-                  <Logo />
+                <Link
+                  to="/"
+                  className="anchor"
+                  aria-label="Go to home page"
+                >
+                  <Logo alt="Luiz Ipsum" />
                 </Link>
                 <BlogTitle>
                   {location.pathname === '/' ? (

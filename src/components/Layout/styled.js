@@ -145,7 +145,7 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   time {
-    color: rgba(var(--text), .5);
+    color: rgba(var(--text), .7);
   }
 
   /* Code */

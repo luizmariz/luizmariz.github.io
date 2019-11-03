@@ -58,7 +58,12 @@ const Switch = styled.label`
 function ToggleThemeBtn({ checked, onToggle, className }) {
   return (
     <Switch className={className}>
-      <input checked={checked} type="checkbox" onChange={onToggle} />
+      <input
+        checked={checked}
+        type="checkbox"
+        onChange={onToggle}
+        label="toggle-theme-btn"
+      />
       <Slider darkMode={checked}>
         <MdBrightnessLow color="#D4D400" size="1.2rem" />
         <MdBrightness2 color="#FFFFFF" size="1.3rem" />

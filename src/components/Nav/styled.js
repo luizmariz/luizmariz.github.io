@@ -2,10 +2,13 @@ import styled from 'styled-components';
 import { SubTitle } from '../shared/styled';
 
 export const NavContainer = styled.nav`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-end;
+  ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    margin: 0;
+  }
 
   @media (max-width: 672px) {
     display: none;
@@ -34,6 +37,7 @@ export const NavSideMenu = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 100;
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
 
