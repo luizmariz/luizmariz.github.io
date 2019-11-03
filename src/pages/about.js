@@ -1,9 +1,10 @@
 import React from 'react';
 import Layout from '../components/Layout';
 import styled from 'styled-components';
-import img from '../assets/images/photo.png';
-import SEO from '../components/SEO';
+import { useStaticQuery, graphql } from 'gatsby'
 import { SubTitle } from '../components/shared/styled';
+import SEO from '../components/SEO';
+import Img from 'gatsby-image';
 
 const Title = styled.h1`
   color: #ffffff;
@@ -33,12 +34,10 @@ const Column = styled.div`
   padding-left: 1rem;
 `;
 
-const Img = styled.img`
+const StyledImg = styled(Img)`
   vertical-align: middle;
   object-fit: cover;
   border-radius: 50%;
-  width: 4.5rem;
-  height: 4.5rem;
 `;
 
 const Name = styled.div`
@@ -78,6 +77,20 @@ const Content = styled.article`
 `;
 
 function AboutPage({ location }) {
+  const { avatar } = useStaticQuery(
+    graphql`
+      query {
+        avatar: file(relativePath: {eq:"photo.png"}) {
+          childImageSharp {
+            fixed(width: 70, height: 70) {
+              ...GatsbyImageSharpFixed
+            }
+          }
+        }
+      }
+    `
+  );
+
   return (
     <Layout location={location}>
       <SEO
@@ -91,7 +104,12 @@ function AboutPage({ location }) {
         </div>
       </header>
       <Row>
-        <Img src={img} alt="blog author image" />
+        <StyledImg
+          alt="Imagem do autor do blog"
+          fixed={avatar.childImageSharp.fixed}
+          draggable={false}
+          fadeIn={false}
+        />
         <Column>
           <Name>Luiz Gustavo Oliveira Mariz</Name>
           <Description>desenvolvedor frontend</Description>

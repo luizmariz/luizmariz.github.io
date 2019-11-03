@@ -1,6 +1,7 @@
 import React from 'react';
-import { Link } from 'gatsby';
+import { useStaticQuery, graphql, Link } from 'gatsby'
 import styled from 'styled-components';
+import Img from 'gatsby-image';
 import img from '../../assets/images/photo.png';
 
 const Row = styled.div`
@@ -32,29 +33,45 @@ const Column = styled.div`
   }
 `;
 
-const Img = styled.img`
+const StyledImg = styled(Img)`
   vertical-align: middle;
   object-fit: cover;
   border-radius: 50%;
-  width: 3.5rem;
-  height: 3.5rem;
 `;
 
 function Bio() {
+  const { avatar } = useStaticQuery(
+    graphql`
+      query {
+        avatar: file(relativePath: {eq:"photo.png"}) {
+          childImageSharp {
+            fixed(width: 55, height: 55) {
+              ...GatsbyImageSharpFixed
+            }
+          }
+        }
+      }
+    `
+  );
+
   return (
     <Row>
-      <Img src={img} alt="blog author image" />
+      <StyledImg
+        alt="Imagem do autor do blog"
+        fixed={avatar.childImageSharp.fixed}
+        draggable={false}
+      />
       <Column>
         <p>
           Blog por <Link to="/about">Luiz Gustavo</Link>
           {'\n'}
           <code>
             ['
-            <span role="img" aria-label="egg">
+            <span role="img" aria-label="ovo">
               🥚
             </span>
             ', '
-            <span role="img" aria-label="chicken">
+            <span role="img" aria-label="galinha">
               🐔
             </span>
             '].sort()

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'gatsby';
+import { useStaticQuery, graphql, Link } from 'gatsby'
 import PropTypes from 'prop-types';
 import useDarkMode from 'use-dark-mode';
 import Helmet from 'react-helmet';
@@ -49,6 +49,28 @@ BasicLayout.propTypes = {
 
 function Layout({ children, location }) {
   const darkMode = useDarkMode();
+  const { logoDark, logoLight } = useStaticQuery(
+    graphql`
+      query {
+        logoDark: file(relativePath: {eq:"logo-cute-purple.png"}) {
+          childImageSharp {
+            fixed(width: 70, height: 70) {
+              ...GatsbyImageSharpFixed
+            }
+          }
+        },
+        logoLight: file(relativePath: {eq:"logo-purple.png"}) {
+          childImageSharp {
+            fixed(width: 70, height: 70) {
+              ...GatsbyImageSharpFixed
+            }
+          }
+        }
+      }
+    `
+  );
+
+  const logo = darkMode.value ? logoDark : logoLight;
 
   if (location.pathname === '/404') {
     return <BasicLayout children={children} darkMode={darkMode} />;
@@ -68,9 +90,15 @@ function Layout({ children, location }) {
                 <Link
                   to="/"
                   className="anchor"
-                  aria-label="Go to home page"
+                  aria-label="Ir para a página principal"
                 >
-                  <Logo alt="Luiz Ipsum" />
+                  <Logo
+                    alt="Luiz Ipsum"
+                    fixed={logo.childImageSharp.fixed}
+                    draggable={false}
+                    fadeIn={false}
+                    loading={"eager"}
+                  />
                 </Link>
                 <BlogTitle>
                   {location.pathname === '/' ? (
