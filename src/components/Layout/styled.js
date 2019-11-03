@@ -1,4 +1,5 @@
 import styled, { createGlobalStyle } from 'styled-components';
+import ToggleThemeBtn from '../../components/shared/ToggleThemeBtn';
 import lightLink from '../../assets/images/light-link.svg';
 import darkLink from '../../assets/images/dark-link.svg';
 
@@ -251,4 +252,10 @@ export const Row = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
+`;
+
+export const ResponsiveToggleBtn = styled(ToggleThemeBtn)`
+  @media (max-width: 672px) {
+    display: none;
+  }
 `;

@@ -6,6 +6,10 @@ export const NavContainer = styled.nav`
   flex-direction: row;
   align-items: center;
   justify-content: flex-end;
+
+  @media (max-width: 672px) {
+    display: none;
+  }
 `;
 
 export const NavLink = styled.li`
@@ -36,6 +40,10 @@ export const NavSideMenu = styled.div`
   & > svg {
     font-size: 2.1rem;
     color: #333333;
+  }
+
+  @media (min-width: 672px) {
+    display: none;
   }
 `;
 
@@ -72,6 +80,10 @@ export const MobMenuContainer = styled.div`
     opacity 0.2s cubic-bezier(0, 0.995, 0.99, 1);
   transition: background-color 0.2s ease-in,
     opacity 0.2s cubic-bezier(0, 0.995, 0.99, 1);
+
+    @media (min-width: 672px) {
+      display: none;
+    }
 `;
 
 export const MenuTitle = styled(SubTitle)`

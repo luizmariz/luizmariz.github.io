@@ -1,14 +1,12 @@
 import React from 'react';
-import { useMediaQuery } from 'react-responsive';
 import { Link } from 'gatsby';
-import PropTypes, { func } from 'prop-types';
+import PropTypes from 'prop-types';
 import useDarkMode from 'use-dark-mode';
 import Helmet from 'react-helmet';
 import logoLight from '../../assets/images/logo-purple.png';
 import logoDark from '../../assets/images/logo-cute-purple.png';
 import Nav from '../Nav';
 import Footer from '../Footer';
-import ToggleThemeBtn from '../../components/shared/ToggleThemeBtn';
 import {
   GlobalStyles,
   Container,
@@ -17,6 +15,7 @@ import {
   Logo,
   LogoContainer,
   Row,
+  ResponsiveToggleBtn
 } from './styled';
 
 
@@ -52,7 +51,6 @@ BasicLayout.propTypes = {
 
 function Layout ({ children, location }) {
   const darkMode = useDarkMode(false);
-  const isMobile = useMediaQuery({ query: '(max-width: 672px)' });
 
   const handleToggleTheme = () => {
     darkMode.toggle();
@@ -71,30 +69,28 @@ function Layout ({ children, location }) {
             <header>
               <Nav darkMode={darkMode.value} onToggle={handleToggleTheme} />
               <LogoContainer>
-                <Row>
-                  <Link to="/" className="anchor">
-                    <Logo src={darkMode.value ? logoDark : logoLight} />
-                  </Link>
-                  <BlogTitle>
-                    {
-                      location.pathname === '/'
-                        ? <h1>luiz ipsum</h1>
-                        : <h3>luiz ipsum</h3>
-                    }
-                  </BlogTitle>
-                </Row>
-                {!isMobile && (
-                  <ToggleThemeBtn
-                    darkMode={darkMode.value}
-                    onToggle={handleToggleTheme}
-                  />
-                )}
-              </LogoContainer>
-            </header>
-          )}
-        />
-        <Footer />
-      </React.Fragment>
+              <Row>
+                <Link to="/" className="anchor">
+                  <Logo src={darkMode.value ? logoDark : logoLight} />
+                </Link>
+                <BlogTitle>
+                  {
+                    location.pathname === '/'
+                      ? <h1>luiz ipsum</h1>
+                      : <h3>luiz ipsum</h3>
+                  }
+                </BlogTitle>
+              </Row>
+              <ResponsiveToggleBtn
+                darkMode={darkMode.value}
+                onToggle={handleToggleTheme}
+              />
+            </LogoContainer>
+          </header>
+        )}
+      />
+      <Footer />
+    </React.Fragment>
   );
 }
 

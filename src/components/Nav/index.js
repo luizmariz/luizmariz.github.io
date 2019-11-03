@@ -21,42 +21,38 @@ function Nav({ darkMode, onToggle }) {
   };
 
   return (
-    <MediaQuery query='(max-width: 672px)'>
-      {matches => matches
-        ? <React.Fragment>
-            <NavSideMenu onClick={toggleMenu}>
-              <MdMenu />
-            </NavSideMenu>
-            <MobMenuContainer animate={showMobMenu}>
-              <MdClose onClick={toggleMenu} />
-              <Row>
-                <MenuTitle>m e n u</MenuTitle>
-                <ToggleThemeBtn darkMode={darkMode} onToggle={onToggle} />
-              </Row>
-              <Link to="/" className="anchor">
-                Início
-              </Link>
-              <hr />
-              <Link to="/about" className="anchor">
-                Sobre mim
-              </Link>
-              <hr />
-            </MobMenuContainer>
-          </React.Fragment>
-        : <NavContainer>
-            <NavLink>
-              <Link to="/" className="anchor">
-                Início
-              </Link>
-            </NavLink>
-            <NavLink>
-              <Link to="/about" className="anchor">
-                Sobre mim
-              </Link>
-            </NavLink>
-         </NavContainer>
-      }
-    </MediaQuery>
+   <React.Fragment>
+    <NavSideMenu onClick={toggleMenu}>
+      <MdMenu />
+    </NavSideMenu>
+    <MobMenuContainer animate={showMobMenu}>
+      <MdClose onClick={toggleMenu} />
+      <Row>
+        <MenuTitle>m e n u</MenuTitle>
+        <ToggleThemeBtn darkMode={darkMode} onToggle={onToggle} />
+      </Row>
+      <Link to="/" className="anchor">
+        Início
+      </Link>
+      <hr />
+      <Link to="/about" className="anchor">
+        Sobre mim
+      </Link>
+      <hr />
+    </MobMenuContainer>
+    <NavContainer>
+      <NavLink>
+        <Link to="/" className="anchor">
+          Início
+        </Link>
+      </NavLink>
+      <NavLink>
+        <Link to="/about" className="anchor">
+          Sobre mim
+        </Link>
+      </NavLink>
+    </NavContainer>
+    </React.Fragment>
   );
 }
 
