@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import MediaQuery from 'react-responsive';
 import { MdMenu, MdClose } from 'react-icons/md';
 import ToggleThemeBtn from '../shared/ToggleThemeBtn';
 import { Link } from 'gatsby';

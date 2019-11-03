@@ -50,11 +50,7 @@ BasicLayout.propTypes = {
 }
 
 function Layout ({ children, location }) {
-  const darkMode = useDarkMode(false);
-
-  const handleToggleTheme = () => {
-    darkMode.toggle();
-  };
+  const darkMode = useDarkMode();
 
   if (location.pathname === '/404') {
     return <BasicLayout children={children} darkMode={darkMode.value} />
@@ -67,7 +63,7 @@ function Layout ({ children, location }) {
           darkMode={darkMode.value}
           render={() => (
             <header>
-              <Nav darkMode={darkMode.value} onToggle={handleToggleTheme} />
+              <Nav darkMode={darkMode.value} onToggle={darkMode.toggle} />
               <LogoContainer>
               <Row>
                 <Link to="/" className="anchor">
@@ -83,7 +79,7 @@ function Layout ({ children, location }) {
               </Row>
               <ResponsiveToggleBtn
                 darkMode={darkMode.value}
-                onToggle={handleToggleTheme}
+                onToggle={darkMode.toggle}
               />
             </LogoContainer>
           </header>
