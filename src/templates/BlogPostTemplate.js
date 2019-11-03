@@ -62,6 +62,10 @@ function BlogPostTemplate({ data, pageContext, location }) {
   return (
     <Layout location={location}>
       <SEO
+        meta={{
+          property: 'og:type',
+          content: 'article',
+        }}
         title={frontmatter.title}
         description={frontmatter.summary}
         slug={slug}

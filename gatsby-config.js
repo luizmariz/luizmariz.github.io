@@ -83,6 +83,6 @@ module.exports = {
         showSpinner: false,
       },
     },
-    `gatsby-plugin-offline`
+    `gatsby-plugin-remove-serviceworker`
   ],
 };
