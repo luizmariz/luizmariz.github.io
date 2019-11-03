@@ -35,7 +35,9 @@ func soAceitaUm (num int) (int, error) {
 ```
 > Você pode nunca lidar com os seus erros, só não deve
 
-Muito texto já né, então segue uma pseudo playlist by Lonely Islands:
+##Conclusão
+
+Muito texto já né, segue uma pseudo playlist by Lonely Islands:
   - [Oakland Nights][2]
   - [I'm So Humble][3]
   - [Great Day][4]
