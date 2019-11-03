@@ -11,16 +11,30 @@ export default function HTML(props) {
           name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
+        <meta name="theme-color" content="" data-react-helmet="true" />
         {props.headComponents}
       </head>
+      {/*
+        TODO: handle theme-color flash when in dark-mode without that
+        workaround
+      */}
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `
+          (() => {
+            try {
+              const color = localStorage.getItem("darkMode") === "true" ? '#282C35' : '#4B334C';
+              document.querySelector('meta[name="theme-color"]').setAttribute('content', color);
+            } catch {}
+          })()
+          `,
+        }}
+      />
       <body {...props.bodyAttributes}>
-        {/*
-          At this case, inject a global var is harmless
-          and works better to set initial theme
-          than useEffect on Layout.js
-        */}
-
         {props.preBodyComponents}
+        <noscript key="noscript" id="gatsby-noscript">
+          This app works best with JavaScript enabled.
+        </noscript>
         <div
           key={`body`}
           id="___gatsby"

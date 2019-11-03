@@ -19,7 +19,6 @@ import {
 function BasicLayout({ render, children, darkMode, location }) {
   return (
     <React.Fragment>
-      {/* TODO: handle theme-color flash when in dark-mode */}
       <Helmet
         meta={[
           {
