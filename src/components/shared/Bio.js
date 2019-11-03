@@ -1,5 +1,5 @@
 import React from 'react';
-import { useStaticQuery, graphql, Link } from 'gatsby'
+import { useStaticQuery, graphql, Link } from 'gatsby';
 import styled from 'styled-components';
 import Img from 'gatsby-image';
 
@@ -42,7 +42,7 @@ function Bio() {
   const { avatar } = useStaticQuery(
     graphql`
       query {
-        avatar: file(relativePath: {eq:"photo.png"}) {
+        avatar: file(relativePath: { eq: "photo.png" }) {
           childImageSharp {
             fixed(width: 55, height: 55) {
               ...GatsbyImageSharpFixed

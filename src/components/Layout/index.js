@@ -1,5 +1,5 @@
 import React from 'react';
-import { useStaticQuery, graphql, Link } from 'gatsby'
+import { useStaticQuery, graphql, Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import useDarkMode from 'use-dark-mode';
 import Helmet from 'react-helmet';
@@ -52,14 +52,14 @@ function Layout({ children, location }) {
   const { logoDark, logoLight } = useStaticQuery(
     graphql`
       query {
-        logoDark: file(relativePath: {eq:"logo-cute-purple.png"}) {
+        logoDark: file(relativePath: { eq: "logo-cute-purple.png" }) {
           childImageSharp {
             fixed(width: 70, height: 70) {
               ...GatsbyImageSharpFixed
             }
           }
-        },
-        logoLight: file(relativePath: {eq:"logo-purple.png"}) {
+        }
+        logoLight: file(relativePath: { eq: "logo-purple.png" }) {
           childImageSharp {
             fixed(width: 70, height: 70) {
               ...GatsbyImageSharpFixed
@@ -91,20 +91,20 @@ function Layout({ children, location }) {
                   aria-label="Ir para a página principal"
                 >
                   <Logo
-                    className='dark'
+                    className="dark"
                     alt="Luiz Ipsum"
                     fixed={logoDark.childImageSharp.fixed}
                     draggable={false}
                     fadeIn={false}
-                    loading={"eager"}
+                    loading={'eager'}
                   />
                   <Logo
-                    className='light'
+                    className="light"
                     alt="Luiz Ipsum"
                     fixed={logoLight.childImageSharp.fixed}
                     draggable={false}
                     fadeIn={false}
-                    loading={"eager"}
+                    loading={'eager'}
                   />
                 </Link>
                 <BlogTitle>

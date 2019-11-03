@@ -67,11 +67,7 @@ function BlogIndexTemplate({ data, location }) {
           {posts.map(({ node }) => {
             return (
               <article key={node.fields.slug}>
-                <Link
-                  to={node.fields.slug}
-                  className="anchor"
-                  rel='bookmark'
-                >
+                <Link to={node.fields.slug} className="anchor" rel="bookmark">
                   <Card>
                     <header>
                       <small>

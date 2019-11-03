@@ -21,10 +21,7 @@ function Nav({ checked, onToggle }) {
 
   return (
     <React.Fragment>
-      <NavSideMenu
-        onClick={toggleMenu}
-        aria-label="Side menu"
-      >
+      <NavSideMenu onClick={toggleMenu} aria-label="Side menu">
         <MdMenu />
       </NavSideMenu>
       <MobMenuContainer animate={showMobMenu}>

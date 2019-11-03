@@ -1,7 +1,7 @@
 import React from 'react';
 import Layout from '../components/Layout';
 import styled from 'styled-components';
-import { useStaticQuery, graphql } from 'gatsby'
+import { useStaticQuery, graphql } from 'gatsby';
 import { SubTitle } from '../components/shared/styled';
 import SEO from '../components/SEO';
 import Img from 'gatsby-image';
@@ -80,7 +80,7 @@ function AboutPage({ location }) {
   const { avatar } = useStaticQuery(
     graphql`
       query {
-        avatar: file(relativePath: {eq:"photo.png"}) {
+        avatar: file(relativePath: { eq: "photo.png" }) {
           childImageSharp {
             fixed(width: 70, height: 70) {
               ...GatsbyImageSharpFixed
