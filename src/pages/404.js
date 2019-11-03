@@ -49,8 +49,6 @@ const Container = styled.div`
 `;
 
 function PageNotFound() {
-  const isDarkMode = useDarkMode(false);
-
   return (
     <Fragment>
       <SEO title="404: Not found" />
