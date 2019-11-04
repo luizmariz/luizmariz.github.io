@@ -9,13 +9,13 @@ tags: teste
 
 Falta de criatividade? talvez. Mas acredito ser o mais puro desespero de ver esse MVP sair. E, após meses de curadoria das docs do [Gatsby][0], aqui estamos.
 
-Outro ponto positivo de escrever uma coisa bem aleátoria é poder usar e abusar do `Markdown` pra testar o comportamento do blog fazendo, por exemplo, uma crítica pra lá de construtiva ao golang com um meme.
+Outro ponto positivo de escrever uma coisa bem aleátoria é poder usar e abusar do Markdown e testar o comportamento do blog fazendo, por exemplo, uma crítica pra lá de construtiva ao golang com um meme.
 
 ![meme do bart escrevendo no quadro negro](./bart-meme.png)
 
-Mas o que seria um blog de desenvolvimento sem links e exemplos né. Então se ficou interessado no jeito que o Go lida com os erros é só clicar [aqui][1]. Anyway, exemplo nunca é de mais né.
+Mas o que seria um blog de desenvolvimento sem links e exemplos né. Então se ficou interessado no jeito que o Go lida com os erros, o [goporexemplo][1] é um site bem legal. Anyway, exemplo nunca é de mais:
 
-```go
+```go{11}
 package main
 
 import "errors"
@@ -36,7 +36,7 @@ func soAceitaUm (num int) (int, error) {
 
 ##Conclusão
 
-Muito texto já né, segue uma pseudo playlist by Lonely Islands:
+Enfim, já tem muito texto. Segue uma pseudo playlist by The Lonely Island pra passar o tempo:
   - [Oakland Nights][2]
   - [I'm So Humble][3]
   - [Great Day][4]

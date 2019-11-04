@@ -164,12 +164,17 @@ export const GlobalStyles = createGlobalStyle`
     border-left: 0.35rem solid;
     border-left-color: inherit;
     opacity: 0.8;
+    font-family: 'Fira Code Light';
   }
 
   .gatsby-highlight-code-line {
+    background-color: #75567144;
     display: block;
     padding-right: 1em;
-    padding-left: 13em;
+    padding-left: 1.25em;
+    border-left: 0.25em solid #FFD1D0;
+    margin-right: -1.3rem;
+    margin-left: -1.3rem;
   }
 
   .gatsby-highlight {
@@ -178,10 +183,6 @@ export const GlobalStyles = createGlobalStyle`
     background-color: #4B334C;
     -webkit-overflow-scrolling: touch;
     overflow: auto;
-  }
-
-  .gatsby-highlight,
-  .gatsby-highlight-code-line {
     margin-right: -1.3rem;
     margin-left: -1.3rem;
   }
@@ -206,6 +207,7 @@ export const GlobalStyles = createGlobalStyle`
       margin-left: -1.3rem;
       margin-right: 0;
       padding-left: 1rem;
+      font-family: 'Fira Code Light';
     }
   }
 `;

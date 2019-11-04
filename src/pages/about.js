@@ -134,9 +134,9 @@ function AboutPage({ location }) {
         <p>
           Apesar de vender meu peixe como dev react, lido bastante com backend,
           me aventurei em projetos de IoT e em outras perólas da programação. No
-          fim, não importa a linguagem, tecnologia ou paradigma porque a
+          fim, não importa a linguagem, tecnologia ou paradigma, a
           sensação mais legal é ver alguma coisa que você fez funcionando linda
-          e maravilhosa. E, no geral, aprendo bem as coisas.
+          e maravilhosa. E, no geral, aprendo bem.
         </p>
         <SubTitle>projetos</SubTitle>
         <AnchorList>
