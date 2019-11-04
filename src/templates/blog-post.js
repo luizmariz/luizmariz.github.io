@@ -58,6 +58,7 @@ function BlogPostTemplate({ data, pageContext, location }) {
   const { frontmatter, html } = markdownRemark;
   const { minutes } = markdownRemark.fields.readingTime;
   const { previous, next, slug } = pageContext;
+  const timestamp = formatTimestamp(frontmatter.date, minutes);
 
   return (
     <Layout location={location}>
@@ -72,7 +73,7 @@ function BlogPostTemplate({ data, pageContext, location }) {
         <article>
           <header>
             <h1>{frontmatter.title}</h1>
-            <time>{formatTimestamp(frontmatter.date, minutes)}</time>
+            <time>{timestamp}</time>
           </header>
           <div dangerouslySetInnerHTML={{ __html: html }} />
         </article>

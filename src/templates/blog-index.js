@@ -65,6 +65,11 @@ function BlogIndexTemplate({ data, location }) {
       <main>
         <PostsContainer>
           {posts.map(({ node }) => {
+            const timestamp = formatTimestamp(
+              node.frontmatter.date,
+              node.fields.readingTime.minutes
+            );
+
             return (
               <article key={node.fields.slug}>
                 <Link to={node.fields.slug} className="anchor" rel="bookmark">
@@ -75,12 +80,7 @@ function BlogIndexTemplate({ data, location }) {
                         {node.frontmatter.tags}
                       </small>
                       <h2>{node.frontmatter.title}</h2>
-                      <time>
-                        {formatTimestamp(
-                          node.frontmatter.date,
-                          node.fields.readingTime.minutes
-                        )}
-                      </time>
+                      <time>{timestamp}</time>
                     </header>
                     <p>{node.frontmatter.summary}</p>
                   </Card>

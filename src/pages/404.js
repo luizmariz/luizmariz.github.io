@@ -1,7 +1,6 @@
 import React, { Fragment } from 'react';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
-import useDarkMode from 'use-dark-mode';
 import ovniLight from '../assets/images/ovni404Light.svg';
 import ovniDark from '../assets/images/ovni404Dark.svg';
 import Layout from '../components/Layout';
