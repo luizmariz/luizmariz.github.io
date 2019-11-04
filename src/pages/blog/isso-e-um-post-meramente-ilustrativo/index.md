@@ -13,7 +13,7 @@ Outro ponto positivo de escrever uma coisa bem aleátoria é poder usar e abusar
 
 ![meme do bart escrevendo no quadro negro](./bart-meme.png)
 
-Mas o que seria um blog de desenvolvimento sem links e exemplos né. Então se ficou interessado no jeito que o Go lida com os erros, o [goporexemplo][1] é um site bem legal. Anyway, exemplo nunca é de mais:
+Mas o que seria um blog de desenvolvimento sem links e exemplos. Então, se ficou interessado no jeito que o Go lida com os erros, é só dar uma olhada aqui no [go por exemplo][1], é um site bem legal. Anyway, um pouco de código vai bem para testar o blog né:
 
 ```go{11}
 package main
