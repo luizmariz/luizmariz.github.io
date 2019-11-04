@@ -59,6 +59,7 @@ function BlogPostTemplate({ data, pageContext, location }) {
   const { minutes } = markdownRemark.fields.readingTime;
   const { previous, next, slug } = pageContext;
   const timestamp = formatTimestamp(frontmatter.date, minutes);
+  console.log(timestamp);
 
   return (
     <Layout location={location}>
