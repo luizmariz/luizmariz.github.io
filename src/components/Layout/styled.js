@@ -138,7 +138,7 @@ export const GlobalStyles = createGlobalStyle`
   hr {
     margin-top: 0;
     margin-bottom: calc(1.75rem - 1px);
-    background: rgba(var(--text), .2);
+    background: rgba(var(--text), .3);
     border: none;
     height: 1px;
   }

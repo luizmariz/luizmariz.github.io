@@ -58,7 +58,7 @@ const StyledHr = styled.hr`
 `;
 
 const Skills = styled.p`
-  opacity: 0.4;
+  opacity: 0.5;
 `;
 
 const AnchorList = styled.section`
