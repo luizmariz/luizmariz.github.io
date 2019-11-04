@@ -1,24 +1,29 @@
 @font-face {
   font-family: 'Fira Code';
   src: url('./FiraCode-Regular.ttf');
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'Fira Code Light';
   src: url('./FiraCode-Light.ttf');
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'Fira Code SemiBold';
   src: url('./FiraCode-SemiBold.ttf');
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'Fira Code Bold';
   src: url('./FiraCode-Bold.ttf');
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'Fira Code Medium';
   src: url('./FiraCode-Medium.ttf');
+  font-display: swap;
 }
