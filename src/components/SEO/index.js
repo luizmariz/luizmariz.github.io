@@ -17,7 +17,7 @@ const query = graphql`
   }
 `;
 
-function SEO({ meta, title, description, image, keywords, slug, lang }) {
+function SEO({ meta, title, description, image, keywords, slug, lang, type }) {
   const data = useStaticQuery(query);
   const { siteMetadata } = data.site;
   const url = `${siteMetadata.siteUrl}${slug}`;
@@ -59,6 +59,10 @@ function SEO({ meta, title, description, image, keywords, slug, lang }) {
           content: siteDescription
         },
         {
+          property: 'og:type',
+          content: type
+        },
+        {
           name: 'twitter:card',
           content: 'summary'
         },
@@ -94,7 +98,8 @@ SEO.defaultProps = {
   meta: [],
   title: '',
   slug: '',
-  lang: 'pt-br'
+  lang: 'pt-br',
+  type: 'website'
 };
 
 SEO.propTypes = {
@@ -102,8 +107,10 @@ SEO.propTypes = {
   image: PropTypes.string,
   meta: PropTypes.array,
   slug: PropTypes.string,
-  title: PropTypes.string.isRequired,
-  keywords: PropTypes.string
+  title: PropTypes.string,
+  keywords: PropTypes.string,
+  lang: PropTypes.string,
+  type: PropTypes.string
 };
 
 export default SEO;
