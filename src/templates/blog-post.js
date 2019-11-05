@@ -48,8 +48,6 @@ export const BlogIndex = styled(Link)`
     margin-block-end: 0.2em;
     font-size: 1.5rem;
     color: var(--primary);
-    font-weight: normal;
-    font-family: 'Fira Code SemiBold';
   }
 `;
 

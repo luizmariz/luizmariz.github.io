@@ -15,6 +15,15 @@ module.exports = {
         minify: true
       }
     },
+    {
+      resolve: `gatsby-plugin-web-font-loader`,
+      options: {
+        custom: {
+          families: ['Fira Code'],
+          urls: [`${__dirname}/src/assets/fonts/fonts.css`]
+        }
+      }
+    },
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sitemap`,

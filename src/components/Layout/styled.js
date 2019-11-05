@@ -79,18 +79,20 @@ export const GlobalStyles = createGlobalStyle`
     padding: 0;
     margin-bottom: 1.5rem;
     color: inherit;
-    font-family: 'Fira Code Bold';
+    font-weight: 700;
     text-rendering: optimizeLegibility;
     font-size: 2.5rem;
     line-height: 1.1;
-    font-weight: normal;
   }
 
   h2 {
     margin-top: 2rem;
-    font-weight: normal;
-    font-family: 'Fira Code SemiBold';
+    font-weight: 600;
     line-height: 2rem;
+  }
+
+  h3 {
+    font-weight: 500;
   }
 
   p {
@@ -164,9 +166,19 @@ export const GlobalStyles = createGlobalStyle`
     border-left: 0.35rem solid;
     border-left-color: inherit;
     opacity: 0.8;
-    font-family: 'Fira Code Light';
+    font-weight: 300;
   }
 
+
+.gatsby-highlight {
+  margin-bottom: 1.75rem;
+  margin-left: -1.3125rem;
+  margin-right: -1.3125rem;
+  border-radius: 10px;
+  background: #011627;
+  -webkit-overflow-scrolling: touch;
+  overflow: auto;
+}
   .gatsby-highlight-code-line {
     background-color: #75567144;
     display: block;
@@ -207,8 +219,13 @@ export const GlobalStyles = createGlobalStyle`
       margin-left: -1.3rem;
       margin-right: 0;
       padding-left: 1rem;
-      font-family: 'Fira Code Light';
+      font-weight: 300;
     }
+  }
+
+  .gatsby-highlight pre[class*='language-'] {
+    float: left;
+    min-width: 100%;
   }
 `;
 
@@ -231,7 +248,7 @@ export const BlogTitle = styled.div`
     margin: 0;
     color: var(--primary);
     font-size: 1.5rem;
-    font-family: 'Fira Code SemiBold';
+    font-weight: 500;
   }
 
   h3 {
@@ -241,8 +258,7 @@ export const BlogTitle = styled.div`
     display: none;
     font-size: 1.5rem;
     color: var(--primary);
-    font-weight: normal;
-    font-family: 'Fira Code SemiBold';
+    font-weight: 500;
     -webkit-tap-highlight-color: transparent;
   }
 `;

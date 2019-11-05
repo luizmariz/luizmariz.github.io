@@ -18,7 +18,6 @@ const PostsContainer = styled.div`
   h2 {
     margin-bottom: 1.5rem;
     margin-top: 0;
-    font-family: 'Fira Code Medium';
     color: var(--secondary);
   }
 
