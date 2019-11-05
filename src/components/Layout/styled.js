@@ -210,7 +210,7 @@ export const GlobalStyles = createGlobalStyle`
       padding-left: 1rem;
 
       p {
-        text-align: center;
+        padding: 0 1.3rem;
       }
     }
   }
