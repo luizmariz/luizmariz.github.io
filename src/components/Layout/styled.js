@@ -12,7 +12,7 @@ export const Logo = styled(Img)`
 
 export const GlobalStyles = createGlobalStyle`
   html {
-    font: 100%/1.75 'Fira Code';
+    font: 100%/1.75 'Fira Code VF';
     box-sizing: border-box;
     overflow-y: scroll;
   }
@@ -161,24 +161,13 @@ export const GlobalStyles = createGlobalStyle`
     padding-top: 0;
     font-size: 1.2rem;
     line-height: 1.75rem;
-    color: inherit;
     font-style: italic;
     border-left: 0.35rem solid;
-    border-left-color: inherit;
-    opacity: 0.8;
     font-weight: 300;
+    border-left-color: #755671;
+    color: inherit;
   }
 
-
-.gatsby-highlight {
-  margin-bottom: 1.75rem;
-  margin-left: -1.3125rem;
-  margin-right: -1.3125rem;
-  border-radius: 10px;
-  background: #011627;
-  -webkit-overflow-scrolling: touch;
-  overflow: auto;
-}
   .gatsby-highlight-code-line {
     background-color: #75567144;
     display: block;
@@ -219,7 +208,10 @@ export const GlobalStyles = createGlobalStyle`
       margin-left: -1.3rem;
       margin-right: 0;
       padding-left: 1rem;
-      font-weight: 300;
+
+      p {
+        text-align: center;
+      }
     }
   }
 
@@ -240,7 +232,7 @@ export const PageContent = styled.div`
 `;
 
 export const BlogTitle = styled.div`
-  margin-left: 0.5rem;
+  margin-left: 0.2rem;
   text-transform: uppercase;
   display: flex;
 
@@ -248,7 +240,7 @@ export const BlogTitle = styled.div`
     margin: 0;
     color: var(--primary);
     font-size: 1.5rem;
-    font-weight: 500;
+    font-weight: 600;
   }
 
   h3 {
@@ -258,7 +250,7 @@ export const BlogTitle = styled.div`
     display: none;
     font-size: 1.5rem;
     color: var(--primary);
-    font-weight: 500;
+    font-weight: 600;
     -webkit-tap-highlight-color: transparent;
   }
 `;

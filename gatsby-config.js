@@ -16,19 +16,6 @@ module.exports = {
       }
     },
     {
-      resolve: `gatsby-plugin-web-font-loader`,
-      options: {
-        custom: {
-          families: ['Fira Code'],
-          urls: [`${__dirname}/src/assets/fonts/fonts.css`]
-        }
-      }
-    },
-    `gatsby-plugin-styled-components`,
-    `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-sitemap`,
-    `gatsby-plugin-robots-txt`,
-    {
       // keep as first gatsby-source-filesystem plugin for gatsby image support
       resolve: 'gatsby-source-filesystem',
       options: {
@@ -36,8 +23,6 @@ module.exports = {
         name: 'images'
       }
     },
-    `gatsby-plugin-sharp`,
-    `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -109,6 +94,12 @@ module.exports = {
         showSpinner: false
       }
     },
+    `gatsby-plugin-styled-components`,
+    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sitemap`,
+    `gatsby-plugin-robots-txt`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
     `gatsby-plugin-remove-serviceworker`,
     {
       resolve: `gatsby-plugin-feed`,

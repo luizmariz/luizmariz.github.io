@@ -1,4 +1,4 @@
-export function formatTimestamp(date, readTime, lang='pt-br') {
+export function formatTimestamp(date, readTime, lang = 'pt-br') {
   if (typeof Date.prototype.toLocaleDateString !== 'function') {
     return date;
   }

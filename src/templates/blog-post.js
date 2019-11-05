@@ -48,6 +48,7 @@ export const BlogIndex = styled(Link)`
     margin-block-end: 0.2em;
     font-size: 1.5rem;
     color: var(--primary);
+    font-weight: 600;
   }
 `;
 
@@ -57,7 +58,6 @@ function BlogPostTemplate({ data, pageContext, location }) {
   const { minutes } = markdownRemark.fields.readingTime;
   const { previous, next, slug } = pageContext;
   const timestamp = formatTimestamp(frontmatter.date, minutes);
-  console.log(timestamp);
 
   return (
     <Layout location={location}>
