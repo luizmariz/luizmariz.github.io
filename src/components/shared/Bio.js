@@ -36,6 +36,8 @@ const StyledImg = styled(Img)`
   vertical-align: middle;
   object-fit: cover;
   border-radius: 50%;
+  width: 55;
+  height: 55;
 `;
 
 function Bio() {
