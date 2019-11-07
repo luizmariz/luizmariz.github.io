@@ -94,13 +94,17 @@ function Layout({ children, location }) {
                     className="dark"
                     alt="Luiz Ipsum"
                     fixed={logoDark.childImageSharp.fixed}
-                    loading="auto"
+                    loading="eager"
+                    critical
+                    fadeIn={false}
                   />
                   <Logo
                     className="light"
                     alt="Luiz Ipsum"
                     fixed={logoLight.childImageSharp.fixed}
-                    loading="auto"
+                    loading="eager"
+                    critical
+                    fadeIn={false}
                   />
                 </Link>
                 <BlogTitle>

@@ -3,41 +3,34 @@ import { useStaticQuery, graphql, Link } from 'gatsby';
 import styled from 'styled-components';
 import Img from 'gatsby-image';
 
-const Row = styled.div`
-  position: relative;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-`;
-
-const Column = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+const Text = styled.p`
+  margin: 0;
+  padding: 0;
+  white-space: pre-line;
   padding-left: 1rem;
-  max-width: 25rem;
-
-  p {
-    margin: 0;
-    padding: 0;
-    white-space: pre-line;
-  }
+  max-width: 16rem;
 
   a::before {
     content: none;
   }
 
-  code {
-    font-size: 1.1rem;
+  @media (max-width: 355px) {
+    max-width: 11rem;
+  }
+
+  @media (min-width: 672px) {
+    max-width: 25rem;
   }
 `;
 
+const Row = styled.div`
+  display: flex;
+`;
+
 const StyledImg = styled(Img)`
-  vertical-align: middle;
-  object-fit: cover;
   border-radius: 50%;
-  width: 55;
-  height: 55;
+  width: 55px;
+  height: 55px;
 `;
 
 function Bio() {
@@ -60,14 +53,13 @@ function Bio() {
       <StyledImg
         alt="Imagem do autor do blog"
         fixed={avatar.childImageSharp.fixed}
+        style={{display: "inherit"}}
       />
-      <Column>
-        <p>
-          Blog por <Link to="/about/">Luiz Gustavo</Link>
-          {'\n'}
-          Grande entusiasta do eXtreme Go Horse.
-        </p>
-      </Column>
+      <Text>
+        Blog por <Link to="/about/">Luiz Gustavo</Link>
+        {'\n'}
+        Grande entusiasta do eXtreme Go Horse.
+      </Text>
     </Row>
   );
 }
