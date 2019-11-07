@@ -19,9 +19,26 @@ export const NavLink = styled.li`
   list-style-type: none;
   font-size: 1rem;
   margin-left: 2rem;
+  display: grid;
 
   a.anchor {
     color: rgb(var(--text));
+    padding-right: 0;
+  }
+
+  &::after {
+    content: '';
+    bottom: -7px;
+    height: 1px;
+    background-color: rgb(var(--text));
+    width: 0;
+    transition: width .25s;
+  }
+
+  &:hover {
+    &::after {
+      width: 100%;
+    }
   }
 `;
 

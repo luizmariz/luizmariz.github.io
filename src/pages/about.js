@@ -52,7 +52,6 @@ const Name = styled.div`
 
 const Description = styled.div`
   font-weight: 400;
-  font-size: 0.9rem;
   text-transform: uppercase;
   opacity: 0.5;
 `;
