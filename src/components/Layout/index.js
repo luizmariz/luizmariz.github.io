@@ -88,31 +88,25 @@ function Layout({ children, location }) {
                 <Link
                   to="/"
                   className="anchor"
-                  aria-label="Ir para a página principal"
+                  aria-label="Ir para a homepage"
                 >
                   <Logo
                     className="dark"
                     alt="Luiz Ipsum"
                     fixed={logoDark.childImageSharp.fixed}
-                    draggable={false}
-                    fadeIn={false}
-                    loading={'eager'}
+                    loading="auto"
                   />
                   <Logo
                     className="light"
                     alt="Luiz Ipsum"
                     fixed={logoLight.childImageSharp.fixed}
-                    draggable={false}
-                    fadeIn={false}
-                    loading={'eager'}
+                    loading="auto"
                   />
                 </Link>
                 <BlogTitle>
-                  {location.pathname === '/' ? (
-                    <h1>luiz ipsum</h1>
-                  ) : (
-                    <h3>luiz ipsum</h3>
-                  )}
+                  {location.pathname === '/' &&
+                    <h1>Luiz Ipsum</h1>
+                  }
                 </BlogTitle>
               </Row>
               <ResponsiveToggleBtn

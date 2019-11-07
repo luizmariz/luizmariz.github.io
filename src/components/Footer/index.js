@@ -11,7 +11,7 @@ function Footer() {
           <Row>
             <a
               className="anchor"
-              href="https://linkedin.com/in/luiz-mariz"
+              href="https://linkedin.com/in/luiz-mariz/"
               target="_blank"
               title="LinkedIn"
               rel="noopener noreferrer"
@@ -20,7 +20,7 @@ function Footer() {
             </a>
             <a
               className="anchor"
-              href="https://github.com/luizmariz"
+              href="https://github.com/luizmariz/"
               target="_blank"
               title="Github"
               rel="noopener noreferrer"

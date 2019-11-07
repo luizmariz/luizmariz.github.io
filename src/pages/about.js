@@ -14,6 +14,7 @@ const Title = styled.h1`
   margin-block-end: 0;
   margin-block-start: 3rem;
   line-height: 2.5rem;
+  font-size: 2.3rem;
 `;
 
 const Row = styled.aside`
@@ -97,20 +98,18 @@ function AboutPage({ location }) {
     <Layout location={location}>
       <SEO
         title={'Sobre mim'}
-        slug={'/about'}
-        description={'Um pouco sobre o criador desse humilde blog'}
+        slug={'/about/'}
+        description={'Conheça um pouco melhor o desenvolvedor desse humilde blog'}
       />
       <header>
         <div className="gatsby-highlight">
-          <Title>sobre mim</Title>
+          <Title>Sobre mim</Title>
         </div>
       </header>
       <Row>
         <StyledImg
           alt="Imagem do autor do blog"
           fixed={avatar.childImageSharp.fixed}
-          draggable={false}
-          fadeIn={false}
         />
         <Column>
           <Name>Luiz Gustavo Oliveira Mariz</Name>
@@ -143,14 +142,14 @@ function AboutPage({ location }) {
         <SubTitle>projetos</SubTitle>
         <AnchorList>
           <a
-            href="https://github.com/luizmariz/luizmariz.github.io"
+            href="https://github.com/luizmariz/luizmariz.github.io/"
             target="_blank"
             rel="noopener noreferrer"
           >
             Esse blog
           </a>
           <a
-            href="https://github.com/luizmariz/reactnd-project-flashcards"
+            href="https://github.com/luizmariz/reactnd-project-flashcards/"
             target="_blank"
             rel="noopener noreferrer"
           >

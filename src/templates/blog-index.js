@@ -73,11 +73,11 @@ function BlogIndexTemplate({ data, location }) {
               <article key={node.fields.slug}>
                 <Link to={node.fields.slug} className="anchor" rel="bookmark">
                   <Card>
+                    <small>
+                      <MdLabel />
+                      {node.frontmatter.tags}
+                    </small>
                     <header>
-                      <small>
-                        <MdLabel />
-                        {node.frontmatter.tags}
-                      </small>
                       <h2>{node.frontmatter.title}</h2>
                       <time>{timestamp}</time>
                     </header>

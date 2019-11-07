@@ -10,18 +10,18 @@ const query = graphql`
       siteMetadata {
         title
         author
-        siteDescription
+        description
         siteUrl
       }
     }
   }
 `;
 
-function SEO({ meta, title, description, image, keywords, slug, lang, type }) {
+function SEO({ meta, title, description, image, slug, lang }) {
   const data = useStaticQuery(query);
   const { siteMetadata } = data.site;
   const url = `${siteMetadata.siteUrl}${slug}`;
-  const siteDescription = description || siteMetadata.siteDescription;
+  const siteDescription = description || siteMetadata.description;
   const siteImage = image
     ? `${siteMetadata.siteUrl}/${image}`
     : `${siteMetadata.siteUrl}/${img}`;
@@ -35,16 +35,12 @@ function SEO({ meta, title, description, image, keywords, slug, lang, type }) {
             title
           }
         : {
-            title: `${siteMetadata.title} — Um blog, por Luiz`
+            title: `${siteMetadata.title} — Home`
           })}
       meta={[
         {
           name: 'description',
           content: siteDescription
-        },
-        {
-          name: 'keywords',
-          content: keywords
         },
         {
           property: 'og:url',
@@ -60,7 +56,7 @@ function SEO({ meta, title, description, image, keywords, slug, lang, type }) {
         },
         {
           property: 'og:type',
-          content: type
+          content: 'website'
         },
         {
           name: 'twitter:card',
@@ -98,8 +94,7 @@ SEO.defaultProps = {
   meta: [],
   title: '',
   slug: '',
-  lang: 'pt-br',
-  type: 'website'
+  lang: 'pt-BR'
 };
 
 SEO.propTypes = {
@@ -108,7 +103,6 @@ SEO.propTypes = {
   meta: PropTypes.array,
   slug: PropTypes.string,
   title: PropTypes.string,
-  keywords: PropTypes.string,
   lang: PropTypes.string,
   type: PropTypes.string
 };

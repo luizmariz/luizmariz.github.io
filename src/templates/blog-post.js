@@ -62,11 +62,9 @@ function BlogPostTemplate({ data, pageContext, location }) {
   return (
     <Layout location={location}>
       <SEO
-        type="article"
         title={frontmatter.title}
         description={frontmatter.summary}
         slug={slug}
-        keywords={frontmatter.tags}
       />
       <main>
         <article>

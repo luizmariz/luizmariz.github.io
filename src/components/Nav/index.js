@@ -31,10 +31,10 @@ function Nav({ checked, onToggle }) {
           <ToggleThemeBtn checked={checked} onToggle={onToggle} />
         </Row>
         <Link to="/" className="anchor">
-          Início
+          Home
         </Link>
         <hr />
-        <Link to="/about" className="anchor">
+        <Link to="/about/" className="anchor">
           Sobre mim
         </Link>
         <hr />
@@ -43,11 +43,11 @@ function Nav({ checked, onToggle }) {
         <ul>
           <NavLink>
             <Link to="/" className="anchor">
-              Início
+              Home
             </Link>
           </NavLink>
           <NavLink>
-            <Link to="/about" className="anchor">
+            <Link to="/about/" className="anchor">
               Sobre mim
             </Link>
           </NavLink>

@@ -60,23 +60,12 @@ function Bio() {
       <StyledImg
         alt="Imagem do autor do blog"
         fixed={avatar.childImageSharp.fixed}
-        draggable={false}
       />
       <Column>
         <p>
-          Blog por <Link to="/about">Luiz Gustavo</Link>
+          Blog por <Link to="/about/">Luiz Gustavo</Link>
           {'\n'}
-          <code>
-            ['
-            <span role="img" aria-label="ovo">
-              🥚
-            </span>
-            ', '
-            <span role="img" aria-label="galinha">
-              🐔
-            </span>
-            '].sort()
-          </code>
+          Grande entusiasta do eXtreme Go Horse.
         </p>
       </Column>
     </Row>

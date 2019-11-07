@@ -2,10 +2,21 @@ module.exports = {
   siteMetadata: {
     title: 'Luiz Ipsum',
     author: 'Luiz Mariz',
-    siteDescription: 'Fábulas de um dev teimoso, e testes aleatórios',
+    description: 'Blog e site pessoal de um desenvolvedor Front-end muito fã de React, JavaScript e Web design.',
     siteUrl: 'https://luizipsum.wtf'
   },
   plugins: [
+    `gatsby-plugin-react-helmet`,
+    {
+      // keep as first gatsby-source-filesystem plugin for gatsby image support
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/src/assets/images/`,
+        name: 'images'
+      }
+    },
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-plugin-use-dark-mode`,
       options: {
@@ -16,18 +27,10 @@ module.exports = {
       }
     },
     {
-      // keep as first gatsby-source-filesystem plugin for gatsby image support
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        path: `${__dirname}/src/assets/images`,
-        name: 'images'
-      }
-    },
-    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: 'pages',
-        path: `${__dirname}/src/pages`
+        path: `${__dirname}/src/pages/`
       }
     },
     {
@@ -87,20 +90,9 @@ module.exports = {
         head: true
       }
     },
-    {
-      resolve: `gatsby-plugin-nprogress`,
-      options: {
-        color: `#755671`,
-        showSpinner: false
-      }
-    },
     `gatsby-plugin-styled-components`,
-    `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-robots-txt`,
-    `gatsby-plugin-sharp`,
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-remove-serviceworker`,
     {
       resolve: `gatsby-plugin-feed`,
       options: {

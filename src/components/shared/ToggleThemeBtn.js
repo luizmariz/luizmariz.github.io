@@ -62,8 +62,8 @@ function ToggleThemeBtn({ checked, onToggle, className }) {
         checked={checked}
         type="checkbox"
         onChange={onToggle}
-        label="Trocar tema de cor"
-        aria-label="Trocar tema de cor"
+        label="Alternar tema"
+        aria-label="Alternar tema"
       />
       <Slider darkMode={checked}>
         <MdBrightnessLow color="#D4D400" size="1.2rem" />
