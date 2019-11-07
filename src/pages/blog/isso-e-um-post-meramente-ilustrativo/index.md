@@ -2,7 +2,7 @@
 title: Isso é um post meramente ilustrativo
 date: 2019-11-02
 summary: Mas têm uma playlist bem legal
-tags: teste
+tags: misc
 ---
 
 ##Mas pera, por que não fazer um post de verdade?

@@ -57,7 +57,6 @@ function BlogPostTemplate({ data, pageContext, location }) {
   const { frontmatter, html } = markdownRemark;
   const { minutes } = markdownRemark.fields.readingTime;
   const { previous, next, slug } = pageContext;
-  const timestamp = formatTimestamp(frontmatter.date, minutes);
 
   return (
     <Layout location={location}>
@@ -70,7 +69,7 @@ function BlogPostTemplate({ data, pageContext, location }) {
         <article>
           <header>
             <h1>{frontmatter.title}</h1>
-            <time>{timestamp}</time>
+            <time>{formatTimestamp(frontmatter.date, minutes)}</time>
           </header>
           <div dangerouslySetInnerHTML={{ __html: html }} />
         </article>
@@ -113,7 +112,7 @@ export const pageQuery = graphql`
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       frontmatter {
-        date(formatString: "MMMM DD, YYYY")
+        date(locale: "pt-br", formatString: "DD [de] MMMM [de] YYYY")
         title
         summary
         tags

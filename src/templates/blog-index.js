@@ -27,10 +27,11 @@ const PostsContainer = styled.div`
     color: rgb(var(--text));
   }
 
-  small {
+  span {
     display: flex;
     align-items: center;
     margin-bottom: 0.5rem;
+    font-size: 0.9rem;
     color: rgba(var(--text), 0.7);
   }
 
@@ -73,10 +74,10 @@ function BlogIndexTemplate({ data, location }) {
               <article key={node.fields.slug}>
                 <Link to={node.fields.slug} className="anchor" rel="bookmark">
                   <Card>
-                    <small>
+                    <span>
                       <MdLabel />
                       {node.frontmatter.tags}
-                    </small>
+                    </span>
                     <header>
                       <h2>{node.frontmatter.title}</h2>
                       <time>{timestamp}</time>
@@ -107,7 +108,7 @@ export const pageQuery = graphql`
             }
           }
           frontmatter {
-            date(formatString: "MMMM DD, YYYY")
+            date(locale: "pt-br", formatString: "DD [de] MMMM [de] YYYY")
             title
             summary
             tags
