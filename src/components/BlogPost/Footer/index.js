@@ -6,7 +6,6 @@ import PropTypes from 'prop-types';
 import * as S from './styled';
 
 function Footer({ previous, next }) {
-  console.log(previous, next);
   return (
     <aside>
       <nav>
