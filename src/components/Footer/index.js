@@ -6,7 +6,7 @@ function Footer() {
   return (
     <footer>
       <S.MainRow>
-        <div>
+        <S.Wrapper>
           <SubTitle>contato</SubTitle>
           <S.Row>
             <a
@@ -28,12 +28,12 @@ function Footer() {
               <S.Github />
             </a>
           </S.Row>
-        </div>
+        </S.Wrapper>
       </S.MainRow>
       <S.BonusRow>
-        <div>
+        <S.Wrapper>
           Feito com react e <S.Hearth />
-        </div>
+        </S.Wrapper>
       </S.BonusRow>
     </footer>
   );

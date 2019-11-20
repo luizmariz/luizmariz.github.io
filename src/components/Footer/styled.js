@@ -3,23 +3,31 @@ import { MdFavorite } from 'react-icons/md';
 import { DiGithubBadge } from 'react-icons/di';
 import { FaLinkedin } from 'react-icons/fa';
 
+export const Wrapper = styled.div`
+  margin: 0 auto;
+  max-width: 42rem;
+  padding: 2.5rem 1.3rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+`;
+
 export const MainRow = styled.section`
   background-color: var(--footer);
-
-  & div {
-    margin: 0 auto;
-    max-width: 42rem;
-    padding: 2.6rem 1.3rem;
-  }
+  min-height: 16vh;
 `;
 
 export const BonusRow = styled(MainRow)`
-  margin-top: 1px;
+  border-top: 1px solid var(--bg);
   font-size: 0.9rem;
-  & div {
-    padding: 0.6rem 1.3rem;
-    display: flex;
+  min-height: 4vh;
+
+  ${Wrapper} {
+    padding: .5rem 1.3rem;
+    flex-direction: row;
     align-items: center;
+    justify-content: flex-start;
   }
 `;
 
@@ -31,10 +39,7 @@ export const Hearth = styled(MdFavorite)`
 export const Row = styled.div`
   display: flex;
   flex-direction: row;
-
-  /* Oops 🙃 */
-  margin-top: 1.1rem !important;
-  padding: 0 0 !important;
+  margin-top: 1.1rem;
 `;
 
 // TODO: change to styled-icons
