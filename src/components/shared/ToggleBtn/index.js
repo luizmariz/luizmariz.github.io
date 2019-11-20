@@ -9,7 +9,9 @@ function ToggleThemeBtn({ checked, onToggle, className }) {
       <input
         checked={checked}
         type="checkbox"
-        onChange={onToggle}
+        // onChange is not working well on production
+        // I need to figure out why
+        onClick={onToggle}
         label="Alternar tema"
         aria-label="Alternar tema"
       />
