@@ -35,9 +35,8 @@ function Nav({ checked, onToggle }) {
           />
         </S.Row>
         {_ROUTES.map(route => (
-          <React.Fragment>
+          <React.Fragment key={route.to}>
             <Link
-              key={route.to}
               to={route.to}
               className="anchor"
             >
@@ -50,11 +49,10 @@ function Nav({ checked, onToggle }) {
       <S.Container>
         <S.ItemList>
           {_ROUTES.map(route => (
-            <S.Item>
+            <S.Item key={route.to}>
               <Link
                 to={route.to}
                 className="anchor"
-                key={route.to}
               >
                 {route.name}
               </Link>

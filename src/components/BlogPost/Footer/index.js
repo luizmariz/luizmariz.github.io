@@ -1,0 +1,44 @@
+import React from 'react';
+import { MdArrowBack, MdArrowForward } from 'react-icons/md';
+import Bio from '../../shared/Bio';
+import PropTypes from 'prop-types';
+import * as S from './styled';
+
+function Footer({ previous, next }) {
+  console.log(previous, next)
+  return (
+    <aside>
+      <nav>
+        <S.StyledLink to="/" className="anchor">
+          <S.BlogIndex>luiz ipsum</S.BlogIndex>
+        </S.StyledLink>
+        <Bio />
+        <S.PostNav>
+          {previous && (
+            <S.Previous>
+              <S.StyledLink to={previous.fields.slug} rel="prev">
+                <MdArrowBack />
+                {previous.frontmatter.title}
+              </S.StyledLink>
+            </S.Previous>
+          )}
+          {next && (
+            <S.Next>
+              <S.StyledLink to={next.fields.slug} rel="next">
+                {next.frontmatter.title}
+                <MdArrowForward />
+              </S.StyledLink>
+            </S.Next>
+          )}
+        </S.PostNav>
+      </nav>
+    </aside>
+  );
+}
+
+Footer.propTypes = {
+  previous: PropTypes.any,
+  next: PropTypes.any
+}
+
+export default Footer;

@@ -9,7 +9,7 @@ function ToggleThemeBtn({ checked, onToggle, className }) {
       <input
         checked={checked}
         type="checkbox"
-        onClick={onToggle}
+        onChange={onToggle}
         label="Alternar tema"
         aria-label="Alternar tema"
       />
