@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { Link } from 'gatsby';
 import { MdMenu, MdClose } from 'react-icons/md';
+import { Anchor } from '../shared/styled';
 import ToggleBtn from '../shared/ToggleBtn';
 import * as S from './styled';
 
@@ -36,12 +36,9 @@ function Nav({ checked, onToggle }) {
         </S.Row>
         {_ROUTES.map(route => (
           <React.Fragment key={route.to}>
-            <Link
-              to={route.to}
-              className="anchor"
-            >
+            <Anchor to={route.to}>
               {route.name}
-            </Link>
+            </Anchor>
             <hr />
           </React.Fragment>
         ))}
@@ -50,12 +47,9 @@ function Nav({ checked, onToggle }) {
         <S.ItemList>
           {_ROUTES.map(route => (
             <S.Item key={route.to}>
-              <Link
-                to={route.to}
-                className="anchor"
-              >
+              <Anchor to={route.to}>
                 {route.name}
-              </Link>
+              </Anchor>
             </S.Item>
           ))}
         </S.ItemList>

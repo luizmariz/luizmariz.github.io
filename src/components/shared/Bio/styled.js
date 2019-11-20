@@ -9,7 +9,7 @@ export const Text = styled.p`
   max-width: 16rem;
 
   a::before {
-    content: none;
+    content: none !important;
   }
 
   @media (max-width: 355px) {

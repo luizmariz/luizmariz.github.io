@@ -1,5 +1,6 @@
 import React from 'react';
-import { useStaticQuery, graphql, Link } from 'gatsby';
+import { useStaticQuery, graphql } from 'gatsby';
+import { Anchor } from '../shared/styled';
 import BaseLayout from './BaseLayout';
 import Nav from '../Nav';
 import Footer from '../Footer';
@@ -43,9 +44,8 @@ function Layout({ children, location }) {
             />
             <S.LogoContainer>
               <S.Row>
-                <Link
+                <Anchor
                   to="/"
-                  className="anchor"
                   aria-label="Ir para a homepage"
                 >
                   <S.Logo
@@ -62,7 +62,7 @@ function Layout({ children, location }) {
                     loading="eager"
                     fadeIn={false}
                   />
-                </Link>
+                </Anchor>
                 <S.BlogTitle>
                   {location.pathname === '/' &&
                     <h1>Luiz Ipsum</h1>

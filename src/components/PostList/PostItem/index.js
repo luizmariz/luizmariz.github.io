@@ -1,14 +1,17 @@
 import React from 'react';
 import { formatTimestamp } from '../../../utils/helpers';
 import { MdLabel } from 'react-icons/md';
-import { Link } from 'gatsby';
+import { Anchor } from '../../shared/styled';
 import PropTypes from 'prop-types';
 import * as S from './styled';
 
 function PostItem({ date, readingTime, slug, tags, title, summary }) {
   return (
     <S.Container>
-      <Link to={slug} className="anchor" rel="bookmark">
+      <Anchor
+        to={slug}
+        rel="bookmark"
+      >
         <React.Fragment>
           <S.Tags>
             <MdLabel />
@@ -20,7 +23,7 @@ function PostItem({ date, readingTime, slug, tags, title, summary }) {
           </header>
           <S.Description>{summary}</S.Description>
         </React.Fragment>
-      </Link>
+      </Anchor>
     </S.Container>
   );
 }

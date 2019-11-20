@@ -1,5 +1,6 @@
 import React from 'react';
 import { SubTitle } from '../shared/styled';
+import { Anchor } from '../shared/styled';
 import * as S from './styled';
 
 function Footer() {
@@ -9,24 +10,22 @@ function Footer() {
         <S.Wrapper>
           <SubTitle>contato</SubTitle>
           <S.Row>
-            <a
-              className="anchor"
+            <Anchor
               href="https://linkedin.com/in/luiz-mariz/"
               target="_blank"
               title="LinkedIn"
               rel="noopener noreferrer"
             >
               <S.Linkedin />
-            </a>
-            <a
-              className="anchor"
+            </Anchor>
+            <Anchor
               href="https://github.com/luizmariz/"
               target="_blank"
               title="Github"
               rel="noopener noreferrer"
             >
               <S.Github />
-            </a>
+            </Anchor>
           </S.Row>
         </S.Wrapper>
       </S.MainRow>

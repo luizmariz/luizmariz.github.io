@@ -25,7 +25,7 @@ function Bio() {
         style={{display: "inherit"}}
       />
       <S.Text>
-        Blog por <Link to="/about/">Luiz Gustavo</Link>
+        Blog por <Link to="/about/">Luiz Gustavo</Link>.
         {'\n'}
         Grande entusiasta do eXtreme Go Horse.
       </S.Text>

@@ -101,7 +101,10 @@ const GlobalStyles = createGlobalStyle`
     opacity: 0.7;
   }
 
-  /* TODO: Refact classname anchor as a Anchor shareable component */
+  a::before {
+    margin-right: .3rem;
+  }
+
   a.anchor,
   a.gatsby-resp-image-link {
     display: flex;
@@ -121,7 +124,6 @@ const GlobalStyles = createGlobalStyle`
   a.gatsby-resp-image-link::before {
     content: none;
   }
-
 
   a.anchor
   svg[aria-hidden="true"] {

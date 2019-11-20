@@ -21,7 +21,7 @@ export const Item = styled.li`
   margin-left: 2rem;
   display: grid;
 
-  a.anchor {
+  a {
     color: rgb(var(--text));
     padding-right: 0;
   }
@@ -86,7 +86,7 @@ export const MobContainer = styled.div`
     color: rgb(var(--text));
   }
 
-  & > a.anchor {
+  a {
     color: rgb(var(--text));
     margin-bottom: 1.7rem;
   }

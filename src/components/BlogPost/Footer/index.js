@@ -1,5 +1,6 @@
 import React from 'react';
 import { MdArrowBack, MdArrowForward } from 'react-icons/md';
+import { Anchor } from '../../shared/styled';
 import Bio from '../../shared/Bio';
 import PropTypes from 'prop-types';
 import * as S from './styled';
@@ -9,9 +10,9 @@ function Footer({ previous, next }) {
   return (
     <aside>
       <nav>
-        <S.StyledLink to="/" className="anchor">
+        <Anchor to="/">
           <S.BlogIndex>luiz ipsum</S.BlogIndex>
-        </S.StyledLink>
+        </Anchor>
         <Bio />
         <S.PostNav>
           {previous && (
