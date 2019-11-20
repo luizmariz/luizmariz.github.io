@@ -22,9 +22,7 @@ function SEO({ meta, title, description, image, slug, lang }) {
   const { siteMetadata } = data.site;
   const url = `${siteMetadata.siteUrl}${slug}`;
   const siteDescription = description || siteMetadata.description;
-  const siteImage = image
-    ? `${siteMetadata.siteUrl}/${image}`
-    : `${siteMetadata.siteUrl}/${img}`;
+  const siteImage = `${siteMetadata.siteUrl}/${image}`;
 
   return (
     <Helmet
@@ -94,7 +92,8 @@ SEO.defaultProps = {
   meta: [],
   title: '',
   slug: '',
-  lang: 'pt-BR'
+  lang: 'pt-BR',
+  image: img
 };
 
 SEO.propTypes = {
@@ -104,7 +103,6 @@ SEO.propTypes = {
   slug: PropTypes.string,
   title: PropTypes.string,
   lang: PropTypes.string,
-  type: PropTypes.string
 };
 
 export default SEO;

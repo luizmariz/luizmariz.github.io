@@ -1,14 +1,14 @@
 import React from 'react';
 import { SubTitle } from '../shared/styled';
-import { MainRow, BonusRow, Hearth, Row, Github, Linkedin } from './styled';
+import * as S from './styled';
 
 function Footer() {
   return (
     <footer>
-      <MainRow>
+      <S.MainRow>
         <div>
           <SubTitle>contato</SubTitle>
-          <Row>
+          <S.Row>
             <a
               className="anchor"
               href="https://linkedin.com/in/luiz-mariz/"
@@ -16,7 +16,7 @@ function Footer() {
               title="LinkedIn"
               rel="noopener noreferrer"
             >
-              <Linkedin />
+              <S.Linkedin />
             </a>
             <a
               className="anchor"
@@ -25,16 +25,16 @@ function Footer() {
               title="Github"
               rel="noopener noreferrer"
             >
-              <Github />
+              <S.Github />
             </a>
-          </Row>
+          </S.Row>
         </div>
-      </MainRow>
-      <BonusRow>
+      </S.MainRow>
+      <S.BonusRow>
         <div>
-          Feito com react e <Hearth />
+          Feito com react e <S.Hearth />
         </div>
-      </BonusRow>
+      </S.BonusRow>
     </footer>
   );
 }

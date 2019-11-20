@@ -1,15 +1,8 @@
 import React, { useState } from 'react';
-import { MdMenu, MdClose } from 'react-icons/md';
-import ToggleThemeBtn from '../shared/ToggleThemeBtn';
 import { Link } from 'gatsby';
-import {
-  NavContainer,
-  NavLink,
-  NavSideMenu,
-  MobMenuContainer,
-  MenuTitle,
-  Row
-} from './styled';
+import { MdMenu, MdClose } from 'react-icons/md';
+import ToggleBtn from '../shared/ToggleBtn';
+import * as S from './styled';
 
 function Nav({ checked, onToggle }) {
   const [showMobMenu, setShowMobMenu] = useState(false);
@@ -21,15 +14,18 @@ function Nav({ checked, onToggle }) {
 
   return (
     <React.Fragment>
-      <NavSideMenu onClick={toggleMenu} aria-label="Side menu">
+      <S.NavSideMenu onClick={toggleMenu} aria-label="Side menu">
         <MdMenu />
-      </NavSideMenu>
-      <MobMenuContainer animate={showMobMenu}>
+      </S.NavSideMenu>
+      <S.MobMenuContainer animate={showMobMenu}>
         <MdClose onClick={toggleMenu} />
-        <Row>
-          <MenuTitle>m e n u</MenuTitle>
-          <ToggleThemeBtn checked={checked} onToggle={onToggle} />
-        </Row>
+        <S.Row>
+          <S.MenuTitle>m e n u</S.MenuTitle>
+          <ToggleBtn
+            checked={checked}
+            onToggle={onToggle}
+          />
+        </S.Row>
         <Link to="/" className="anchor">
           Home
         </Link>
@@ -38,21 +34,21 @@ function Nav({ checked, onToggle }) {
           Sobre mim
         </Link>
         <hr />
-      </MobMenuContainer>
-      <NavContainer>
+      </S.MobMenuContainer>
+      <S.NavContainer>
         <ul>
-          <NavLink>
+          <S.NavLink>
             <Link to="/" className="anchor">
               Home
             </Link>
-          </NavLink>
-          <NavLink>
+          </S.NavLink>
+          <S.NavLink>
             <Link to="/about/" className="anchor">
               Sobre mim
             </Link>
-          </NavLink>
+          </S.NavLink>
         </ul>
-      </NavContainer>
+      </S.NavContainer>
     </React.Fragment>
   );
 }

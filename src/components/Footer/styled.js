@@ -15,7 +15,7 @@ export const MainRow = styled.section`
 
 export const BonusRow = styled(MainRow)`
   margin-top: 1px;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   & div {
     padding: 0.6rem 1.3rem;
     display: flex;
@@ -37,6 +37,7 @@ export const Row = styled.div`
   padding: 0 0 !important;
 `;
 
+// TODO: change to styled-icons
 export const Github = styled(DiGithubBadge)`
   color: rgb(var(--text));
   cursor: pointer;

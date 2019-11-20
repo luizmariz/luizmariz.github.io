@@ -1,54 +1,11 @@
 import React from 'react';
 import { useStaticQuery, graphql, Link } from 'gatsby';
-import PropTypes from 'prop-types';
-import useDarkMode from 'use-dark-mode';
-import Helmet from 'react-helmet';
+import BaseLayout from './BaseLayout';
 import Nav from '../Nav';
 import Footer from '../Footer';
-import {
-  GlobalStyles,
-  Container,
-  PageContent,
-  BlogTitle,
-  Logo,
-  LogoContainer,
-  Row,
-  ResponsiveToggleBtn
-} from './styled';
-
-function BasicLayout({ render, children, darkMode, location }) {
-  return (
-    <React.Fragment>
-      <Helmet
-        meta={[
-          {
-            name: 'theme-color',
-            content: darkMode.value ? '#282C35' : '#4B334C'
-          }
-        ]}
-      />
-      <GlobalStyles />
-      <Container>
-        {render(darkMode, location)}
-        <PageContent>{children}</PageContent>
-      </Container>
-    </React.Fragment>
-  );
-}
-
-BasicLayout.defaultProps = {
-  render: () => {}
-};
-
-BasicLayout.propTypes = {
-  render: PropTypes.func,
-  children: PropTypes.any,
-  location: PropTypes.object,
-  darkMode: PropTypes.object.isRequired
-};
+import * as S from './styled';
 
 function Layout({ children, location }) {
-  const darkMode = useDarkMode();
   const { logoDark, logoLight } = useStaticQuery(
     graphql`
       query {
@@ -71,26 +28,27 @@ function Layout({ children, location }) {
   );
 
   if (location.pathname === '/404') {
-    return <BasicLayout children={children} darkMode={darkMode} />;
+    return <BaseLayout children={children} />;
   }
 
   return (
     <React.Fragment>
-      <BasicLayout
+      <BaseLayout
         children={children}
-        darkMode={darkMode}
-        location={location}
-        render={(darkMode, location) => (
+        render={(darkMode) => (
           <header>
-            <Nav checked={darkMode.value} onToggle={darkMode.toggle} />
-            <LogoContainer>
-              <Row>
+            <Nav
+              checked={darkMode.value}
+              onToggle={darkMode.toggle}
+            />
+            <S.LogoContainer>
+              <S.Row>
                 <Link
                   to="/"
                   className="anchor"
                   aria-label="Ir para a homepage"
                 >
-                  <Logo
+                  <S.Logo
                     className="dark"
                     alt="Luiz Ipsum"
                     fixed={logoDark.childImageSharp.fixed}
@@ -98,7 +56,7 @@ function Layout({ children, location }) {
                     critical
                     fadeIn={false}
                   />
-                  <Logo
+                  <S.Logo
                     className="light"
                     alt="Luiz Ipsum"
                     fixed={logoLight.childImageSharp.fixed}
@@ -107,17 +65,17 @@ function Layout({ children, location }) {
                     fadeIn={false}
                   />
                 </Link>
-                <BlogTitle>
+                <S.BlogTitle>
                   {location.pathname === '/' &&
                     <h1>Luiz Ipsum</h1>
                   }
-                </BlogTitle>
-              </Row>
-              <ResponsiveToggleBtn
+                </S.BlogTitle>
+              </S.Row>
+              <S.ResponsiveToggleBtn
                 checked={darkMode.value}
                 onToggle={darkMode.toggle}
               />
-            </LogoContainer>
+            </S.LogoContainer>
           </header>
         )}
       />

@@ -118,7 +118,7 @@ function AboutPage({ location }) {
       </Row>
       <Content>
         <StyledHr />
-        <Skills>react, node, python, go, angular, c++, java ...</Skills>
+        <Skills>react, node, python, go, angular, c++, java...</Skills>
         <p>
           Oi, meu nome é Luiz, nasci no interior de Minas Gerais e atualmente
           sou dev no time de growth hacking da{' '}

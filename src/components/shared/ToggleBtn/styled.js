@@ -1,9 +1,6 @@
-import React from 'react';
-import { MdBrightnessLow, MdBrightness2 } from 'react-icons/md';
 import styled from 'styled-components';
-import PropTypes from 'prop-types';
 
-const Slider = styled.div`
+export const Slider = styled.div`
   position: absolute;
   cursor: pointer;
   top: 0;
@@ -36,7 +33,7 @@ const Slider = styled.div`
   }
 `;
 
-const Switch = styled.label`
+export const Switch = styled.label`
   position: relative;
   display: inline-block;
   width: 3.4rem;
@@ -54,28 +51,3 @@ const Switch = styled.label`
     transform: translateX(-1.68rem);
   }
 `;
-
-function ToggleThemeBtn({ checked, onToggle, className }) {
-  return (
-    <Switch className={className}>
-      <input
-        checked={checked}
-        type="checkbox"
-        onChange={onToggle}
-        label="Alternar tema"
-        aria-label="Alternar tema"
-      />
-      <Slider darkMode={checked}>
-        <MdBrightnessLow color="#D4D400" size="1.2rem" />
-        <MdBrightness2 color="#FFFFFF" size="1.3rem" />
-      </Slider>
-    </Switch>
-  );
-}
-
-ToggleThemeBtn.propTypes = {
-  checked: PropTypes.bool.isRequired,
-  onToggle: PropTypes.func.isRequired
-};
-
-export default ToggleThemeBtn;
