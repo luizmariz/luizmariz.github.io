@@ -1,21 +1,21 @@
 import styled from 'styled-components';
 import { SubTitle } from '../shared/styled';
 
-export const NavContainer = styled.nav`
-  ul {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-end;
-    margin: 0;
-  }
-
+export const Container = styled.nav`
   @media (max-width: 672px) {
     display: none;
   }
 `;
 
-export const NavLink = styled.li`
+export const ItemList = styled.ul`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  margin: 0;
+`;
+
+export const Item = styled.li`
   list-style-type: none;
   font-size: 1rem;
   margin-left: 2rem;
@@ -42,7 +42,7 @@ export const NavLink = styled.li`
   }
 `;
 
-export const NavSideMenu = styled.div`
+export const SideMenu = styled.div`
   position: fixed;
   top: 0;
   right: 0;
@@ -68,7 +68,7 @@ export const NavSideMenu = styled.div`
   }
 `;
 
-export const MobMenuContainer = styled.div`
+export const MobContainer = styled.div`
   position: fixed;
   top: 0;
   right: 0;

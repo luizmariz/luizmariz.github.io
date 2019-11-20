@@ -53,7 +53,6 @@ function Layout({ children, location }) {
                     alt="Luiz Ipsum"
                     fixed={logoDark.childImageSharp.fixed}
                     loading="eager"
-                    critical
                     fadeIn={false}
                   />
                   <S.Logo
@@ -61,7 +60,6 @@ function Layout({ children, location }) {
                     alt="Luiz Ipsum"
                     fixed={logoLight.childImageSharp.fixed}
                     loading="eager"
-                    critical
                     fadeIn={false}
                   />
                 </Link>

@@ -4,6 +4,11 @@ import { MdMenu, MdClose } from 'react-icons/md';
 import ToggleBtn from '../shared/ToggleBtn';
 import * as S from './styled';
 
+const _ROUTES = [
+  { name: 'Home', to: '/' },
+  { name: 'Sobre mim', to: '/about/' }
+]
+
 function Nav({ checked, onToggle }) {
   const [showMobMenu, setShowMobMenu] = useState(false);
 
@@ -14,10 +19,13 @@ function Nav({ checked, onToggle }) {
 
   return (
     <React.Fragment>
-      <S.NavSideMenu onClick={toggleMenu} aria-label="Side menu">
+      <S.SideMenu
+        onClick={toggleMenu}
+        aria-label="Side menu"
+      >
         <MdMenu />
-      </S.NavSideMenu>
-      <S.MobMenuContainer animate={showMobMenu}>
+      </S.SideMenu>
+      <S.MobContainer animate={showMobMenu}>
         <MdClose onClick={toggleMenu} />
         <S.Row>
           <S.MenuTitle>m e n u</S.MenuTitle>
@@ -26,29 +34,34 @@ function Nav({ checked, onToggle }) {
             onToggle={onToggle}
           />
         </S.Row>
-        <Link to="/" className="anchor">
-          Home
-        </Link>
-        <hr />
-        <Link to="/about/" className="anchor">
-          Sobre mim
-        </Link>
-        <hr />
-      </S.MobMenuContainer>
-      <S.NavContainer>
-        <ul>
-          <S.NavLink>
-            <Link to="/" className="anchor">
-              Home
+        {_ROUTES.map(route => (
+          <React.Fragment>
+            <Link
+              key={route.to}
+              to={route.to}
+              className="anchor"
+            >
+              {route.name}
             </Link>
-          </S.NavLink>
-          <S.NavLink>
-            <Link to="/about/" className="anchor">
-              Sobre mim
-            </Link>
-          </S.NavLink>
-        </ul>
-      </S.NavContainer>
+            <hr />
+          </React.Fragment>
+        ))}
+      </S.MobContainer>
+      <S.Container>
+        <S.ItemList>
+          {_ROUTES.map(route => (
+            <S.Item>
+              <Link
+                to={route.to}
+                className="anchor"
+                key={route.to}
+              >
+                {route.name}
+              </Link>
+            </S.Item>
+          ))}
+        </S.ItemList>
+      </S.Container>
     </React.Fragment>
   );
 }
