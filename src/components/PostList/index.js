@@ -23,6 +23,6 @@ function PostList({ posts }) {
 
 PostList.propTypes = {
   posts: PropTypes.array.isRequired
-}
+};
 
 export default PostList;

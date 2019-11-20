@@ -102,7 +102,7 @@ SEO.propTypes = {
   meta: PropTypes.array,
   slug: PropTypes.string,
   title: PropTypes.string,
-  lang: PropTypes.string,
+  lang: PropTypes.string
 };
 
 export default SEO;

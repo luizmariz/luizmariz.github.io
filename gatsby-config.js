@@ -2,7 +2,8 @@ module.exports = {
   siteMetadata: {
     title: 'Luiz Ipsum',
     author: 'Luiz Mariz',
-    description: 'Blog e site pessoal de um desenvolvedor Front-end muito fã de React, JavaScript e Web design.',
+    description:
+      'Blog e site pessoal de um desenvolvedor Front-end muito fã de React, JavaScript e Web design.',
     siteUrl: 'https://luizipsum.wtf'
   },
   plugins: [
@@ -146,6 +147,6 @@ module.exports = {
         ]
       }
     },
-    `gatsby-plugin-catch-links`,
+    `gatsby-plugin-catch-links`
   ]
 };

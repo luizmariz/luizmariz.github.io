@@ -24,7 +24,7 @@ export const BonusRow = styled(MainRow)`
   min-height: 4vh;
 
   ${Wrapper} {
-    padding: .5rem 1.3rem;
+    padding: 0.5rem 1.3rem;
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;

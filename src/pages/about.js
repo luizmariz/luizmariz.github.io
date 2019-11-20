@@ -99,7 +99,9 @@ function AboutPage({ location }) {
       <SEO
         title={'Sobre mim'}
         slug={'/about/'}
-        description={'Conheça um pouco melhor o desenvolvedor desse humilde blog'}
+        description={
+          'Conheça um pouco melhor o desenvolvedor desse humilde blog'
+        }
       />
       <header>
         <div className="gatsby-highlight">

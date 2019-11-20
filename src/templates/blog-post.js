@@ -6,7 +6,7 @@ function BlogPostTemplate({ data, pageContext, location }) {
   const { markdownRemark } = data;
   const { frontmatter, html } = markdownRemark;
   const { previous, next, slug } = pageContext;
-  console.log(pageContext)
+  console.log(pageContext);
   return (
     <BlogPost
       location={location}

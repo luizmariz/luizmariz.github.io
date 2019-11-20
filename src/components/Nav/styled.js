@@ -32,7 +32,7 @@ export const Item = styled.li`
     height: 1px;
     background-color: rgb(var(--text));
     width: 0;
-    transition: width .25s;
+    transition: width 0.25s;
   }
 
   &:hover {

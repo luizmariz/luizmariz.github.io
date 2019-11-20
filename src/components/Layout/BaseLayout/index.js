@@ -27,12 +27,12 @@ function BaseLayout({ render, children }) {
 }
 
 BaseLayout.defaultProps = {
-  render: () => {},
+  render: () => {}
 };
 
 BaseLayout.propTypes = {
   render: PropTypes.func,
-  children: PropTypes.any.isRequired,
+  children: PropTypes.any.isRequired
 };
 
 export default BaseLayout;

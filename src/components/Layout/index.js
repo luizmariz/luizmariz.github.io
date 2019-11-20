@@ -36,18 +36,12 @@ function Layout({ children, location }) {
     <React.Fragment>
       <BaseLayout
         children={children}
-        render={(darkMode) => (
+        render={darkMode => (
           <header>
-            <Nav
-              checked={darkMode.value}
-              onToggle={darkMode.toggle}
-            />
+            <Nav checked={darkMode.value} onToggle={darkMode.toggle} />
             <S.LogoContainer>
               <S.Row>
-                <Anchor
-                  to="/"
-                  aria-label="Ir para a homepage"
-                >
+                <Anchor to="/" aria-label="Ir para a homepage">
                   <S.Logo
                     className="dark"
                     alt="Luiz Ipsum"
@@ -64,9 +58,7 @@ function Layout({ children, location }) {
                   />
                 </Anchor>
                 <S.BlogTitle>
-                  {location.pathname === '/' &&
-                    <h1>Luiz Ipsum</h1>
-                  }
+                  {location.pathname === '/' && <h1>Luiz Ipsum</h1>}
                 </S.BlogTitle>
               </S.Row>
               <S.ResponsiveToggleBtn

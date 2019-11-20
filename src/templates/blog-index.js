@@ -13,7 +13,7 @@ function BlogIndexTemplate({ data, location }) {
         <Bio />
       </aside>
       <main>
-        <PostList posts={data.allMarkdownRemark.edges}/>
+        <PostList posts={data.allMarkdownRemark.edges} />
       </main>
     </Layout>
   );

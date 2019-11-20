@@ -8,10 +8,7 @@ import * as S from './styled';
 function PostItem({ date, readingTime, slug, tags, title, summary }) {
   return (
     <S.Container>
-      <Anchor
-        to={slug}
-        rel="bookmark"
-      >
+      <Anchor to={slug} rel="bookmark">
         <React.Fragment>
           <S.Tags>
             <MdLabel />
@@ -35,6 +32,6 @@ PostItem.propTypes = {
   tags: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   summary: PropTypes.string.isRequired
-}
+};
 
 export default PostItem;

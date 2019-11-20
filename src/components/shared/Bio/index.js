@@ -22,11 +22,10 @@ function Bio() {
       <S.StyledImg
         alt="Imagem do autor do blog"
         fixed={avatar.childImageSharp.fixed}
-        style={{display: "inherit"}}
+        style={{ display: 'inherit' }}
       />
       <S.Text>
-        Blog por <Link to="/about/">Luiz Gustavo</Link>.
-        {'\n'}
+        Blog por <Link to="/about/">Luiz Gustavo</Link>.{'\n'}
         Grande entusiasta do eXtreme Go Horse.
       </S.Text>
     </S.Row>

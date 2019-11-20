@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 import * as S from './styled';
 
 function Footer({ previous, next }) {
-  console.log(previous, next)
+  console.log(previous, next);
   return (
     <aside>
       <nav>
@@ -40,6 +40,6 @@ function Footer({ previous, next }) {
 Footer.propTypes = {
   previous: PropTypes.any,
   next: PropTypes.any
-}
+};
 
 export default Footer;

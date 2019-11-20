@@ -7,7 +7,7 @@ import * as S from './styled';
 const _ROUTES = [
   { name: 'Home', to: '/' },
   { name: 'Sobre mim', to: '/about/' }
-]
+];
 
 function Nav({ checked, onToggle }) {
   const [showMobMenu, setShowMobMenu] = useState(false);
@@ -19,26 +19,18 @@ function Nav({ checked, onToggle }) {
 
   return (
     <React.Fragment>
-      <S.SideMenu
-        onClick={toggleMenu}
-        aria-label="Side menu"
-      >
+      <S.SideMenu onClick={toggleMenu} aria-label="Side menu">
         <MdMenu />
       </S.SideMenu>
       <S.MobContainer animate={showMobMenu}>
         <MdClose onClick={toggleMenu} />
         <S.Row>
           <S.MenuTitle>m e n u</S.MenuTitle>
-          <ToggleBtn
-            checked={checked}
-            onToggle={onToggle}
-          />
+          <ToggleBtn checked={checked} onToggle={onToggle} />
         </S.Row>
         {_ROUTES.map(route => (
           <React.Fragment key={route.to}>
-            <Anchor to={route.to}>
-              {route.name}
-            </Anchor>
+            <Anchor to={route.to}>{route.name}</Anchor>
             <hr />
           </React.Fragment>
         ))}
@@ -47,9 +39,7 @@ function Nav({ checked, onToggle }) {
         <S.ItemList>
           {_ROUTES.map(route => (
             <S.Item key={route.to}>
-              <Anchor to={route.to}>
-                {route.name}
-              </Anchor>
+              <Anchor to={route.to}>{route.name}</Anchor>
             </S.Item>
           ))}
         </S.ItemList>
