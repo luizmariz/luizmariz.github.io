@@ -6,6 +6,7 @@ export const Logo = styled(Img)`
   width: 70px;
   /* Oops */
   margin-left: -0.4rem;
+  margin-right: 2px;
 `;
 
 export const BlogTitle = styled.div`

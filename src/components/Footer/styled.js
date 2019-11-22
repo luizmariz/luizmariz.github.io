@@ -71,3 +71,15 @@ export const Linkedin = styled(FaLinkedin)`
     border: 1px solid rgba(var(--text), 0.5);
   }
 `;
+
+export const Anchor = styled.a`
+  border-bottom: none;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &::before {
+    content: none !important;
+  }
+`;
