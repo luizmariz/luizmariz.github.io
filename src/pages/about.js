@@ -66,7 +66,7 @@ const Name = styled.div`
 const Description = styled.div`
   font-weight: 400;
   text-transform: uppercase;
-  opacity: 0.5;
+  opacity: 0.6;
 `;
 
 const StyledHr = styled.hr`
@@ -74,7 +74,7 @@ const StyledHr = styled.hr`
 `;
 
 const Skills = styled.p`
-  opacity: 0.6;
+  opacity: 0.7;
   font-weight: 300;
   display: inline-block;
   margin-bottom: 1rem;

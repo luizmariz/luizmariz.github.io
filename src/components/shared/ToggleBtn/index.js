@@ -7,10 +7,8 @@ function ToggleThemeBtn({ checked, onToggle, className }) {
   return (
     <S.Switch className={className}>
       <input
-        checked={checked}
+        defaultChecked={checked}
         type="checkbox"
-        // onChange is not working well on production
-        // I need to figure out why
         onClick={onToggle}
         label="Alternar tema"
         aria-label="Alternar tema"
