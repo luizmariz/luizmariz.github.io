@@ -14,9 +14,9 @@ const blinkTextCursor = keyframes`
 `;
 
 const TextCursor = styled.span`
-  border-right: 1px solid rgba(var(--text), .75);
+  border-right: 1px solid rgba(var(--text), 0.75);
   display: inline;
-  animation: ${blinkTextCursor} .7s steps(44) infinite normal;
+  animation: ${blinkTextCursor} 0.7s steps(44) infinite normal;
 `;
 
 const Title = styled.h1`
@@ -96,27 +96,27 @@ const Content = styled.article`
 `;
 
 function AboutPage({ location }) {
-  const [ skills, setSkills ] = useState('');
-  const [ isAnimating, setIsAnimating ] = useState(false);
-  const [ ref, inView ] = useInView();
+  const [skills, setSkills] = useState('');
+  const [isAnimating, setIsAnimating] = useState(false);
+  const [ref, inView] = useInView();
 
-  const typeWriter = (text, i=0) => {
+  const typeWriter = (text, i = 0) => {
     if (i < text.length) {
-      setSkills(text.slice(0,i+1));
+      setSkills(text.slice(0, i + 1));
       setTimeout(() => {
-        typeWriter(text, i+1);
+        typeWriter(text, i + 1);
       }, 100);
     } else {
       setIsAnimating(false);
     }
-  }
+  };
 
   useEffect(() => {
     if (inView && !isAnimating) {
       setIsAnimating(true);
       typeWriter('react, node, python, go, angular, c++, java');
     }
-  }, [inView])
+  }, [inView]);
 
   const { avatar } = useStaticQuery(
     graphql`
