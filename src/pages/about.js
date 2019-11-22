@@ -1,10 +1,23 @@
-import React from 'react';
-import Layout from '../components/Layout';
-import styled from 'styled-components';
+import React, { useState, useEffect } from 'react';
+import styled, { keyframes } from 'styled-components';
 import { useStaticQuery, graphql } from 'gatsby';
 import { SubTitle } from '../components/shared/styled';
+import { useInView } from 'react-intersection-observer';
+import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 import Img from 'gatsby-image';
+
+// TODO: Refact
+const blinkTextCursor = keyframes`
+  from {border-right-color: rgba(var(--text), .75);}
+  to {border-right-color: transparent}
+`;
+
+const TextCursor = styled.span`
+  border-right: 1px solid rgba(var(--text), .75);
+  display: inline;
+  animation: ${blinkTextCursor} .7s steps(44) infinite normal;
+`;
 
 const Title = styled.h1`
   color: #ffffff;
@@ -61,7 +74,10 @@ const StyledHr = styled.hr`
 `;
 
 const Skills = styled.p`
-  opacity: 0.5;
+  opacity: 0.6;
+  font-weight: 300;
+  display: inline-block;
+  margin-bottom: 1rem;
 `;
 
 const AnchorList = styled.section`
@@ -80,6 +96,28 @@ const Content = styled.article`
 `;
 
 function AboutPage({ location }) {
+  const [ skills, setSkills ] = useState('');
+  const [ isAnimating, setIsAnimating ] = useState(false);
+  const [ ref, inView ] = useInView();
+
+  const typeWriter = (text, i=0) => {
+    if (i < text.length) {
+      setSkills(text.slice(0,i+1));
+      setTimeout(() => {
+        typeWriter(text, i+1);
+      }, 100);
+    } else {
+      setIsAnimating(false);
+    }
+  }
+
+  useEffect(() => {
+    if (inView && !isAnimating) {
+      setIsAnimating(true);
+      typeWriter('react, node, python, go, angular, c++, java');
+    }
+  }, [inView])
+
   const { avatar } = useStaticQuery(
     graphql`
       query {
@@ -120,7 +158,10 @@ function AboutPage({ location }) {
       </Row>
       <Content>
         <StyledHr />
-        <Skills>react, node, python, go, angular, c++, java...</Skills>
+        <Skills ref={ref}>
+          {skills}
+          <TextCursor />
+        </Skills>
         <p>
           Oi, meu nome é Luiz, nasci no interior de Minas Gerais e atualmente
           sou dev no time de growth hacking da{' '}

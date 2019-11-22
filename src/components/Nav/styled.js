@@ -28,11 +28,11 @@ export const Item = styled.li`
 
   &::after {
     content: '';
-    bottom: -7px;
+    margin-top: -4px;
     height: 1px;
     background-color: rgb(var(--text));
     width: 0;
-    transition: width 0.25s;
+    transition: width 0.35s;
   }
 
   &:hover {

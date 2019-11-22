@@ -95,10 +95,13 @@ const GlobalStyles = createGlobalStyle`
     text-decoration: none;
     color: var(--secondary);
     border-bottom: 2px dotted var(--primary);
+    transition: opacity .1s;
+    opacity: 1;
   }
 
   a:hover {
     opacity: 0.7;
+    transition: opacity .1s;
   }
 
   a::before {
