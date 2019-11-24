@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { SubTitle } from '../shared/styled';
 
 export const Container = styled.nav`
   @media (max-width: 672px) {
@@ -107,9 +106,11 @@ export const MobContainer = styled.div`
   }
 `;
 
-export const MenuTitle = styled(SubTitle)`
+export const MenuTitle = styled.h2`
   color: rgb(var(--text));
   font-size: 1.2rem;
+  text-transform: uppercase;
+  margin: 0;
 `;
 
 export const Row = styled.div`

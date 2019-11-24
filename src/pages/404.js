@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import { Link } from 'gatsby';
+import { Anchor } from '../components/shared/styled';
 import styled from 'styled-components';
 import ovniLight from '../assets/images/ovni404Light.svg';
 import ovniDark from '../assets/images/ovni404Dark.svg';
@@ -47,7 +47,7 @@ const Container = styled.div`
   }
 `;
 
-function PageNotFound() {
+export default function() {
   return (
     <Fragment>
       <SEO title="404: Not found" />
@@ -57,13 +57,11 @@ function PageNotFound() {
           <OvniVector src={ovniLight} className="light" />
           <h1>404</h1>
           <p>Ixi, parece que essa página não existe.</p>
-          <Link className="anchor" aria-label="Ir para a página inicial">
+          <Anchor aria-label="Ir para a página inicial">
             me traz de volta!
-          </Link>
+          </Anchor>
         </Container>
       </Layout>
     </Fragment>
   );
 }
-
-export default PageNotFound;

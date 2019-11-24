@@ -6,7 +6,7 @@ import { FaLinkedin } from 'react-icons/fa';
 export const Wrapper = styled.div`
   margin: 0 auto;
   max-width: 42rem;
-  padding: 2.5rem 1.3rem;
+  padding: 2rem 1.3rem;
   display: flex;
   align-items: flex-start;
   justify-content: center;

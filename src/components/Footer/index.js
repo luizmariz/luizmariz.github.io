@@ -7,7 +7,6 @@ function Footer() {
     <footer>
       <S.MainRow>
         <S.Wrapper>
-          <SubTitle>contato</SubTitle>
           <S.Row>
             <S.Anchor
               href="https://linkedin.com/in/luiz-mariz/"
