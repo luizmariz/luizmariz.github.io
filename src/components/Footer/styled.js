@@ -53,6 +53,7 @@ export const Github = styled(DiGithubBadge)`
   transition: border 0.1s ease-in;
 
   &:hover {
+    transition: border 0.1s ease-in;
     border: 1px solid rgba(var(--text), 0.5);
   }
 `;
@@ -68,6 +69,7 @@ export const Linkedin = styled(FaLinkedin)`
   transition: border 0.1s ease-in;
 
   &:hover {
+    transition: border 0.1s ease-in;
     border: 1px solid rgba(var(--text), 0.5);
   }
 `;
