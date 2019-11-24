@@ -18,7 +18,7 @@ export default function({ location }) {
         <h1>Sobre mim</h1>
       </header>
       <Author />
-      <TypeWriter value='React, NodeJs, Python, Go, Angular, Java e C++' />
+      <TypeWriter value="React, NodeJs, Python, Go, Angular, Java e C++" />
       <article>
         <p>
           Oi, meu nome é Luiz, nasci no interior de Minas Gerais e atualmente

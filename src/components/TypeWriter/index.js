@@ -7,7 +7,7 @@ function TypeWriter({ value }) {
   const [text, setText] = useState(value);
   const [ref, inView] = useInView({ triggerOnce: true });
 
-  const typeWriter = (text, i=0) => {
+  const typeWriter = (text, i = 0) => {
     if (i < text.length) {
       setText(text.slice(0, i + 1));
       setTimeout(() => {
@@ -32,6 +32,6 @@ function TypeWriter({ value }) {
 
 TypeWriter.propTypes = {
   value: PropTypes.string.isRequired
-}
+};
 
 export default TypeWriter;
