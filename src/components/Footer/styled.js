@@ -47,7 +47,7 @@ export const Row = styled.div`
 `;
 
 export const Github = styled(DiGithubBadge)`
-  color: rgb(var(--text), .9);
+  color: var(--icon);
   cursor: pointer;
   font-size: 2.6rem;
   border: 1px solid rgba(var(--text), 0.2);
@@ -62,7 +62,7 @@ export const Github = styled(DiGithubBadge)`
 `;
 
 export const Linkedin = styled(FaLinkedin)`
-  color: rgb(var(--text), .9);
+  color: var(--icon);
   cursor: pointer;
   font-size: 2.6rem;
   border: 1px solid rgba(var(--text), 0.2);

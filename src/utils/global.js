@@ -17,6 +17,7 @@ const GlobalStyles = createGlobalStyle`
     --secondary: #755671;
     --tertiary: #FFD1D0BF;
     --heart: 75, 51, 76;
+    --icon: #333333;
 
     a::before {
       content: url(${lightLink});
@@ -35,6 +36,7 @@ const GlobalStyles = createGlobalStyle`
     --secondary: #FFD1D0;
     --tertiary: #FFFFFF22;
     --heart: 232, 113, 92;
+    --icon: #FFD1D0;
 
     a::before {
       content: url(${darkLink});
