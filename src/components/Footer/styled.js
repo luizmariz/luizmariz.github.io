@@ -23,6 +23,10 @@ export const BonusRow = styled(MainRow)`
   font-size: 0.9rem;
   min-height: 4vh;
 
+  @media (max-width: 672px) {
+    margin-bottom: 4rem;
+  }
+
   ${Wrapper} {
     padding: 0.5rem 1.3rem;
     flex-direction: row;

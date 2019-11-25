@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import { MdMenu, MdClose } from 'react-icons/md';
 import { Anchor } from '../shared/styled';
 import ToggleBtn from '../shared/ToggleBtn';
+import NavMobile from './NavMobile';
+
 import * as S from './styled';
 
 const _ROUTES = [
@@ -10,19 +11,10 @@ const _ROUTES = [
 ];
 
 function Nav({ checked, onToggle }) {
-  const [showMobMenu, setShowMobMenu] = useState(false);
-
-  const toggleMenu = e => {
-    e.preventDefault();
-    setShowMobMenu(showMobMenu => !showMobMenu);
-  };
-
   return (
     <React.Fragment>
-      <S.SideMenu onClick={toggleMenu} aria-label="Side menu">
-        <MdMenu />
-      </S.SideMenu>
-      <S.MobContainer animate={showMobMenu}>
+      <NavMobile items={_ROUTES}/>
+      {/* <S.MobContainer animate={showMobMenu}>
         <MdClose onClick={toggleMenu} />
         <S.Row>
           <S.MenuTitle>m e n u</S.MenuTitle>
@@ -34,7 +26,7 @@ function Nav({ checked, onToggle }) {
             <hr />
           </React.Fragment>
         ))}
-      </S.MobContainer>
+      </S.MobContainer> */}
       <S.Container>
         <S.ItemList>
           {_ROUTES.map(route => (

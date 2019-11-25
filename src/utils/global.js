@@ -11,7 +11,7 @@ const GlobalStyles = createGlobalStyle`
 
   .light-mode {
     --bg: #FFFFFF;
-    --footer: #C3C3C355;
+    --footer: #EEEFFF;
     --text: 51, 51, 51;
     --primary: #4B334C;
     --secondary: #755671;
@@ -29,7 +29,7 @@ const GlobalStyles = createGlobalStyle`
 
   .dark-mode {
     --bg: #282C35;
-    --footer: #F6F6F611;
+    --footer: #313642;
     --text: 255, 255, 255;
     --primary: #755671;
     --secondary: #FFD1D0;

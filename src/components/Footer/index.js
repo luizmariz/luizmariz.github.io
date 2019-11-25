@@ -1,5 +1,4 @@
 import React from 'react';
-import { SubTitle } from '../shared/styled';
 import * as S from './styled';
 
 function Footer() {

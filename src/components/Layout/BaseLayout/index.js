@@ -1,12 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import useDarkMode from 'use-dark-mode';
 import Helmet from 'react-helmet';
 import GlobalStyles from '../../../utils/global';
 import * as S from './styled';
 
-function BaseLayout({ render, children }) {
-  const darkMode = useDarkMode(false);
+function BaseLayout({ render, children, darkMode }) {
+  console.log(darkMode)
   return (
     <React.Fragment>
       <Helmet
@@ -19,7 +18,7 @@ function BaseLayout({ render, children }) {
       />
       <GlobalStyles />
       <S.Container>
-        {render(darkMode)}
+        {render()}
         <S.PageContent>{children}</S.PageContent>
       </S.Container>
     </React.Fragment>
@@ -32,7 +31,8 @@ BaseLayout.defaultProps = {
 
 BaseLayout.propTypes = {
   render: PropTypes.func,
-  children: PropTypes.any.isRequired
+  children: PropTypes.any.isRequired,
+  darkMode: PropTypes.object.isRequired
 };
 
 export default BaseLayout;

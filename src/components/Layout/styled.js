@@ -38,7 +38,6 @@ export const LogoContainer = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  margin-top: 2.6rem;
 
   .anchor:hover {
     opacity: 1;

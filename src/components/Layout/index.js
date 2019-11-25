@@ -1,12 +1,14 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import { Anchor } from '../shared/styled';
+import useDarkMode from 'use-dark-mode';
 import BaseLayout from './BaseLayout';
 import Nav from '../Nav';
 import Footer from '../Footer';
 import * as S from './styled';
 
 function Layout({ children, location }) {
+  const darkMode = useDarkMode(false);
   const { logoDark, logoLight } = useStaticQuery(
     graphql`
       query {
@@ -29,16 +31,20 @@ function Layout({ children, location }) {
   );
 
   if (location.pathname === '/404') {
-    return <BaseLayout children={children} />;
+    return <BaseLayout children={children} darkMode={darkMode}/>;
   }
 
   return (
     <React.Fragment>
+      <Nav
+        checked={darkMode.value}
+        onToggle={darkMode.toggle}
+      />
       <BaseLayout
+        darkMode={darkMode}
         children={children}
-        render={darkMode => (
+        render={() => (
           <header>
-            <Nav checked={darkMode.value} onToggle={darkMode.toggle} />
             <S.LogoContainer>
               <S.Row>
                 <Anchor to="/" aria-label="Ir para a homepage">
