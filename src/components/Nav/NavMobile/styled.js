@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { MdDragHandle, MdArrowUpward } from 'react-icons/md';
+import { MdMenu, MdArrowUpward } from 'react-icons/md';
 import { Anchor } from '../../shared/styled';
 
 export const Container = styled.nav`
@@ -14,11 +14,11 @@ export const Container = styled.nav`
   justify-content: flex-start;
   overflow: hidden;
 
-  -webkit-transition: height .4s ease, background-color .2s ease-in;
-     -moz-transition: height .4s ease, background-color .2s ease-in;
-      -ms-transition: height .4s ease, background-color .2s ease-in;
-       -o-transition: height .4s ease, background-color .2s ease-in;
-          transition: height .4s ease, background-color .2s ease-in;
+  -webkit-transition: height .3s ease, background-color .2s ease-in;
+     -moz-transition: height .3s ease, background-color .2s ease-in;
+      -ms-transition: height .3s ease, background-color .2s ease-in;
+       -o-transition: height .3s ease, background-color .2s ease-in;
+          transition: height .3s ease, background-color .2s ease-in;
 
   @media (min-width: 672px) {
     display: none;
@@ -36,22 +36,8 @@ export const MenuBar = styled.div`
   border: 1px solid #99999922;
 `;
 
-export const MenuBtn = styled.div`
-  border: 1px solid ${props => props.toggle
-    ? 'rgba(var(--text), 0.5)'
-    : 'rgba(var(--text), 0.2)'
-  };
-  border-radius: 5px;
-  transition: border 0.1s ease-in;
-  width: 3.8rem;
-  height: 2.2rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-`;
-
-export const MenuIcon = styled(MdDragHandle)`
-  font-size: 1.5rem;
+export const MenuIcon = styled(MdMenu)`
+  font-size: 1.6rem;
   color: rgb(var(--text), .8);
 `;
 
@@ -64,7 +50,7 @@ export const Icons = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 6rem;
+  width: 5rem;
 `;
 
 export const Content = styled.ul`

@@ -21,12 +21,7 @@ function NavMobile({ items, currentPath }) {
   return (
     <S.Container toggle={showMenu ? 1 : 0}>
       <S.MenuBar>
-        <S.MenuBtn
-          onClick={toggleMenu}
-          toggle={showMenu ? 1 : 0}
-        >
-          <S.MenuIcon />
-        </S.MenuBtn>
+        <S.MenuIcon onClick={toggleMenu} />
         <S.Icons>
           <ToggleBtn />
           <S.ToTopBtn onClick={scrollToTop} />
