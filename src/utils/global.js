@@ -10,12 +10,12 @@ const GlobalStyles = createGlobalStyle`
   }
 
   .light-mode {
-    --bg: #FFFFFF;
-    --footer: #EEEFFF;
+    --bg: #ffffff;
+    --footer: #f5f5f5;
     --text: 51, 51, 51;
     --primary: #4B334C;
     --secondary: #755671;
-    --tertiary: #FFD1D0BF;
+    --tertiary: #ffd1d0bf;
     --heart: 75, 51, 76;
     --icon: #333333;
 
@@ -33,10 +33,10 @@ const GlobalStyles = createGlobalStyle`
     --footer: #313642;
     --text: 255, 255, 255;
     --primary: #755671;
-    --secondary: #FFD1D0;
-    --tertiary: #FFFFFF22;
+    --secondary: #ffd1d0;
+    --tertiary: #ffffff22;
     --heart: 232, 113, 92;
-    --icon: #FFD1D0;
+    --icon: #ffd1d0;
 
     a::before {
       content: url(${darkLink});

@@ -30,7 +30,7 @@ export const MenuBar = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  height: 3.5rem;
+  min-height: 3.5rem;
   width: 100%;
   padding: .5rem 1.3rem;
   border: 1px solid #99999922;
@@ -44,27 +44,27 @@ export const MenuBtn = styled.div`
   border-radius: 5px;
   transition: border 0.1s ease-in;
   width: 3.8rem;
-  height: 2.4rem;
+  height: 2.2rem;
   display: flex;
   align-items: center;
   justify-content: center;
 `;
 
 export const MenuIcon = styled(MdDragHandle)`
-  font-size: 1.8rem;
-  color: rgb(var(--text), .7);
+  font-size: 1.5rem;
+  color: rgb(var(--text), .8);
 `;
 
 export const ToTopBtn = styled(MdArrowUpward)`
-  color: rgb(var(--text), .7);
-  font-size: 1.8rem;
+  color: rgb(var(--text), .8);
+  font-size: 1.5rem;
 `;
 
 export const Icons = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 6.5rem;
+  width: 6rem;
 `;
 
 export const Content = styled.ul`
