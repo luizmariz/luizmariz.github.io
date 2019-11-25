@@ -1,20 +1,24 @@
 import styled from 'styled-components';
-import { MdDragHandle } from 'react-icons/md';
+import { MdDragHandle, MdArrowUpward } from 'react-icons/md';
+import { Anchor } from '../../shared/styled';
 
 export const Container = styled.nav`
   position: fixed;
   bottom: 0;
-  height: ${props => props.show ? '12rem' : '4rem'};
+  height: ${props => props.toggle ? '10.5rem' : '3.5rem'};
   width: 100vw;
-  padding: .5rem 1.3rem;
   background-color: var(--footer);
   z-index: 100;
-  border: 1px solid #99999922;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   overflow: hidden;
-  transition: height .45s ease;
+
+  -webkit-transition: height .4s ease, background-color .2s ease-in;
+     -moz-transition: height .4s ease, background-color .2s ease-in;
+      -ms-transition: height .4s ease, background-color .2s ease-in;
+       -o-transition: height .4s ease, background-color .2s ease-in;
+          transition: height .4s ease, background-color .2s ease-in;
 
   @media (min-width: 672px) {
     display: none;
@@ -23,35 +27,61 @@ export const Container = styled.nav`
 
 export const MenuBar = styled.div`
   display: flex;
-  height: 3rem;
-  width: 100%;
   flex-direction: row;
   align-items: center;
+  justify-content: space-between;
+  height: 3.5rem;
+  width: 100%;
+  padding: .5rem 1.3rem;
+  border: 1px solid #99999922;
+`;
+
+export const MenuBtn = styled.div`
+  border: 1px solid ${props => props.toggle
+    ? 'rgba(var(--text), 0.5)'
+    : 'rgba(var(--text), 0.2)'
+  };
+  border-radius: 5px;
+  transition: border 0.1s ease-in;
+  width: 3.8rem;
+  height: 2.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
+export const MenuIcon = styled(MdDragHandle)`
+  font-size: 1.8rem;
+  color: rgb(var(--text), .7);
+`;
+
+export const ToTopBtn = styled(MdArrowUpward)`
+  color: rgb(var(--text), .7);
+  font-size: 1.8rem;
+`;
+
+export const Icons = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 6.5rem;
 `;
 
 export const Content = styled.ul`
   list-style-type: none;
-  padding: 0;
   line-height: 2.5rem;
-
-  a {
-    font-weight: 400;
-    margin-top: .5rem;
-    color: rgb(var(--text));
-  }
+  margin: 0;
+  padding: 0;
 `;
 
-export const MenuBtn = styled(MdDragHandle)`
-  color: rgb(var(--text), .5);
-  cursor: pointer;
-  font-size: 2.6rem;
-  border: 1px solid rgba(var(--text), 0.2);
-  border-radius: 5px;
-  transition: border 0.1s ease-in;
-  width: 3.8rem;
+export const StyledAnchor = styled(Anchor)`
+  color: rgb(var(--text));
+  border-bottom: 1px solid #99999922;
+`;
 
-  &:hover {
-    transition: border 0.1s ease-in;
-    border: 1px solid rgba(var(--text), 0.5);
-  }
+export const Item = styled.li`
+  padding: 0 1.3rem;
+  height: 3.5rem;
+  display: flex;
+  align-items: center;
 `;

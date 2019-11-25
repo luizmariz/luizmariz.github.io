@@ -9,7 +9,7 @@ function ToggleBtn({ className }) {
   return (
     <S.LighBulb
       className={className}
-      isDark={darkMode.value}
+      dark={darkMode.value ? 1 : 0}
       onClick={darkMode.toggle}
     />
   );

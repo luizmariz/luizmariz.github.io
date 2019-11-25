@@ -50,18 +50,16 @@ const GlobalStyles = createGlobalStyle`
     margin: 0;
     color: rgb(var(--text));
     background-color: var(--bg);
-
-    @media (min-width: 672px) {
-      -webkit-transition: background-color .2s ease-in;
-	       -moz-transition: background-color .2s ease-in;
-	        -ms-transition: background-color .2s ease-in;
-	         -o-transition: background-color .2s ease-in;
-	            transition: background-color .2s ease-in;
-    }
   }
 
+  body,
   * {
     box-sizing: inherit;
+    -webkit-transition: background-color .2s ease-in;
+       -moz-transition: background-color .2s ease-in;
+        -ms-transition: background-color .2s ease-in;
+         -o-transition: background-color .2s ease-in;
+            transition: background-color .2s ease-in;
   }
 
   h1 {

@@ -10,13 +10,16 @@ const _ROUTES = [
 function Nav({ location }) {
   return (
     <React.Fragment>
-      <NavMobile items={_ROUTES}/>
+      <NavMobile
+        items={_ROUTES}
+        currentPath={location.pathname}
+      />
     </React.Fragment>
   );
 }
 
 Nav.propTypes = {
-  location: PropTypes.string
+  location: PropTypes.object
 }
 
 export default Nav;

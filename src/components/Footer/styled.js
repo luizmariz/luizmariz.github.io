@@ -19,12 +19,12 @@ export const MainRow = styled.section`
 `;
 
 export const BonusRow = styled(MainRow)`
-  border-top: 1px solid var(--bg);
+  border-top: 1px solid #99999922;
   font-size: 0.9rem;
   min-height: 4vh;
 
   @media (max-width: 672px) {
-    margin-bottom: 4rem;
+    margin-bottom: 3.5rem;
   }
 
   ${Wrapper} {
@@ -46,9 +46,8 @@ export const Row = styled.div`
   margin-top: 1.1rem;
 `;
 
-// TODO: change to styled-icons
 export const Github = styled(DiGithubBadge)`
-  color: rgb(var(--text));
+  color: rgb(var(--text), .9);
   cursor: pointer;
   font-size: 2.6rem;
   border: 1px solid rgba(var(--text), 0.2);
@@ -63,7 +62,7 @@ export const Github = styled(DiGithubBadge)`
 `;
 
 export const Linkedin = styled(FaLinkedin)`
-  color: rgb(var(--text));
+  color: rgb(var(--text), .9);
   cursor: pointer;
   font-size: 2.6rem;
   border: 1px solid rgba(var(--text), 0.2);
