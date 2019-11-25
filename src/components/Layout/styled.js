@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import ToggleBtn from '../../components/shared/ToggleBtn';
 import Img from 'gatsby-image';
 
 export const Logo = styled(Img)`
@@ -50,10 +49,4 @@ export const Row = styled.div`
   align-items: center;
   justify-content: flex-start;
   min-height: 70px;
-`;
-
-export const ResponsiveToggleBtn = styled(ToggleBtn)`
-  @media (max-width: 672px) {
-    display: none;
-  }
 `;

@@ -1,11 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
+import useDarkMode from 'use-dark-mode';
 import GlobalStyles from '../../../utils/global';
 import * as S from './styled';
 
-function BaseLayout({ render, children, darkMode }) {
-  console.log(darkMode)
+function BaseLayout({ render, children }) {
+  const darkMode = useDarkMode(false);
+
   return (
     <React.Fragment>
       <Helmet
@@ -32,7 +34,6 @@ BaseLayout.defaultProps = {
 BaseLayout.propTypes = {
   render: PropTypes.func,
   children: PropTypes.any.isRequired,
-  darkMode: PropTypes.object.isRequired
 };
 
 export default BaseLayout;

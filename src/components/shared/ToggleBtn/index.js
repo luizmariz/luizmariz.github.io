@@ -1,30 +1,22 @@
 import React from 'react';
-import { MdBrightnessLow, MdBrightness2 } from 'react-icons/md';
+import useDarkMode from 'use-dark-mode';
 import * as S from './styled';
 import PropTypes from 'prop-types';
 
-function ToggleThemeBtn({ checked, onToggle, className }) {
+function ToggleBtn({ className }) {
+  const darkMode = useDarkMode(false);
+
   return (
-    <S.Switch className={className}>
-      <input
-        defaultChecked={checked}
-        type="checkbox"
-        onClick={onToggle}
-        label="Alternar tema"
-        aria-label="Alternar tema"
-      />
-      <S.Slider darkMode={checked}>
-        <MdBrightnessLow color="#D4D400" size="1.2rem" />
-        <MdBrightness2 color="#FFFFFF" size="1.3rem" />
-      </S.Slider>
-    </S.Switch>
+    <S.LighBulb
+      className={className}
+      isDark={darkMode.value}
+      onClick={darkMode.toggle}
+    />
   );
 }
 
-ToggleThemeBtn.propTypes = {
-  checked: PropTypes.bool.isRequired,
-  onToggle: PropTypes.func.isRequired,
+ToggleBtn.propTypes = {
   className: PropTypes.string
 };
 
-export default ToggleThemeBtn;
+export default ToggleBtn;
