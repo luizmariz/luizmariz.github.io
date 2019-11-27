@@ -13,6 +13,7 @@ export const BlogTitle = styled.div`
   text-transform: uppercase;
   display: flex;
 
+  /* TODO: refact it */
   h1 {
     margin: 0;
     color: var(--primary);
@@ -40,6 +41,10 @@ export const LogoContainer = styled.div`
 
   .anchor:hover {
     opacity: 1;
+  }
+
+  @media (min-width: 770px) {
+    margin-top: 3.5rem;
   }
 `;
 

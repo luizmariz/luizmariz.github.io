@@ -11,7 +11,7 @@ const GlobalStyles = createGlobalStyle`
 
   .light-mode {
     --bg: #ffffff;
-    --footer: #f5f5f5;
+    --footer: #f4f7f6;
     --text: 51, 51, 51;
     --primary: #4B334C;
     --secondary: #755671;
@@ -196,7 +196,7 @@ const GlobalStyles = createGlobalStyle`
     color: inherit;
   }
 
-  @media (max-width: 672px) {
+  @media (max-width: 770px) {
     .gatsby-highlight {
       border-radius: 0;
     }

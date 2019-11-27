@@ -20,7 +20,7 @@ export const Container = styled.nav`
        -o-transition: height .3s ease, background-color .2s ease-in;
           transition: height .3s ease, background-color .2s ease-in;
 
-  @media (min-width: 672px) {
+  @media (min-width: 770px) {
     display: none;
   }
 `;

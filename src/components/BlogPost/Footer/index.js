@@ -9,9 +9,9 @@ function Footer({ previous, next }) {
   return (
     <aside>
       <nav>
-        <Anchor to="/">
-          <S.BlogIndex>luiz ipsum</S.BlogIndex>
-        </Anchor>
+        <S.BlogIndex>
+          <Anchor to="/">luiz ipsum</Anchor>
+        </S.BlogIndex>
         <Bio />
         <S.PostNav>
           {previous && (

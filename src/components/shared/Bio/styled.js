@@ -16,7 +16,7 @@ export const Text = styled.p`
     max-width: 11rem;
   }
 
-  @media (min-width: 672px) {
+  @media (min-width: 770px) {
     max-width: 25rem;
   }
 `;

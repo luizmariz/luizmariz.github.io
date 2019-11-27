@@ -23,7 +23,7 @@ export const BonusRow = styled(MainRow)`
   font-size: 0.9rem;
   min-height: 4vh;
 
-  @media (max-width: 672px) {
+  @media (max-width: 770px) {
     margin-bottom: 3.5rem;
   }
 

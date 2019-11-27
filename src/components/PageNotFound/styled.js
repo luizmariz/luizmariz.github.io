@@ -5,7 +5,7 @@ export const OvniVector = styled.img`
   height: auto;
   width: 25vw;
 
-  @media (max-width: 672px) {
+  @media (max-width: 770px) {
     width: 80vw;
   }
 `;
@@ -30,7 +30,7 @@ export const StyledAnchor = styled(Anchor)`
   padding: 0.5rem 0;
   transition: border-color 0.1s ease-in;
 
-  @media (max-width: 672px) {
+  @media (max-width: 770px) {
     margin: 0 10%;
   }
 

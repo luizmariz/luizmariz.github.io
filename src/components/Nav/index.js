@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import NavMobile from './NavMobile';
+import NavDesktop from './NavDesktop';
 
 const _ROUTES = [
   { name: 'Home', to: '/' },
@@ -10,10 +11,8 @@ const _ROUTES = [
 function Nav({ location }) {
   return (
     <React.Fragment>
-      <NavMobile
-        items={_ROUTES}
-        currentPath={location.pathname}
-      />
+      <NavMobile items={_ROUTES} />
+      <NavDesktop />
     </React.Fragment>
   );
 }

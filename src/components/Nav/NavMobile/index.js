@@ -3,7 +3,7 @@ import ToggleBtn from '../../shared/ToggleBtn';
 import PropTypes from 'prop-types';
 import * as S from './styled';
 
-function NavMobile({ items, currentPath }) {
+function NavMobile({ items }) {
   const [showMenu, setShowMenu] = useState(false);
 
   const toggleMenu = e => {
@@ -32,7 +32,6 @@ function NavMobile({ items, currentPath }) {
           <S.StyledAnchor
             key={item.to}
             to={item.to}
-            selected={item.to === currentPath}
           >
             <S.Item>
               {item.name}
@@ -46,7 +45,6 @@ function NavMobile({ items, currentPath }) {
 
 NavMobile.propTypes = {
   items: PropTypes.array.isRequired,
-  currentPath: PropTypes.string
 }
 
 export default NavMobile;
