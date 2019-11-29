@@ -14,7 +14,8 @@ function BlogPost({
   summary,
   html,
   previous,
-  next
+  next,
+  image
 }) {
   return (
     <Layout location={location}>
@@ -22,7 +23,7 @@ function BlogPost({
         title={title}
         description={summary}
         slug={slug}
-        image={img}
+        image={image}
       />
       <main>
         <article>
@@ -47,7 +48,8 @@ BlogPost.propTypes = {
   summary: PropTypes.string.isRequired,
   html: PropTypes.string.isRequired,
   previous: PropTypes.any,
-  next: PropTypes.any
+  next: PropTypes.any,
+  image: PropTypes.string
 };
 
 export default BlogPost;
