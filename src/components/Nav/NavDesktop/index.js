@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import * as S from './styled';
+import AnimatedMenu from '../../shared/AnimatedMenu';
 
 function NavDesktop({ items }) {
   const [ scroll, setScroll ] = useState(0);
@@ -27,17 +28,26 @@ function NavDesktop({ items }) {
 
   });
 
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
+
   return (
     <S.Container show={show ? 1 : 0} >
       <S.Wrapper>
-        <S.AnimatedMenu onClick={handleToggleMenu}>
-          <S.MenuBarTop />
-          <S.MenuBarMiddle />
-          <S.MenuBarBottom />
-        </S.AnimatedMenu>
+        <AnimatedMenu
+          onClick={handleToggleMenu}
+          active={showMenu}
+        />
         <S.Row>
           <S.StyledToggleBtn />
-          <S.ToTopBtn />
+          <S.ToTopBtn
+            onClick={scrollToTop}
+            title="Ir para o topo"
+          />
         </S.Row>
       </S.Wrapper>
       <S.NavigationWrapper show={showMenu ? 1: 0}>

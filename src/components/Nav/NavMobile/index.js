@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import ToggleBtn from '../../shared/ToggleBtn';
 import PropTypes from 'prop-types';
 import * as S from './styled';
+import ToggleBtn from '../../shared/ToggleBtn';
+import AnimatedMenu from '../../shared/AnimatedMenu';
 
 function NavMobile({ items }) {
-  const [showMenu, setShowMenu] = useState(false);
+  const [ showMenu, setShowMenu ] = useState(false);
 
   const toggleMenu = e => {
     e.preventDefault();
@@ -36,7 +37,10 @@ function NavMobile({ items }) {
   return (
     <S.Container toggle={showMenu ? 1 : 0}>
       <S.MenuBar>
-        <S.MenuIcon onClick={toggleMenu} />
+        <AnimatedMenu
+          onClick={toggleMenu}
+          active={showMenu}
+        />
         <S.Icons>
           <ToggleBtn />
           <S.ToTopBtn onClick={scrollToTop} />

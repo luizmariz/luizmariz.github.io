@@ -82,7 +82,7 @@ export const Anchor = styled.a`
   border-bottom: none;
 
   &:hover {
-    opacity: 1;
+    border-bottom: none;
   }
 
   &::before {

@@ -43,3 +43,7 @@ export const Description = styled.p`
   margin-bottom: 0;
   color: rgb(var(--text));
 `;
+
+export const Time = styled.time`
+  font-size: .9rem;
+`;

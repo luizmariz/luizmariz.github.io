@@ -94,14 +94,11 @@ const GlobalStyles = createGlobalStyle`
   a {
     text-decoration: none;
     color: var(--secondary);
-    border-bottom: 2px dotted var(--primary);
-    transition: opacity .1s;
-    opacity: 1;
+    border-bottom: 2px dotted var(--secondary);
   }
 
   a:hover {
-    opacity: 0.7;
-    transition: opacity .1s;
+    border-bottom: 2px solid var(--secondary);
   }
 
   a::before {

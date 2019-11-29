@@ -11,7 +11,7 @@ export const Anchor = styled(Link)`
   stroke: rgba(var(--text), 0.5);
 
   &:hover {
-    opacity: 1;
+    border-bottom: none;
   }
 
   &::before {

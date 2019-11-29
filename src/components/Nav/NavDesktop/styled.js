@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import { MdMenu, MdArrowUpward } from 'react-icons/md';
+import { MdArrowUpward } from 'react-icons/md';
 import { Anchor } from '../../shared/styled';
 import ToggleBtn from '../../shared/ToggleBtn';
 
@@ -18,12 +18,12 @@ export const Container = styled.nav`
   ${props => props.show
     ? css`
         visibility: visible;
-        transition: all .25s ease-out;
+        transition: all .25s ease-out, background-color .2s ease-in;
         transform: translateY(0);
       `
     : css`
       visibility: hidden;
-      transition: all .25s ease-in;
+      transition: all .25s ease-in, background-color .2s ease-in;
       transform: translateY(-100%);
     `
   }
@@ -49,69 +49,22 @@ export const Row = styled.div`
   align-items: center;
 `;
 
-export const MenuIcon = styled(MdMenu)`
-  font-size: 2rem;
-  color: rgb(var(--text));
-  transition: color 0.2s ease-in;
-
-  &:hover {
-    cursor: pointer;
-  }
-
-`;
-
 export const ToTopBtn = styled(MdArrowUpward)`
   color: rgb(var(--text));
-  font-size: 1.7rem;
+  font-size: 1.6rem;
+  transition: color 0.15s ease-in;
 
   &:hover {
+    color: var(--tertiary);
     cursor: pointer;
+    transition: color 0.15s ease-out;
   }
 
 `;
 
 export const StyledToggleBtn = styled(ToggleBtn)`
-  font-size: 1.7rem;
+  font-size: 1.6rem;
   margin-right: 2rem;
-`;
-
-export const MenuBarTop = styled.div`
-  width: 100%;
-  height: 3px;
-  background-color: rgb(var(--text), .9);
-`;
-
-export const MenuBarMiddle = styled.div`
-  width: 100%;
-  height: 3px;
-  background-color: rgb(var(--text), .9);
-`;
-
-export const MenuBarBottom = styled.div`
-  width: 100%;
-  height: 3px;
-  background-color: rgb(var(--text), .9);
-`;
-
-export const AnimatedMenu = styled.div`
-  width: 2rem;
-  height: 2rem;
-  padding: .2rem .25rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-
-  &:hover {
-    cursor: pointer;
-
-    ${MenuBarTop} { width: 45%; }
-    ${MenuBarMiddle} { width: 85%; }
-    ${MenuBarBottom} { width: 65%; }
-  }
-
-  * {
-    transition: width .15s ease-in-out;
-  }
 `;
 
 export const NavigationWrapper = styled.div`
@@ -120,7 +73,7 @@ export const NavigationWrapper = styled.div`
   width: 100%;
   height: ${props => props.show ? '4rem' : '0'};
   overflow: hidden;
-  transition: height .25s ease-in-out;
+  transition: all .25s ease-in-out;
 `;
 
 export const Navigation = styled.ul`
@@ -146,7 +99,7 @@ export const StyledAnchor = styled(Anchor)`
   transition: background-color .1s ease-out;
 
   &:hover {
-    background-color: rgb(var(--text), .1);
+    background-color: rgb(var(--text), .03);
     transition: background-color .1s ease-in;
   }
 `;

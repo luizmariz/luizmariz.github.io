@@ -11,6 +11,7 @@ function ToggleBtn({ className }) {
       className={className}
       dark={darkMode.value ? 1 : 0}
       onClick={darkMode.toggle}
+      title="Mudar o tema"
     />
   );
 }

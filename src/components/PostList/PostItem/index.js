@@ -16,7 +16,7 @@ function PostItem({ date, readingTime, slug, tags, title, summary }) {
           </S.Tags>
           <header>
             <S.Title>{title}</S.Title>
-            <time>{formatTimestamp(date, readingTime)}</time>
+            <S.Time>{formatTimestamp(date, readingTime)}</S.Time>
           </header>
           <S.Description>{summary}</S.Description>
         </React.Fragment>
