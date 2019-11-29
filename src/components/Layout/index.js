@@ -10,7 +10,7 @@ function Layout({ children, location }) {
   const { logoDark, logoLight } = useStaticQuery(
     graphql`
       query {
-        logoDark: file(relativePath: { eq: "logo-cute-purple.png" }) {
+        logoDark: file(relativePath: { eq: "logo-cute-pink.png" }) {
           childImageSharp {
             fixed(width: 70, height: 70) {
               ...GatsbyImageSharpFixed
