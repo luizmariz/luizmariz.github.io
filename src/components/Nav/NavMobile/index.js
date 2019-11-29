@@ -31,9 +31,7 @@ function NavMobile({ items }) {
       <S.Content>
         {items.map(item => (
           <S.Item key={item.to}>
-            <S.StyledAnchor to={item.to}>
-              {item.name}
-            </S.StyledAnchor>
+            <S.StyledAnchor to={item.to}>{item.name}</S.StyledAnchor>
           </S.Item>
         ))}
       </S.Content>

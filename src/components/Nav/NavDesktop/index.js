@@ -47,9 +47,7 @@ function NavDesktop({ items }) {
         <S.Navigation>
           {items.map(item => (
             <S.Item key={item.to}>
-              <S.StyledAnchor to={item.to}>
-                {item.name}
-              </S.StyledAnchor>
+              <S.StyledAnchor to={item.to}>{item.name}</S.StyledAnchor>
             </S.Item>
           ))}
         </S.Navigation>
