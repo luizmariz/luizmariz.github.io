@@ -4,11 +4,12 @@ import Layout from '../components/Layout';
 import Bio from '../components/shared/Bio';
 import SEO from '../components/SEO';
 import PostList from '../components/PostList';
+import img from '../assets/images/default-img.png';
 
 function BlogIndexTemplate({ data, location }) {
   return (
     <Layout location={location}>
-      <SEO />
+      <SEO img={img} />
       <aside>
         <Bio />
       </aside>

@@ -3,6 +3,7 @@ import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 import Author from '../components/Author';
 import TypeWriter from '../components/TypeWriter';
+import img from '../assets/images/default-img.png';
 
 export default function({ location }) {
   return (
@@ -10,6 +11,7 @@ export default function({ location }) {
       <SEO
         title={'Sobre mim'}
         slug={'/about/'}
+        image={img}
         description={
           'Conheça um pouco melhor o desenvolvedor desse humilde blog'
         }
