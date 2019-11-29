@@ -19,6 +19,6 @@ function Nav({ location }) {
 
 Nav.propTypes = {
   location: PropTypes.object
-}
+};
 
 export default Nav;

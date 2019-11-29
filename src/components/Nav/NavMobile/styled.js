@@ -5,7 +5,7 @@ import { Anchor } from '../../shared/styled';
 export const Container = styled.nav`
   position: fixed;
   bottom: 0;
-  height: ${props => props.toggle ? '10.5rem' : '3.5rem'};
+  height: ${props => (props.toggle ? '10.5rem' : '3.5rem')};
   width: 100vw;
   background-color: var(--footer);
   z-index: 100;
@@ -14,11 +14,11 @@ export const Container = styled.nav`
   justify-content: flex-start;
   overflow: hidden;
 
-  -webkit-transition: height .3s ease, background-color .2s ease-in;
-     -moz-transition: height .3s ease, background-color .2s ease-in;
-      -ms-transition: height .3s ease, background-color .2s ease-in;
-       -o-transition: height .3s ease, background-color .2s ease-in;
-          transition: height .3s ease, background-color .2s ease-in;
+  -webkit-transition: height 0.3s ease, background-color 0.2s ease-in;
+  -moz-transition: height 0.3s ease, background-color 0.2s ease-in;
+  -ms-transition: height 0.3s ease, background-color 0.2s ease-in;
+  -o-transition: height 0.3s ease, background-color 0.2s ease-in;
+  transition: height 0.3s ease, background-color 0.2s ease-in;
 
   @media (min-width: 770px) {
     display: none;
@@ -32,17 +32,17 @@ export const MenuBar = styled.div`
   justify-content: space-between;
   min-height: 3.5rem;
   width: 100%;
-  padding: .5rem 1.3rem;
+  padding: 0.5rem 1.3rem;
   border: 1px solid #99999922;
 `;
 
 export const MenuIcon = styled(MdMenu)`
   font-size: 1.6rem;
-  color: rgb(var(--text), .8);
+  color: rgb(var(--text), 0.8);
 `;
 
 export const ToTopBtn = styled(MdArrowUpward)`
-  color: rgb(var(--text), .8);
+  color: rgb(var(--text), 0.8);
   font-size: 1.5rem;
 `;
 

@@ -45,5 +45,5 @@ export const Description = styled.p`
 `;
 
 export const Time = styled.time`
-  font-size: .9rem;
+  font-size: 0.9rem;
 `;

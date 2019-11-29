@@ -5,7 +5,7 @@ import ToggleBtn from '../../shared/ToggleBtn';
 import AnimatedMenu from '../../shared/AnimatedMenu';
 
 function NavMobile({ items }) {
-  const [ showMenu, setShowMenu ] = useState(false);
+  const [showMenu, setShowMenu] = useState(false);
 
   const toggleMenu = e => {
     e.preventDefault();
@@ -31,16 +31,12 @@ function NavMobile({ items }) {
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-
   });
 
   return (
     <S.Container toggle={showMenu ? 1 : 0}>
       <S.MenuBar>
-        <AnimatedMenu
-          onClick={toggleMenu}
-          active={showMenu}
-        />
+        <AnimatedMenu onClick={toggleMenu} active={showMenu} />
         <S.Icons>
           <ToggleBtn />
           <S.ToTopBtn onClick={scrollToTop} />
@@ -48,13 +44,8 @@ function NavMobile({ items }) {
       </S.MenuBar>
       <S.Content>
         {items.map(item => (
-          <S.StyledAnchor
-            key={item.to}
-            to={item.to}
-          >
-            <S.Item>
-              {item.name}
-            </S.Item>
+          <S.StyledAnchor key={item.to} to={item.to}>
+            <S.Item>{item.name}</S.Item>
           </S.StyledAnchor>
         ))}
       </S.Content>
@@ -63,7 +54,7 @@ function NavMobile({ items }) {
 }
 
 NavMobile.propTypes = {
-  items: PropTypes.array.isRequired,
-}
+  items: PropTypes.array.isRequired
+};
 
 export default NavMobile;

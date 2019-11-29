@@ -13,20 +13,20 @@ export const Container = styled.nav`
   align-items: center;
   flex-direction: column;
   overflow: visible;
-  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, .08);
+  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.08);
 
-  ${props => props.show
-    ? css`
-        visibility: visible;
-        transition: all .25s ease-out, background-color .2s ease-in;
-        transform: translateY(0);
-      `
-    : css`
-      visibility: hidden;
-      transition: all .25s ease-in, background-color .2s ease-in;
-      transform: translateY(-100%);
-    `
-  }
+  ${props =>
+    props.show
+      ? css`
+          visibility: visible;
+          transition: all 0.25s ease-out, background-color 0.2s ease-in;
+          transform: translateY(0);
+        `
+      : css`
+          visibility: hidden;
+          transition: all 0.25s ease-in, background-color 0.2s ease-in;
+          transform: translateY(-100%);
+        `}
 
   @media (max-width: 770px) {
     display: none;
@@ -59,7 +59,6 @@ export const ToTopBtn = styled(MdArrowUpward)`
     cursor: pointer;
     transition: color 0.15s ease-out;
   }
-
 `;
 
 export const StyledToggleBtn = styled(ToggleBtn)`
@@ -71,9 +70,9 @@ export const NavigationWrapper = styled.div`
   background-color: var(--footer);
   border: 1px solid #99999922;
   width: 100%;
-  height: ${props => props.show ? '4rem' : '0'};
+  height: ${props => (props.show ? '4rem' : '0')};
   overflow: hidden;
-  transition: all .25s ease-in-out;
+  transition: all 0.25s ease-in-out;
 `;
 
 export const Navigation = styled.ul`
@@ -96,10 +95,10 @@ export const Item = styled.li`
 
 export const StyledAnchor = styled(Anchor)`
   color: rgb(var(--text));
-  transition: background-color .1s ease-out;
+  transition: background-color 0.1s ease-out;
 
   &:hover {
-    background-color: rgb(var(--text), .03);
-    transition: background-color .1s ease-in;
+    background-color: rgb(var(--text), 0.03);
+    transition: background-color 0.1s ease-in;
   }
 `;

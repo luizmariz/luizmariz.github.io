@@ -3,7 +3,7 @@ import styled, { css } from 'styled-components';
 const bar = css`
   width: 100%;
   height: 3px;
-  background-color: rgb(var(--text), .9);
+  background-color: rgb(var(--text), 0.9);
 
   @media (max-width: 770px) {
     height: 2px;
@@ -26,40 +26,40 @@ export const MenuBarBottom = styled.div`
 export const Container = styled.div`
   width: 2rem;
   height: 1.7rem;
-  padding: .2rem .25rem;
+  padding: 0.2rem 0.25rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  transform: rotate(${props => props.active ? '45deg' : '0'});
-  transition: margin .2s ease-in-out, opacity .2s ease-in-out,
-  transform .2s ease-in-out;
+  transform: rotate(${props => (props.active ? '45deg' : '0')});
+  transition: margin 0.2s ease-in-out, opacity 0.2s ease-in-out,
+    transform 0.2s ease-in-out;
 
-  ${ props => props.active
-    ? css`
-      ${MenuBarMiddle} {
-        margin: -3px 0;
-        opacity: 0;
+  ${props =>
+    props.active
+      ? css`
+          ${MenuBarMiddle} {
+            margin: -3px 0;
+            opacity: 0;
 
-        @media (max-width: 770px) {
-          margin: -2px;
-        }
-      }
+            @media (max-width: 770px) {
+              margin: -2px;
+            }
+          }
 
-      ${MenuBarBottom} {
-        transform: rotate(90deg);
-      }
-    `
-    : ''
-  }
+          ${MenuBarBottom} {
+            transform: rotate(90deg);
+          }
+        `
+      : ''}
 
   @media (min-width: 770px) {
     &:hover {
       cursor: pointer;
 
       * {
-        transition: margin .2s ease-in-out, opacity .2s ease-in-out,
-        transform .2s ease-in-out;
+        transition: margin 0.2s ease-in-out, opacity 0.2s ease-in-out,
+          transform 0.2s ease-in-out;
       }
 
       ${MenuBarMiddle} {
@@ -78,7 +78,7 @@ export const Container = styled.div`
   }
 
   * {
-    transition: margin .2s ease-in-out, opacity .2s ease-in-out,
-    transform .2s ease-in-out;
+    transition: margin 0.2s ease-in-out, opacity 0.2s ease-in-out,
+      transform 0.2s ease-in-out;
   }
 `;

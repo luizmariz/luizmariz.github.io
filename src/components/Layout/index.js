@@ -41,10 +41,7 @@ function Layout({ children, location }) {
           <header>
             <S.LogoContainer>
               <S.Row>
-                <Anchor
-                  to="/"
-                  aria-label="Ir para a homepage"
-                >
+                <Anchor to="/" aria-label="Ir para a homepage">
                   <S.Logo
                     className="dark"
                     alt="Luiz Ipsum"

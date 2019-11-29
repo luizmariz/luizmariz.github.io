@@ -19,12 +19,12 @@ function AnimatedMenu({ classname, onClick, active }) {
 
 AnimatedMenu.defaultProps = {
   active: false
-}
+};
 
 AnimatedMenu.propTypes = {
   classname: PropTypes.string,
   onClick: PropTypes.func,
   active: PropTypes.bool
-}
+};
 
 export default AnimatedMenu;

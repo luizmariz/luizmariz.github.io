@@ -33,7 +33,7 @@ BaseLayout.defaultProps = {
 
 BaseLayout.propTypes = {
   render: PropTypes.func,
-  children: PropTypes.any.isRequired,
+  children: PropTypes.any.isRequired
 };
 
 export default BaseLayout;
