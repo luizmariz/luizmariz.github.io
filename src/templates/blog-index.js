@@ -9,7 +9,7 @@ import img from '../assets/images/default-img.png';
 function BlogIndexTemplate({ data, location }) {
   return (
     <Layout location={location}>
-      <SEO img={img} />
+      <SEO image={img} />
       <aside>
         <Bio />
       </aside>

@@ -18,7 +18,12 @@ function BlogPost({
 }) {
   return (
     <Layout location={location}>
-      <SEO title={title} description={summary} slug={slug} />
+      <SEO
+        title={title}
+        description={summary}
+        slug={slug}
+        image={img}
+      />
       <main>
         <article>
           <header>

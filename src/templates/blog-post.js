@@ -12,6 +12,7 @@ function BlogPostTemplate({ data, pageContext, location }) {
       location={location}
       title={frontmatter.title}
       summary={frontmatter.summary}
+      image={frontmatter.image}
       date={frontmatter.date}
       readingTime={markdownRemark.fields.readingTime.minutes}
       slug={slug}
