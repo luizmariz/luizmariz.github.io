@@ -8,8 +8,7 @@ function ToggleBtn({ className }) {
 
   return (
     <S.LighBulb
-      className={className}
-      dark={darkMode.value ? 1 : 0}
+      className={`${className} light-bulb`}
       onClick={darkMode.toggle}
       title="Mudar o tema"
     />

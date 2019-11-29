@@ -32,7 +32,7 @@ export const MenuBar = styled.div`
   justify-content: space-between;
   min-height: 3.5rem;
   width: 100%;
-  padding: 0.5rem 1.3rem;
+  padding: 0.5rem 1.05rem;
   border: 1px solid #99999922;
 `;
 

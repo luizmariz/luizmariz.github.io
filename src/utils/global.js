@@ -26,6 +26,10 @@ const GlobalStyles = createGlobalStyle`
     .dark {
       display: none !important;
     }
+
+    .light-bulb {
+      color: #ffd700;
+    }
   }
 
   .dark-mode {
@@ -44,6 +48,10 @@ const GlobalStyles = createGlobalStyle`
 
     .light {
       display: none !important;
+    }
+
+    .light-bulb {
+      color: #ffffffbb;
     }
   }
 
@@ -98,7 +106,9 @@ const GlobalStyles = createGlobalStyle`
   }
 
   a:hover {
-    border-bottom: 2px solid var(--secondary);
+    @media (min-width: 770px) {
+      border-bottom: 2px solid var(--secondary);
+    }
   }
 
   a::before {
