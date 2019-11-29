@@ -24,7 +24,7 @@ export default function({ location }) {
           Oi, meu nome é Luiz, nasci no interior de Minas Gerais e atualmente
           sou dev no time de growth hacking da{' '}
           <a
-            href="https://mjvinnovation.com"
+            href="https://www.mjvinnovation.com/"
             target="_blank"
             rel="noopener noreferrer"
           >
