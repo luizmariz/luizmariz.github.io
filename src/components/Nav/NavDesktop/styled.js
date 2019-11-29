@@ -90,12 +90,14 @@ export const Item = styled.li`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0 3rem;
 `;
 
 export const StyledAnchor = styled(Anchor)`
   color: rgb(var(--text));
   transition: background-color 0.1s ease-out;
+  height: 100%;
+  width: 100%;
+  padding: 0 3rem;
 
   &:hover {
     background-color: rgb(var(--text), 0.03);

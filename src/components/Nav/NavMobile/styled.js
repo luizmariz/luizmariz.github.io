@@ -63,10 +63,12 @@ export const Content = styled.ul`
 export const StyledAnchor = styled(Anchor)`
   color: rgb(var(--text));
   border-bottom: 1px solid #99999922;
+  height: 100%;
+  width: 100%;
+  padding: 0 1.3rem;
 `;
 
 export const Item = styled.li`
-  padding: 0 1.3rem;
   height: 3.5rem;
   display: flex;
   align-items: center;

@@ -46,9 +46,11 @@ function NavDesktop({ items }) {
       <S.NavigationWrapper show={showMenu ? 1 : 0}>
         <S.Navigation>
           {items.map(item => (
-            <S.StyledAnchor to={item.to}>
-              <S.Item>{item.name}</S.Item>
-            </S.StyledAnchor>
+            <S.Item key={item.to}>
+              <S.StyledAnchor to={item.to}>
+                {item.name}
+              </S.StyledAnchor>
+            </S.Item>
           ))}
         </S.Navigation>
       </S.NavigationWrapper>
