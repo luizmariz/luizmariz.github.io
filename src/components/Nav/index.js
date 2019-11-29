@@ -12,7 +12,7 @@ function Nav({ location }) {
   return (
     <React.Fragment>
       <NavMobile items={_ROUTES} />
-      <NavDesktop />
+      <NavDesktop items={_ROUTES} />
     </React.Fragment>
   );
 }

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import ToggleBtn from '../../shared/ToggleBtn';
 import PropTypes from 'prop-types';
 import * as S from './styled';
@@ -16,7 +16,22 @@ function NavMobile({ items }) {
       top: 0,
       behavior: 'smooth'
     });
-  }
+  };
+
+  const handleScroll = () => {
+    if (showMenu) {
+      setShowMenu(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+
+  });
 
   return (
     <S.Container toggle={showMenu ? 1 : 0}>

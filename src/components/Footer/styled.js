@@ -16,6 +16,7 @@ export const Wrapper = styled.div`
 export const MainRow = styled.section`
   background-color: var(--footer);
   min-height: 16vh;
+  border-top: 1px solid #99999922;
 `;
 
 export const BonusRow = styled(MainRow)`
