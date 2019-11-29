@@ -37,5 +37,6 @@ export const StyledAnchor = styled(Anchor)`
   &:hover {
     transition: border-color 0.1s ease-in;
     border-color: rgba(var(--text), 0.5);
+    border-bottom: 1px solid rgba(var(--text), 0.5);
   }
 `;
