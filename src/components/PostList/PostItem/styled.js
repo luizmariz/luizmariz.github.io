@@ -9,12 +9,12 @@ export const Container = styled.article`
   transition: border 0.1s ease-in;
 
   svg {
-    color: rgba(var(--heart), 0.5);
+    color: var(--secondary);
     margin-right: 0.5rem;
   }
 
   &:hover {
-    border: 1px solid rgba(var(--text), 0.5);
+    border: 1px solid var(--secondary);
     transition: border 0.1s ease-in;
     cursor: pointer;
   }
@@ -27,23 +27,25 @@ export const Container = styled.article`
 export const Tags = styled.span`
   display: flex;
   align-items: center;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0;
+  margin-top: 1rem;
   font-size: 0.9rem;
-  color: rgba(var(--text), 0.7);
+  color: rgb(var(--text));
 `;
 
 export const Title = styled.h2`
   margin-bottom: 1.5rem;
   margin-top: 0;
-  color: var(--secondary);
+  color: var(--primary);
 `;
 
 export const Description = styled.p`
-  margin-top: 0.4rem;
+  margin-top: 0;
   margin-bottom: 0;
-  color: rgb(var(--text));
+  color: rgba(var(--text), 0.7);
 `;
 
 export const Time = styled.time`
-  font-size: 0.9rem;
+  margin-bottom: .5rem;
+  margin-top: 0;
 `;

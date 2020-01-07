@@ -36,8 +36,8 @@ const GlobalStyles = createGlobalStyle`
     --bg: #282C35;
     --footer: #313642;
     --text: 255, 255, 255;
-    --primary: #755671;
-    --secondary: #ffd1d0;
+    --primary: #ffd1d0;
+    --secondary: #755671;
     --tertiary: #ffffff22;
     --heart: 232, 113, 92;
     --icon: #ffd1d0;
@@ -101,13 +101,13 @@ const GlobalStyles = createGlobalStyle`
 
   a {
     text-decoration: none;
-    color: var(--secondary);
-    border-bottom: 2px dotted var(--secondary);
+    color: var(--primary);
+    border-bottom: 2px dotted var(--primary);
   }
 
   a:hover {
     @media (min-width: 770px) {
-      border-bottom: 2px solid var(--secondary);
+      border-bottom: 2px solid var(--primary);
     }
   }
 
@@ -151,6 +151,10 @@ const GlobalStyles = createGlobalStyle`
 
   time {
     color: rgba(var(--text), .7);
+    margin-bottom: 1.75rem;
+    margin-top: -.7rem;
+    display: block;
+    font-size: 0.9rem;
   }
 
   /* Code */

@@ -7,13 +7,20 @@ export const PostNav = styled.ul`
   margin-top: 4rem;
   margin-bottom: 0;
   list-style-type: none;
+  max-width: 80%;
 
   svg {
     font-size: 1.2rem;
   }
+
+  @media (max-width: 770px) {
+    max-width: 100%;
+  }
 `;
 
 export const Next = styled.li`
+  display: inline;
+
   svg {
     margin-left: 1rem;
   }
@@ -21,6 +28,7 @@ export const Next = styled.li`
 
 export const Previous = styled.li`
   text-align: right;
+  display: inline;
 
   svg {
     margin-right: 1rem;
@@ -28,10 +36,12 @@ export const Previous = styled.li`
 `;
 
 export const StyledLink = styled(Link)`
-  display: inline-flex;
-  float: left;
   margin-top: 1.5rem;
-  align-items: center;
+  line-height: 2.1rem;
+
+  svg {
+    margin-bottom: -.2rem;
+  }
 
   &::before {
     content: none !important;

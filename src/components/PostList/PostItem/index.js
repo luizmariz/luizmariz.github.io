@@ -10,15 +10,15 @@ function PostItem({ date, readingTime, slug, tags, title, summary }) {
     <S.Container>
       <Anchor to={slug} rel="bookmark">
         <React.Fragment>
+          <header>
+            <S.Time>{formatTimestamp(date, readingTime)}</S.Time>
+            <S.Title>{title}</S.Title>
+          </header>
+          <S.Description>{summary}</S.Description>
           <S.Tags>
             <MdLabel />
             {tags}
           </S.Tags>
-          <header>
-            <S.Title>{title}</S.Title>
-            <S.Time>{formatTimestamp(date, readingTime)}</S.Time>
-          </header>
-          <S.Description>{summary}</S.Description>
         </React.Fragment>
       </Anchor>
     </S.Container>

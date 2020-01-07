@@ -11,7 +11,7 @@ function NavDesktop({ items }) {
   const handleScroll = () => {
     const scrollPos = document.body.getBoundingClientRect().top;
     setShowMenu(false);
-    setShow(scrollPos > scroll);
+    setShow(scrollPos >= scroll);
     setScroll(scrollPos);
   };
 
@@ -25,7 +25,7 @@ function NavDesktop({ items }) {
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  });
+  }, [scroll]);
 
   const scrollToTop = () => {
     window.scrollTo({
@@ -37,17 +37,25 @@ function NavDesktop({ items }) {
   return (
     <S.Container show={show ? 1 : 0}>
       <S.Wrapper>
-        <AnimatedMenu onClick={handleToggleMenu} active={showMenu} />
+        <AnimatedMenu
+          onClick={handleToggleMenu}
+          active={showMenu}
+        />
         <S.Row>
           <S.StyledToggleBtn />
-          <S.ToTopBtn onClick={scrollToTop} title="Ir para o topo" />
+          <S.ToTopBtn
+            onClick={scrollToTop}
+            title="Ir para o topo"
+          />
         </S.Row>
       </S.Wrapper>
       <S.NavigationWrapper show={showMenu ? 1 : 0}>
         <S.Navigation>
           {items.map(item => (
             <S.Item key={item.to}>
-              <S.StyledAnchor to={item.to}>{item.name}</S.StyledAnchor>
+              <S.StyledAnchor to={item.to}>
+                {item.name}
+              </S.StyledAnchor>
             </S.Item>
           ))}
         </S.Navigation>

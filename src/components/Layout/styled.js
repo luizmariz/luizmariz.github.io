@@ -16,7 +16,7 @@ export const BlogTitle = styled.div`
   /* TODO: refact it */
   h1 {
     margin: 0;
-    color: var(--secondary);
+    color: var(--primary);
     font-size: 1.5rem;
     font-weight: 600;
   }
