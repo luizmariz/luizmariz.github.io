@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import * as S from './styled';
 
 function TypeWriter({ value }) {
-  const [text, setText] = useState(value);
+  const [text, setText] = useState('');
   const [ref, inView] = useInView({ triggerOnce: true });
 
   const typeWriter = (text, i = 0) => {
