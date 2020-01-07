@@ -36,11 +36,10 @@ export const Container = styled.nav`
 export const Wrapper = styled.div`
   height: 4rem;
   min-width: 58rem;
-  padding: 0 1.3rem;
+  padding: 1.2rem 1.3rem;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
 `;
 
 export const Row = styled.div`
