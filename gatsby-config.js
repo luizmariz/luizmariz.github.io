@@ -58,7 +58,12 @@ module.exports = {
               inlineCodeMarker: '÷'
             }
           },
-          'gatsby-remark-copy-linked-files',
+          {
+            resolve: `gatsby-remark-copy-linked-files`,
+            options: {
+              ignoreFileExtensions: [],
+            },
+          },
           'gatsby-remark-smartypants',
           {
             resolve: 'gatsby-remark-external-links',

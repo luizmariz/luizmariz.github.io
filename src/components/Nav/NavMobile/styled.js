@@ -72,4 +72,5 @@ export const Item = styled.li`
   height: 3.5rem;
   display: flex;
   align-items: center;
+  margin: 0;
 `;

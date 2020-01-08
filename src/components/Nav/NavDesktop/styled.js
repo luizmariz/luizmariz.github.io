@@ -89,6 +89,7 @@ export const Item = styled.li`
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 0;
 `;
 
 export const StyledAnchor = styled(Anchor)`

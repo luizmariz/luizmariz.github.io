@@ -20,7 +20,7 @@ function TypeWriter({ value }) {
     if (inView) {
       typeWriter(value);
     }
-  }, [inView]);
+  }, [inView, value]);
 
   return (
     <S.Container ref={ref}>

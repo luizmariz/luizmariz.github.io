@@ -105,12 +105,6 @@ const GlobalStyles = createGlobalStyle`
     border-bottom: 2px dotted var(--primary);
   }
 
-  a:hover {
-    @media (min-width: 770px) {
-      border-bottom: 2px solid var(--primary);
-    }
-  }
-
   a::before {
     margin-right: .3rem;
   }
@@ -127,7 +121,7 @@ const GlobalStyles = createGlobalStyle`
 
   a.anchor:hover,
   a.gatsby-resp-image-link:hover {
-    opacity: 1;
+    border-bottom: none;
   }
 
   a.anchor::before,
@@ -155,6 +149,15 @@ const GlobalStyles = createGlobalStyle`
     margin-top: -.7rem;
     display: block;
     font-size: 0.9rem;
+  }
+
+  .mobile-gif,
+  .desktop-gif {
+    text-align:center;
+  }
+
+  li {
+    margin-bottom: .5rem;
   }
 
   /* Code */
@@ -220,6 +223,20 @@ const GlobalStyles = createGlobalStyle`
       p {
         padding: 0 1.3rem;
       }
+    }
+
+    .desktop-gif {
+      display: none
+    }
+  }
+
+  @media (min-width: 770px){
+    .mobile-gif {
+      display: none;
+    }
+
+    a:hover {
+      border-bottom: 2px solid var(--primary);
     }
   }
 
