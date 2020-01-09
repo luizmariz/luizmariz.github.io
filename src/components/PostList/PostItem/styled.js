@@ -14,7 +14,7 @@ export const Container = styled.article`
   }
 
   &:hover {
-    border: 1px solid var(--secondary);
+    border: 1px solid rgba(var(--text), 0.5);
     transition: border 0.1s ease-in;
     cursor: pointer;
   }

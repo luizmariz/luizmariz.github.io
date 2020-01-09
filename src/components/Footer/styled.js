@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { MdFavorite } from 'react-icons/md';
 import { DiGithubBadge } from 'react-icons/di';
-import { FaLinkedin } from 'react-icons/fa';
+import { FaLinkedin, FaTwitter } from 'react-icons/fa';
 
 export const Wrapper = styled.div`
   margin: 0 auto;
@@ -63,6 +63,22 @@ export const Github = styled(DiGithubBadge)`
 `;
 
 export const Linkedin = styled(FaLinkedin)`
+  color: var(--icon);
+  cursor: pointer;
+  font-size: 2.6rem;
+  border: 1px solid rgba(var(--text), 0.2);
+  border-radius: 5px;
+  padding: 7px;
+  margin-right: 1rem;
+  transition: border 0.1s ease-in;
+
+  &:hover {
+    transition: border 0.1s ease-in;
+    border: 1px solid rgba(var(--text), 0.5);
+  }
+`;
+
+export const Twitter = styled(FaTwitter)`
   color: var(--icon);
   cursor: pointer;
   font-size: 2.6rem;

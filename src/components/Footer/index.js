@@ -16,6 +16,14 @@ function Footer() {
               <S.Linkedin />
             </S.Anchor>
             <S.Anchor
+              href="https://twitter.com/luiz_of_rivia"
+              target="_blank"
+              title="Twitter"
+              rel="noopener noreferrer"
+            >
+              <S.Twitter />
+            </S.Anchor>
+            <S.Anchor
               href="https://github.com/luizmariz/"
               target="_blank"
               title="Github"
