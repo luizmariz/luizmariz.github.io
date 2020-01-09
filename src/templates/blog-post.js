@@ -1,6 +1,7 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import BlogPost from '../components/BlogPost';
+import thumbnail from '../assets/images/default-img.png';
 
 function BlogPostTemplate({ data, pageContext, location }) {
   const { markdownRemark } = data;
@@ -12,7 +13,7 @@ function BlogPostTemplate({ data, pageContext, location }) {
       location={location}
       title={frontmatter.title}
       summary={frontmatter.summary}
-      image={frontmatter.image}
+      image={thumbnail}
       date={frontmatter.date}
       readingTime={markdownRemark.fields.readingTime.minutes}
       slug={slug}

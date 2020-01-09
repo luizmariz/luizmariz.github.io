@@ -156,7 +156,6 @@ const GlobalStyles = createGlobalStyle`
     text-align:center;
   }
 
-  p,
   ul {
     margin: 0 0 1.5rem 0;
   }
