@@ -12,8 +12,8 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
-    "clean": "if exist .\\public rmdir /s /q .\\public\\ && if exist .\\.cache rmdir /s /q .\\.cache\\",
-    "deploy": "yarn clean && gatsby build && echo luizipsum.com.br > .\\public\\CNAME && gh-pages -d public -b master"
+    "clean": "rm -rf ./public && rm -rf ./cache",
+    "deploy": "yarn clean && gatsby build && echo luizipsum.com.br > ./public/CNAME && gh-pages -d public -b master"
   },
   "dependencies": {
     "babel-plugin-styled-components": "^1.10.6",
