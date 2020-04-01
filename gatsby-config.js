@@ -4,7 +4,7 @@ module.exports = {
     author: 'Luiz Mariz',
     description:
       'Blog e site pessoal de um desenvolvedor Front-end muito fã de React, JavaScript e Web design.',
-    siteUrl: 'https://luizipsum.wtf'
+    siteUrl: 'https://luizipsum.com.br'
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
