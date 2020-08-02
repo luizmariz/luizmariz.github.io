@@ -34,7 +34,7 @@ export const pageQuery = graphql`
             }
           }
           frontmatter {
-            date(locale: "pt-br", formatString: "DD [de] MMMM [de] YYYY")
+            date(locale: "pt-br", formatString: "YYYY-MM-DD")
             title
             summary
             tags

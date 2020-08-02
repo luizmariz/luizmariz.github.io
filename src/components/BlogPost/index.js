@@ -15,7 +15,8 @@ function BlogPost({
   html,
   previous,
   next,
-  image
+  image,
+  tags
 }) {
   return (
     <Layout location={location}>
@@ -24,6 +25,16 @@ function BlogPost({
         description={summary}
         slug={slug}
         image={image}
+        meta={[
+          {
+            property: 'article:published_time',
+            content: date
+          },
+          ...tags.map(tag => ({
+            property: 'article:tag',
+            content: tag
+          }))
+        ]}
       />
       <main>
         <article>
@@ -49,7 +60,8 @@ BlogPost.propTypes = {
   html: PropTypes.string.isRequired,
   previous: PropTypes.any,
   next: PropTypes.any,
-  image: PropTypes.string
+  image: PropTypes.string,
+  tags: PropTypes.arrayOf(PropTypes.string)
 };
 
 export default BlogPost;

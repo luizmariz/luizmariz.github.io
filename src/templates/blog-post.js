@@ -20,6 +20,7 @@ function BlogPostTemplate({ data, pageContext, location }) {
       html={html}
       previous={previous}
       next={next}
+      tags={frontmatter.tags.split(',')}
     />
   );
 }
@@ -31,7 +32,7 @@ export const pageQuery = graphql`
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       frontmatter {
-        date(locale: "pt-br", formatString: "DD [de] MMMM [de] YYYY")
+        date(locale: "pt-br", formatString: "YYYY-MM-DD")
         title
         summary
         tags
