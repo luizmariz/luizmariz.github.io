@@ -9,7 +9,7 @@
     "build": "gatsby build",
     "develop": "gatsby develop -H 127.0.0.1 -p 8000",
     "format": "prettier --write \"{gatsby-*.js,src/**/*.{js,jsx,json,css}}\"",
-    "start": "npm run develop",
+    "start": "yarn develop",
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
     "clean": "rm -rf ./public && rm -rf ./cache",
@@ -52,6 +52,7 @@
     "react-intersection-observer": "^8.25.2",
     "react-responsive": "^8.0.1",
     "styled-components": "^4.4.1",
+    "styled-media-query": "^2.1.2",
     "use-dark-mode": "^2.3.1"
   },
   "devDependencies": {
