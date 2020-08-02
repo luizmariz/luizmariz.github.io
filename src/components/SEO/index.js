@@ -28,12 +28,12 @@ function SEO({ meta, title, description, image, slug, lang }) {
       htmlAttributes={{ lang }}
       {...(title
         ? {
-            titleTemplate: `%s — ${siteMetadata.title}`,
-            title
-          }
+          titleTemplate: `%s — ${siteMetadata.title}`,
+          title
+        }
         : {
-            title: `${siteMetadata.title} — Home`
-          })}
+          title: `${siteMetadata.title} — Home`
+        })}
       meta={[
         {
           name: 'description',
@@ -71,15 +71,15 @@ function SEO({ meta, title, description, image, slug, lang }) {
         .concat(
           siteImage
             ? [
-                {
-                  property: 'og:image',
-                  content: siteImage
-                },
-                {
-                  name: 'twitter:image',
-                  content: siteImage
-                }
-              ]
+              {
+                property: 'og:image',
+                content: siteImage
+              },
+              {
+                name: 'twitter:image',
+                content: siteImage
+              }
+            ]
             : []
         )
         .concat(meta)}
@@ -89,9 +89,9 @@ function SEO({ meta, title, description, image, slug, lang }) {
 
 SEO.defaultProps = {
   meta: [],
+  lang: 'pt-BR',
   title: '',
   slug: '',
-  lang: 'pt-BR',
   image: null
 };
 

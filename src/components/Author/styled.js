@@ -18,18 +18,20 @@ export const Column = styled.div`
 `;
 
 export const StyledImg = styled(Img)`
+  width: 70px;
+  height: 70px;
+
   vertical-align: middle;
   object-fit: cover;
   border-radius: 50%;
-  width: 70px;
-  height: 70px;
 `;
 
 export const Name = styled.div`
-  font-weight: 500;
-  max-width: 10rem;
-  line-height: 1.4rem;
   margin-bottom: 0.2rem;
+  max-width: 10rem;
+
+  line-height: 1.4rem;
+  font-weight: 500;
 `;
 
 export const Description = styled.div`

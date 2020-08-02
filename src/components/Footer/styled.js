@@ -1,32 +1,36 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
+import media from 'styled-media-query';
+
 import { MdFavorite } from 'react-icons/md';
 import { DiGithubBadge } from 'react-icons/di';
 import { FaLinkedin, FaTwitter } from 'react-icons/fa';
 
 export const Wrapper = styled.div`
-  margin: 0 auto;
-  max-width: 42rem;
-  padding: 2rem 1.3rem;
   display: flex;
+  max-width: 42rem;
+  margin: 0 auto;
+  padding: 2rem 1.3rem;
+  flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  flex-direction: column;
 `;
 
 export const MainRow = styled.section`
-  background-color: var(--footer);
   min-height: 16vh;
+
+  background-color: var(--footer);
   border-top: 1px solid #99999922;
 `;
 
 export const BonusRow = styled(MainRow)`
-  border-top: 1px solid #99999922;
-  font-size: 0.9rem;
   min-height: 4vh;
+  font-size: 0.9rem;
+  border-top: 1px solid #99999922;
 
-  @media (max-width: 770px) {
+
+  ${media.greaterThan('medium')`
     margin-bottom: 3.5rem;
-  }
+  `}
 
   ${Wrapper} {
     padding: 0.5rem 1.3rem;
@@ -37,61 +41,14 @@ export const BonusRow = styled(MainRow)`
 `;
 
 export const Hearth = styled(MdFavorite)`
+ margin-left: 0.5rem;
   color: rgba(var(--heart));
-  margin-left: 0.5rem;
 `;
 
 export const Row = styled.div`
   display: flex;
-  flex-direction: row;
   margin-top: 1.1rem;
-`;
-
-export const Github = styled(DiGithubBadge)`
-  color: var(--icon);
-  cursor: pointer;
-  font-size: 2.6rem;
-  border: 1px solid rgba(var(--text), 0.2);
-  border-radius: 5px;
-  padding: 3px;
-  transition: border 0.1s ease-in;
-
-  &:hover {
-    transition: border 0.1s ease-in;
-    border: 1px solid rgba(var(--text), 0.5);
-  }
-`;
-
-export const Linkedin = styled(FaLinkedin)`
-  color: var(--icon);
-  cursor: pointer;
-  font-size: 2.6rem;
-  border: 1px solid rgba(var(--text), 0.2);
-  border-radius: 5px;
-  padding: 7px;
-  margin-right: 1rem;
-  transition: border 0.1s ease-in;
-
-  &:hover {
-    transition: border 0.1s ease-in;
-    border: 1px solid rgba(var(--text), 0.5);
-  }
-`;
-
-export const Twitter = styled(FaTwitter)`
-  color: var(--icon);
-  cursor: pointer;
-  font-size: 2.6rem;
-  border: 1px solid rgba(var(--text), 0.2);
-  border-radius: 5px;
-  padding: 7px;
-  margin-right: 1rem;
-  transition: border 0.1s ease-in;
-
-  &:hover {
-    transition: border 0.1s ease-in;
-    border: 1px solid rgba(var(--text), 0.5);
-  }
+  flex-direction: row;
 `;
 
 export const Anchor = styled.a`
@@ -104,4 +61,36 @@ export const Anchor = styled.a`
   &::before {
     content: none !important;
   }
+`;
+
+const BtnCommonCss = css`
+  padding: 7px;
+  margin-right: 1rem;
+
+  font-size: 2.6rem;
+  color: var(--icon);
+
+  cursor: pointer;
+  border: 1px solid rgba(var(--text), 0.2);
+  border-radius: 5px;
+  transition: border 0.1s ease-in;
+
+  &:hover {
+    transition: border 0.1s ease-in;
+    border: 1px solid rgba(var(--text), 0.5);
+  }
+`;
+
+export const Github = styled(DiGithubBadge)`
+  ${BtnCommonCss}
+
+  padding: 3px;
+`;
+
+export const Linkedin = styled(FaLinkedin)`
+  ${BtnCommonCss}
+`;
+
+export const Twitter = styled(FaTwitter)`
+  ${BtnCommonCss}
 `;

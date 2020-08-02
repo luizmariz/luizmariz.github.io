@@ -1,11 +1,12 @@
 import { createGlobalStyle } from 'styled-components';
+import media from 'styled-media-query';
 import lightLink from '../assets/images/light-link.svg';
 import darkLink from '../assets/images/dark-link.svg';
 
 const GlobalStyles = createGlobalStyle`
   html {
-    font: 100%/1.75 'Fira Code VF';
     box-sizing: border-box;
+    font: 100%/1.75 'Fira Code VF';
     overflow-y: scroll;
   }
 
@@ -58,6 +59,7 @@ const GlobalStyles = createGlobalStyle`
   body {
     padding: 0;
     margin: 0;
+
     color: rgb(var(--text));
     background-color: var(--bg);
   }
@@ -65,6 +67,7 @@ const GlobalStyles = createGlobalStyle`
   body,
   * {
     box-sizing: inherit;
+
     -webkit-transition: background-color .2s ease-in;
        -moz-transition: background-color .2s ease-in;
         -ms-transition: background-color .2s ease-in;
@@ -73,20 +76,19 @@ const GlobalStyles = createGlobalStyle`
   }
 
   h1 {
-    margin-left: 0;
-    margin-right: 0;
-    margin-top: 0;
     padding: 0;
-    margin-bottom: 1.5rem;
-    color: inherit;
+    margin: 0 0 1.5rem 0;
+
     font-weight: 700;
-    text-rendering: optimizeLegibility;
     font-size: 2.5rem;
     line-height: 1.1;
+    text-rendering: optimizeLegibility;
+    color: inherit;
   }
 
   h2 {
     margin-top: 2rem;
+
     font-weight: 600;
     line-height: 2rem;
   }
@@ -100,8 +102,9 @@ const GlobalStyles = createGlobalStyle`
   }
 
   a {
-    text-decoration: none;
     color: var(--primary);
+
+    text-decoration: none;
     border-bottom: 2px dotted var(--primary);
   }
 
@@ -112,11 +115,12 @@ const GlobalStyles = createGlobalStyle`
   a.anchor,
   a.gatsby-resp-image-link {
     display: flex;
+    float: none;
     flex-direction: row;
     align-items: center;
-    border-bottom: none;
-    float: none;
     margin: 0;
+
+    border-bottom: none;
   }
 
   a.anchor:hover,
@@ -131,29 +135,35 @@ const GlobalStyles = createGlobalStyle`
 
   a.anchor
   svg[aria-hidden="true"] {
-    stroke: rgba(var(--text), .5);
     padding-right: 2px;
+    stroke: rgba(var(--text), .5);
   }
 
   hr {
+    height: 1px;
     margin-top: 0;
     margin-bottom: calc(1.75rem - 1px);
+
     background: rgba(var(--text), .3);
     border: none;
-    height: 1px;
   }
 
   time {
-    color: rgba(var(--text), .7);
+    display: block;
     margin-bottom: 1.75rem;
     margin-top: -.7rem;
-    display: block;
+
     font-size: 0.9rem;
+    color: rgba(var(--text), .7);
   }
 
   .mobile-gif,
   .desktop-gif {
     text-align:center;
+  }
+
+  .desktop-gif {
+    display: none
   }
 
   ul {
@@ -166,88 +176,90 @@ const GlobalStyles = createGlobalStyle`
 
   /* Code */
   blockquote {
-    margin-left: -1.75rem;
-    margin-right: 1.75rem;
-    margin-top: 0;
-    margin-bottom: 1.75rem;
-    padding-bottom: 0;
-    padding-left: 1.3rem;
-    padding-right: 0;
-    padding-top: 0;
+    margin: 0 0 1.75rem -1.3rem;
+    padding: 0 0 0 1.3rem;
+
     font-size: 1.2rem;
-    line-height: 1.75rem;
     font-style: italic;
-    border-left: 0.35rem solid;
     font-weight: 300;
-    border-left-color: #755671;
+    line-height: 1.75rem;
     color: inherit;
+
+
+    border-left: 0.35rem solid;
+    border-left-color: #755671;
+
+    p {
+      padding: 0 1.3rem;
+    }
   }
 
   .gatsby-highlight-code-line {
-    background-color: #75567144;
     display: block;
     padding-right: 1em;
     padding-left: 1.25em;
-    border-left: 0.25em solid #FFD1D0;
     margin-right: -1.3rem;
     margin-left: -1.3rem;
+
+    background-color: #75567144;
+    border-left: 0.25em solid #FFD1D0;
   }
 
   .gatsby-highlight {
     margin-bottom: 1.75rem;
-    border-radius: 10px;
-    background-color: #4B334C;
-    -webkit-overflow-scrolling: touch;
-    overflow: auto;
     margin-right: -1.3rem;
     margin-left: -1.3rem;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+
+    border-radius: 0;
+    background-color: #4B334C;
   }
 
   pre[class*='language-'] {
-    overflow: auto;
     padding: 1.3rem;
+    overflow: auto;
+
     background-color: transparent;
   }
 
   :not(pre) > code[class*='language-'] {
-    background: var(--tertiary);
     color: inherit;
-  }
-
-  @media (max-width: 770px) {
-    .gatsby-highlight {
-      border-radius: 0;
-    }
-
-    blockquote {
-      margin-left: -1.3rem;
-      margin-right: 0;
-      padding-left: 1rem;
-
-      p {
-        padding: 0 1.3rem;
-      }
-    }
-
-    .desktop-gif {
-      display: none
-    }
-  }
-
-  @media (min-width: 770px){
-    .mobile-gif {
-      display: none;
-    }
-
-    a:hover {
-      border-bottom: 2px solid var(--primary);
-    }
+    background: var(--tertiary);
   }
 
   .gatsby-highlight pre[class*='language-'] {
     float: left;
     min-width: 100%;
   }
+
+  ${media.greaterThan("medium")`
+    .mobile-gif {
+      display: none;
+    }
+
+    .desktop-gif {
+      display: inherit;
+    }
+
+    a:hover {
+      border-bottom: 2px solid var(--primary);
+    }
+
+    .gatsby-highlight {
+      border-radius: 10px;
+    }
+
+    blockquote {
+      margin-right: 1.75rem;
+      margin-left: -1.75rem;
+      padding-left: 1rem;
+
+      p {
+        padding: 0;
+      }
+    }
+  `}
 `;
 
 export default GlobalStyles;

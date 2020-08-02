@@ -8,18 +8,18 @@ function NavDesktop({ items }) {
   const [show, setShow] = useState(true);
   const [showMenu, setShowMenu] = useState(false);
 
-  const handleScroll = () => {
-    const scrollPos = document.body.getBoundingClientRect().top;
-    setShowMenu(false);
-    setShow(scrollPos >= scroll);
-    setScroll(scrollPos);
-  };
-
   const handleToggleMenu = () => {
     setShowMenu(!showMenu);
   };
 
   useEffect(() => {
+    const handleScroll = () => {
+      const scrollPos = document.body.getBoundingClientRect().top;
+      setShowMenu(false);
+      setShow(scrollPos >= scroll);
+      setScroll(scrollPos);
+    };
+
     window.addEventListener('scroll', handleScroll);
 
     return () => {

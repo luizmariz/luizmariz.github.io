@@ -6,14 +6,17 @@ export const blinkTextCursor = keyframes`
 `;
 
 export const TextCursor = styled.span`
-  border-right: 1px solid rgba(var(--text), 0.75);
   display: inline;
+
+  border-right: 1px solid rgba(var(--text), 0.75);
   animation: ${blinkTextCursor} 0.7s steps(44) infinite normal;
 `;
 
 export const Container = styled.p`
-  opacity: 0.7;
-  font-weight: 300;
   display: inline-block;
   margin: 0;
+
+  font-weight: 300;
+
+  opacity: 0.7;
 `;

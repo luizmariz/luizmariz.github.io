@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import NavMobile from './NavMobile';
 import NavDesktop from './NavDesktop';
 
+// TODO: Refact
+
 const _ROUTES = [
   { name: 'Home', to: '/' },
   { name: 'Sobre mim', to: '/about/' }

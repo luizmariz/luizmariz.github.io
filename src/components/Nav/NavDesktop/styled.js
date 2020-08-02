@@ -1,4 +1,6 @@
 import styled, { css } from 'styled-components';
+import media from 'styled-media-query';
+
 import { MdArrowUpward } from 'react-icons/md';
 import { Anchor } from '../../shared/styled';
 import ToggleBtn from '../../shared/ToggleBtn';
@@ -6,13 +8,15 @@ import ToggleBtn from '../../shared/ToggleBtn';
 export const Container = styled.nav`
   position: fixed;
   top: 0;
-  width: 100vw;
-  background-color: var(--bg);
   z-index: 100;
+
   display: flex;
+  width: 100vw;
   align-items: center;
   flex-direction: column;
   overflow: visible;
+
+  background-color: var(--bg);
   box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.08);
 
   ${props =>
@@ -28,16 +32,16 @@ export const Container = styled.nav`
           transform: translateY(-100%);
         `}
 
-  @media (max-width: 770px) {
+  ${media.lessThan("medium")`
     display: none;
-  }
+  `}
 `;
 
 export const Wrapper = styled.div`
+  display: flex;
   height: 4rem;
   min-width: 58rem;
   padding: 1.2rem 1.3rem;
-  display: flex;
   flex-direction: row;
   justify-content: space-between;
 `;
@@ -51,53 +55,60 @@ export const Row = styled.div`
 export const ToTopBtn = styled(MdArrowUpward)`
   color: rgb(var(--text));
   font-size: 1.6rem;
+
   transition: color 0.15s ease-in;
 
   &:hover {
     color: var(--tertiary);
+
     cursor: pointer;
     transition: color 0.15s ease-out;
   }
 `;
 
 export const StyledToggleBtn = styled(ToggleBtn)`
-  font-size: 1.6rem;
   margin-right: 2rem;
+  font-size: 1.6rem;
 `;
 
 export const NavigationWrapper = styled.div`
-  background-color: var(--footer);
-  border: 1px solid #99999922;
   width: 100%;
   height: ${props => (props.show ? '4rem' : '0')};
   overflow: hidden;
+
+  background-color: var(--footer);
+  border: 1px solid #99999922;
   transition: all 0.25s ease-in-out;
 `;
 
 export const Navigation = styled.ul`
-  list-style-type: none;
+  display: flex;
   height: 100%;
   margin: 0;
   padding: 0;
-  display: flex;
   flex-direction: row;
+
+  list-style-type: none;
 `;
 
 export const Item = styled.li`
-  border-right: 1px solid #99999922;
-  height: 100%;
   display: flex;
+  height: 100%;
+  margin: 0;
   justify-content: center;
   align-items: center;
-  margin: 0;
+
+  border-right: 1px solid #99999922;
 `;
 
 export const StyledAnchor = styled(Anchor)`
-  color: rgb(var(--text));
-  transition: background-color 0.1s ease-out;
   height: 100%;
   width: 100%;
   padding: 0 3rem;
+
+  color: rgb(var(--text));
+
+  transition: background-color 0.1s ease-out;
 
   &:hover {
     background-color: rgb(var(--text), 0.03);

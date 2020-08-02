@@ -7,16 +7,16 @@ function TypeWriter({ value }) {
   const [text, setText] = useState('');
   const [ref, inView] = useInView({ triggerOnce: true });
 
-  const typeWriter = (text, i = 0) => {
-    if (i < text.length) {
-      setText(text.slice(0, i + 1));
-      setTimeout(() => {
-        typeWriter(text, i + 1);
-      }, 100);
-    }
-  };
-
   useEffect(() => {
+    const typeWriter = (text, i = 0) => {
+      if (i < text.length) {
+        setText(text.slice(0, i + 1));
+        setTimeout(() => {
+          typeWriter(text, i + 1);
+        }, 100);
+      }
+    };
+
     if (inView) {
       typeWriter(value);
     }

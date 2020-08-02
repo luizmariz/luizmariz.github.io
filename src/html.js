@@ -14,10 +14,6 @@ export default function HTML(props) {
         <meta name="theme-color" content="" data-react-helmet="true" />
         {props.headComponents}
       </head>
-      {/*
-        TODO: handle theme-color flash when in dark-mode without that
-        workaround
-      */}
       <script
         dangerouslySetInnerHTML={{
           __html: `

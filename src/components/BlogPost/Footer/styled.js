@@ -1,21 +1,24 @@
 import styled from 'styled-components';
+import media from 'styled-media-query';
+
 import { Link } from 'gatsby';
 
 export const PostNav = styled.ul`
   display: inline-block;
-  padding: 0;
+  max-width: 100%;
   margin-top: 4rem;
   margin-bottom: 0;
+  padding: 0;
+
   list-style-type: none;
-  max-width: 80%;
 
   svg {
     font-size: 1.2rem;
   }
 
-  @media (max-width: 770px) {
-    max-width: 100%;
-  }
+  ${media.greaterThan("medium")`
+    max-width: 80%;
+  `}
 `;
 
 export const Next = styled.li`
@@ -27,8 +30,8 @@ export const Next = styled.li`
 `;
 
 export const Previous = styled.li`
-  text-align: right;
   display: inline;
+  text-align: right;
 
   svg {
     margin-right: 1rem;
@@ -49,11 +52,13 @@ export const StyledLink = styled(Link)`
 `;
 
 export const BlogIndex = styled.h3`
-  text-transform: uppercase;
   margin-block-start: 2em;
   margin-block-end: 0.5em;
-  font-size: 1.5rem;
-  color: var(--primary);
-  font-weight: 600;
   align-self: flex-start;
+
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--primary);
+
+  text-transform: uppercase;
 `;

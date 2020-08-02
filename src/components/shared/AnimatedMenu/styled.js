@@ -1,39 +1,35 @@
 import styled, { css } from 'styled-components';
+import media from 'styled-media-query';
 
-const bar = css`
+const Bar = styled.div`
   width: 100%;
-  height: 3px;
+  height: 2px;
+
   background-color: rgb(var(--text), 0.9);
 
-  @media (max-width: 770px) {
-    height: 2px;
-  }
+  ${media.greaterThan("medium")`
+    height: 3px;
+  `}
 `;
 
-export const MenuBarTop = styled.div`
-  ${bar}
-`;
+export const MenuBarTop = styled(Bar)``;
 
-export const MenuBarMiddle = styled.div`
-  ${bar}
+export const MenuBarMiddle = styled(Bar)`
   margin: 3px 0;
 `;
 
-export const MenuBarBottom = styled.div`
-  ${bar}
-`;
+export const MenuBarBottom = styled(Bar)``;
 
 export const Container = styled.div`
-  width: 2rem;
+  display: flex;
+  width: 1.9rem;
   height: 1.7rem;
   padding: 0.2rem 0.25rem;
-  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
   transform: rotate(${props => (props.active ? '45deg' : '0')});
-  transition: margin 0.2s ease-in-out, opacity 0.2s ease-in-out,
-    transform 0.2s ease-in-out;
 
   ${props =>
     props.active
@@ -53,7 +49,15 @@ export const Container = styled.div`
         `
       : ''}
 
-  @media (min-width: 770px) {
+  &,
+  * {
+    transition: margin 0.2s ease-in-out, opacity 0.2s ease-in-out,
+      transform 0.2s ease-in-out;
+  }
+
+  ${media.greaterThan("medium")`
+    width: 2rem;
+
     &:hover {
       cursor: pointer;
 
@@ -71,14 +75,5 @@ export const Container = styled.div`
         transform: rotate(90deg);
       }
     }
-  }
-
-  @media (max-width: 770px) {
-    width: 1.9rem;
-  }
-
-  * {
-    transition: margin 0.2s ease-in-out, opacity 0.2s ease-in-out,
-      transform 0.2s ease-in-out;
-  }
+  `}
 `;

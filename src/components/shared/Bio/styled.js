@@ -1,24 +1,27 @@
 import styled from 'styled-components';
+import media from 'styled-media-query';
+
 import Img from 'gatsby-image';
 
 export const Text = styled.p`
+  max-width: 14rem;
   margin: 0;
   padding: 0;
-  white-space: pre-line;
   padding-left: 1rem;
-  max-width: 16rem;
+
+  white-space: pre-line;
 
   a::before {
     content: none !important;
   }
 
-  @media (max-width: 355px) {
-    max-width: 11rem;
-  }
+  ${media.greaterThan("375px")`
+    max-width: 16rem;
+  `}
 
-  @media (min-width: 770px) {
+  ${media.greaterThan("medium")`
     max-width: 25rem;
-  }
+  `}
 `;
 
 export const Row = styled.div`
@@ -26,7 +29,8 @@ export const Row = styled.div`
 `;
 
 export const StyledImg = styled(Img)`
-  border-radius: 50%;
   width: 55px;
   height: 55px;
+
+  border-radius: 50%;
 `;
