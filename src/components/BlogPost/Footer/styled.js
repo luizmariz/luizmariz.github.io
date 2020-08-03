@@ -56,7 +56,7 @@ export const BlogIndex = styled.h3`
   margin-block-end: 0.5em;
   align-self: flex-start;
 
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: 600;
   color: var(--primary);
 
