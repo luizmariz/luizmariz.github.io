@@ -3,7 +3,7 @@ import './style.css';
 
 function SignUp() {
   return (
-    <div style={{ margin: '90px 0px 40px' }}>
+    <div style={{ margin: '4rem 0px 2rem' }}>
       <form
         action="https://app.convertkit.com/forms/1565471/subscriptions"
         className="seva-form formkit-form"
@@ -11,7 +11,8 @@ function SignUp() {
         min-width="400 500 600 700 800"
         style={{
           borderRadius: 6,
-          boxShadow: 'var(--form-shadow)'
+          boxShadow: 'var(--form-shadow)',
+          transition: 'all 0.25s ease-out'
         }}
       >
         <div data-style="full">

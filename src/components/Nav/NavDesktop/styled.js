@@ -75,9 +75,10 @@ export const NavigationWrapper = styled.div`
   width: 100%;
   height: ${props => (props.show ? '4rem' : '0')};
   overflow: hidden;
+  border-top: 1px solid #99999922;
+  border-bottom: ${props => (props.show ? '1px' : '0')} solid #99999922;
 
   background-color: var(--footer);
-  border: 1px solid #99999922;
   transition: all 0.25s ease-in-out;
 `;
 
