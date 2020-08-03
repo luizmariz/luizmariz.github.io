@@ -26,7 +26,7 @@ function Bio() {
       />
       <S.Text>
         Blog por <Link to="/about/">Luiz Gustavo</Link>.{'\n'}
-        Grande entusiasta do eXtreme Go Horse.
+        Entusiasta de coisas que funcionam.
       </S.Text>
     </S.Row>
   );

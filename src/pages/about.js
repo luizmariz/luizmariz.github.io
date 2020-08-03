@@ -24,13 +24,13 @@ export default function({ location }) {
       <article>
         <p>
           Oi, meu nome é Luiz, nasci no interior de Minas Gerais e atualmente
-          sou dev no time de growth hacking da{' '}
+          sou dev no{' '}
           <a
-            href="https://www.mjvinnovation.com/"
+            href="https://www.fab.mil.br/organizacoes/mostra/67/CENTRO%20DE%20COMPUTA%C3%87%C3%83O%20DE%20AERON%C3%81UTICA%20DO%20RIO%20DE%20JANEIRO"
             target="_blank"
             rel="noopener noreferrer"
           >
-            MJV
+            CCA-RJ
           </a>
           , no Rio de Janeiro/RJ, além de ser um estudante em ciência da
           computação na UFRJ e técnico em eletrônica pelo CEFET/RJ.

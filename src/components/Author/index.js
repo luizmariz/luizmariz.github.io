@@ -25,7 +25,7 @@ function Author() {
       />
       <S.Column>
         <S.Name>Luiz Gustavo Oliveira Mariz</S.Name>
-        <S.Description>Desenvolvedor front end</S.Description>
+        <S.Description>Desenvolvedor full stack</S.Description>
       </S.Column>
     </S.Row>
   );
