@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[9],{B8UQ:function(a,e,n){"use strict";n.r(e);var t=n("q1tI"),c=n.n(t),r=n("Zttt");e.default=function(a){var e=a.location;return c.a.createElement(r.a,{location:e},c.a.createElement("main",null,c.a.createElement("h1",null,"Só mais um passo..."),c.a.createElement("p",null,"É só checar sua caixa de entrada e confirmar a inscrição.")))}}}]);
+//# sourceMappingURL=component---src-pages-confirm-js-8ff2a294777e32dc915f.js.map
