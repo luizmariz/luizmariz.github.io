@@ -19,6 +19,7 @@ const GlobalStyles = createGlobalStyle`
     --tertiary: #ffd1d0bf;
     --heart: 75, 51, 76;
     --icon: #333333;
+    --form-shadow: 0 2px 15px 0 rgba(210,214,220,0.5);
 
     a::before {
       content: url(${lightLink});
@@ -42,6 +43,7 @@ const GlobalStyles = createGlobalStyle`
     --tertiary: #ffffff22;
     --heart: 232, 113, 92;
     --icon: #ffd1d0;
+    --form-shadow: 0 2px 15px 0 rgba(26,26,27,0.637);
 
     a::before {
       content: url(${darkLink});
@@ -233,7 +235,7 @@ const GlobalStyles = createGlobalStyle`
     min-width: 100%;
   }
 
-  ${media.greaterThan("medium")`
+  ${media.greaterThan('medium')`
     .mobile-gif {
       display: none;
     }

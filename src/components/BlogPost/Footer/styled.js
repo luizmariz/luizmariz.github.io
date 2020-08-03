@@ -16,7 +16,7 @@ export const PostNav = styled.ul`
     font-size: 1.2rem;
   }
 
-  ${media.greaterThan("medium")`
+  ${media.greaterThan('medium')`
     max-width: 80%;
   `}
 `;
@@ -43,7 +43,7 @@ export const StyledLink = styled(Link)`
   line-height: 2.1rem;
 
   svg {
-    margin-bottom: -.2rem;
+    margin-bottom: -0.2rem;
   }
 
   &::before {
@@ -52,7 +52,7 @@ export const StyledLink = styled(Link)`
 `;
 
 export const BlogIndex = styled.h3`
-  margin-block-start: 2em;
+  margin-block-start: 0;
   margin-block-end: 0.5em;
   align-self: flex-start;
 

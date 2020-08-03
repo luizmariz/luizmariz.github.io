@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import SEO from '../SEO';
 import Layout from '../Layout';
 import Footer from './Footer';
+import SignUp from './SignUp';
 
 function BlogPost({
   location,
@@ -45,6 +46,7 @@ function BlogPost({
           <div dangerouslySetInnerHTML={{ __html: html }} />
         </article>
       </main>
+      <SignUp />
       <Footer previous={previous} next={next} />
     </Layout>
   );

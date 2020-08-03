@@ -17,7 +17,7 @@ export const Container = styled.nav`
   overflow: visible;
 
   background-color: var(--bg);
-  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.08);
+  box-shadow: var(--form-shadow);
 
   ${props =>
     props.show
@@ -32,7 +32,7 @@ export const Container = styled.nav`
           transform: translateY(-100%);
         `}
 
-  ${media.lessThan("medium")`
+  ${media.lessThan('medium')`
     display: none;
   `}
 `;

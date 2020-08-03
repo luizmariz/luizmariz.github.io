@@ -24,12 +24,13 @@ export const MainRow = styled.section`
 
 export const BonusRow = styled(MainRow)`
   min-height: 4vh;
+  margin-bottom: 3.5rem;
+
   font-size: 0.9rem;
   border-top: 1px solid #99999922;
 
-
   ${media.greaterThan('medium')`
-    margin-bottom: 3.5rem;
+    margin-bottom: 0;
   `}
 
   ${Wrapper} {
@@ -41,7 +42,7 @@ export const BonusRow = styled(MainRow)`
 `;
 
 export const Hearth = styled(MdFavorite)`
- margin-left: 0.5rem;
+  margin-left: 0.5rem;
   color: rgba(var(--heart));
 `;
 
