@@ -1,33 +1,12 @@
+import { StaticImage } from 'gatsby-plugin-image';
 import React from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
+import Footer from '../Footer';
+import Nav from '../Nav';
 import { Anchor } from '../shared/styled';
 import BaseLayout from './BaseLayout';
-import Nav from '../Nav';
-import Footer from '../Footer';
 import * as S from './styled';
 
 function Layout({ children, location }) {
-  const { logoDark, logoLight } = useStaticQuery(
-    graphql`
-      query {
-        logoDark: file(relativePath: { eq: "logo-cute-pink.png" }) {
-          childImageSharp {
-            fixed(width: 70, height: 70) {
-              ...GatsbyImageSharpFixed
-            }
-          }
-        }
-        logoLight: file(relativePath: { eq: "logo-purple.png" }) {
-          childImageSharp {
-            fixed(width: 70, height: 70) {
-              ...GatsbyImageSharpFixed
-            }
-          }
-        }
-      }
-    `
-  );
-
   if (location.pathname === '/404') {
     return <BaseLayout children={children} />;
   }
@@ -41,20 +20,22 @@ function Layout({ children, location }) {
           <header>
             <S.LogoContainer>
               <S.Row>
-                <Anchor to="/" aria-label="Ir para a homepage">
-                  <S.Logo
+                <Anchor to="/" aria-label="Ir para a homepage" style={{marginLeft: '-0.4rem', marginRight: '2px'}}>
+                  <StaticImage
                     className="dark"
                     alt="Luiz Ipsum"
-                    fixed={logoDark.childImageSharp.fixed}
-                    loading="eager"
-                    fadeIn={false}
+                    src={'../../assets/images/logo-cute-pink.png'}
+                    width={70}
+                    height={70}
+                    placeholder="blurred"
                   />
-                  <S.Logo
+                  <StaticImage
                     className="light"
                     alt="Luiz Ipsum"
-                    fixed={logoLight.childImageSharp.fixed}
-                    loading="eager"
-                    fadeIn={false}
+                    src={'../../assets/images/logo-purple.png'}
+                    width={70}
+                    height={70}
+                    placeholder="blurred"
                   />
                 </Anchor>
                 <S.BlogTitle>

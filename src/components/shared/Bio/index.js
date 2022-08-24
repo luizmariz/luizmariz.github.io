@@ -1,28 +1,20 @@
 import React from 'react';
 import { useStaticQuery, graphql, Link } from 'gatsby';
 import * as S from './styled';
+import { StaticImage } from 'gatsby-plugin-image';
 
 function Bio() {
-  const { avatar } = useStaticQuery(
-    graphql`
-      query {
-        avatar: file(relativePath: { eq: "photo.png" }) {
-          childImageSharp {
-            fixed(width: 55, height: 55) {
-              ...GatsbyImageSharpFixed
-            }
-          }
-        }
-      }
-    `
-  );
-
   return (
     <S.Row>
-      <S.StyledImg
+      <StaticImage
         alt="Imagem do autor do blog"
-        fixed={avatar.childImageSharp.fixed}
-        style={{ display: 'inherit' }}
+        src="../../../assets/images/photo.png"
+        placeholder="blurred"
+        layout="fixed"
+        width={55}
+        height={55}
+        quality={100}
+        style={{ borderRadius: 50 }}
       />
       <S.Text>
         Blog por <Link to="/about/">Luiz Gustavo</Link>.{'\n'}

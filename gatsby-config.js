@@ -7,6 +7,7 @@ module.exports = {
     siteUrl: 'https://luizipsum.com.br'
   },
   plugins: [
+    `gatsby-plugin-image`,
     `gatsby-plugin-react-helmet`,
     {
       // keep as first gatsby-source-filesystem plugin for gatsby image support
@@ -16,7 +17,16 @@ module.exports = {
         name: 'images'
       }
     },
-    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-plugin-sharp`,
+      options: {
+        defaults: {
+          placeholder: `dominantColor`,
+          quality: 80,
+          backgroundColor: `transparent`
+        }
+      }
+    },
     `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-plugin-use-dark-mode`,
@@ -61,8 +71,8 @@ module.exports = {
           {
             resolve: `gatsby-remark-copy-linked-files`,
             options: {
-              ignoreFileExtensions: [],
-            },
+              ignoreFileExtensions: []
+            }
           },
           'gatsby-remark-smartypants',
           {
@@ -117,7 +127,7 @@ module.exports = {
         feeds: [
           {
             serialize: ({ query: { site, allMarkdownRemark } }) => {
-              return allMarkdownRemark.edges.map(edge => {
+              return allMarkdownRemark.edges.map((edge) => {
                 return Object.assign({}, edge.node.frontmatter, {
                   description: edge.node.frontmatter.summary,
                   date: edge.node.frontmatter.date,

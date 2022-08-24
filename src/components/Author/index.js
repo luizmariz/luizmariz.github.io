@@ -1,27 +1,19 @@
 import React from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
+import { StaticImage } from 'gatsby-plugin-image';
 import * as S from './styled';
 
 function Author() {
-  const { avatar } = useStaticQuery(
-    graphql`
-      query {
-        avatar: file(relativePath: { eq: "photo.png" }) {
-          childImageSharp {
-            fixed(width: 70, height: 70) {
-              ...GatsbyImageSharpFixed
-            }
-          }
-        }
-      }
-    `
-  );
-
   return (
     <S.Row>
-      <S.StyledImg
+      <StaticImage
         alt="Imagem do autor do blog"
-        fixed={avatar.childImageSharp.fixed}
+        src="../../assets/images/photo.png"
+        placeholder="blurred"
+        layout="fixed"
+        width={70}
+        height={70}
+        quality={100}
+        style={{ borderRadius: 50 }}
       />
       <S.Column>
         <S.Name>Luiz Gustavo Oliveira Mariz</S.Name>

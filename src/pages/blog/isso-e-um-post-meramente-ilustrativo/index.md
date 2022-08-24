@@ -5,7 +5,7 @@ summary: Mas têm uma playlist bem legal
 tags: misc
 ---
 
-##Mas pera, por que não fazer um post de verdade?
+## Mas pera, por que não fazer um post de verdade?
 
 Falta de criatividade? talvez. Mas acredito ser o mais puro desespero de ver esse MVP sair. E, após meses de curadoria das docs do [Gatsby][0], aqui estamos.
 
@@ -34,7 +34,7 @@ func soAceitaUm (num int) (int, error) {
 ```
 > Você pode nunca lidar com os seus erros, só não deve
 
-##Conclusão
+## Conclusão
 
 Enfim, já tem muito texto. Segue uma pseudo playlist by The Lonely Island pra passar o tempo:
   - [Oakland Nights][2]

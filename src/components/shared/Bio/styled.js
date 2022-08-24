@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 import media from 'styled-media-query';
-
-import Img from 'gatsby-image';
+import { StaticImage } from 'gatsby-plugin-image';
 
 export const Text = styled.p`
   max-width: 14rem;
@@ -15,22 +14,15 @@ export const Text = styled.p`
     content: none !important;
   }
 
-  ${media.greaterThan("375px")`
+  ${media.greaterThan('375px')`
     max-width: 16rem;
   `}
 
-  ${media.greaterThan("medium")`
+  ${media.greaterThan('medium')`
     max-width: 25rem;
   `}
 `;
 
 export const Row = styled.div`
   display: flex;
-`;
-
-export const StyledImg = styled(Img)`
-  width: 55px;
-  height: 55px;
-
-  border-radius: 50%;
 `;

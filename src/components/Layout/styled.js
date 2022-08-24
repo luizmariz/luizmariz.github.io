@@ -1,12 +1,4 @@
 import styled from 'styled-components';
-import Img from 'gatsby-image';
-
-export const Logo = styled(Img)`
-  width: 70px;
-  /* Oops */
-  margin-left: -0.4rem;
-  margin-right: 2px;
-`;
 
 export const BlogTitle = styled.div`
   display: flex;
@@ -17,10 +9,9 @@ export const BlogTitle = styled.div`
   /* TODO: refact it */
   h1 {
     margin: 0;
+    padding-left: 1rem;
 
-    color: var(--primary);
     font-size: 1.5rem;
-    font-weight: 600;
   }
 
   h3 {
@@ -30,8 +21,6 @@ export const BlogTitle = styled.div`
     height: 0;
 
     font-size: 1.5rem;
-    color: var(--primary);
-    font-weight: 600;
 
     -webkit-tap-highlight-color: transparent;
   }

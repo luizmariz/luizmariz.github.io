@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import Img from 'gatsby-image';
 
 export const Row = styled.aside`
   display: flex;
@@ -15,15 +14,6 @@ export const Column = styled.div`
   align-items: flex-start;
   justify-content: flex-start;
   padding-left: 1rem;
-`;
-
-export const StyledImg = styled(Img)`
-  width: 70px;
-  height: 70px;
-
-  vertical-align: middle;
-  object-fit: cover;
-  border-radius: 50%;
 `;
 
 export const Name = styled.div`
