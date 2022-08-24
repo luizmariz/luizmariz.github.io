@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkluiz_ipsum=self.webpackChunkluiz_ipsum||[]).push([[264],{6443:function(e,a,n){n.r(a);var l=n(9953),t=n(7170);a.default=function(e){var a=e.location;return l.createElement(t.Z,{location:a},l.createElement("main",null,l.createElement("h1",null,"Só mais um passo..."),l.createElement("p",null,"É só checar sua caixa de entrada e confirmar a inscrição.")))}}}]);
+//# sourceMappingURL=component---src-pages-confirm-js-3567f56993f437319612.js.map

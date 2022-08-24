@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[10],{gCcv:function(e,a,n){"use strict";n.r(a);var o=n("q1tI"),t=n.n(o),r=n("Zttt");a.default=function(e){var a=e.location;return t.a.createElement(r.a,{location:a},t.a.createElement("main",null,t.a.createElement("h1",null,"Obrigado por se inscrever!"),t.a.createElement("p",null,"Seu email foi confirmado e agora você deve receber um email sempre que tiver conteúdo novo por aqui.")))}}}]);
-//# sourceMappingURL=component---src-pages-thanks-js-d0bd3365dbcaa97d43b6.js.map
