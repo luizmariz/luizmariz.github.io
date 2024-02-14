@@ -16,7 +16,7 @@ const query = graphql`
   }
 `;
 
-function SEO({ meta, title, description, image, slug, lang }) {
+function Seo({ meta, title, description, image, slug, lang }) {
   const data = useStaticQuery(query);
   const { siteMetadata } = data.site;
   const url = `${siteMetadata.siteUrl}${slug}`;
@@ -28,12 +28,12 @@ function SEO({ meta, title, description, image, slug, lang }) {
       htmlAttributes={{ lang }}
       {...(title
         ? {
-          titleTemplate: `%s — ${siteMetadata.title}`,
-          title
-        }
+            titleTemplate: `%s — ${siteMetadata.title}`,
+            title
+          }
         : {
-          title: `${siteMetadata.title} — Home`
-        })}
+            title: `${siteMetadata.title} — Home`
+          })}
       meta={[
         {
           name: 'description',
@@ -71,15 +71,15 @@ function SEO({ meta, title, description, image, slug, lang }) {
         .concat(
           siteImage
             ? [
-              {
-                property: 'og:image',
-                content: siteImage
-              },
-              {
-                name: 'twitter:image',
-                content: siteImage
-              }
-            ]
+                {
+                  property: 'og:image',
+                  content: siteImage
+                },
+                {
+                  name: 'twitter:image',
+                  content: siteImage
+                }
+              ]
             : []
         )
         .concat(meta)}
@@ -87,7 +87,7 @@ function SEO({ meta, title, description, image, slug, lang }) {
   );
 }
 
-SEO.defaultProps = {
+Seo.defaultProps = {
   meta: [],
   lang: 'pt-BR',
   title: '',
@@ -95,7 +95,7 @@ SEO.defaultProps = {
   image: null
 };
 
-SEO.propTypes = {
+Seo.propTypes = {
   description: PropTypes.string,
   image: PropTypes.string,
   meta: PropTypes.array,
@@ -104,4 +104,4 @@ SEO.propTypes = {
   lang: PropTypes.string
 };
 
-export default SEO;
+export default Seo;

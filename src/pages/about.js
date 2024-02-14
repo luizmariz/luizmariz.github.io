@@ -1,14 +1,14 @@
 import React from 'react';
 import Layout from '../components/Layout';
-import SEO from '../components/SEO';
+import Seo from '../components/Seo';
 import Author from '../components/Author';
 import TypeWriter from '../components/TypeWriter';
 import img from '../assets/images/default-img.png';
 
-export default function({ location }) {
+function About({ location }) {
   return (
     <Layout location={location}>
-      <SEO
+      <Seo
         title={'Sobre mim'}
         slug={'/about/'}
         image={img}
@@ -35,13 +35,15 @@ export default function({ location }) {
           , no Rio de Janeiro/RJ :)
         </p>
         <p>
-          Apesar de vender meu peixe como dev front-end, já lidei bastante com backend,
-          me aventurei em projetos de IoT e em outras áreas da programação. No
-          fim, não importa a linguagem, tecnologia ou paradigma, a sensação mais
-          legal é ver alguma coisa que você fez funcionando linda e maravilhosa.
-          E, no geral, aprendo bem.
+          Apesar de vender meu peixe como dev front-end, já lidei bastante com
+          backend, me aventurei em projetos de IoT e em outras áreas da
+          programação. No fim, não importa a linguagem, tecnologia ou paradigma,
+          a sensação mais legal é ver alguma coisa que você fez funcionando
+          linda e maravilhosa. E, no geral, aprendo bem.
         </p>
       </article>
     </Layout>
   );
 }
+
+export default About;

@@ -2,14 +2,14 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import Layout from '../components/Layout';
 import Bio from '../components/shared/Bio';
-import SEO from '../components/SEO';
+import Seo from '../components/Seo';
 import PostList from '../components/PostList';
 import img from '../assets/images/default-img.png';
 
 function BlogIndexTemplate({ data, location }) {
   return (
     <Layout location={location}>
-      <SEO image={img} />
+      <Seo image={img} />
       <aside>
         <Bio />
       </aside>
@@ -24,7 +24,7 @@ export default BlogIndexTemplate;
 
 export const pageQuery = graphql`
   {
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark(sort: { frontmatter: { date: DESC } }) {
       edges {
         node {
           fields {

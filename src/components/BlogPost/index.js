@@ -1,7 +1,7 @@
 import React from 'react';
 import { formatTimestamp } from '../../utils/helpers';
 import PropTypes from 'prop-types';
-import SEO from '../SEO';
+import Seo from '../Seo';
 import Layout from '../Layout';
 import Footer from './Footer';
 import SignUp from './SignUp';
@@ -21,7 +21,7 @@ function BlogPost({
 }) {
   return (
     <Layout location={location}>
-      <SEO
+      <Seo
         title={title}
         description={summary}
         slug={slug}
@@ -31,7 +31,7 @@ function BlogPost({
             property: 'article:published_time',
             content: date
           },
-          ...tags.map(tag => ({
+          ...tags.map((tag) => ({
             property: 'article:tag',
             content: tag
           }))

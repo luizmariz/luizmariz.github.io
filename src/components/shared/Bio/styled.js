@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import media from 'styled-media-query';
-import { StaticImage } from 'gatsby-plugin-image';
 
 export const Text = styled.p`
   max-width: 14rem;

@@ -51,6 +51,7 @@ function SignUp() {
             <div
               className="formkit-image formkit-image relative"
               role="button"
+              aria-label="Subscribe to newsletter"
               tabindex="0"
             >
               <img
