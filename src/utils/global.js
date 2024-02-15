@@ -6,15 +6,16 @@ import darkLink from '../assets/images/dark-link.svg';
 const GlobalStyles = createGlobalStyle`
   html {
     box-sizing: border-box;
-    font: 100%/1.75 'Fira Code VF';
+    font: 100%/1.75 'Karla';
+    font-weight: 400;
     overflow-y: scroll;
   }
   .light-mode {
     --bg: #ffffff;
     --footer: #f4f7f6;
     --text: 51, 51, 51;
-    --primary: #4B334C;
-    --secondary: #755671;
+    --primary: #2A4B9A;
+    --secondary: #5CBBAB;
     --tertiary: #ffd1d0bf;
     --heart: 75, 51, 76;
     --icon: #333333;
@@ -54,6 +55,7 @@ const GlobalStyles = createGlobalStyle`
     margin: 0;
     color: rgb(var(--text));
     background-color: var(--bg);
+    font-size: 1.125rem;
   }
   body,
   * {
@@ -125,7 +127,7 @@ const GlobalStyles = createGlobalStyle`
     display: block;
     margin-bottom: 1.75rem;
     margin-top: -.7rem;
-    font-size: 0.9rem;
+    font-size: 1rem;
     color: rgba(var(--text), .7);
   }
   .mobile-gif,
@@ -142,6 +144,11 @@ const GlobalStyles = createGlobalStyle`
     margin-bottom: .5rem;
   }
   /* Code */
+  code {
+    font-family: "Fira Code VF" !important;
+    font-size: 0.875rem !important;
+  }
+
   blockquote {
     margin: 0 0 1.75rem -1.3rem;
     padding: 0 0 0 1.3rem;
@@ -162,7 +169,7 @@ const GlobalStyles = createGlobalStyle`
     padding-left: 1.25em;
     margin-right: -1.3rem;
     margin-left: -1.3rem;
-    background-color: #75567144;
+    background-color: #171717;
     border-left: 0.25em solid #FFD1D0;
   }
   .gatsby-highlight {
@@ -172,7 +179,7 @@ const GlobalStyles = createGlobalStyle`
     overflow: auto;
     -webkit-overflow-scrolling: touch;
     border-radius: 0;
-    background-color: #4B334C;
+    background-color: #212121;
   }
   pre[class*='language-'] {
     padding: 1.3rem;
@@ -186,6 +193,7 @@ const GlobalStyles = createGlobalStyle`
   .gatsby-highlight pre[class*='language-'] {
     float: left;
     min-width: 100%;
+    background-color: transparent;
   }
   ${media.greaterThan('medium')`
     .mobile-gif {
@@ -196,9 +204,6 @@ const GlobalStyles = createGlobalStyle`
     }
     a:hover {
       border-bottom: 2px solid var(--primary);
-    }
-    .gatsby-highlight {
-      border-radius: 10px;
     }
     blockquote {
       margin-right: 1.75rem;

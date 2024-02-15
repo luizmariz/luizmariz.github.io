@@ -26,7 +26,7 @@ export const BonusRow = styled(MainRow)`
   min-height: 4vh;
   margin-bottom: 3.5rem;
 
-  font-size: 0.9rem;
+  font-size: 1rem;
   border-top: 1px solid #99999922;
 
   ${media.greaterThan('medium')`

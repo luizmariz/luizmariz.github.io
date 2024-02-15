@@ -31,7 +31,7 @@ export const Tags = styled.span`
   margin-top: 1rem;
   align-items: center;
 
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: rgb(var(--text));
 `;
 
@@ -50,6 +50,6 @@ export const Description = styled.p`
 `;
 
 export const Time = styled.time`
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
   margin-top: 0;
 `;
