@@ -1,5 +1,5 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
 import Helmet from 'react-helmet';
 import useDarkMode from 'use-dark-mode';
 import GlobalStyles from '../../../utils/global';
@@ -19,10 +19,12 @@ function BaseLayout({ render, children }) {
         ]}
       />
       <GlobalStyles />
-      <S.Container>
-        {render()}
-        <S.PageContent>{children}</S.PageContent>
-      </S.Container>
+      <S.MainWrapper>
+        <S.Container>
+          {render()}
+          <S.PageContent>{children}</S.PageContent>
+        </S.Container>
+      </S.MainWrapper>
     </React.Fragment>
   );
 }

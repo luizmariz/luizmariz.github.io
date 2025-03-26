@@ -3,43 +3,41 @@ import * as S from './styled';
 
 function Footer() {
   return (
-    <footer>
-      <S.MainRow>
-        <S.Wrapper>
-          <S.Row>
-            <S.Anchor
-              href="https://linkedin.com/in/luiz-mariz/"
-              target="_blank"
-              title="LinkedIn"
-              rel="noopener noreferrer"
-            >
-              <S.Linkedin />
-            </S.Anchor>
-            <S.Anchor
-              href="https://twitter.com/luiz_of_rivia"
-              target="_blank"
-              title="Twitter"
-              rel="noopener noreferrer"
-            >
-              <S.Twitter />
-            </S.Anchor>
-            <S.Anchor
-              href="https://github.com/luizmariz/"
-              target="_blank"
-              title="Github"
-              rel="noopener noreferrer"
-            >
-              <S.Github />
-            </S.Anchor>
-          </S.Row>
-        </S.Wrapper>
-      </S.MainRow>
-      <S.BonusRow>
-        <S.Wrapper>
-          Feito com react e <S.Hearth />
-        </S.Wrapper>
-      </S.BonusRow>
-    </footer>
+    <S.MainRow>
+      <S.Wrapper>
+        <S.Container>
+          <S.ContainerTitle>Mapa do site</S.ContainerTitle>
+          <S.Anchor>Início</S.Anchor>
+          <S.Anchor>Currículo</S.Anchor>
+          <S.Anchor>Postagens</S.Anchor>
+        </S.Container>
+        <S.Container>
+          <S.ContainerTitle>Redes</S.ContainerTitle>
+          <S.Anchor
+            href="https://linkedin.com/in/luiz-mariz/"
+            target="_blank"
+            title="LinkedIn"
+            rel="noopener noreferrer"
+          >
+            LinkedIn
+          </S.Anchor>
+          <S.Anchor
+            href="https://github.com/luizmariz/"
+            target="_blank"
+            title="Github"
+            rel="noopener noreferrer"
+          >
+            Github
+          </S.Anchor>
+        </S.Container>
+        <S.Container>
+          <S.ContainerTitle>© 2025</S.ContainerTitle>
+          <S.AuxiliarText>
+            Luiz Ipsum. Todos os direitos reservados
+          </S.AuxiliarText>
+        </S.Container>
+      </S.Wrapper>
+    </S.MainRow>
   );
 }
 
