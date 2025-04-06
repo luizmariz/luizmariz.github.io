@@ -92,7 +92,7 @@ module.exports = {
         short_name: 'Luiz Ipsum',
         start_url: '/',
         display: 'minimal-ui',
-        icon: 'src/assets/images/logo-512px.png',
+        icon: 'src/assets/images/favicon.png',
         background_color: `#ffffff`,
         theme_color: `#4b334c`,
         display: `minimal-ui`,

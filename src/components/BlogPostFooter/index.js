@@ -1,8 +1,8 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import { MdArrowBack, MdArrowForward } from 'react-icons/md';
-import { Anchor } from '../../shared/styled';
-import Bio from '../../shared/Bio';
-import PropTypes from 'prop-types';
+import { Anchor } from '../../utils/anchor.styled';
+import Bio from '../Bio';
 import * as S from './styled';
 
 function Footer({ previous, next }) {

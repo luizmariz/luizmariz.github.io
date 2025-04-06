@@ -1,15 +1,15 @@
-import React from 'react';
 import { graphql } from 'gatsby';
+import React from 'react';
+// import img from '../assets/images/default-img.png';
+import Bio from '../components/Bio';
 import Layout from '../components/Layout';
-import Bio from '../components/shared/Bio';
-import Seo from '../components/Seo';
 import PostList from '../components/PostList';
-import img from '../assets/images/default-img.png';
+import Seo from '../components/Seo';
 
-function BlogIndexTemplate({ data, location }) {
+function HomeTemplate({ data, location }) {
   return (
     <Layout location={location}>
-      <Seo image={img} />
+      <Seo />
       <aside>
         <Bio />
       </aside>
@@ -20,7 +20,7 @@ function BlogIndexTemplate({ data, location }) {
   );
 }
 
-export default BlogIndexTemplate;
+export default HomeTemplate;
 
 export const pageQuery = graphql`
   {

@@ -1,9 +1,9 @@
 import React from 'react';
+import Author from '../components/Author';
 import Layout from '../components/Layout';
 import Seo from '../components/Seo';
-import Author from '../components/Author';
 import TypeWriter from '../components/TypeWriter';
-import img from '../assets/images/default-img.png';
+// import img from '../assets/images/default-img.png';
 
 function About({ location }) {
   return (
@@ -11,7 +11,7 @@ function About({ location }) {
       <Seo
         title={'Sobre mim'}
         slug={'/about/'}
-        image={img}
+        // image={img}
         description={
           'Conheça um pouco melhor o desenvolvedor desse humilde blog'
         }
