@@ -2,8 +2,8 @@ import styled, { css } from 'styled-components';
 import media from 'styled-media-query';
 
 import { MdArrowUpward } from 'react-icons/md';
-import { Anchor } from '../../shared/styled';
-import ToggleBtn from '../../shared/ToggleBtn';
+import { Anchor } from '../../utils/anchor.styled';
+import ToggleBtn from '../ToggleBtn';
 
 export const Container = styled.nav`
   position: fixed;
@@ -19,16 +19,20 @@ export const Container = styled.nav`
   background-color: var(--bg);
   box-shadow: var(--form-shadow);
 
-  ${props =>
+  ${(props) =>
     props.show
       ? css`
           visibility: visible;
-          transition: all 0.25s ease-out, background-color 0.2s ease-in;
+          transition:
+            all 0.25s ease-out,
+            background-color 0.2s ease-in;
           transform: translateY(0);
         `
       : css`
           visibility: hidden;
-          transition: all 0.25s ease-in, background-color 0.2s ease-in;
+          transition:
+            all 0.25s ease-in,
+            background-color 0.2s ease-in;
           transform: translateY(-100%);
         `}
 
@@ -73,10 +77,10 @@ export const StyledToggleBtn = styled(ToggleBtn)`
 
 export const NavigationWrapper = styled.div`
   width: 100%;
-  height: ${props => (props.show ? '4rem' : '0')};
+  height: ${(props) => (props.show ? '4rem' : '0')};
   overflow: hidden;
   border-top: 1px solid #99999922;
-  border-bottom: ${props => (props.show ? '1px' : '0')} solid #99999922;
+  border-bottom: ${(props) => (props.show ? '1px' : '0')} solid #99999922;
 
   background-color: var(--footer);
   transition: all 0.25s ease-in-out;

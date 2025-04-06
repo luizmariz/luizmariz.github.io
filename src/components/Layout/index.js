@@ -1,9 +1,9 @@
 import { StaticImage } from 'gatsby-plugin-image';
 import React from 'react';
+import { Anchor } from '../../utils/anchor.styled';
+import BaseLayout from '../BaseLayout';
 import Footer from '../Footer';
 import Nav from '../Nav';
-import { Anchor } from '../shared/styled';
-import BaseLayout from './BaseLayout';
 import * as S from './styled';
 
 function Layout({ children, location }) {
@@ -20,7 +20,11 @@ function Layout({ children, location }) {
           <header>
             <S.LogoContainer>
               <S.Row>
-                <Anchor to="/" aria-label="Ir para a homepage" style={{marginLeft: '-0.4rem', marginRight: '2px'}}>
+                <Anchor
+                  to="/"
+                  aria-label="Ir para a homepage"
+                  style={{ marginLeft: '-0.4rem', marginRight: '2px' }}
+                >
                   <StaticImage
                     className="dark"
                     alt="Luiz Ipsum"

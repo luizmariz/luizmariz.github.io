@@ -1,8 +1,7 @@
+import { MdArrowUpward, MdMenu } from 'react-icons/md';
 import styled from 'styled-components';
 import media from 'styled-media-query';
-
-import { MdMenu, MdArrowUpward } from 'react-icons/md';
-import { Anchor } from '../../shared/styled';
+import { Anchor } from '../../utils/anchor.styled';
 
 export const Container = styled.nav`
   position: fixed;
@@ -10,7 +9,7 @@ export const Container = styled.nav`
   z-index: 100;
 
   display: flex;
-  height: ${props => (props.toggle ? '10.5rem' : '3.5rem')};
+  height: ${(props) => (props.toggle ? '10.5rem' : '3.5rem')};
   width: 100vw;
   flex-direction: column;
   justify-content: flex-start;
@@ -18,13 +17,23 @@ export const Container = styled.nav`
 
   background-color: var(--footer);
 
-  -webkit-transition: height 0.3s ease, background-color 0.2s ease-in;
-  -moz-transition: height 0.3s ease, background-color 0.2s ease-in;
-  -ms-transition: height 0.3s ease, background-color 0.2s ease-in;
-  -o-transition: height 0.3s ease, background-color 0.2s ease-in;
-  transition: height 0.3s ease, background-color 0.2s ease-in;
+  -webkit-transition:
+    height 0.3s ease,
+    background-color 0.2s ease-in;
+  -moz-transition:
+    height 0.3s ease,
+    background-color 0.2s ease-in;
+  -ms-transition:
+    height 0.3s ease,
+    background-color 0.2s ease-in;
+  -o-transition:
+    height 0.3s ease,
+    background-color 0.2s ease-in;
+  transition:
+    height 0.3s ease,
+    background-color 0.2s ease-in;
 
-  ${media.greaterThan("medium")`
+  ${media.greaterThan('medium')`
     display: none;
   `}
 `;

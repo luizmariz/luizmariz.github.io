@@ -1,8 +1,8 @@
-import React from 'react';
-import { formatTimestamp } from '../../../utils/helpers';
-import { MdLabel } from 'react-icons/md';
-import { Anchor } from '../../shared/styled';
 import PropTypes from 'prop-types';
+import React from 'react';
+import { MdLabel } from 'react-icons/md';
+import { Anchor } from '../../utils/anchor.styled';
+import { formatTimestamp } from '../../utils/helpers';
 import * as S from './styled';
 
 function PostItem({ date, readingTime, slug, tags, title, summary }) {

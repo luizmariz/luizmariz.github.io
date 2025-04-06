@@ -1,10 +1,10 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import { formatTimestamp } from '../../utils/helpers';
-import PropTypes from 'prop-types';
-import Seo from '../Seo';
+import Footer from '../BlogPostFooter';
+import SignUp from '../BlogPostSignUp';
 import Layout from '../Layout';
-import Footer from './Footer';
-import SignUp from './SignUp';
+import Seo from '../Seo';
 
 function BlogPost({
   location,

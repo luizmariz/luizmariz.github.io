@@ -1,7 +1,7 @@
-import React from 'react';
-import * as S from './styled';
 import PropTypes from 'prop-types';
-import PostItem from './PostItem';
+import React from 'react';
+import PostItem from '../PostItem';
+import * as S from './styled';
 
 function PostList({ posts }) {
   return (

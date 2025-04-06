@@ -1,7 +1,7 @@
-import React from 'react';
 import PropTypes from 'prop-types';
-import NavMobile from './NavMobile';
-import NavDesktop from './NavDesktop';
+import React from 'react';
+import NavDesktop from '../NavDesktop';
+import NavMobile from '../NavMobile';
 
 // TODO: Refact
 

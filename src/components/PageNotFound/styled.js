@@ -1,13 +1,13 @@
 import styled from 'styled-components';
 import media from 'styled-media-query';
 
-import { Anchor } from '../shared/styled';
+import { Anchor } from '../../utils/anchor.styled';
 
 export const OvniVector = styled.img`
   height: auto;
   width: 80vw;
 
-  ${media.greaterThan("medium")`
+  ${media.greaterThan('medium')`
     width: 25vw;
   `}
 `;
@@ -34,7 +34,7 @@ export const StyledAnchor = styled(Anchor)`
   border-radius: 5px;
   transition: border-color 0.1s ease-in;
 
-  ${media.greaterThan("medium")`
+  ${media.greaterThan('medium')`
     margin: 0 30%;
   `}
 

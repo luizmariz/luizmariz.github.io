@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import Helmet from 'react-helmet';
 import useDarkMode from 'use-dark-mode';
-import GlobalStyles from '../../../utils/global';
+import GlobalStyles from '../../utils/global.styled';
 import * as S from './styled';
 
 function BaseLayout({ render, children }) {

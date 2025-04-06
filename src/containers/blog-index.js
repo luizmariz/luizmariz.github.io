@@ -1,10 +1,10 @@
-import React from 'react';
 import { graphql } from 'gatsby';
-import Layout from '../components/Layout';
-import Bio from '../components/shared/Bio';
-import Seo from '../components/Seo';
-import PostList from '../components/PostList';
+import React from 'react';
 import img from '../assets/images/default-img.png';
+import Bio from '../components/Bio';
+import Layout from '../components/Layout';
+import PostList from '../components/PostList';
+import Seo from '../components/Seo';
 
 function BlogIndexTemplate({ data, location }) {
   return (

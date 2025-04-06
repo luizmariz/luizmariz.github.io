@@ -1,15 +1,15 @@
-import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+import React, { useState } from 'react';
+import AnimatedMenu from '../AnimatedMenu';
+import ToggleBtn from '../ToggleBtn';
 import * as S from './styled';
-import ToggleBtn from '../../shared/ToggleBtn';
-import AnimatedMenu from '../../shared/AnimatedMenu';
 
 function NavMobile({ items }) {
   const [showMenu, setShowMenu] = useState(false);
 
-  const toggleMenu = e => {
+  const toggleMenu = (e) => {
     e.preventDefault();
-    setShowMenu(showMenu => !showMenu);
+    setShowMenu((showMenu) => !showMenu);
   };
 
   const scrollToTop = () => {
@@ -29,7 +29,7 @@ function NavMobile({ items }) {
         </S.Icons>
       </S.MenuBar>
       <S.Content>
-        {items.map(item => (
+        {items.map((item) => (
           <S.Item key={item.to}>
             <S.StyledAnchor to={item.to}>{item.name}</S.StyledAnchor>
           </S.Item>
