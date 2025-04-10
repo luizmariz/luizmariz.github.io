@@ -1,23 +1,23 @@
 import PropTypes from 'prop-types';
-import React from 'react';
-import Helmet from 'react-helmet';
-import useDarkMode from 'use-dark-mode';
+import React, { useEffect } from 'react';
 import GlobalStyles from '../../utils/global.styled';
 import * as S from './styled';
 
-function BaseLayout({ render, children }) {
-  const darkMode = useDarkMode(false);
+function LayoutBase({ render, children }) {
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const scrollbarWidth =
+        window.innerWidth - document.documentElement.clientWidth;
+
+      document.documentElement.style.setProperty(
+        '--scrollbar-width',
+        `${scrollbarWidth}px`
+      );
+    }
+  });
 
   return (
     <React.Fragment>
-      <Helmet
-        meta={[
-          {
-            name: 'theme-color',
-            content: darkMode.value ? '#282C35' : '#4B334C'
-          }
-        ]}
-      />
       <GlobalStyles />
       <S.MainWrapper>
         <S.Container>
@@ -29,13 +29,13 @@ function BaseLayout({ render, children }) {
   );
 }
 
-BaseLayout.defaultProps = {
+LayoutBase.defaultProps = {
   render: () => {}
 };
 
-BaseLayout.propTypes = {
+LayoutBase.propTypes = {
   render: PropTypes.func,
   children: PropTypes.any.isRequired
 };
 
-export default BaseLayout;
+export default LayoutBase;

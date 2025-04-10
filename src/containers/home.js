@@ -1,7 +1,7 @@
 import { graphql } from 'gatsby';
 import React from 'react';
 // import img from '../assets/images/default-img.png';
-import Bio from '../components/Bio';
+import Intro from '../components/Intro';
 import Layout from '../components/Layout';
 import PostList from '../components/PostList';
 import Seo from '../components/Seo';
@@ -10,10 +10,8 @@ function HomeTemplate({ data, location }) {
   return (
     <Layout location={location}>
       <Seo />
-      <aside>
-        <Bio />
-      </aside>
       <main>
+        <Intro />
         <PostList posts={data.allMarkdownRemark.edges} />
       </main>
     </Layout>

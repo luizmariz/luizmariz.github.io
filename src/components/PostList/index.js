@@ -7,15 +7,16 @@ function PostList({ posts }) {
   return (
     <S.Container>
       {posts.map(({ node }) => (
-        <PostItem
-          key={node.fields.slug}
-          date={node.frontmatter.date}
-          readingTime={node.fields.readingTime.minutes}
-          slug={node.fields.slug}
-          tags={node.frontmatter.tags}
-          title={node.frontmatter.title}
-          summary={node.frontmatter.summary}
-        />
+        <S.Wrapper key={node.fields.slug}>
+          <PostItem
+            date={node.frontmatter.date}
+            readingTime={node.fields.readingTime.minutes}
+            slug={node.fields.slug}
+            tags={node.frontmatter.tags}
+            title={node.frontmatter.title}
+            summary={node.frontmatter.summary}
+          />
+        </S.Wrapper>
       ))}
     </S.Container>
   );

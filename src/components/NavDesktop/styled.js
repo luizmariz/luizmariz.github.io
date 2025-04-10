@@ -2,22 +2,17 @@ import styled, { css } from 'styled-components';
 import media from 'styled-media-query';
 
 import { MdArrowUpward } from 'react-icons/md';
-import { Anchor } from '../../utils/anchor.styled';
-import ToggleBtn from '../ToggleBtn';
 
 export const Container = styled.nav`
   position: fixed;
   top: 0;
-  z-index: 100;
-
-  display: flex;
+  z-index: 99999;
+  display: block;
   width: 100vw;
-  align-items: center;
-  flex-direction: column;
   overflow: visible;
-
-  background-color: var(--bg);
-  box-shadow: var(--form-shadow);
+  backdrop-filter: blur(1rem);
+  border-bottom: 1px solid #99999922;
+  padding-right: var(--scrollbar-width);
 
   ${(props) =>
     props.show
@@ -35,16 +30,17 @@ export const Container = styled.nav`
             background-color 0.2s ease-in;
           transform: translateY(-100%);
         `}
-
   ${media.lessThan('medium')`
     display: none;
-  `}
+  `};
 `;
 
 export const Wrapper = styled.div`
   display: flex;
   height: 4rem;
-  min-width: 58rem;
+  max-width: 64rem;
+  min-width: 64rem;
+  margin: 0 auto;
   padding: 1.2rem 1.3rem;
   flex-direction: row;
   justify-content: space-between;
@@ -54,69 +50,10 @@ export const Row = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
+  width: 100%;
 `;
 
 export const ToTopBtn = styled(MdArrowUpward)`
-  color: rgb(var(--text));
+  color: rgb(255, 255, 255);
   font-size: 1.6rem;
-
-  transition: color 0.15s ease-in;
-
-  &:hover {
-    color: var(--tertiary);
-
-    cursor: pointer;
-    transition: color 0.15s ease-out;
-  }
-`;
-
-export const StyledToggleBtn = styled(ToggleBtn)`
-  margin-right: 2rem;
-  font-size: 1.6rem;
-`;
-
-export const NavigationWrapper = styled.div`
-  width: 100%;
-  height: ${(props) => (props.show ? '4rem' : '0')};
-  overflow: hidden;
-  border-top: 1px solid #99999922;
-  border-bottom: ${(props) => (props.show ? '1px' : '0')} solid #99999922;
-
-  background-color: var(--footer);
-  transition: all 0.25s ease-in-out;
-`;
-
-export const Navigation = styled.ul`
-  display: flex;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  flex-direction: row;
-
-  list-style-type: none;
-`;
-
-export const Item = styled.li`
-  display: flex;
-  height: 100%;
-  margin: 0;
-  justify-content: center;
-  align-items: center;
-
-  border-right: 1px solid #99999922;
-`;
-
-export const StyledAnchor = styled(Anchor)`
-  height: 100%;
-  width: 100%;
-  padding: 0 3rem;
-
-  color: rgb(var(--text));
-
-  transition: background-color 0.1s ease-out;
-
-  &:hover {
-    background-color: rgb(var(--text), 0.03);
-    transition: background-color 0.1s ease-in;
-  }
 `;

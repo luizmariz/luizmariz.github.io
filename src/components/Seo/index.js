@@ -1,7 +1,7 @@
-import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
-import Helmet from 'react-helmet';
 import PropTypes from 'prop-types';
+import React from 'react';
+import Helmet from 'react-helmet';
 
 const query = graphql`
   query GetSiteMetadata {
@@ -66,6 +66,10 @@ function Seo({ meta, title, description, image, slug, lang }) {
         {
           name: 'twitter:description',
           content: siteDescription
+        },
+        {
+          name: 'theme-color',
+          content: '#13244D'
         }
       ]
         .concat(

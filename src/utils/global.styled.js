@@ -8,6 +8,7 @@ const GlobalStyles = createGlobalStyle`
     scrollbar-width: thin;
     scrollbar-color: #505050 #252525;
     scroll-behavior: smooth;
+    user-select: none;
   }
 
   * {

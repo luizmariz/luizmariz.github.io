@@ -1,29 +1,12 @@
 import styled from 'styled-components';
 
-export const BlogTitle = styled.div`
-  display: flex;
-  margin-left: 0.2rem;
-
+export const Title = styled.span`
   text-transform: uppercase;
-
-  /* TODO: refact it */
-  h1 {
-    margin: 0;
-    padding-left: 1rem;
-
-    font-size: 1.5rem;
-  }
-
-  h3 {
-    display: none;
-    margin: 0;
-    width: 0;
-    height: 0;
-
-    font-size: 1.5rem;
-
-    -webkit-tap-highlight-color: transparent;
-  }
+  margin: 0;
+  padding-left: 1rem;
+  font-weight: bold;
+  color: #cfdae1;
+  font-size: 1.5rem;
 `;
 
 export const LogoContainer = styled.div`

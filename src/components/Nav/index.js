@@ -3,8 +3,6 @@ import React from 'react';
 import NavDesktop from '../NavDesktop';
 import NavMobile from '../NavMobile';
 
-// TODO: Refact
-
 const _ROUTES = [
   { name: 'Home', to: '/' },
   { name: 'Sobre mim', to: '/about/' }

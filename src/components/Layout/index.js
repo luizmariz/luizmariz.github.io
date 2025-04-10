@@ -1,50 +1,36 @@
 import { StaticImage } from 'gatsby-plugin-image';
 import React from 'react';
 import { Anchor } from '../../utils/anchor.styled';
-import BaseLayout from '../BaseLayout';
 import Footer from '../Footer';
+import LayoutBase from '../LayoutBase';
 import Nav from '../Nav';
 import * as S from './styled';
 
 function Layout({ children, location }) {
   if (location.pathname === '/404') {
-    return <BaseLayout children={children} />;
+    return <LayoutBase children={children} />;
   }
 
   return (
     <React.Fragment>
       <Nav location={location} />
-      <BaseLayout
+      <LayoutBase
         children={children}
         render={() => (
           <header>
             <S.LogoContainer>
               <S.Row>
-                <Anchor
-                  to="/"
-                  aria-label="Ir para a homepage"
-                  style={{ marginLeft: '-0.4rem', marginRight: '2px' }}
-                >
+                <Anchor to="/" aria-label="Ir para a homepage">
                   <StaticImage
-                    className="dark"
-                    alt="Luiz Ipsum"
-                    src={'../../assets/images/logo-cute-pink.png'}
-                    width={70}
-                    height={70}
-                    placeholder="blurred"
-                  />
-                  <StaticImage
-                    className="light"
-                    alt="Luiz Ipsum"
-                    src={'../../assets/images/logo-purple.png'}
-                    width={70}
-                    height={70}
-                    placeholder="blurred"
+                    alt="Logo Luiz Ipsum representado por blocos dispostos em forma de L e I"
+                    src={'../../assets/svgs/logo-default.svg'}
+                    height={50}
+                    placeholder="none"
+                    quality={100}
+                    layout="fixed"
                   />
                 </Anchor>
-                <S.BlogTitle>
-                  {location.pathname === '/' && <h1>Luiz Ipsum</h1>}
-                </S.BlogTitle>
+                <S.Title>{location.pathname === '/' && 'Luiz Ipsum'}</S.Title>
               </S.Row>
             </S.LogoContainer>
           </header>
