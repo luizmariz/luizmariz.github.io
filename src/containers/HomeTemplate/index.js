@@ -1,10 +1,10 @@
 import { graphql } from 'gatsby';
 import React from 'react';
 // import img from '../assets/images/default-img.png';
-import Intro from '../components/Intro';
-import Layout from '../components/Layout';
-import PostList from '../components/PostList';
-import Seo from '../components/Seo';
+import Intro from '../../components/Intro';
+import Layout from '../../components/Layout';
+import PostList from '../../components/PostList';
+import Seo from '../../components/Seo';
 
 function HomeTemplate({ data, location }) {
   return (

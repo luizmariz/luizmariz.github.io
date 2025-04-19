@@ -4,30 +4,25 @@ export const Title = styled.span`
   text-transform: uppercase;
   margin: 0;
   padding-left: 1rem;
-  font-weight: bold;
+  font-weight: 800;
   color: #cfdae1;
   font-size: 1.5rem;
+  letter-spacing: 0rem;
 `;
 
 export const LogoContainer = styled.div`
-  display: flex;
+  display: inline-flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  min-height: 70px;
+  opacity: 0.5;
 
-  .anchor:hover {
+  &:hover {
     opacity: 1;
   }
 
   @media (min-width: 770px) {
-    margin-top: 3.5rem;
+    margin-top: 2.5rem;
   }
-`;
-
-export const Row = styled.div`
-  display: flex;
-  min-height: 70px;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
 `;

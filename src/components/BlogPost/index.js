@@ -1,10 +1,10 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import { formatTimestamp } from '../../utils/helpers';
-import Footer from '../BlogPostFooter';
-import SignUp from '../BlogPostSignUp';
+import BlogPostFooter from '../BlogPostFooter';
 import Layout from '../Layout';
 import Seo from '../Seo';
+import * as S from './styled';
 
 function BlogPost({
   location,
@@ -37,17 +37,16 @@ function BlogPost({
           }))
         ]}
       />
-      <main>
+      <S.MainWrapper>
         <article>
-          <header>
+          <S.PostHeader>
             <h1>{title}</h1>
             <time>{formatTimestamp(date, readingTime)}</time>
-          </header>
-          <div dangerouslySetInnerHTML={{ __html: html }} />
+          </S.PostHeader>
+          <S.PostContent dangerouslySetInnerHTML={{ __html: html }} />
         </article>
-      </main>
-      <SignUp />
-      <Footer previous={previous} next={next} />
+      </S.MainWrapper>
+      <BlogPostFooter previous={previous} next={next} />
     </Layout>
   );
 }

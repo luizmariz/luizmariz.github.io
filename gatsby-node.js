@@ -5,8 +5,10 @@ exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions;
 
   return new Promise((resolve, reject) => {
-    const BlogPostTemplate = path.resolve(`src/containers/blog-post.js`);
-    const HomeTemplate = path.resolve(`src/containers/home.js`);
+    const HomeTemplate = path.resolve(`src/containers/HomeTemplate/index.js`);
+    const BlogPostTemplate = path.resolve(
+      `src/containers/BlogPostTemplate/index.js`
+    );
 
     createPage({
       path: '/',

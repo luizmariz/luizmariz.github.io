@@ -6,10 +6,13 @@ export const CallToAction = styled.b`
   color: #5cbbab;
   display: flex;
   align-items: end;
+  justify-content: end;
   gap: 0.5rem;
   line-height: 100%;
   flex-grow: 1;
   padding: 0.25rem 0;
+  font-size: 1.2rem;
+  font-weight: 800;
   transition:
     opacity 0.6s,
     transform 0.6s;
@@ -26,7 +29,7 @@ export const Container = styled.article`
   text-decoration: none;
   color: #cfdae1;
   width: 100%;
-  height: 24rem;
+  height: 20rem;
   padding: 1.5rem;
 
   &::before {
@@ -54,8 +57,6 @@ export const Container = styled.article`
     opacity: 1;
   }
 `;
-
-//
 
 export const Time = styled.time`
   font-size: 0.875rem;

@@ -8,7 +8,31 @@ import * as S from './styled';
 
 function Layout({ children, location }) {
   if (location.pathname === '/404') {
-    return <LayoutBase children={children} />;
+    return (
+      <React.Fragment>
+        <LayoutBase
+          children={children}
+          render={() => (
+            <header>
+              <S.LogoContainer>
+                <Anchor to="/" aria-label="Ir para a homepage">
+                  <StaticImage
+                    alt="Logo Luiz Ipsum representado por blocos dispostos em forma de L e I"
+                    src={'../../assets/svgs/logo-default.svg'}
+                    height={50}
+                    placeholder="none"
+                    quality={100}
+                    layout="fixed"
+                  />
+                  <S.Title>Luiz Ipsum</S.Title>
+                </Anchor>
+              </S.LogoContainer>
+            </header>
+          )}
+        />
+        <Footer />
+      </React.Fragment>
+    );
   }
 
   return (
@@ -19,19 +43,17 @@ function Layout({ children, location }) {
         render={() => (
           <header>
             <S.LogoContainer>
-              <S.Row>
-                <Anchor to="/" aria-label="Ir para a homepage">
-                  <StaticImage
-                    alt="Logo Luiz Ipsum representado por blocos dispostos em forma de L e I"
-                    src={'../../assets/svgs/logo-default.svg'}
-                    height={50}
-                    placeholder="none"
-                    quality={100}
-                    layout="fixed"
-                  />
-                </Anchor>
-                <S.Title>{location.pathname === '/' && 'Luiz Ipsum'}</S.Title>
-              </S.Row>
+              <Anchor to="/" aria-label="Ir para a homepage">
+                <StaticImage
+                  alt="Logo Luiz Ipsum representado por blocos dispostos em forma de L e I"
+                  src={'../../assets/svgs/logo-default.svg'}
+                  height={50}
+                  placeholder="none"
+                  quality={100}
+                  layout="fixed"
+                />
+                <S.Title>{'Luiz Ipsum'}</S.Title>
+              </Anchor>
             </S.LogoContainer>
           </header>
         )}

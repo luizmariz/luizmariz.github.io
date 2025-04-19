@@ -19,7 +19,7 @@ function PostItem({ date, readingTime, slug, tags, title, summary }) {
           ))}
         </S.Tags>
         <S.CallToAction>
-          Ler publicação
+          Ler artigo
           <S.ToLeftBtn />
         </S.CallToAction>
       </S.Container>

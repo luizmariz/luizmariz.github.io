@@ -63,6 +63,25 @@ module.exports = {
           },
           'gatsby-remark-autolink-headers',
           {
+            resolve: `gatsby-remark-table-of-contents`,
+            options: {
+              exclude: 'Table of Contents',
+              tight: true,
+              ordered: false,
+              fromHeading: 1,
+              toHeading: 6,
+              className: 'table-of-contents'
+            }
+          },
+          {
+            resolve: `gatsby-remark-prismjs-copy-button`,
+            options: {
+              buttonText: 'Copiar',
+              successText: 'Copiado ✅',
+              errorText: 'Erro ao copiar'
+            }
+          },
+          {
             resolve: 'gatsby-remark-prismjs',
             options: {
               inlineCodeMarker: '÷'

@@ -10,7 +10,8 @@ export const Container = styled.nav`
   display: block;
   width: 100vw;
   overflow: visible;
-  backdrop-filter: blur(1rem);
+  background: #000c1ab5;
+  backdrop-filter: blur(4px);
   border-bottom: 1px solid #99999922;
   padding-right: var(--scrollbar-width);
 

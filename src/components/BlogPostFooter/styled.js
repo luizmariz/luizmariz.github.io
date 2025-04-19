@@ -1,53 +1,59 @@
 import styled from 'styled-components';
-import media from 'styled-media-query';
 
 import { Link } from 'gatsby';
 
-export const PostNav = styled.ul`
-  display: inline-block;
-  max-width: 100%;
-  margin-top: 4rem;
-  margin-bottom: 0;
-  padding: 0;
-
-  list-style-type: none;
-
-  svg {
-    font-size: 1.2rem;
-  }
-
-  ${media.greaterThan('medium')`
-    max-width: 80%;
-  `}
+export const PostFooterContainer = styled.aside`
+  display: block;
+  padding-top: 3rem;
 `;
 
-export const Next = styled.li`
-  display: inline;
+export const PostNav = styled.nav`
+  display: flex;
+  align-items: center;
+  width: 100%;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  margin-top: 2rem;
+  gap: 1rem;
+`;
+
+export const StyledLink = styled(Link)`
+  line-height: 1.5rem;
+  text-decoration: none;
+  color: #5cbbab;
+  font-weight: 600;
+  border: 1px solid #5cbbab;
+  display: flex;
+  align-items: center;
+  height: 5rem;
+  padding: 0.5rem 1rem;
+  margin-left: auto;
+  opacity: 0.5;
+  width: 50%;
+
+  svg {
+    font-size: 1.6rem;
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+`;
+
+export const Next = styled(StyledLink)`
+  text-align: right;
 
   svg {
     margin-left: 1rem;
   }
 `;
 
-export const Previous = styled.li`
-  display: inline;
-  text-align: right;
+export const Previous = styled(StyledLink)`
+  text-align: left;
 
   svg {
     margin-right: 1rem;
-  }
-`;
-
-export const StyledLink = styled(Link)`
-  margin-top: 1.5rem;
-  line-height: 2.1rem;
-
-  svg {
-    margin-bottom: -0.2rem;
-  }
-
-  &::before {
-    content: none !important;
   }
 `;
 

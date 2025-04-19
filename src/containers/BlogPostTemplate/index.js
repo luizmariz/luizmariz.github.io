@@ -1,6 +1,6 @@
 import { graphql } from 'gatsby';
 import React from 'react';
-import BlogPost from '../components/BlogPost';
+import BlogPost from '../../components/BlogPost';
 // import thumbnail from '../assets/images/default-img.png';
 
 function BlogPostTemplate({ data, pageContext, location }) {
