@@ -11,8 +11,8 @@ export const Container = styled.nav`
   display: block;
   width: 100vw;
   overflow: visible;
-  background: rgba(0, 10, 22, 0.8);
-  backdrop-filter: blur(12px);
+  background: rgba(0, 10, 22, 0.65);
+  backdrop-filter: blur(8px);
   border-bottom: 1px solid #99999922;
   padding-right: var(--scrollbar-width);
 
@@ -99,7 +99,7 @@ export const Wrapper = styled.div`
   max-width: 64rem;
   min-width: 64rem;
   margin: 0 auto;
-  padding: 1.2rem 1.3rem;
+  padding: 1.2rem 1.2rem;
   flex-direction: row;
   justify-content: space-between;
 `;
@@ -153,9 +153,5 @@ export const LogoContainer = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  opacity: 0.5;
-
-  &:hover {
-    opacity: 1;
-  }
+  opacity: 1;
 `;

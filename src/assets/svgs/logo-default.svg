@@ -1,12 +1,12 @@
 <svg width="46" height="54" viewBox="0 0 46 54" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M1 6.56816L12.0548 1.18408L23.0273 6.74476" stroke="white" stroke-miterlimit="10"/>
-<path d="M34.0124 12.1713L23.0278 6.74468L33.9624 1L45.0006 6.63003" stroke="white" stroke-miterlimit="10"/>
-<path d="M24.5297 29.8519L33.9599 34.5157L23.0272 40.0246L14.2534 35.677L12.0547 34.5878L12.0778 12.1814L23.0272 6.74463V29.1085L24.5297 29.8519Z" fill="white" fill-opacity="0.1" stroke="white" stroke-miterlimit="10"/>
-<path d="M34.0122 12.1084L33.9604 34.622" stroke="white" stroke-miterlimit="10"/>
-<path d="M44.9496 6.69946L44.8932 29.0273L33.9604 34.5158L34.0122 12.1714L44.9496 6.69946Z" fill="white" fill-opacity="0.1" stroke="white" stroke-miterlimit="10"/>
-<path d="M12.078 12.1815L1.04541 6.62549V41.9923L23.0653 53.3282L33.9343 47.3209L33.9601 34.5158L23.0274 40.0247" stroke="white" stroke-miterlimit="10"/>
-<path d="M23.0657 53.3281L23.0278 40.0247" stroke="white" stroke-miterlimit="10"/>
-<path d="M23.0275 29.1084L12.0947 34.6173" stroke="white" stroke-miterlimit="10"/>
+<path d="M1 6.56816L12.0548 1.18408L23.0273 6.74476" stroke="#5CBBAB" stroke-miterlimit="10"/>
+<path d="M34.0124 12.1713L23.0278 6.74468L33.9624 1L45.0006 6.63003" stroke="#5CBBAB" stroke-miterlimit="10"/>
+<path d="M24.5297 29.8519L33.9599 34.5157L23.0272 40.0246L14.2534 35.677L12.0547 34.5878L12.0778 12.1814L23.0272 6.74463V29.1085L24.5297 29.8519Z" fill="#5CBBAB" fill-opacity="0.1" stroke="#5CBBAB" stroke-miterlimit="10"/>
+<path d="M34.0122 12.1084L33.9604 34.622" stroke="#5CBBAB" stroke-miterlimit="10"/>
+<path d="M44.9496 6.69946L44.8932 29.0273L33.9604 34.5158L34.0122 12.1714L44.9496 6.69946Z" fill="#5CBBAB" fill-opacity="0.1" stroke="#5CBBAB" stroke-miterlimit="10"/>
+<path d="M12.078 12.1815L1.04541 6.62549V41.9923L23.0653 53.3282L33.9343 47.3209L33.9601 34.5158L23.0274 40.0247" stroke="#5CBBAB" stroke-miterlimit="10"/>
+<path d="M23.0657 53.3281L23.0278 40.0247" stroke="#5CBBAB" stroke-miterlimit="10"/>
+<path d="M23.0275 29.1084L12.0947 34.6173" stroke="#5CBBAB" stroke-miterlimit="10"/>
 <rect y="5.64258" width="1.47682" height="0.76955" transform="rotate(-25.7927 0 5.64258)" fill="#13244D"/>
 <rect x="45.1768" y="5.46094" width="0.627935" height="0.621082" transform="rotate(26.8781 45.1768 5.46094)" fill="#13244D"/>
 </svg>

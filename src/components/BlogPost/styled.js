@@ -155,7 +155,7 @@ export const PostContent = styled.div`
 
   blockquote {
     max-width: calc((64rem * 0.6) + 2.6rem);
-    margin: 0 0 1.75rem -1.3rem;
+    margin: 0 0 1.75rem -1.2rem;
     padding: 0 0 0 1rem;
     font-size: 1rem;
     font-style: italic;
@@ -167,7 +167,7 @@ export const PostContent = styled.div`
     border-left-color: #2a3177;
 
     p {
-      padding: 0 1.3rem;
+      padding: 0 1.2rem;
     }
   }
 
@@ -176,14 +176,14 @@ export const PostContent = styled.div`
     min-width: calc((64rem * 0.6) + 1.9rem);
     padding-right: 0;
     padding-left: 1.3em;
-    margin-left: -1.3rem;
+    margin-left: -1.2rem;
     border-left: 0.25em solid #cfdae1;
     background: rgba(227, 233, 247, 0.08);
   }
 
   .gatsby-highlight {
     margin-bottom: 1.75rem;
-    margin-left: -1.3rem;
+    margin-left: -1.2rem;
     max-width: calc(64rem * 0.6 + 2.6rem);
     overflow: auto;
     -webkit-overflow-scrolling: touch;
@@ -205,7 +205,7 @@ export const PostContent = styled.div`
     font-family:
       Fira Code VF,
       monospace;
-    padding: 1.3rem;
+    padding: 1.2rem;
     overflow: auto;
     background-color: transparent;
     margin: 0;
@@ -231,7 +231,7 @@ export const PostContent = styled.div`
   img {
     border: 0.35rem solid rgba(200, 199, 193, 0.1);
     margin: 0 !important;
-    margin-left: -1.3rem !important;
+    margin-left: -1.2rem !important;
     min-width: calc(64rem * 0.6 + 2.6rem) !important;
     max-width: calc(64rem * 0.6 + 2.6rem) !important;
   }
@@ -256,7 +256,7 @@ export const PostContent = styled.div`
     }
 
     blockquote {
-      margin-left: -1.3rem;
+      margin-left: -1.2rem;
       padding-left: 1rem;
 
       p {

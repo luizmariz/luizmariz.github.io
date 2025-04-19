@@ -4,7 +4,7 @@ import background from '../../assets/svgs/intro-background.svg';
 export const Text = styled.p`
   max-width: 14rem;
   white-space: pre-line;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   max-width: 28rem;
   margin-block: 0.5rem;
 `;

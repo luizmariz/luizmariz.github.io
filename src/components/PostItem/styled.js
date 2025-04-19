@@ -69,7 +69,7 @@ export const Time = styled.time`
 `;
 
 export const Title = styled.h2`
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   line-height: 150%;
   margin: 0.5rem 0;
 `;

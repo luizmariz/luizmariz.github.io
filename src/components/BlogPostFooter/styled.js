@@ -26,12 +26,13 @@ export const StyledLink = styled(Link)`
   border: 1px solid #5cbbab;
   display: flex;
   align-items: center;
-  height: 5rem;
+  height: 4rem;
   padding: 0.5rem 1rem;
   opacity: 0.5;
   width: 50%;
   gap: 1rem;
   position: relative;
+  font-size: 0.875rem;
 
   svg {
     font-size: 1.6rem;
