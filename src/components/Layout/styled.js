@@ -1,28 +1,21 @@
 import styled from 'styled-components';
 
-export const Title = styled.span`
-  text-transform: uppercase;
-  margin: 0;
-  padding-left: 1rem;
-  font-weight: 800;
-  color: #cfdae1;
-  font-size: 1.5rem;
-  letter-spacing: 0rem;
+export const Container = styled.div`
+  margin: 0 auto;
+  padding: 4rem 1.3rem;
+  max-width: 64rem;
 `;
 
-export const LogoContainer = styled.div`
-  display: inline-flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  min-height: 70px;
-  opacity: 0.5;
+export const PageContent = styled.div`
+  margin-top: 2.5rem;
+`;
 
-  &:hover {
-    opacity: 1;
-  }
-
-  @media (min-width: 770px) {
-    margin-top: 2.5rem;
-  }
+export const MainWrapper = styled.div`
+  position: relative;
+  background: #000c1a;
+  color: #cfdae1;
+  border-bottom: 1px solid #99999922;
+  z-index: 9999;
+  margin-bottom: max(19vh, 15rem);
+  min-height: 100vh;
 `;

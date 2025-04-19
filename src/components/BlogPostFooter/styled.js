@@ -28,12 +28,14 @@ export const StyledLink = styled(Link)`
   align-items: center;
   height: 5rem;
   padding: 0.5rem 1rem;
-  margin-left: auto;
   opacity: 0.5;
   width: 50%;
+  gap: 1rem;
+  position: relative;
 
   svg {
     font-size: 1.6rem;
+    width: 2.5rem;
   }
 
   &:hover {
@@ -42,19 +44,13 @@ export const StyledLink = styled(Link)`
 `;
 
 export const Next = styled(StyledLink)`
+  justify-content: end;
   text-align: right;
-
-  svg {
-    margin-left: 1rem;
-  }
 `;
 
 export const Previous = styled(StyledLink)`
+  justify-content: start;
   text-align: left;
-
-  svg {
-    margin-right: 1rem;
-  }
 `;
 
 export const BlogIndex = styled.h3`

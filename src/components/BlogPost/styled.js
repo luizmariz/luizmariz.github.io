@@ -52,7 +52,7 @@ export const PostHeader = styled.header`
     font-size: 2.5rem;
     line-height: 1.1;
     text-rendering: optimizelegibility;
-    color: #ffffff;
+    color: #cfdae1;
   }
 
   time {
@@ -60,7 +60,7 @@ export const PostHeader = styled.header`
     margin-bottom: 1.75rem;
     margin-top: -0.7rem;
     font-size: 0.9rem;
-    color: #ffffff77;
+    color: #cfdae177;
   }
 `;
 
@@ -78,7 +78,7 @@ export const PostContent = styled.div`
 
   h2,
   h3 {
-    color: #ffffff;
+    color: #cfdae1;
     margin-bottom: 1.7rem;
     margin-top: 3rem;
   }
@@ -177,7 +177,7 @@ export const PostContent = styled.div`
     padding-right: 0;
     padding-left: 1.3em;
     margin-left: -1.3rem;
-    border-left: 0.25em solid #ffffff;
+    border-left: 0.25em solid #cfdae1;
     background: rgba(227, 233, 247, 0.08);
   }
 

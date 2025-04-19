@@ -11,8 +11,8 @@ export const CallToAction = styled.b`
   line-height: 100%;
   flex-grow: 1;
   padding: 0.25rem 0;
-  font-size: 1.2rem;
-  font-weight: 800;
+  font-size: 1rem;
+  font-weight: 600;
   transition:
     opacity 0.6s,
     transform 0.6s;
@@ -20,6 +20,11 @@ export const CallToAction = styled.b`
   transition-delay: calc(1 * 0.075s);
   transform: translateY(1.8rem);
   opacity: 0;
+  text-transform: uppercase;
+
+  svg {
+    font-size: 1.2rem;
+  }
 `;
 
 export const Container = styled.article`
