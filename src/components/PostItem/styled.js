@@ -21,6 +21,9 @@ export const CallToAction = styled.b`
   transform: translateY(1.8rem);
   opacity: 0;
   text-transform: uppercase;
+  position: absolute;
+  bottom: 1.6rem;
+  right: 1.6rem;
 
   svg {
     font-size: 1.2rem;
@@ -34,7 +37,7 @@ export const Container = styled.article`
   text-decoration: none;
   color: #cfdae1;
   width: 100%;
-  height: 20rem;
+  height: 16rem;
   padding: 1.5rem;
 
   &::before {

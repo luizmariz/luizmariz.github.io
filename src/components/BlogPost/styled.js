@@ -8,7 +8,7 @@ export const MainWrapper = styled.main`
     position: sticky;
     top: 6rem;
     float: right;
-    width: calc(64rem * 0.305);
+    width: calc(64rem * 0.255);
     opacity: 0.5;
     padding: 1rem;
 
@@ -43,7 +43,7 @@ export const MainWrapper = styled.main`
 `;
 
 export const PostHeader = styled.header`
-  max-width: calc(64rem * 0.6);
+  max-width: calc(64rem * 0.65);
 
   h1 {
     padding: 0px;
@@ -58,7 +58,7 @@ export const PostHeader = styled.header`
   time {
     display: block;
     margin-bottom: 1.75rem;
-    margin-top: -0.7rem;
+    margin-top: -0.65rem;
     font-size: 0.9rem;
     color: #cfdae177;
   }
@@ -69,7 +69,7 @@ export const PostContent = styled.div`
   --primary: #5cbbab;
 
   * {
-    max-width: calc(64rem * 0.6);
+    max-width: calc(64rem * 0.65);
   }
 
   p {
@@ -154,7 +154,7 @@ export const PostContent = styled.div`
   }
 
   blockquote {
-    max-width: calc((64rem * 0.6) + 2.6rem);
+    max-width: calc((64rem * 0.65) + 2.6rem);
     margin: 0 0 1.75rem -1.2rem;
     padding: 0 0 0 1rem;
     font-size: 1rem;
@@ -173,7 +173,7 @@ export const PostContent = styled.div`
 
   .gatsby-highlight-code-line {
     display: block;
-    min-width: calc((64rem * 0.6) + 1.9rem);
+    min-width: calc((64rem * 0.65) + 1.9rem);
     padding-right: 0;
     padding-left: 1.3em;
     margin-left: -1.2rem;
@@ -184,7 +184,7 @@ export const PostContent = styled.div`
   .gatsby-highlight {
     margin-bottom: 1.75rem;
     margin-left: -1.2rem;
-    max-width: calc(64rem * 0.6 + 2.6rem);
+    max-width: calc(64rem * 0.65 + 2.6rem);
     overflow: auto;
     -webkit-overflow-scrolling: touch;
     border-radius: 0;
@@ -197,7 +197,8 @@ export const PostContent = styled.div`
       font-family:
         Fira Code VF,
         monospace;
-      font-size: 0.765rem;
+      font-size: 0.6565rem;
+      user-select: text;
     }
   }
 
@@ -232,8 +233,8 @@ export const PostContent = styled.div`
     border: 0.35rem solid rgba(200, 199, 193, 0.1);
     margin: 0 !important;
     margin-left: -1.2rem !important;
-    min-width: calc(64rem * 0.6 + 2.6rem) !important;
-    max-width: calc(64rem * 0.6 + 2.6rem) !important;
+    min-width: calc(64rem * 0.65 + 2.6rem) !important;
+    max-width: calc(64rem * 0.65 + 2.6rem) !important;
   }
 
   .gatsby-remark-prismjs-copy-button {

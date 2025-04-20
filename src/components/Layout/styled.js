@@ -19,3 +19,14 @@ export const MainWrapper = styled.div`
   margin-bottom: max(25vh, 20rem);
   min-height: 100vh;
 `;
+
+export const VerticalText = styled.div`
+  font-weight: 800;
+  font-size: 7rem;
+  opacity: 0.025;
+  line-height: 120%;
+  position: absolute;
+  top: 0;
+  left: 0.5rem;
+  width: 100%;
+`;

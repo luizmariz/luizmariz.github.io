@@ -15,7 +15,6 @@ function Nav({ location }) {
   const [show, setShow] = useState(true);
 
   useEffect(() => {
-    console.log(location);
     const handleScroll = () => {
       const scrollPos = document.body.getBoundingClientRect().top;
       setShow(scrollPos >= scroll);

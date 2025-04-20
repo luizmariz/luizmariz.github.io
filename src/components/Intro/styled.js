@@ -17,7 +17,7 @@ export const Column = styled.section`
   display: flex;
   flex-direction: column;
   position: relative;
-  margin: 0 1.5rem;
+  margin: 4rem 1.5rem;
 
   ::after {
     content: '';

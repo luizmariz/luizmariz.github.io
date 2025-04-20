@@ -5,6 +5,11 @@ summary: Um mini tutorial de como criar uma animação simples e fofinha que eu 
 tags: javascript
 ---
 
+```toc
+## Table of contents
+
+```
+
 <p class="desktop-gif"><img alt="Qualquer tecnologia suficientemente avançada é indistinguível de magia, frase de Arthur C. Clarke" src="./typewriter-animation.gif" /></p>
 <p class="mobile-gif"><img alt="Qualquer tecnologia suficientemente avançada é indistinguível de magia, frase de Arthur C. Clarke" src="./typewriter-animation-mobile.gif" /></p>
 

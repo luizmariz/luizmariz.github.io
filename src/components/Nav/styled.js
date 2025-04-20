@@ -60,9 +60,9 @@ export const NavLinkWrapper = styled.div`
             position: absolute;
             top: -1.6rem;
             left: 10%;
-            background-color: color-mix(in srgb, #ffffff 15%, transparent);
+            background-color: color-mix(in srgb, #ffffff 10%, transparent);
             width: 80%;
-            height: 190%;
+            height: 140%;
             pointer-events: false;
             filter: blur(12px);
           }
