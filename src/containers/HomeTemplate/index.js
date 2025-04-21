@@ -8,7 +8,7 @@ import Seo from '../../components/Seo';
 
 function HomeTemplate({ data, location }) {
   return (
-    <Layout location={location}>
+    <Layout location={location} enableVerticalText>
       <Seo />
       <main>
         <Intro />

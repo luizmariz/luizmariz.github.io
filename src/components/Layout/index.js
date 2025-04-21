@@ -6,7 +6,7 @@ import Nav from '../Nav';
 
 import * as S from '../Layout/styled';
 
-function Layout({ children, location }) {
+function Layout({ children, location, enableVerticalText = false }) {
   const mainWrapperRef = useRef(null);
 
   const [mainWrapperHeight, setMainWrapperHeight] = useState(0);
@@ -30,15 +30,17 @@ function Layout({ children, location }) {
       <GlobalStyles />
       <Nav location={location} />
       <S.MainWrapper ref={mainWrapperRef}>
-        <S.VerticalText height={mainWrapperHeight}>
-          <Carousel
-            height={mainWrapperHeight}
-            items={[
-              'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc aliquet feugiat ligula quis volutpat. '
-            ]}
-            duration={120}
-          ></Carousel>
-        </S.VerticalText>
+        {enableVerticalText && (
+          <S.VerticalText height={mainWrapperHeight}>
+            <Carousel
+              height={mainWrapperHeight}
+              items={[
+                'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc aliquet feugiat ligula quis volutpat. '
+              ]}
+              duration={300}
+            ></Carousel>
+          </S.VerticalText>
+        )}
         <S.Container>
           <S.PageContent>{children}</S.PageContent>
         </S.Container>

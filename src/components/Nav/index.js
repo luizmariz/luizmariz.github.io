@@ -6,7 +6,7 @@ import { Anchor } from '../../utils/anchor.styled';
 import * as S from '../Nav/styled';
 
 const _ROUTES = [
-  { name: 'Início', to: '/' },
+  { name: '🏡 Início', to: '/' },
   { name: 'Sobre mim', to: '/about/' }
 ];
 

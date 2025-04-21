@@ -1,7 +1,7 @@
 import React from 'react';
 import * as S from './styled';
 
-const Carousel = ({ items, height, duration = 10 }) => {
+function Carousel({ items, height, duration = 10 }) {
   const [animationState, setAnimationState] = React.useState('running');
 
   return (
@@ -20,6 +20,6 @@ const Carousel = ({ items, height, duration = 10 }) => {
       </S.CarouselTrack>
     </S.CarouselContainer>
   );
-};
+}
 
 export default Carousel;

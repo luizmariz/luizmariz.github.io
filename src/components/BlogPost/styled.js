@@ -49,8 +49,9 @@ export const PostHeader = styled.header`
     padding: 0px;
     margin: 0px 0px 1.5rem;
     font-weight: 700;
-    font-size: 2.5rem;
-    line-height: 1.1;
+    font-size: 2rem;
+    text-transform: uppercase;
+    line-height: 125%;
     text-rendering: optimizelegibility;
     color: #cfdae1;
   }
@@ -197,7 +198,7 @@ export const PostContent = styled.div`
       font-family:
         Fira Code VF,
         monospace;
-      font-size: 0.6565rem;
+      font-size: 0.8rem;
       user-select: text;
     }
   }

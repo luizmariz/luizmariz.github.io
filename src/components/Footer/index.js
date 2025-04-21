@@ -22,9 +22,7 @@ function Footer() {
           <S.NewsletterTextTitle>
             Inscreva-se na newsletter
           </S.NewsletterTextTitle>
-          <S.NewsletterText>
-            Eu demoro para postar. Então relaxa que não vou spammar 😉
-          </S.NewsletterText>
+          <S.NewsletterText>Relaxa que não vou spammar 😇</S.NewsletterText>
           <S.NewsletterBtn to={'/signup'}>Inscreva-se</S.NewsletterBtn>
         </S.Container>
         <S.Container>

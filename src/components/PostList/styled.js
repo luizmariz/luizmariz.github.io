@@ -1,7 +1,7 @@
 import styled, { keyframes } from 'styled-components';
 
 export const Container = styled.div`
-  margin-top: 3.5rem;
+  margin-top: 2.5rem;
   margin-bottom: 1rem;
   display: grid;
   grid-template-columns: repeat(2, 1fr);

@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { Anchor } from '../../utils/anchor.styled';
 
 export const ContainerTitle = styled.h5`
-  font-size: 0.875rem;
+  font-size: 0.9rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
   display: block;
@@ -11,7 +11,7 @@ export const ContainerTitle = styled.h5`
 
 export const Link = styled(Anchor)`
   margin-bottom: 0.25rem;
-  font-size: 0.875rem;
+  font-size: 0.9rem;
   font-weight: 200;
   opacity: 0.8;
   display: block;
@@ -110,7 +110,7 @@ export const LogoContainer = styled.div`
 export const NewsletterText = styled.p`
   margin: 0;
   padding: 0;
-  font-size: 0.875rem;
+  font-size: 0.9rem;
   opacity: 0.7;
 `;
 
@@ -128,7 +128,7 @@ export const NewsletterBtn = styled(Anchor)`
   padding: 0.5rem 1rem;
   opacity: 0.5;
   display: inline-flex;
-  font-size: 0.875rem;
+  font-size: 0.9rem;
   margin-top: 1rem;
 
   &:hover {

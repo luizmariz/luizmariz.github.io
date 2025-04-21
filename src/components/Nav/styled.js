@@ -41,6 +41,7 @@ export const NavLink = styled(Anchor)`
   color: #ffffff99;
   font-size: 0.875rem;
   padding: 0.1rem 0.5rem;
+  transition: color 250ms ease;
 
   &:hover {
     color: #ffffff;
