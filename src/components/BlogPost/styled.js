@@ -39,6 +39,10 @@ export const MainWrapper = styled.main`
         padding-top: 1rem;
       }
     }
+
+    ${media.lessThan('medium')`
+      display: none;
+    `}
   }
 `;
 

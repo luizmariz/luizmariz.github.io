@@ -3,7 +3,7 @@ import { createGlobalStyle } from 'styled-components';
 const GlobalStyles = createGlobalStyle`
   html {
     font: 100%/1.75 'Karla';
-    font-weight: 400;
+    font-weight: 300;
     overflow-y: scroll;
     user-select: none;
     background: #000c1a;

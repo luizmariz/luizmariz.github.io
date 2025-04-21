@@ -35,7 +35,6 @@ function Footer() {
           <S.Link
             href="https://linkedin.com/in/luiz-mariz/"
             target="_blank"
-            title="LinkedIn"
             rel="noopener noreferrer"
           >
             LinkedIn
@@ -43,7 +42,6 @@ function Footer() {
           <S.Link
             href="https://github.com/luizmariz/"
             target="_blank"
-            title="Github"
             rel="noopener noreferrer"
           >
             Github

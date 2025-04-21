@@ -1,5 +1,4 @@
 import styled, { css } from 'styled-components';
-import media from 'styled-media-query';
 
 import { MdArrowUpward } from 'react-icons/md';
 import { Anchor } from '../../utils/anchor.styled';
@@ -32,9 +31,6 @@ export const Container = styled.nav`
             background-color 0.2s ease-in;
           transform: translateY(-100%);
         `}
-  ${media.lessThan('medium')`
-    display: none;
-  `};
 `;
 
 export const NavLink = styled(Anchor)`
@@ -64,7 +60,7 @@ export const NavLinkWrapper = styled.div`
             background-color: color-mix(in srgb, #ffffff 10%, transparent);
             width: 80%;
             height: 140%;
-            pointer-events: false;
+            pointer-events: none;
             filter: blur(12px);
           }
 
@@ -98,7 +94,6 @@ export const Wrapper = styled.div`
   display: flex;
   height: 4rem;
   max-width: 64rem;
-  min-width: 64rem;
   margin: 0 auto;
   padding: 1.2rem 1.2rem;
   flex-direction: row;

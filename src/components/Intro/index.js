@@ -2,20 +2,24 @@ import React from 'react';
 import moneyGIF from '../../assets/gifs/money.gif';
 
 import CodeEditorWindow from '../CodeEditor';
+import ProfileCard from '../ProfileCard';
+
 import * as S from './styled';
 
 function Intro() {
-  const initialCode = `
-  // Welcome to the code editor!
-  function greet(name) {
-    return 'Hello, ' + name + '!';
-  }
+  const initialCode = `/**
+*  Sim, a marca é um trocadilho com Lorem Ipsum
+*  Sim, achei genial. E tá tudo bem.
+*/
+function saudar(nome) {
+  return "Olá," + nome + "!";
+}
 
-  const message = greet('World');
-  console.log(message);
+const message = greet('Mundo');
+console.log(message);
 
-  // Try editing this code!
-  `.trim();
+// Experimente editar este código!
+`.trim();
 
   return (
     <S.Container>
@@ -32,9 +36,20 @@ function Intro() {
           <S.MoneyGif alt="Imagem do autor do blog" src={moneyGIF} /> , que vêm
           dos programas que eu faço.
         </S.Text>
+        <S.ConnectButton
+          href="https://linkedin.com/in/luiz-mariz/"
+          target="_blank"
+          title="LinkedIn"
+          rel="noopener noreferrer"
+        >
+          Me adiciona lá!
+        </S.ConnectButton>
       </S.Column>
       <S.Column>
         <CodeEditorWindow initialCode={initialCode} language="javascript" />
+        <S.ProfileWrapper>
+          <ProfileCard />
+        </S.ProfileWrapper>
       </S.Column>
     </S.Container>
   );

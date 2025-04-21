@@ -23,10 +23,10 @@ export const MainWrapper = styled.div`
 export const VerticalText = styled.div`
   font-weight: 800;
   font-size: 7rem;
-  opacity: 0.025;
+  opacity: 0.03;
   line-height: 120%;
   position: absolute;
   top: 0;
-  left: 0.5rem;
+  left: 0.4rem;
   text-transform: uppercase;
 `;

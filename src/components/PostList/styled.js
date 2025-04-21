@@ -2,7 +2,7 @@ import styled, { keyframes } from 'styled-components';
 
 export const Container = styled.div`
   margin-top: 2.5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 2.5rem;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 `;
