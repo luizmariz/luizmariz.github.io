@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { useEffect, useState } from 'react';
 import Logo from '../../assets/svgs/logo-default.svg';
-import { Anchor } from '../../utils/anchor.styled';
+import { Anchor } from '../../utils/shared.styled';
 
 import * as S from '../Nav/styled';
 

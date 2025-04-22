@@ -2,8 +2,7 @@ import styled, { css } from 'styled-components';
 
 export const EditorContainer = styled.div`
   font-family: 'Fira Code', monospace;
-  width: 450px;
-  min-width: 400px;
+  width: 460px;
   overflow: hidden;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
   border: 1px solid #99999955;

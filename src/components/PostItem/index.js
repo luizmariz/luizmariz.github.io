@@ -1,7 +1,8 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import { Anchor } from '../../utils/anchor.styled';
 import { formatTimestamp } from '../../utils/helpers';
+import { Anchor } from '../../utils/shared.styled';
+
 import * as S from './styled';
 
 function PostItem({ date, readingTime, slug, tags, title, summary }) {
@@ -9,15 +10,17 @@ function PostItem({ date, readingTime, slug, tags, title, summary }) {
     <Anchor to={slug} rel="bookmark">
       <S.Container>
         <header>
-          <S.Time>{formatTimestamp(date, readingTime)}</S.Time>
+          {/* <S.Tags>
+            {tags.split(',').map((tag, index) => (
+              <S.Tag key={tag + index}>{tag}</S.Tag>
+            ))}
+          </S.Tags>
+           */}
+
           <S.Title>{title}</S.Title>
         </header>
         <S.Description>{summary}</S.Description>
-        <S.Tags>
-          {tags.split(',').map((tag, index) => (
-            <S.Tag key={tag + index}>{tag}</S.Tag>
-          ))}
-        </S.Tags>
+        <S.Time>{formatTimestamp(date, readingTime)}</S.Time>
         <S.CallToAction>
           Ler artigo
           <S.ToLeftBtn />

@@ -2,9 +2,8 @@ import React, { useEffect, useRef, useState } from 'react';
 import GlobalStyles from '../../utils/global.styled';
 import Carousel from '../Carrousel';
 import Footer from '../Footer';
-import Nav from '../Nav';
-
 import * as S from '../Layout/styled';
+import Nav from '../Nav';
 
 function Layout({ children, location, enableVerticalText = false }) {
   const mainWrapperRef = useRef(null);
@@ -29,7 +28,7 @@ function Layout({ children, location, enableVerticalText = false }) {
     <React.Fragment>
       <GlobalStyles />
       <Nav location={location} />
-      <S.MainWrapper ref={mainWrapperRef}>
+      <S.MainWrapper ref={mainWrapperRef} id="app">
         {enableVerticalText && (
           <S.VerticalText height={mainWrapperHeight}>
             <Carousel

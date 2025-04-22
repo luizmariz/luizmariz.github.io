@@ -1,5 +1,4 @@
 import React from 'react';
-import moneyGIF from '../../assets/gifs/money.gif';
 
 import CodeEditorWindow from '../CodeEditor';
 import ProfileCard from '../ProfileCard';
@@ -9,32 +8,30 @@ import * as S from './styled';
 function Intro() {
   const initialCode = `/**
 *  Sim, a marca é um trocadilho com Lorem Ipsum
-*  Sim, achei genial. E tá tudo bem.
+*  Sim, achei genial e tá tudo bem.
 */
-function saudar(nome) {
-  return "Olá," + nome + "!";
+function greet(name = 'Pessoa') {
+  return 'Olá,' + name + '!';
 }
 
-const message = greet('Mundo');
+const message = greet();
 console.log(message);
 
-// Experimente editar este código!
+// Experimenta editar o código!
 `.trim();
 
   return (
     <S.Container>
       <S.Column>
-        <S.Text>
-          <S.TextBold>Luiz</S.TextBold> sou eu.
+        <S.Text title="Precisa de copyright? @gaveta">
+          <S.TextBold id="app">Olá</S.TextBold> pessoa!
         </S.Text>
         <S.Text>
-          <S.TextBold>Luiz Ipsum</S.TextBold>, um domínio da internet onde
+          <S.TextBold>Luiz Ipsum</S.TextBold> é um domínio da internet onde
           escrevo coisas.
         </S.Text>
         <S.Text>
-          Domínio pago com{' '}
-          <S.MoneyGif alt="Imagem do autor do blog" src={moneyGIF} /> , que vêm
-          dos programas que eu faço.
+          É também um playground pessoal, então não espere muita coerência.
         </S.Text>
         <S.ConnectButton
           href="https://linkedin.com/in/luiz-mariz/"

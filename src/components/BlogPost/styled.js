@@ -52,12 +52,13 @@ export const PostHeader = styled.header`
   h1 {
     padding: 0px;
     margin: 0px 0px 1.5rem;
-    font-weight: 700;
-    font-size: 2rem;
-    text-transform: uppercase;
     line-height: 125%;
     text-rendering: optimizelegibility;
     color: #cfdae1;
+    font-size: 2rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-style: italic;
   }
 
   time {
@@ -160,7 +161,7 @@ export const PostContent = styled.div`
 
   blockquote {
     max-width: calc((64rem * 0.65) + 2.6rem);
-    margin: 0 0 1.75rem -1.2rem;
+    margin: 0 0 1.75rem -1.5rem;;
     padding: 0 0 0 1rem;
     font-size: 1rem;
     font-style: italic;
@@ -172,7 +173,7 @@ export const PostContent = styled.div`
     border-left-color: #2a3177;
 
     p {
-      padding: 0 1.2rem;
+      padding: 0 1.5rem;;
     }
   }
 
@@ -181,14 +182,14 @@ export const PostContent = styled.div`
     min-width: calc((64rem * 0.65) + 1.9rem);
     padding-right: 0;
     padding-left: 1.3em;
-    margin-left: -1.2rem;
+    margin-left: -1.5rem;;
     border-left: 0.25em solid #cfdae1;
     background: rgba(227, 233, 247, 0.08);
   }
 
   .gatsby-highlight {
     margin-bottom: 1.75rem;
-    margin-left: -1.2rem;
+    margin-left: -1.5rem;;
     max-width: calc(64rem * 0.65 + 2.6rem);
     overflow: auto;
     -webkit-overflow-scrolling: touch;
@@ -211,7 +212,7 @@ export const PostContent = styled.div`
     font-family:
       Fira Code VF,
       monospace;
-    padding: 1.2rem;
+    padding: 1.5rem;;
     overflow: auto;
     background-color: transparent;
     margin: 0;
@@ -237,7 +238,7 @@ export const PostContent = styled.div`
   img {
     border: 0.35rem solid rgba(200, 199, 193, 0.1);
     margin: 0 !important;
-    margin-left: -1.2rem !important;
+    margin-left: -1.5rem; !important;
     min-width: calc(64rem * 0.65 + 2.6rem) !important;
     max-width: calc(64rem * 0.65 + 2.6rem) !important;
   }
@@ -262,7 +263,7 @@ export const PostContent = styled.div`
     }
 
     blockquote {
-      margin-left: -1.2rem;
+      margin-left: -1.5rem;;
       padding-left: 1rem;
 
       p {

@@ -30,6 +30,32 @@ export const CallToAction = styled.b`
   }
 `;
 
+export const Title = styled.h2`
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: 150%;
+  padding: 0;
+  margin: 0;
+  padding-top: 0.25rem;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.02em;
+`;
+
+export const Time = styled.time`
+  font-size: 0.875rem;
+  font-weight: 200;
+  opacity: 0.6;
+`;
+
+export const Description = styled.p`
+  font-size: 1rem;
+  line-height: 150%;
+  margin: 0;
+  margin-bottom: 0.5rem;
+  opacity: 0.6;
+  font-weight: 200;
+`;
+
 export const Container = styled.article`
   position: relative;
   display: flex;
@@ -37,13 +63,15 @@ export const Container = styled.article`
   text-decoration: none;
   color: #cfdae1;
   width: 100%;
-  height: 16.5rem;
-  padding: 1.5rem;
-  transition: transform 280ms cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  height: 14rem;
+  padding: 1rem 1.5rem;
+  transition: transform 250ms cubic-bezier(0.68, -0.55, 0.27, 1.55);
 
   &::before {
     content: '';
-    background-image: url('${cardBackground}');
+    background:
+      linear-gradient(rgba(42, 49, 119, 0.3), rgba(0, 0, 10, 0.3)),
+      url('${cardBackground}');
     width: 100%;
     height: 100%;
     position: absolute;
@@ -51,19 +79,31 @@ export const Container = styled.article`
     left: 0;
     pointer-events: none;
     overflow: clip;
-    border: 0.0625rem rgba(255, 255, 255, 0.5) solid;
+    border: 0.0625rem rgba(255, 255, 255, 0.4) solid;
+
     opacity: 0;
     transition: opacity 180ms ease-in;
     z-index: -1;
   }
 
   &:hover::before {
-    opacity: 0.8;
+    opacity: 1;
   }
 
   &:hover ${CallToAction} {
     transform: translateY(0);
+    opacity: 0.8;
+
+    background-repeat: no-repeat;
+  }
+
+  &:hover ${Title} {
+    transform: translateY(0);
     opacity: 1;
+  }
+
+  &:hover ${Description}, &:hover ${Time} {
+    opacity: 0.8;
   }
 
   &:hover {
@@ -71,28 +111,11 @@ export const Container = styled.article`
   }
 `;
 
-export const Time = styled.time`
-  font-size: 0.875rem;
-  opacity: 0.4;
-`;
-
-export const Title = styled.h2`
-  font-size: 1.2rem;
-  text-transform: uppercase;
-  line-height: 150%;
-  margin: 0.25rem 0 0.5rem 0;
-`;
-
-export const Description = styled.p`
-  font-size: 1rem;
-  line-height: 150%;
-  margin: 0.5rem 0;
-  opacity: 0.6;
-`;
-
 export const Tags = styled.p`
   display: flex;
   gap: 0.5rem;
+  margin: 0;
+  margin-bottom: 0.5rem;
 `;
 
 export const Tag = styled.span`

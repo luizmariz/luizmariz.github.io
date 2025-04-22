@@ -1,6 +1,6 @@
 import React from 'react';
 import Logo from '../../assets/svgs/logo-default.svg';
-import { Anchor } from '../../utils/anchor.styled';
+import { Anchor } from '../../utils/shared.styled';
 
 import * as S from './styled';
 

@@ -1,7 +1,33 @@
-import styled, { css } from 'styled-components';
-
 import { MdArrowUpward } from 'react-icons/md';
-import { Anchor } from '../../utils/anchor.styled';
+import styled, { css, keyframes } from 'styled-components';
+import { Anchor } from '../../utils/shared.styled';
+
+export const turnOn = keyframes`
+  0% {
+    opacity: 0.6;
+  }
+  10% {
+    opacity: .4;
+  }
+    20% {
+    opacity: 0.7;
+  }
+  40% {
+    opacity: 0.5;
+  }
+    50% {
+    opacity: 0.6;
+  }
+  60% {
+    opacity: 0.5;
+  }
+  70% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+  }
+`;
 
 export const Container = styled.nav`
   position: fixed;
@@ -62,6 +88,7 @@ export const NavLinkWrapper = styled.div`
             height: 140%;
             pointer-events: none;
             filter: blur(12px);
+            animation: ${turnOn} 2s ease-in-out forwards;
           }
 
           &:before {
@@ -95,7 +122,7 @@ export const Wrapper = styled.div`
   height: 4rem;
   max-width: 64rem;
   margin: 0 auto;
-  padding: 1.2rem 1.2rem;
+  padding: 1.5rem; 1.5rem;;
   flex-direction: row;
   justify-content: space-between;
 `;
@@ -149,5 +176,7 @@ export const LogoContainer = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  opacity: 1;
+  opacity: 0.5;
+  animation: ${turnOn} 1s ease-in-out forwards;
+  animation-delay: 0.5s;
 `;

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import media from 'styled-media-query';
 
-import { Anchor } from '../../utils/anchor.styled';
+import { Anchor } from '../../utils/shared.styled';
 
 export const OvniVector = styled.img`
   height: auto;

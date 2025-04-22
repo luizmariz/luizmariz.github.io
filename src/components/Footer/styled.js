@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Anchor } from '../../utils/anchor.styled';
+import { Anchor } from '../../utils/shared.styled';
 
 export const ContainerTitle = styled.h5`
   font-size: 0.9rem;
@@ -49,7 +49,7 @@ export const Wrapper = styled.div`
   align-items: start;
   justify-content: start;
   margin: 0 auto;
-  padding: 0 1.2rem;
+  padding: 0 1.5rem;
   max-width: 64rem;
   min-width: 64rem;
   display: flex;
@@ -79,7 +79,7 @@ export const InnerRow = styled.div`
 
 export const InnerRowContainer = styled.div`
   margin: 0 auto;
-  padding: 0 1.2rem;
+  padding: 0 1.5rem;
   max-width: 64rem;
   gap: 1.5rem;
   display: flex;

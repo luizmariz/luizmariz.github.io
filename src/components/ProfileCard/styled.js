@@ -1,6 +1,6 @@
 import styled, { keyframes } from 'styled-components';
 import me from '../../assets/images/me.png';
-import { Anchor } from '../../utils/anchor.styled';
+import { Anchor } from '../../utils/shared.styled';
 
 export const floatAnimation = keyframes`
   0% { transform: translateY(0px); }
@@ -12,12 +12,13 @@ export const ProfileCardContainer = styled.div`
   width: 300px;
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(10px);
-  box-shadow: -24px 18px 10px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: -16px 10px 16px 0px rgba(0, 0, 0, 0.3);
   border: 1px solid rgba(255, 255, 255, 0.2);
   padding: 1rem;
   color: white;
   animation: ${floatAnimation} 4s ease-in-out infinite;
   overflow: hidden;
+  font-weight: 200;
 
   &:after {
     content: '';
@@ -88,8 +89,12 @@ export const Link = styled(Anchor)`
   line-height: 1;
   color: #5cbbab;
   opacity: 0.5;
+  text-transform: uppercase;
+  font-weight: 500;
+  padding: 0.25rem 0.5rem;
 
   &:hover {
     opacity: 1;
+    background: #5cbbab11;
   }
 `;

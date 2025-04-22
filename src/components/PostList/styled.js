@@ -1,18 +1,15 @@
 import styled, { keyframes } from 'styled-components';
 
 export const Container = styled.div`
-  margin-top: 2.5rem;
-  margin-bottom: 2.5rem;
+  margin-top: 3rem;
+  margin-bottom: 4rem;
   display: grid;
+  gap: 1rem;
   grid-template-columns: repeat(2, 1fr);
 `;
 
 export const Wrapper = styled.div`
-  border: 1px solid #99999922;
-
-  &:nth-child(even) {
-    border-left: none;
-  }
+  border: 1px solid #99999933;
 `;
 
 export const TitleContainer = styled.div`
