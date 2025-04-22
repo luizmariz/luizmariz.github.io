@@ -1,9 +1,9 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import { default as React } from 'react';
 
 export default function HTML(props) {
   return (
-    <html {...props.htmlAttributes}>
+    <html lang="pt-BR" {...props.htmlAttributes}>
       <head>
         <meta charSet="utf-8" />
         <meta httpEquiv="x-ua-compatible" content="ie=edge" />
@@ -14,18 +14,6 @@ export default function HTML(props) {
         <meta name="theme-color" content="" data-react-helmet="true" />
         {props.headComponents}
       </head>
-      <script
-        dangerouslySetInnerHTML={{
-          __html: `
-          (() => {
-            try {
-              const color = localStorage.getItem("darkMode") === "true" ? '#282C35' : '#4B334C';
-              document.querySelector('meta[name="theme-color"]').setAttribute('content', color);
-            } catch {}
-          })()
-          `
-        }}
-      />
       <body {...props.bodyAttributes}>
         {props.preBodyComponents}
         <noscript key="noscript" id="gatsby-noscript">
