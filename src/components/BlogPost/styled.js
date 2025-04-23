@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import media from 'styled-media-query';
+import background from '../../assets/svgs/post-background.svg';
 
 export const MainWrapper = styled.main`
   position: relative;
@@ -48,10 +49,13 @@ export const MainWrapper = styled.main`
 
 export const PostHeader = styled.header`
   max-width: calc(64rem * 0.65);
+  padding-top: 1rem;
+  margin-bottom: 3rem;
+  position: relative;
 
   h1 {
     padding: 0px;
-    margin: 0px 0px 1.5rem;
+    margin: 0px 0px 0.5rem;
     line-height: 125%;
     text-rendering: optimizelegibility;
     color: #cfdae1;
@@ -63,10 +67,25 @@ export const PostHeader = styled.header`
 
   time {
     display: block;
-    margin-bottom: 1.75rem;
-    margin-top: -0.65rem;
+    margin-left: 0.15rem;
     font-size: 0.9rem;
     color: #cfdae177;
+    font-style: italic;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: -2.6rem;
+    left: -2.2rem;
+    width: 140%;
+    height: 140%;
+    background-image: url('${background}');
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: inset 0 0 30px 25px rgba(0, 12, 26, 1);
+    opacity: 0.7;
+    z-index: -1;
   }
 `;
 
@@ -161,7 +180,7 @@ export const PostContent = styled.div`
 
   blockquote {
     max-width: calc((64rem * 0.65) + 2.6rem);
-    margin: 0 0 1.75rem -1.5rem;;
+    margin: 0 0 1.75rem -1.5rem;
     padding: 0 0 0 1rem;
     font-size: 1rem;
     font-style: italic;
@@ -173,7 +192,7 @@ export const PostContent = styled.div`
     border-left-color: #2a3177;
 
     p {
-      padding: 0 1.5rem;;
+      padding: 0 1.5rem;
     }
   }
 
@@ -182,14 +201,14 @@ export const PostContent = styled.div`
     min-width: calc((64rem * 0.65) + 1.9rem);
     padding-right: 0;
     padding-left: 1.3em;
-    margin-left: -1.5rem;;
+    margin-left: -1.5rem;
     border-left: 0.25em solid #cfdae1;
     background: rgba(227, 233, 247, 0.08);
   }
 
   .gatsby-highlight {
     margin-bottom: 1.75rem;
-    margin-left: -1.5rem;;
+    margin-left: -1.5rem;
     max-width: calc(64rem * 0.65 + 2.6rem);
     overflow: auto;
     -webkit-overflow-scrolling: touch;
@@ -212,7 +231,7 @@ export const PostContent = styled.div`
     font-family:
       Fira Code VF,
       monospace;
-    padding: 1.5rem;;
+    padding: 1.5rem;
     overflow: auto;
     background-color: transparent;
     margin: 0;
@@ -238,7 +257,7 @@ export const PostContent = styled.div`
   img {
     border: 0.35rem solid rgba(200, 199, 193, 0.1);
     margin: 0 !important;
-    margin-left: -1.5rem; !important;
+    margin-left: -1.5rem !important;
     min-width: calc(64rem * 0.65 + 2.6rem) !important;
     max-width: calc(64rem * 0.65 + 2.6rem) !important;
   }
@@ -263,7 +282,7 @@ export const PostContent = styled.div`
     }
 
     blockquote {
-      margin-left: -1.5rem;;
+      margin-left: -1.5rem;
       padding-left: 1rem;
 
       p {

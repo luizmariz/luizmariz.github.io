@@ -4,7 +4,11 @@ import 'prismjs/themes/prism-tomorrow.css';
 import React, { useState } from 'react';
 import * as S from './styled';
 
-function CodeEditorWindow({ initialCode = '', language = 'javascript' }) {
+function CodeEditorWindow({
+  initialCode = '',
+  language = 'javascript',
+  onChange
+}) {
   const [code, setCode] = useState(initialCode);
   const [highlightedCode, setHighlightedCode] = useState('');
 
@@ -46,7 +50,10 @@ function CodeEditorWindow({ initialCode = '', language = 'javascript' }) {
           <S.CodeInput
             className={`language-${language}`}
             value={code}
-            onChange={(e) => setCode(e.target.value)}
+            onChange={(e) => {
+              setCode(e.target.value);
+              onChange(e.target.value);
+            }}
             spellCheck="false"
           />
         </S.CodeEditor>

@@ -10,7 +10,7 @@ function PostList({ posts }) {
         <S.SectionTitle>Blog</S.SectionTitle>
         <S.SectionSubTitle>
           Coisas que escrevi +{' '}
-          <S.AnimatedText>textos que mereciam um Ctrl+Z 🧠</S.AnimatedText>
+          <S.AnimatedText>textos que mereciam um Ctrl+Z</S.AnimatedText>
         </S.SectionSubTitle>
       </S.TitleContainer>
       <S.Container>

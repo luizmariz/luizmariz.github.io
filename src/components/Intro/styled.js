@@ -4,7 +4,7 @@ import background from '../../assets/svgs/intro-background.svg';
 export const Text = styled.p`
   max-width: 14rem;
   white-space: pre-line;
-  font-size: 1.5rem;
+  font-size: 1.375rem;
   max-width: 28rem;
   margin: 0.5rem 0;
   line-height: 130%;
@@ -20,6 +20,13 @@ export const Text = styled.p`
 
   &:last-of-type {
     margin-top: 1rem;
+  }
+
+  &:first-of-type {
+    overflow: hidden;
+    max-width: 100%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
 `;
 
@@ -50,7 +57,7 @@ export const Column = styled.div`
     width: 18rem;
     height: 18rem;
     border-radius: 50%;
-    pointer-events: false;
+    pointer-events: none;
     background-color: color-mix(in srgb, #ffffff 10%, transparent);
     filter: blur(8rem);
   }
@@ -69,12 +76,16 @@ export const Container = styled.section`
     position: absolute;
     top: -3rem;
     right: -2.6rem;
-    width: 100%;
-    height: 100%;
+    width: 23rem;
+    height: 18.41rem;
     background-image: url('${background}');
-    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right;
     opacity: 0.5;
     z-index: -1;
+    box-shadow:
+      inset -25px 0 10px -5px rgba(0, 12, 26, 0.7),
+      inset 0 25px 10px -5px rgba(0, 12, 26, 0.6);
   }
 `;
 
@@ -90,19 +101,56 @@ export const ProfileWrapper = styled.div`
 `;
 
 export const ConnectButton = styled.a`
-  color: #ffffff;
-  text-decoration: none;
-  background: url(//s2.svgbox.net/pen-brushes.svg?ic=brush-9&color=2A3177);
-  display: inline-block;
-  width: fit-content;
-  font-size: 0.9rem;
-  font-weight: 600;
-  opacity: 0.7;
+  display: inline;
+  font-size: 16px;
+  font-weight: 200;
+  letter-spacing: 1px;
   padding: 1rem 1.5rem;
-  margin-top: 1.5rem;
+  padding-top: 1.25rem;
+  padding-right: 1.75rem;
+  outline: 0;
+  border: 1px solid #99999933;
+  cursor: pointer;
+  position: relative;
+  background-color: transparent;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  color: rgb(207, 218, 225);
+  text-decoration: none;
+  width: fit-content;
+  margin-left: 0.25rem;
+  margin-top: 2rem;
+  transition: 0.2s;
+  font-weight: 800;
   text-transform: uppercase;
+  font-size: 0.875rem;
+  line-height: 100%;
+  height: 3.125rem;
+
+  &:after {
+    content: '';
+    background-color: #2a3177;
+    width: 100%;
+    z-index: -2;
+    position: absolute;
+    height: 100%;
+    top: 0.25rem;
+    right: 0.25rem;
+    transition: 0.2s;
+    opacity: 0.5;
+  }
 
   &:hover {
-    opacity: 1;
+    margin-left: 0;
+    border-color: #99999988;
+    padding-top: 1.15rem;
+    padding-right: 1.65rem;
+  }
+
+  &:hover:after {
+    top: 0px;
+    right: 0px;
+    opacity: 0.7;
   }
 `;

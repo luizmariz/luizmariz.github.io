@@ -83,7 +83,7 @@ export const Description = styled.p`
 `;
 
 export const Link = styled(Anchor)`
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   display: inline-flex;
   float: right;
   line-height: 1;

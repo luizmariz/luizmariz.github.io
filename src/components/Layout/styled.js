@@ -4,6 +4,20 @@ export const Container = styled.div`
   margin: 0 auto;
   padding: 4rem 1.5rem;
   max-width: 64rem;
+
+  &:before {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    bottom: -17.5rem;
+    left: 0;
+    width: 100%;
+    height: 18rem;
+    border-radius: 50%;
+    pointer-events: none;
+    background-color: color-mix(in srgb, #ffffff 5%, transparent);
+    filter: blur(32px);
+  }
 `;
 
 export const PageContent = styled.div`
@@ -18,6 +32,7 @@ export const MainWrapper = styled.div`
   z-index: 9999;
   margin-bottom: max(25vh, 20rem);
   min-height: 100vh;
+  overflow: hidden;
 `;
 
 export const VerticalText = styled.div`
