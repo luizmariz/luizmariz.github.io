@@ -1,6 +1,6 @@
+import { Link } from 'gatsby';
 import { MdArrowUpward } from 'react-icons/md';
 import styled, { css, keyframes } from 'styled-components';
-import { Anchor } from '../../utils/shared.styled';
 
 export const turnOn = keyframes`
   0% {
@@ -59,7 +59,7 @@ export const Container = styled.nav`
         `}
 `;
 
-export const NavLink = styled(Anchor)`
+export const NavLink = styled(Link)`
   color: #ffffff99;
   font-size: 0.875rem;
   padding: 0.1rem 0.5rem;

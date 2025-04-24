@@ -1,7 +1,7 @@
+import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import React, { useEffect, useState } from 'react';
 import Logo from '../../assets/svgs/logo-default.svg';
-import { Anchor } from '../../utils/shared.styled';
 
 import * as S from '../Nav/styled';
 
@@ -40,14 +40,14 @@ function Nav({ location }) {
       <S.Wrapper>
         <S.Row>
           <S.LogoContainer>
-            <Anchor to="/" aria-label="Ir para a homepage">
+            <Link to="/" aria-label="Ir para a homepage">
               <img
                 alt="Logo Luiz Ipsum representado por blocos dispostos em forma de L e I"
                 src={Logo}
                 height={36}
               />
               <S.Title>Luiz Ipsum</S.Title>
-            </Anchor>
+            </Link>
           </S.LogoContainer>
         </S.Row>
         <S.Row>

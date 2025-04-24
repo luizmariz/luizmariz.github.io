@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import media from 'styled-media-query';
 
-import { Anchor } from '../../utils/shared.styled';
+import { Link } from 'gatsby';
 
 export const OvniVector = styled.img`
   height: auto;
@@ -24,7 +24,7 @@ export const Title = styled.h1`
   font-size: 5rem;
 `;
 
-export const StyledAnchor = styled(Anchor)`
+export const StyledAnchor = styled(Link)`
   display: block;
   margin: 0 10%;
   padding: 0.5rem 0;

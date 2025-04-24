@@ -9,7 +9,7 @@ export const Container = styled.div`
     z-index: -1;
     content: '';
     position: absolute;
-    bottom: -17.5rem;
+    bottom: -16.5rem;
     left: 0;
     width: 100%;
     height: 18rem;
@@ -32,7 +32,7 @@ export const MainWrapper = styled.div`
   z-index: 9999;
   margin-bottom: max(25vh, 20rem);
   min-height: 100vh;
-  overflow: hidden;
+  contain: paint;
 `;
 
 export const VerticalText = styled.div`

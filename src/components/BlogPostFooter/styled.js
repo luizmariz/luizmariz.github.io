@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { ActionButtonStyles } from '../../utils/shared.styled';
 
 import { Link } from 'gatsby';
 
@@ -19,28 +20,23 @@ export const PostNav = styled.nav`
 `;
 
 export const StyledLink = styled(Link)`
-  line-height: 1.5rem;
-  text-decoration: none;
-  color: #5cbbab;
-  font-weight: 600;
-  border: 1px solid #5cbbab;
+  ${ActionButtonStyles}
   display: flex;
   align-items: center;
-  height: 4rem;
-  padding: 0.5rem 1rem;
-  opacity: 0.5;
   width: 50%;
   gap: 1rem;
-  position: relative;
-  font-size: 0.875rem;
+  height: 4.5rem;
+  padding-top: 1.5rem;
+  padding-right: 2rem;
+  border: 1px solid #99999955;
 
   svg {
-    font-size: 1.6rem;
-    width: 2.5rem;
+    font-size: 1rem;
+    width: 1.5rem;
   }
 
-  &:hover {
-    opacity: 1;
+  &:after {
+    background-color: #5cbbab88;
   }
 `;
 

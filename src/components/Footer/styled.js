@@ -1,15 +1,17 @@
+import { Link } from 'gatsby';
 import styled from 'styled-components';
-import { Anchor } from '../../utils/shared.styled';
+import { ActionButtonStyles } from '../../utils/shared.styled';
 
 export const ContainerTitle = styled.h5`
-  font-size: 0.9rem;
-  font-weight: 600;
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-transform: uppercase;
   margin-bottom: 0.5rem;
   display: block;
-  opacity: 0.9;
+  opacity: 0.25;
 `;
 
-export const Link = styled(Anchor)`
+export const StyledLink = styled(Link)`
   margin-bottom: 0.25rem;
   font-size: 0.9rem;
   font-weight: 200;
@@ -29,7 +31,12 @@ export const Link = styled(Anchor)`
   }
 `;
 
-export const BasicLink = styled(Anchor)``;
+export const ActionButton = styled(Link)`
+  ${ActionButtonStyles}
+  margin-top: 1rem;
+`;
+
+export const BasicLink = styled(Link)``;
 
 export const AuxiliarText = styled.span`
   margin-bottom: 1rem;
@@ -41,6 +48,17 @@ export const AuxiliarText = styled.span`
 
 export const Container = styled.section`
   display: block;
+
+  &:first-child {
+    margin-right: 1.5rem;
+  }
+
+  &:hover ${ContainerTitle} {
+    opacity: 0.9;
+    text-shadow:
+      0px 2px 4px rgba(255, 255, 255, 0.03),
+      0px 4px 15px rgba(255, 255, 255, 0.15);
+  }
 `;
 
 export const Wrapper = styled.div`
@@ -75,6 +93,7 @@ export const InnerRow = styled.div`
   width: 100%;
   height: 25%;
   background: #000308;
+  border-top: 1px solid #99999910;
 `;
 
 export const InnerRowContainer = styled.div`
@@ -97,6 +116,9 @@ export const Title = styled.span`
   color: #cfdae1;
   font-size: 1rem;
   letter-spacing: 0rem;
+  text-shadow:
+    0px 2px 4px rgba(255, 255, 255, 0.03),
+    0px 4px 15px rgba(255, 255, 255, 0.15);
 `;
 
 export const LogoContainer = styled.div`
@@ -104,22 +126,23 @@ export const LogoContainer = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
+  opacity: 0.9;
 `;
 
 export const NewsletterText = styled.p`
   margin: 0;
   padding: 0;
   font-size: 0.9rem;
-  opacity: 0.7;
+  font-weight: 200;
 `;
 
 export const NewsletterTextTitle = styled(NewsletterText)`
-  font-weight: 800;
+  font-weight: 600;
   opacity: 1;
 `;
 
-export const NewsletterBtn = styled(Anchor)`
+export const NewsletterBtn = styled(Link)`
   line-height: 1.5rem;
   text-decoration: none;
   color: #5cbbab;

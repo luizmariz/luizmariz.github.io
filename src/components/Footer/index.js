@@ -1,6 +1,6 @@
+import { Link } from 'gatsby';
 import React from 'react';
 import Logo from '../../assets/svgs/logo-default.svg';
-import { Anchor } from '../../utils/shared.styled';
 
 import * as S from './styled';
 
@@ -10,42 +10,42 @@ function Footer() {
       <S.Wrapper>
         <S.Container>
           <S.LogoContainer>
-            <Anchor to="/" aria-label="Ir para a homepage">
+            <Link to="/" aria-label="Ir para a homepage">
               <img
                 alt="Logo Luiz Ipsum representado por blocos dispostos em forma de L e I"
                 src={Logo}
                 height={36}
               />
               <S.Title>Luiz Ipsum</S.Title>
-            </Anchor>
+            </Link>
           </S.LogoContainer>
           <S.NewsletterTextTitle>
             Inscreva-se na newsletter
           </S.NewsletterTextTitle>
           <S.NewsletterText>Relaxa que não vou spammar 😇</S.NewsletterText>
-          <S.NewsletterBtn to={'/signup'}>Inscreva-se</S.NewsletterBtn>
+          <S.ActionButton to={'/signup'}>Inscreva-se</S.ActionButton>
         </S.Container>
         <S.Container>
           <S.ContainerTitle>Mapa do site</S.ContainerTitle>
-          <S.Link to={'/'}>Início</S.Link>
-          <S.Link to={'/about'}>Sobre mim</S.Link>
+          <S.StyledLink to={'/'}>Início</S.StyledLink>
+          <S.StyledLink to={'/about'}>Sobre mim</S.StyledLink>
         </S.Container>
         <S.Container>
           <S.ContainerTitle>Redes</S.ContainerTitle>
-          <S.Link
+          <S.StyledLink
             href="https://linkedin.com/in/luiz-mariz/"
             target="_blank"
             rel="noopener noreferrer"
           >
             LinkedIn
-          </S.Link>
-          <S.Link
+          </S.StyledLink>
+          <S.StyledLink
             href="https://github.com/luizmariz/"
             target="_blank"
             rel="noopener noreferrer"
           >
             Github
-          </S.Link>
+          </S.StyledLink>
         </S.Container>
       </S.Wrapper>
       <S.InnerRow>

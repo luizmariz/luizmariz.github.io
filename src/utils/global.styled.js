@@ -28,6 +28,15 @@ const GlobalStyles = createGlobalStyle`
     margin: 0;
     padding: 0;
   }
+
+  a {
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    float: none;
+    margin: 0;
+    text-decoration: none;
+  }
 `;
 
 export default GlobalStyles;

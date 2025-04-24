@@ -19,10 +19,13 @@ export const MainWrapper = styled.main`
 
     &::before {
       content: 'Neste artigo';
-      font-size: 1rem;
+      font-size: 0.875rem;
+      font-weight: 500;
+      text-transform: uppercase;
       display: block;
-      font-weight: 600;
+      opacity: 0.9;
       line-height: 100%;
+      text-shadow: 0 0 5px rgba(0, 195, 255, 0.5);
     }
 
     ul {
@@ -121,10 +124,7 @@ export const PostContent = styled.div`
     color: var(--primary);
     text-decoration: none;
     border-bottom: 2px dotted var(--primary);
-  }
-
-  a::before {
-    margin-right: 0.3rem;
+    display: inline;
   }
 
   a.anchor,
@@ -159,6 +159,13 @@ export const PostContent = styled.div`
     background: rgba(var(--text), 0.3);
     border: none;
     margin: 2.5rem 0;
+    background: linear-gradient(
+      to right,
+      transparent 0%,
+      rgba(var(--text), 0.2) 20%,
+      rgba(var(--text), 0.2) 80%,
+      transparent 100%
+    );
   }
 
   .mobile-gif,

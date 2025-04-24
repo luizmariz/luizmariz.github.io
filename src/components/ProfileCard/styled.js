@@ -1,6 +1,6 @@
+import { Link } from 'gatsby';
 import styled, { keyframes } from 'styled-components';
 import me from '../../assets/images/me.png';
-import { Anchor } from '../../utils/shared.styled';
 
 export const floatAnimation = keyframes`
   0% { transform: translateY(0px); }
@@ -82,7 +82,7 @@ export const Description = styled.p`
   margin-bottom: 0.5rem;
 `;
 
-export const Link = styled(Anchor)`
+export const StyledLink = styled(Link)`
   font-size: 0.8rem;
   display: inline-flex;
   float: right;

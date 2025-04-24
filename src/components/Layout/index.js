@@ -3,6 +3,7 @@ import GlobalStyles from '../../utils/global.styled';
 import Carousel from '../Carrousel';
 import Footer from '../Footer';
 import * as S from '../Layout/styled';
+import LayoutParticles from '../LayoutParticles';
 import Nav from '../Nav';
 
 function Layout({ children, location, enableVerticalText = false }) {
@@ -43,6 +44,7 @@ function Layout({ children, location, enableVerticalText = false }) {
         <S.Container>
           <S.PageContent>{children}</S.PageContent>
         </S.Container>
+        <LayoutParticles />
       </S.MainWrapper>
       <Footer />
     </React.Fragment>

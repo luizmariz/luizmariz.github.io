@@ -19,7 +19,7 @@ function ProfileCard() {
       <S.Description>
         {'Sou um desenvolvedor com bastante experiência criando coisas...'}
       </S.Description>
-      <S.Link to={'/about'}>Saiba mais</S.Link>
+      <S.StyledLink to={'/about'}>Saiba mais</S.StyledLink>
     </S.ProfileCardContainer>
   );
 }

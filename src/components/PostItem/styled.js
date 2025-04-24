@@ -1,3 +1,4 @@
+import { Link } from 'gatsby';
 import { MdArrowForward } from 'react-icons/md';
 import styled from 'styled-components';
 import cardBackground from '../../assets/images/card-background.jpg';
@@ -54,6 +55,10 @@ export const Description = styled.p`
   margin-bottom: 0.5rem;
   opacity: 0.6;
   font-weight: 200;
+`;
+
+export const StyledLink = styled(Link)`
+  display: flex;
 `;
 
 export const Container = styled.article`

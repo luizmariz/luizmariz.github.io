@@ -1,13 +1,12 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import { formatTimestamp } from '../../utils/helpers';
-import { Anchor } from '../../utils/shared.styled';
 
 import * as S from './styled';
 
 function PostItem({ date, readingTime, slug, tags, title, summary }) {
   return (
-    <Anchor to={slug} rel="bookmark">
+    <S.StyledLink to={slug} rel="bookmark">
       <S.Container>
         <header>
           {/* <S.Tags>
@@ -26,7 +25,7 @@ function PostItem({ date, readingTime, slug, tags, title, summary }) {
           <S.ToLeftBtn />
         </S.CallToAction>
       </S.Container>
-    </Anchor>
+    </S.StyledLink>
   );
 }
 

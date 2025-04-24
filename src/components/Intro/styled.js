@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import background from '../../assets/svgs/intro-background.svg';
+import { ActionButtonStyles } from '../../utils/shared.styled';
 
 export const Text = styled.p`
   max-width: 14rem;
@@ -100,57 +101,7 @@ export const ProfileWrapper = styled.div`
   bottom: -6.5rem;
 `;
 
-export const ConnectButton = styled.a`
-  display: inline;
-  font-size: 16px;
-  font-weight: 200;
-  letter-spacing: 1px;
-  padding: 1rem 1.5rem;
-  padding-top: 1.25rem;
-  padding-right: 1.75rem;
-  outline: 0;
-  border: 1px solid #99999933;
-  cursor: pointer;
-  position: relative;
-  background-color: transparent;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  color: rgb(207, 218, 225);
-  text-decoration: none;
-  width: fit-content;
-  margin-left: 0.25rem;
-  margin-top: 2rem;
-  transition: 0.2s;
-  font-weight: 800;
-  text-transform: uppercase;
-  font-size: 0.875rem;
-  line-height: 100%;
-  height: 3.125rem;
-
-  &:after {
-    content: '';
-    background-color: #2a3177;
-    width: 100%;
-    z-index: -2;
-    position: absolute;
-    height: 100%;
-    top: 0.25rem;
-    right: 0.25rem;
-    transition: 0.2s;
-    opacity: 0.5;
-  }
-
-  &:hover {
-    margin-left: 0;
-    border-color: #99999988;
-    padding-top: 1.15rem;
-    padding-right: 1.65rem;
-  }
-
-  &:hover:after {
-    top: 0px;
-    right: 0px;
-    opacity: 0.7;
-  }
+export const ActionButton = styled.a`
+  ${ActionButtonStyles}
+  margin-top: 1.4rem;
 `;
