@@ -1,10 +1,19 @@
 import React from 'react';
-import './style.css';
+
+import { AnimatedText } from '../../utils/shared.styled';
+import * as S from './styled';
 
 function SignUpForm() {
   return (
-    <React.Fragment>
+    <S.Wrapper>
       <script src="https://f.convertkit.com/ckjs/ck.5.js"></script>
+      <S.StyledSectionSubTitle>
+        Inscreva-se na minha
+        <AnimatedText> newsletter</AnimatedText>
+      </S.StyledSectionSubTitle>
+      <S.SubTitle>
+        Receba novidades direto no seu e-mail. Sem spam, só o bom e o útil! ✨
+      </S.SubTitle>
       <form
         action="https://app.kit.com/forms/1565471/subscriptions"
         class="seva-form formkit-form"
@@ -33,8 +42,8 @@ function SignUpForm() {
               <input
                 class="formkit-input"
                 name="email_address"
-                aria-label='📩 seu@email.com"'
-                placeholder='📩 seu@email.com"'
+                aria-label="📩 seu@email.com"
+                placeholder="📩 seu@email.com"
                 required=""
                 type="email"
                 data-dashlane-rid="748ee9ff88d86d1c"
@@ -72,7 +81,7 @@ function SignUpForm() {
           </div>
         </div>
       </form>
-    </React.Fragment>
+    </S.Wrapper>
   );
 }
 

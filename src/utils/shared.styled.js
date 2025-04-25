@@ -1,4 +1,4 @@
-import { css } from 'styled-components';
+import styled, { css, keyframes } from 'styled-components';
 
 export const ActionButtonStyles = css`
   display: inline-block;
@@ -45,4 +45,68 @@ export const ActionButtonStyles = css`
   &:hover:after {
     opacity: 0.7;
   }
+`;
+
+export const turnOn = keyframes`
+  0% {
+    opacity: 0.6;
+  }
+  10% {
+    opacity: .4;
+  }
+    20% {
+    opacity: 0.7;
+  }
+  40% {
+    opacity: 0.5;
+  }
+    50% {
+    opacity: 0.6;
+  }
+  60% {
+    opacity: 0.5;
+  }
+  70% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+  }
+`;
+
+export const TextbackgroundAnimation = keyframes`
+ 0%,
+    100% {
+      background-position: 0;
+    }
+
+    50% {
+      background-position: 100%;
+    }
+`;
+
+export const AnimatedText = styled.span`
+  background: linear-gradient(
+    288deg,
+    rgb(55, 119, 108),
+    rgb(53, 53, 116),
+    #5cbbab
+  );
+  background-size: 200% 200%;
+  animation: ${TextbackgroundAnimation} 4s infinite;
+
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+`;
+
+export const SectionSubTitle = styled.h4`
+  width: 100%;
+  text-align: center;
+  font-weight: 800;
+  opacity: 0.8;
+  font-size: 2rem;
+  max-width: 29rem;
+  font-style: italic;
+  text-transform: uppercase;
+  line-height: 120%;
 `;

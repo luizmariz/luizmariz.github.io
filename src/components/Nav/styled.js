@@ -1,33 +1,7 @@
 import { Link } from 'gatsby';
 import { MdArrowUpward } from 'react-icons/md';
-import styled, { css, keyframes } from 'styled-components';
-
-export const turnOn = keyframes`
-  0% {
-    opacity: 0.6;
-  }
-  10% {
-    opacity: .4;
-  }
-    20% {
-    opacity: 0.7;
-  }
-  40% {
-    opacity: 0.5;
-  }
-    50% {
-    opacity: 0.6;
-  }
-  60% {
-    opacity: 0.5;
-  }
-  70% {
-    opacity: 0.8;
-  }
-  100% {
-    opacity: 1;
-  }
-`;
+import styled, { css } from 'styled-components';
+import { turnOn } from '../../utils/shared.styled';
 
 export const Container = styled.nav`
   position: fixed;

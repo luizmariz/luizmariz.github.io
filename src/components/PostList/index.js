@@ -1,6 +1,8 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import { AnimatedText, SectionSubTitle } from '../../utils/shared.styled';
 import PostItem from '../PostItem';
+
 import * as S from './styled';
 
 function PostList({ posts }) {
@@ -8,10 +10,10 @@ function PostList({ posts }) {
     <React.Fragment>
       <S.TitleContainer>
         <S.SectionTitle>Blog</S.SectionTitle>
-        <S.SectionSubTitle>
+        <SectionSubTitle>
           Coisas que escrevi +{' '}
-          <S.AnimatedText>textos que mereciam um Ctrl+Z</S.AnimatedText>
-        </S.SectionSubTitle>
+          <AnimatedText>textos que mereciam um Ctrl+Z</AnimatedText>
+        </SectionSubTitle>
       </S.TitleContainer>
       <S.Container>
         {posts.map(({ node }) => (
