@@ -36,7 +36,13 @@ export const ActionButton = styled(Link)`
   margin-top: 1rem;
 `;
 
-export const BasicLink = styled(Link)``;
+export const BasicLink = styled(Link)`
+  color: #cfdae1;
+
+  &:hover {
+    text-decoration: underline;
+  }
+`;
 
 export const AuxiliarText = styled.span`
   margin-bottom: 1rem;

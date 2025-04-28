@@ -44,4 +44,5 @@ export const VerticalText = styled.div`
   top: 0;
   left: 0.4rem;
   text-transform: uppercase;
+  height: 100%;
 `;

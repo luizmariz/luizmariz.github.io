@@ -1,6 +1,6 @@
 import React from 'react';
-
 import { AnimatedText } from '../../utils/shared.styled';
+
 import * as S from './styled';
 
 function SignUpForm() {
@@ -12,7 +12,8 @@ function SignUpForm() {
         <AnimatedText> newsletter</AnimatedText>
       </S.StyledSectionSubTitle>
       <S.SubTitle>
-        Receba novidades direto no seu e-mail. Sem spam, só o bom e o útil! ✨
+        Receba novidades direto no seu e-mail. Sem spam, só o bom e o agradável!
+        ✨
       </S.SubTitle>
       <form
         action="https://app.kit.com/forms/1565471/subscriptions"

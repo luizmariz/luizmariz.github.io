@@ -1,4 +1,5 @@
 import React from 'react';
+
 import * as S from './styled';
 
 function ProfileCard() {
@@ -19,7 +20,7 @@ function ProfileCard() {
       <S.Description>
         {'Sou um desenvolvedor com bastante experiência criando coisas...'}
       </S.Description>
-      <S.StyledLink to={'/about'}>Saiba mais</S.StyledLink>
+      <S.StyledLink to={'/about'}>Clica aqui</S.StyledLink>
     </S.ProfileCardContainer>
   );
 }

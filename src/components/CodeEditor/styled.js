@@ -4,7 +4,6 @@ export const EditorContainer = styled.div`
   font-family: 'Fira Code', monospace;
   width: 460px;
   overflow: hidden;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
   border: 1px solid #99999955;
   box-shadow: -5px 5px 4px 0px rgba(0, 0, 0, 0.3);
 `;

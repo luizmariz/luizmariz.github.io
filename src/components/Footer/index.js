@@ -51,8 +51,14 @@ function Footer() {
       <S.InnerRow>
         <S.InnerRowContainer>
           <p>© 2025 luizipsum.com · Todos os direitos reservados</p>
-          <S.BasicLink>Política de Privacidade</S.BasicLink>
-          <S.BasicLink>Termos de Uso</S.BasicLink>
+          <S.BasicLink to={'/policies'}>Política de Privacidade</S.BasicLink>
+          <S.BasicLink
+            href="https://github.com/luizmariz/luizmariz.github.io/blob/development/LICENSE"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Termos de Uso
+          </S.BasicLink>
         </S.InnerRowContainer>
       </S.InnerRow>
     </S.MainRow>
