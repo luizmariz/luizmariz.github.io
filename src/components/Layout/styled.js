@@ -53,7 +53,6 @@ export const VerticalText = styled.div`
   left: 0.4rem;
   text-transform: uppercase;
   height: 100%;
-  z-index: -999999;
 
   @media (max-width: 1023px) {
     right: -2rem;

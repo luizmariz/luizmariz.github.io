@@ -185,14 +185,6 @@ export const PostContent = styled.div`
     margin-bottom: 0.5rem;
   }
 
-  code[class*='language-'] {
-    font-family:
-      Fira Code VF,
-      monospace !important;
-    font-size: 0.8rem !important;
-    user-select: text !important;
-  }
-
   blockquote {
     max-width: calc(64rem * 0.65 + 3.7rem) !important;
     min-width: calc(64rem * 0.65 + 3.7rem) !important;

@@ -15,8 +15,8 @@ export const CallToAction = styled.b`
   font-size: 1rem;
   font-weight: 600;
   transition:
-    opacity 0.2s,
-    transform 0.2s;
+    opacity 200ms,
+    transform 200ms;
   transition-timing-function: cubic-bezier(0.12, 0.62, 0.12, 0.95);
   transition-delay: calc(1 * 0.075s);
   transform: translateX(-0.8rem);
@@ -28,6 +28,12 @@ export const CallToAction = styled.b`
 
   svg {
     font-size: 1.2rem;
+  }
+
+  @media (max-width: 1023px) {
+    transition:
+      opacity 375ms,
+      transform 375ms;
   }
 `;
 
@@ -96,7 +102,7 @@ export const Container = styled.article`
   padding: 1rem 1.5rem;
   transition: transform 250ms cubic-bezier(0.68, -0.55, 0.27, 1.55);
 
-  &::before {
+  &:before {
     content: '';
     background:
       linear-gradient(rgba(42, 49, 119, 0.3), rgba(0, 0, 10, 0.3)),
@@ -115,14 +121,21 @@ export const Container = styled.article`
     z-index: -1;
   }
 
-  &:hover {
-    ${ContainerAnimation}
-  }
-
   ${(props) => props.active && ContainerAnimation}
+
+  @media (min-width: 1024px) {
+    &:hover {
+      ${ContainerAnimation}
+    }
+  }
 
   @media (max-width: 1023px) {
     height: 18rem;
+    transition: transform 375ms cubic-bezier(0.68, -0.55, 0.27, 1.55);
+
+    &:before {
+      transition: opacity 275ms ease-in;
+    }
   }
 `;
 

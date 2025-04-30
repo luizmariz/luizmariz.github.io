@@ -1,4 +1,5 @@
 import React from 'react';
+import TypeWriter from '../TypeWriter';
 
 import * as S from './styled';
 
@@ -14,7 +15,9 @@ function ProfileCard() {
         />
         <div>
           <S.Name>{'Luiz Mariz'}</S.Name>
-          <S.Title>{'Desenvolvedor Fullstack'}</S.Title>
+          <S.Title>
+            <TypeWriter value={'Desenvolvedor Fullstack'} />{' '}
+          </S.Title>
         </div>
       </S.ProfileHeader>
       <S.Description>

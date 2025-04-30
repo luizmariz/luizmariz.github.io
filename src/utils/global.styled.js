@@ -8,11 +8,14 @@ const GlobalStyles = createGlobalStyle`
     overscroll-behavior: none;
     user-select: none;
     background: #000c1a;
+
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
   }
 
   * {
     box-sizing: border-box;
-    transition: background 100ms ease, opacity 250ms ease;
+    transition: background 275ms ease, opacity 375ms ease;
     scrollbar-width: thin;
     scrollbar-color: #505050 #252525;
     scroll-behavior: smooth;
@@ -41,6 +44,15 @@ const GlobalStyles = createGlobalStyle`
     float: none;
     margin: 0;
     text-decoration: none;
+  }
+
+  code[class*='language-'] *,
+  code[class*='language-'] {
+    font-family:
+      Fira Code VF,
+      monospace !important;
+    font-size: 0.75rem !important;
+    user-select: text !important;
   }
 `;
 

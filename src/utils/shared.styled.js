@@ -18,7 +18,7 @@ export const ActionButtonStyles = css`
   text-decoration: none;
   width: fit-content;
   margin-left: 0.25rem;
-  transition: 0.2s;
+  transition: 375ms;
   font-weight: 800;
   text-transform: uppercase;
   font-size: 0.8rem;
@@ -34,7 +34,7 @@ export const ActionButtonStyles = css`
     height: 100%;
     top: 0.25rem;
     right: 0.25rem;
-    transition: 0.2s;
+    transition: 375ms;
     opacity: 0.5;
   }
 

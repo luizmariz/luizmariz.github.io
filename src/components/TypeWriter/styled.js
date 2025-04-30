@@ -1,15 +1,15 @@
 import styled, { keyframes } from 'styled-components';
 
 export const blinkTextCursor = keyframes`
-  from {border-right-color: rgba(var(--text), .75);}
+  from {border-right-color: rgba(207, 218, 225, .75);}
   to {border-right-color: transparent}
 `;
 
 export const TextCursor = styled.span`
   display: inline;
 
-  border-right: 1px solid rgba(var(--text), 0.75);
-  animation: ${blinkTextCursor} 0.7s steps(44) infinite normal;
+  border-right: 1px solid rgba(207, 218, 225, 0.75);
+  animation: ${blinkTextCursor} 1s steps(44) infinite normal;
 `;
 
 export const Container = styled.p`

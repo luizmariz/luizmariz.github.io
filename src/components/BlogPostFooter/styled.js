@@ -37,7 +37,7 @@ export const StyledLink = styled(Link)`
 
   svg {
     font-size: 1rem;
-    width: 1.5rem;
+    width: 3.5rem;
   }
 
   &:after {
@@ -46,6 +46,7 @@ export const StyledLink = styled(Link)`
 
   @media (max-width: 1023px) {
     width: 100%;
+    height: 5.5rem;
   }
 `;
 

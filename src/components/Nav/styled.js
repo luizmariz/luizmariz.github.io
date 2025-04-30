@@ -20,15 +20,15 @@ export const Container = styled.nav`
       ? css`
           visibility: visible;
           transition:
-            all 0.25s ease-out,
-            background-color 0.2s ease-in;
+            all 375ms ease-out,
+            background-color 375ms ease-in;
           transform: translateY(0);
         `
       : css`
           visibility: hidden;
           transition:
-            all 0.25s ease-in,
-            background-color 0.2s ease-in;
+            all 375ms ease-in,
+            background-color 375ms ease-in;
           transform: translateY(-100%);
         `}
 `;
@@ -37,7 +37,7 @@ export const NavLink = styled(Link)`
   color: #ffffff99;
   font-size: 0.875rem;
   padding: 0.1rem 0.5rem;
-  transition: color 250ms ease;
+  transition: color 375ms ease;
 
   &:hover {
     color: #ffffff;
@@ -192,8 +192,8 @@ export const MobileContainer = styled.nav`
   visibility: hidden;
   transform: translateY(-200%);
   transition:
-    all 0.25s ease-out,
-    background-color 0.2s ease-in;
+    all 375ms ease-out,
+    background-color 375ms ease-in;
 
   ${NavLinkWrapper} {
     text-align: end;

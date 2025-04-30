@@ -103,8 +103,8 @@ module.exports = {
         start_url: '/',
         display: 'minimal-ui',
         icon: 'src/assets/images/favicon.png',
-        background_color: `#cfdae1`,
-        theme_color: `#4b334c`,
+        background_color: `#000308`,
+        theme_color: `#000308`,
         display: `minimal-ui`,
         theme_color_in_head: false
       }

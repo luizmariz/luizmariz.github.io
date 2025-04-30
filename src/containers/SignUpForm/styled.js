@@ -33,7 +33,7 @@ export const Wrapper = styled.div`
     height: 140%;
     opacity: 0.05;
     z-index: -1;
-    transition: opacity 250ms ease-in-out;
+    transition: opacity 375ms ease-in-out;
   }
 
   &:hover:before {
@@ -77,7 +77,7 @@ export const Wrapper = styled.div`
     flex: 1 0 auto;
     line-height: 1.4;
     margin: 0;
-    transition: border-color ease-out 300ms;
+    transition: border-color ease-out 375ms;
     height: 3.2rem;
     width: 100%;
   }
@@ -85,7 +85,7 @@ export const Wrapper = styled.div`
   .formkit-form[data-uid='c9ccd99c04'] .formkit-input:focus {
     outline: none;
     border-color: #1677be;
-    transition: border-color ease 300ms;
+    transition: border-color ease 375ms;
   }
 
   .formkit-form[data-uid='c9ccd99c04'] .formkit-input::placeholder {

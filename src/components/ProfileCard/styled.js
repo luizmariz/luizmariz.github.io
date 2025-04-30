@@ -32,8 +32,8 @@ export const ProfileCardContainer = styled.div`
     z-index: -1;
     opacity: 0;
     transition:
-      opacity 0.5s,
-      transform 0.8s;
+      opacity 500ms,
+      transform 800ms;
     transition-timing-function: cubic-bezier(0.12, 0.62, 0.12, 0.95);
     transition-delay: calc(1 * 0.075s);
     transform: translateX(100%) translateY(-100%);
@@ -49,6 +49,8 @@ export const ProfileImage = styled.img`
   outline: 1px solid rgba(255, 255, 255, 0.3);
   outline-offset: 2px;
   border-radius: 50%;
+  margin-left: 2px;
+  margin-top: 2px;
   float: left;
 `;
 

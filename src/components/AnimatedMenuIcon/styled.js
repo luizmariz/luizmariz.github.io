@@ -22,6 +22,7 @@ export const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 
   transform: rotate(${(props) => (props.active ? '45deg' : '0')});
 
@@ -46,8 +47,8 @@ export const Container = styled.div`
   &,
   * {
     transition:
-      margin 0.2s ease-in-out,
-      opacity 0.2s ease-in-out,
-      transform 0.2s ease-in-out;
+      margin 375ms ease-in-out,
+      opacity 375ms ease-in-out,
+      transform 375ms ease-in-out;
   }
 `;
