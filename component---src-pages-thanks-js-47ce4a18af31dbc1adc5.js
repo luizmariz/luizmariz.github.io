@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkluiz_ipsum=self.webpackChunkluiz_ipsum||[]).push([[790],{7470:function(e,n,r){r.r(n);var a=r(9953),l=r(7170);n.default=function(e){var n=e.location;return a.createElement(l.Z,{location:n},a.createElement("main",null,a.createElement("h1",null,"Obrigado por se inscrever!"),a.createElement("p",null,"Seu email foi confirmado e agora você deve receber um email sempre que tiver conteúdo novo por aqui.")))}}}]);
-//# sourceMappingURL=component---src-pages-thanks-js-47ce4a18af31dbc1adc5.js.map
