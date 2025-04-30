@@ -16,17 +16,21 @@ const useActiveChildIndexAtScrollEnter = (containerRef) => {
     const handleScroll = () => {
       const children = Array.from(container.children);
 
+      let nextHoveredChildIndex = null;
+
       for (let i = 0; i < children.length; i++) {
         const elementPosition = children[i].getBoundingClientRect().top;
         const scrollY = window.scrollY;
 
         if (
           i !== hoveredChildIndex &&
-          elementPosition < scrollY - window.innerHeight
+          elementPosition - 300 < scrollY - window.innerHeight + 300
         ) {
-          setHoveredChildIndex(i);
+          nextHoveredChildIndex = i;
         }
       }
+
+      setHoveredChildIndex(nextHoveredChildIndex);
     };
 
     window.addEventListener('scroll', handleScroll);

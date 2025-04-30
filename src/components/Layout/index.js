@@ -15,7 +15,7 @@ function Layout({ children, location, enableVerticalText = false }) {
         {enableVerticalText && (
           <S.VerticalText>
             <Carousel
-              vertical
+              vertical={true}
               items={[
                 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc aliquet feugiat ligula quis volutpat. '
               ]}

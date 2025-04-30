@@ -32,33 +32,33 @@ function Footer() {
         </S.Container>
         <S.Container>
           <S.ContainerTitle>Redes</S.ContainerTitle>
-          <S.StyledLink
+          <S.AnchorStyledLink
             href="https://linkedin.com/in/luiz-mariz/"
             target="_blank"
             rel="noopener noreferrer"
           >
             LinkedIn
-          </S.StyledLink>
-          <S.StyledLink
+          </S.AnchorStyledLink>
+          <S.AnchorStyledLink
             href="https://github.com/luizmariz/"
             target="_blank"
             rel="noopener noreferrer"
           >
             Github
-          </S.StyledLink>
+          </S.AnchorStyledLink>
         </S.Container>
       </S.Wrapper>
       <S.InnerRow>
         <S.InnerRowContainer>
           <p>© 2025 luizipsum.com · Todos os direitos reservados</p>
           <S.BasicLink to={'/policies'}>Política de Privacidade</S.BasicLink>
-          <S.BasicLink
+          <S.AnchorBasicLink
             href="https://github.com/luizmariz/luizmariz.github.io/blob/development/LICENSE"
             target="_blank"
             rel="noopener noreferrer"
           >
             Termos de Uso
-          </S.BasicLink>
+          </S.AnchorBasicLink>
         </S.InnerRowContainer>
       </S.InnerRow>
     </S.MainRow>

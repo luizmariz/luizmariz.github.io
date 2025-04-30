@@ -56,7 +56,10 @@ function Nav({ location }) {
           </S.Row>
           <S.Row>
             {_ROUTES.map((item) => (
-              <S.NavLinkWrapper selected={location.pathname === item.to}>
+              <S.NavLinkWrapper
+                selected={location.pathname === item.to}
+                key={'nav-link-' + item.to.toLowerCase()}
+              >
                 <S.NavLink to={item.to}>{item.name}</S.NavLink>
               </S.NavLinkWrapper>
             ))}
@@ -74,7 +77,10 @@ function Nav({ location }) {
       </S.Container>
       <S.MobileContainer show={showMobileMenu ? 1 : 0}>
         {_ROUTES.map((item) => (
-          <S.NavLinkWrapper selected={location.pathname === item.to}>
+          <S.NavLinkWrapper
+            selected={location.pathname === item.to}
+            key={'mobile-nav-link-' + item.to.toLowerCase()}
+          >
             <S.NavLink to={item.to}>{item.name}</S.NavLink>
           </S.NavLinkWrapper>
         ))}

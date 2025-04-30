@@ -9,28 +9,24 @@ export const Container = styled.nav`
   z-index: 99999;
   display: block;
   width: 100vw;
-  overflow: visible;
   background: rgba(0, 10, 22, 0.65);
   backdrop-filter: blur(8px);
   border-bottom: 1px solid #99999922;
   padding-right: var(--scrollbar-width);
+  transform: translateY(-100%);
+  transition:
+    all 275ms ease-out,
+    background-color 275ms ease-in;
+
+  @media (max-width: 1023px) {
+    transform: translateY(0);
+  }
 
   ${(props) =>
-    props.show
-      ? css`
-          visibility: visible;
-          transition:
-            all 375ms ease-out,
-            background-color 375ms ease-in;
-          transform: translateY(0);
-        `
-      : css`
-          visibility: hidden;
-          transition:
-            all 375ms ease-in,
-            background-color 375ms ease-in;
-          transform: translateY(-100%);
-        `}
+    props.show &&
+    css`
+      transform: translateY(0);
+    `}
 `;
 
 export const NavLink = styled(Link)`
@@ -163,6 +159,10 @@ export const Title = styled.span`
   color: #cfdae1;
   font-size: 1rem;
   letter-spacing: 0rem;
+
+  @media (max-width: 1023px) {
+    display: none;
+  }
 `;
 
 export const LogoContainer = styled.div`
@@ -183,7 +183,8 @@ export const MobileContainer = styled.nav`
   height: 4rem;
   background: rgba(0, 10, 22, 0.9);
   backdrop-filter: blur(5px);
-  border: 1px solid #99999922;
+  border-top: 1px solid #99999922;
+  border-bottom: 1px solid #99999922;
   padding: 0 1.5rem;
   display: flex;
   gap: 1rem;

@@ -17,7 +17,7 @@ function SignUpForm() {
       </S.SubTitle>
       <form
         action="https://app.kit.com/forms/1565471/subscriptions"
-        class="seva-form formkit-form"
+        className="seva-form formkit-form"
         method="post"
         data-sv-form="1565471"
         data-uid="c9ccd99c04"
@@ -30,18 +30,18 @@ function SignUpForm() {
       >
         <div data-style="clean">
           <ul
-            class="formkit-alert formkit-alert-error"
+            className="formkit-alert formkit-alert-error"
             data-element="errors"
             data-group="alert"
           ></ul>
           <div
             data-element="fields"
             data-stacked="false"
-            class="seva-fields formkit-fields"
+            className="seva-fields formkit-fields"
           >
-            <div class="formkit-field">
+            <div className="formkit-field">
               <input
-                class="formkit-input"
+                className="formkit-input"
                 name="email_address"
                 aria-label="📩 seu@email.com"
                 placeholder="📩 seu@email.com"
@@ -55,24 +55,24 @@ function SignUpForm() {
             </div>
             <button
               data-element="submit"
-              class="formkit-submit formkit-submit"
+              className="formkit-submit formkit-submit"
               data-dashlane-label="true"
               data-dashlane-rid="1d5fe7dd76980183"
               data-dashlane-classification="action,subscribe"
             >
-              <div class="formkit-spinner">
+              <div className="formkit-spinner">
                 <div></div>
                 <div></div>
                 <div></div>
               </div>
-              <span class="">Inscreva-se</span>
+              <span className="">Inscreva-se</span>
             </button>
           </div>
-          <div class="formkit-powered-by-convertkit-container">
+          <div className="formkit-powered-by-convertkit-container">
             <a
               href="https://kit.com/features/forms?utm_campaign=poweredby&amp;utm_content=form&amp;utm_medium=referral&amp;utm_source=dynamic"
               data-element="powered-by"
-              class="formkit-powered-by-convertkit"
+              className="formkit-powered-by-convertkit"
               data-variant="light"
               target="_blank"
               rel="nofollow"

@@ -88,7 +88,7 @@ export const EditorContent = styled.div`
   display: flex;
   align-items: start;
   overflow-x: auto;
-  font-size: 12px;
+  font-size: 0.75rem;
   line-height: 21px;
   font-family: inherit;
   tab-size: 2;

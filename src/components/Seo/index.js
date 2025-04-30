@@ -16,7 +16,14 @@ const query = graphql`
   }
 `;
 
-function Seo({ meta, title, description, image, slug, lang }) {
+function Seo({
+  meta = [],
+  title = '',
+  description,
+  image = null,
+  slug = '',
+  lang = 'pt-BR'
+}) {
   const data = useStaticQuery(query);
   const { siteMetadata } = data.site;
   const url = `${siteMetadata.siteUrl}${slug}`;
@@ -90,14 +97,6 @@ function Seo({ meta, title, description, image, slug, lang }) {
     />
   );
 }
-
-Seo.defaultProps = {
-  meta: [],
-  lang: 'pt-BR',
-  title: '',
-  slug: '',
-  image: null
-};
 
 Seo.propTypes = {
   description: PropTypes.string,

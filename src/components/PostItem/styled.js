@@ -68,7 +68,7 @@ export const StyledLink = styled(Link)`
 `;
 
 const ContainerAnimation = css`
-  &::before {
+  &:before {
     opacity: 1;
   }
 
@@ -89,6 +89,10 @@ const ContainerAnimation = css`
   }
 
   transform: translateX(2.5%) translateY(-5%);
+
+  @media (max-width: 1023px) {
+    transform: translateX(0) translateY(-10%);
+  }
 `;
 
 export const Container = styled.article`
@@ -121,8 +125,6 @@ export const Container = styled.article`
     z-index: -1;
   }
 
-  ${(props) => props.active && ContainerAnimation}
-
   @media (min-width: 1024px) {
     &:hover {
       ${ContainerAnimation}
@@ -136,6 +138,8 @@ export const Container = styled.article`
     &:before {
       transition: opacity 275ms ease-in;
     }
+
+    ${(props) => props.active && ContainerAnimation}
   }
 `;
 

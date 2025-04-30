@@ -48,9 +48,9 @@ function Policies({ location }) {
         </ul>
         <h2>4. Cookies</h2>
         <p>
-          O site não utiliza cookies para o seu funcionamento básico e
-          analytics. Se desejar uma camada extra de segurança, você pode
-          desativá-los no seu navegador.
+          Este site não utiliza cookies próprios, mas serviços de terceiros usam
+          cookies para rastreamento. Se desejar bloquear esse rastreamento, você
+          pode desativá-los no seu navegador.
         </p>
         <h2>5. Seus Direitos</h2>
         <p>Você pode:</p>

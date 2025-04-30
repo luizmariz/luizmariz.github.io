@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { useInView } from 'react-intersection-observer';
 import PropTypes from 'prop-types';
+import React, { useEffect, useState } from 'react';
+import { useInView } from 'react-intersection-observer';
 import * as S from './styled';
 
 function TypeWriter({ value }) {
@@ -11,9 +11,12 @@ function TypeWriter({ value }) {
     const typeWriter = (text, i = 0) => {
       if (i < text.length) {
         setText(text.slice(0, i + 1));
-        setTimeout(() => {
-          typeWriter(text, i + 1);
-        }, 100);
+        setTimeout(
+          () => {
+            typeWriter(text, i + 1);
+          },
+          180 + Math.random() * 10
+        );
       }
     };
 
@@ -25,7 +28,7 @@ function TypeWriter({ value }) {
   return (
     <S.Container ref={ref}>
       {text}
-      <S.TextCursor />
+      {text.length !== value.length && <S.TextCursor />}
     </S.Container>
   );
 }

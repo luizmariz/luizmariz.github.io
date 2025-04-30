@@ -76,18 +76,21 @@ function AuthorInfo() {
       <S.Column>
         <StaticImage
           src="../../assets/images/me-img.png"
+          alt="Imagem do autor do blog esmaecida"
           placeholder="blurred"
           layout="fixed"
           width={180}
         />
         <StaticImage
           src="../../assets/images/polaroid.jpg"
+          alt="Imagem polaroid do autor do blog horizontal"
           placeholder="blurred"
           layout="fixed"
           width={140}
         />
         <StaticImage
           src="../../assets/images/old-me.png"
+          alt="Imagem do autor do blog quando criança"
           placeholder="blurred"
           layout="fixed"
           width={278}

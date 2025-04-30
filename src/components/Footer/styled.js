@@ -1,5 +1,5 @@
 import { Link } from 'gatsby';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { ActionButtonStyles } from '../../utils/shared.styled';
 
 export const ContainerTitle = styled.h5`
@@ -15,7 +15,12 @@ export const ContainerTitle = styled.h5`
   }
 `;
 
-export const StyledLink = styled(Link)`
+export const ActionButton = styled(Link)`
+  ${ActionButtonStyles}
+  margin-top: 1rem;
+`;
+
+const LinkStyles = css`
   margin-bottom: 0.25rem;
   font-size: 0.9rem;
   font-weight: 200;
@@ -23,6 +28,7 @@ export const StyledLink = styled(Link)`
   display: block;
   cursor: pointer;
   color: inherit;
+  color: #cfdae1;
 
   &:visited {
     color: inherit;
@@ -30,22 +36,32 @@ export const StyledLink = styled(Link)`
   }
 
   &:hover {
-    color: #5cbbab;
     text-decoration: underline;
   }
 `;
 
-export const ActionButton = styled(Link)`
-  ${ActionButtonStyles}
-  margin-top: 1rem;
-`;
-
-export const BasicLink = styled(Link)`
+const BasicLinkStyles = css`
   color: #cfdae1;
 
   &:hover {
     text-decoration: underline;
   }
+`;
+
+export const StyledLink = styled(Link)`
+  ${LinkStyles}
+`;
+
+export const AnchorStyledLink = styled.a`
+  ${LinkStyles}
+`;
+
+export const BasicLink = styled(Link)`
+  ${BasicLinkStyles}
+`;
+
+export const AnchorBasicLink = styled.a`
+  ${BasicLinkStyles}
 `;
 
 export const AuxiliarText = styled.span`

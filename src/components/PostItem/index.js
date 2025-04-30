@@ -7,7 +7,7 @@ import * as S from './styled';
 function PostItem({ date, readingTime, slug, tags, title, summary, active }) {
   return (
     <S.StyledLink to={slug} rel="bookmark">
-      <S.Container active={active}>
+      <S.Container active={active ? 1 : 0}>
         <header>
           {/* <S.Tags>
             {tags.split(',').map((tag, index) => (

@@ -5,7 +5,7 @@ const GlobalStyles = createGlobalStyle`
     font: 100%/1.75 'Karla';
     font-weight: 300;
     overflow-y: scroll;
-    overscroll-behavior: none;
+    overscroll-behavior: default;
     user-select: none;
     background: #000c1a;
 
@@ -46,6 +46,7 @@ const GlobalStyles = createGlobalStyle`
     text-decoration: none;
   }
 
+  pre[class*='language-'],
   code[class*='language-'] *,
   code[class*='language-'] {
     font-family:
