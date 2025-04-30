@@ -80,6 +80,15 @@ export const Row = styled.div`
     margin-top: 0;
     opacity: 0.8;
   }
+
+  @media (max-width: 1023px) {
+    &:nth-child(3) {
+      margin-top: 0.5rem;
+      margin-left: -1.4rem;
+      margin-right: -1.4rem;
+      width: calc(100% + 2.8rem);
+    }
+  }
 `;
 
 export const Column = styled.div`
@@ -130,7 +139,6 @@ export const Column = styled.div`
     border: 1px solid #5cbbab;
     background: #ffffff22;
     pointer-events: none;
-
     opacity: 0.15;
   }
 
@@ -146,6 +154,34 @@ export const Column = styled.div`
     pointer-events: none;
     background-color: color-mix(in srgb, #ffffff 10%, transparent);
     filter: blur(8rem);
+  }
+
+  @media (max-width: 1023px) {
+    width: 100%;
+
+    &:nth-child(2) {
+      margin-top: 3rem;
+
+      > *:nth-child(1) {
+        left: 250px;
+      }
+
+      > *:nth-child(2) {
+        bottom: -7rem;
+        top: unset;
+        left: 225px;
+      }
+
+      > *:nth-child(3) {
+        left: -1.5rem;
+      }
+    }
+
+    &:before {
+      left: 0;
+      top: -1.5rem;
+      bottom: unset;
+    }
   }
 `;
 
@@ -173,11 +209,15 @@ export const Container = styled.section`
       inset -25px 0 10px -5px rgba(0, 12, 26, 0.7),
       inset 0 25px 10px -5px rgba(0, 12, 26, 0.6);
   }
+
+  @media (max-width: 1023px) {
+    margin-top: 1.5rem;
+  }
 `;
 
 export const ButtonContainer = styled.div`
   display: flex;
-  gap: 1rem;
+  gap: 0.75rem;
   margin-top: 1.4rem;
 `;
 

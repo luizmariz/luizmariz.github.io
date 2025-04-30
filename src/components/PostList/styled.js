@@ -6,6 +6,10 @@ export const Container = styled.div`
   display: grid;
   gap: 1rem;
   grid-template-columns: repeat(2, 1fr);
+
+  @media (max-width: 1023px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
 `;
 
 export const Wrapper = styled.div`

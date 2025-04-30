@@ -65,6 +65,16 @@ export const Container = styled.section`
       0px 2px 4px rgba(255, 255, 255, 0.03),
       0px 4px 15px rgba(255, 255, 255, 0.15);
   }
+
+  @media (max-width: 1023px) {
+    &:first-child {
+      width: 100%;
+    }
+
+    &:nth-child(2) {
+      margin-right: 5rem;
+    }
+  }
 `;
 
 export const Wrapper = styled.div`
@@ -80,7 +90,15 @@ export const Wrapper = styled.div`
   align-items: center;
   justify-content: start;
   height: 75%;
+  flex-wrap: wrap;
   gap: 5rem;
+
+  @media (max-width: 1023px) {
+    min-width: 100%;
+    max-width: 100%;
+    height: 22rem;
+    gap: 0;
+  }
 `;
 
 export const MainRow = styled.footer`
@@ -93,6 +111,13 @@ export const MainRow = styled.footer`
   width: 100%;
   display: flex;
   flex-direction: column;
+  align-items: end;
+
+  @media (max-width: 1023px) {
+    height: 27rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 `;
 
 export const InnerRow = styled.div`
@@ -100,6 +125,10 @@ export const InnerRow = styled.div`
   height: 25%;
   background: #000308;
   border-top: 1px solid #99999910;
+
+  @media (max-width: 1023px) {
+    height: 5rem;
+  }
 `;
 
 export const InnerRowContainer = styled.div`
@@ -112,6 +141,7 @@ export const InnerRowContainer = styled.div`
   font-size: 0.765rem;
   height: 100%;
   opacity: 0.5;
+  line-height: 120%;
 `;
 
 export const Title = styled.span`

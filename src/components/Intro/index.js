@@ -53,11 +53,13 @@ console.log(message);
         </S.ActionButton>
       </S.Column>
       <S.Column>
-        <CodeEditorWindow
-          initialCode={initialCode}
-          language="javascript"
-          onChange={handleCodeChange}
-        />
+        <S.CodeEditorWrapper>
+          <CodeEditorWindow
+            initialCode={initialCode}
+            language="javascript"
+            onChange={handleCodeChange}
+          />
+        </S.CodeEditorWrapper>
         <S.ProfileWrapper>
           <ProfileCard />
         </S.ProfileWrapper>

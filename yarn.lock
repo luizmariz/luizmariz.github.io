@@ -10580,7 +10580,6 @@ __metadata:
     react-is: "npm:^18.2.0"
     react-responsive: "npm:^9.0.2"
     styled-components: "npm:^6.1.0"
-    styled-media-query: "npm:^2.1.2"
     use-dark-mode: "npm:^2.3.1"
   languageName: unknown
   linkType: soft
@@ -14903,15 +14902,6 @@ __metadata:
     react: ">= 16.8.0"
     react-dom: ">= 16.8.0"
   checksum: 10c0/190d6d5dc9099489fac37e23be5bda7fef399ca9f9230f1de81100b98ec1c75070ef5990241c007126d97f40069d3c864f4239e185161a70ff111dd3e3bf5370
-  languageName: node
-  linkType: hard
-
-"styled-media-query@npm:^2.1.2":
-  version: 2.1.2
-  resolution: "styled-media-query@npm:2.1.2"
-  peerDependencies:
-    styled-components: ">= 1"
-  checksum: 10c0/26d1a8fd204b704d11fe2cd81c634c1ea8a6f6e2513fb6ca8fc5a1fc462732ce29fd7294ffb3b99599fb2388b3261469baa3b8058d987d0b7fbfd7b7caf6a3eb
   languageName: node
   linkType: hard
 

@@ -84,7 +84,7 @@ export const EditorContent = styled.div`
   background: #1e1e1e;
   padding: 16px 0;
   width: 100%;
-  height: 250px;
+  height: 285px;
   display: flex;
   align-items: start;
   overflow-x: auto;

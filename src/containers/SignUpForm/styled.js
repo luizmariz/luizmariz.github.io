@@ -40,6 +40,12 @@ export const Wrapper = styled.div`
     opacity: 0.1;
   }
 
+  @media (max-width: 1023px) {
+    &:before {
+      display: none;
+    }
+  }
+
   form {
     max-width: 100%;
     width: 100%;

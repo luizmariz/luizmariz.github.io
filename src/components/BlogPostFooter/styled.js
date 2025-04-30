@@ -6,6 +6,7 @@ import { Link } from 'gatsby';
 export const PostFooterContainer = styled.aside`
   display: block;
   padding-top: 3rem;
+  margin-bottom: 3.5rem;
 `;
 
 export const PostNav = styled.nav`
@@ -17,6 +18,10 @@ export const PostNav = styled.nav`
   margin: 0;
   margin-top: 2rem;
   gap: 1rem;
+
+  @media (max-width: 1023px) {
+    flex-wrap: wrap;
+  }
 `;
 
 export const StyledLink = styled(Link)`
@@ -26,7 +31,7 @@ export const StyledLink = styled(Link)`
   width: 50%;
   gap: 1rem;
   height: 4.5rem;
-  padding-top: 1.5rem;
+  padding-top: 1.25rem;
   padding-right: 2rem;
   border: 1px solid #99999955;
 
@@ -37,6 +42,10 @@ export const StyledLink = styled(Link)`
 
   &:after {
     background-color: #5cbbab88;
+  }
+
+  @media (max-width: 1023px) {
+    width: 100%;
   }
 `;
 

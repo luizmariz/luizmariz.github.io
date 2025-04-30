@@ -1,6 +1,6 @@
 import { Link } from 'gatsby';
 import { MdArrowForward } from 'react-icons/md';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import cardBackground from '../../assets/images/card-background.jpg';
 
 export const CallToAction = styled.b`
@@ -61,6 +61,30 @@ export const StyledLink = styled(Link)`
   display: flex;
 `;
 
+const ContainerAnimation = css`
+  &::before {
+    opacity: 1;
+  }
+
+  ${CallToAction} {
+    transform: translateY(0);
+    opacity: 0.8;
+
+    background-repeat: no-repeat;
+  }
+
+  ${Title} {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  ${Description}, ${Time} {
+    opacity: 0.8;
+  }
+
+  transform: translateX(2.5%) translateY(-5%);
+`;
+
 export const Container = styled.article`
   position: relative;
   display: flex;
@@ -91,28 +115,14 @@ export const Container = styled.article`
     z-index: -1;
   }
 
-  &:hover::before {
-    opacity: 1;
-  }
-
-  &:hover ${CallToAction} {
-    transform: translateY(0);
-    opacity: 0.8;
-
-    background-repeat: no-repeat;
-  }
-
-  &:hover ${Title} {
-    transform: translateY(0);
-    opacity: 1;
-  }
-
-  &:hover ${Description}, &:hover ${Time} {
-    opacity: 0.8;
-  }
-
   &:hover {
-    transform: translateX(2.5%) translateY(-5%);
+    ${ContainerAnimation}
+  }
+
+  ${(props) => props.active && ContainerAnimation}
+
+  @media (max-width: 1023px) {
+    height: 18rem;
   }
 `;
 

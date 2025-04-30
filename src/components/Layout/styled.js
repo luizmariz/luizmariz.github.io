@@ -22,6 +22,10 @@ export const Container = styled.div`
 
 export const PageContent = styled.div`
   margin-top: 2.5rem;
+
+  @media (max-width: 1023px) {
+    margin-top: 1.5rem;
+  }
 `;
 
 export const MainWrapper = styled.div`
@@ -33,6 +37,10 @@ export const MainWrapper = styled.div`
   margin-bottom: max(25vh, 20rem);
   min-height: 100vh;
   contain: paint;
+
+  @media (max-width: 1023px) {
+    margin-bottom: 27rem;
+  }
 `;
 
 export const VerticalText = styled.div`
@@ -45,4 +53,10 @@ export const VerticalText = styled.div`
   left: 0.4rem;
   text-transform: uppercase;
   height: 100%;
+  z-index: -999999;
+
+  @media (max-width: 1023px) {
+    right: -2rem;
+    left: unset;
+  }
 `;

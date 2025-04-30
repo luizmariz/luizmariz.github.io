@@ -96,7 +96,7 @@ export const Wrapper = styled.div`
   height: 4rem;
   max-width: 64rem;
   margin: 0 auto;
-  padding: 1.5rem; 1.5rem;;
+  padding: 1.5rem; 1.5rem;
   flex-direction: row;
   justify-content: space-between;
 `;
@@ -121,6 +121,14 @@ export const Row = styled.div`
 
   &:last-child {
     justify-content: end;
+  }
+
+  @media (max-width: 1023px) {
+    min-width: 0;
+
+    &:nth-child(2) {
+      display: none;
+    }
   }
 `;
 

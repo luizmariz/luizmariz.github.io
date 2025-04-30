@@ -4,10 +4,10 @@ import { formatTimestamp } from '../../utils/helpers';
 
 import * as S from './styled';
 
-function PostItem({ date, readingTime, slug, tags, title, summary }) {
+function PostItem({ date, readingTime, slug, tags, title, summary, active }) {
   return (
     <S.StyledLink to={slug} rel="bookmark">
-      <S.Container>
+      <S.Container active={active}>
         <header>
           {/* <S.Tags>
             {tags.split(',').map((tag, index) => (

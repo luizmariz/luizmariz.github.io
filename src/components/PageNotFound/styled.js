@@ -28,6 +28,17 @@ export const Container = styled.div`
     opacity: 0.2;
     z-index: -1;
   }
+
+  @media (max-width: 1023px) {
+    margin: 0;
+    width: 100%;
+    padding-top: 8rem;
+
+    &:after {
+      width: 100%;
+      left: 1.5rem;
+    }
+  }
 `;
 
 export const StyledLink = styled(Link)`

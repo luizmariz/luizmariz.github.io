@@ -3,7 +3,6 @@ import background from '../../assets/svgs/intro-background.svg';
 import { ActionButtonStyles } from '../../utils/shared.styled';
 
 export const Text = styled.p`
-  max-width: 14rem;
   white-space: pre-line;
   font-size: 1.375rem;
   max-width: 28rem;
@@ -46,7 +45,6 @@ export const Column = styled.div`
     align-items: end;
     flex-grow: 1;
     padding-right: 1rem;
-    padding-top: 2.5rem;
   }
 
   &:last-child:before {
@@ -62,6 +60,14 @@ export const Column = styled.div`
     background-color: color-mix(in srgb, #ffffff 10%, transparent);
     filter: blur(8rem);
   }
+
+  @media (max-width: 1023px) {
+    width: 100%;
+
+    &:last-child {
+      min-height: 23rem;
+    }
+  }
 `;
 
 export const Container = styled.section`
@@ -69,8 +75,9 @@ export const Container = styled.section`
   flex-direction: row;
   width: 100%;
   position: relative;
-  margin-bottom: 12rem;
+  margin-bottom: 10rem;
   margin-top: 5rem;
+  flex-wrap: wrap;
 
   &:after {
     content: '';
@@ -88,17 +95,39 @@ export const Container = styled.section`
       inset -25px 0 10px -5px rgba(0, 12, 26, 0.7),
       inset 0 25px 10px -5px rgba(0, 12, 26, 0.6);
   }
-`;
 
-export const MoneyGif = styled.img`
-  display: inline-flex;
-  height: 1.6rem;
+  @media (max-width: 1023px) {
+    margin-top: 0;
+    margin-bottom: 13rem;
+
+    &:after {
+      right: -3.3rem;
+    }
+  }
 `;
 
 export const ProfileWrapper = styled.div`
   position: absolute;
   left: -4rem;
   bottom: -6.5rem;
+
+  @media (max-width: 1023px) {
+    left: 0;
+    bottom: -9rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+`;
+
+export const CodeEditorWrapper = styled.div`
+  position: static;
+
+  @media (max-width: 1023px) {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
 `;
 
 export const ActionButton = styled.a`
