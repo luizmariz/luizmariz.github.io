@@ -123,11 +123,23 @@ export const Row = styled.div`
     justify-content: end;
   }
 
+  &:last-child > :last-child {
+    display: none;
+  }
+
   @media (max-width: 1023px) {
     min-width: 0;
 
     &:nth-child(2) {
       display: none;
+    }
+
+    &:last-child {
+      gap: 1.5rem;
+    }
+
+    &:last-child > :last-child {
+      display: flex;
     }
   }
 `;
@@ -161,4 +173,38 @@ export const LogoContainer = styled.div`
   opacity: 0.5;
   animation: ${turnOn} 1s ease-in-out forwards;
   animation-delay: 0.5s;
+`;
+
+export const MobileContainer = styled.nav`
+  position: fixed;
+  top: 4rem;
+  width: 100vw;
+  z-index: 99998;
+  height: 4rem;
+  background: rgba(0, 10, 22, 0.9);
+  backdrop-filter: blur(5px);
+  border: 1px solid #99999922;
+  padding: 0 1.5rem;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+  transform: translateY(-200%);
+  transition:
+    all 0.25s ease-out,
+    background-color 0.2s ease-in;
+
+  ${NavLinkWrapper} {
+    text-align: end;
+    margin: 1rem 0;
+    display: inline-block;
+  }
+
+  ${(props) =>
+    props.show &&
+    css`
+      visibility: visible;
+      transform: translateY(0);
+    `}
 `;

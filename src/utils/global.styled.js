@@ -5,6 +5,7 @@ const GlobalStyles = createGlobalStyle`
     font: 100%/1.75 'Karla';
     font-weight: 300;
     overflow-y: scroll;
+    overscroll-behavior: none;
     user-select: none;
     background: #000c1a;
   }
@@ -27,6 +28,10 @@ const GlobalStyles = createGlobalStyle`
   h6 {
     margin: 0;
     padding: 0;
+  }
+
+  h1, h2 {
+    line-height: 120%;
   }
 
   a {

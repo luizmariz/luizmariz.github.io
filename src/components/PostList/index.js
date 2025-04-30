@@ -22,8 +22,7 @@ const useActiveChildIndexAtScrollEnter = (containerRef) => {
 
         if (
           i !== hoveredChildIndex &&
-          elementPosition <
-            scrollY - window.innerHeight - window.innerHeight * 0.3
+          elementPosition < scrollY - window.innerHeight
         ) {
           setHoveredChildIndex(i);
         }

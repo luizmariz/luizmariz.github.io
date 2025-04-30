@@ -185,6 +185,14 @@ export const PostContent = styled.div`
     margin-bottom: 0.5rem;
   }
 
+  code[class*='language-'] {
+    font-family:
+      Fira Code VF,
+      monospace !important;
+    font-size: 0.8rem !important;
+    user-select: text !important;
+  }
+
   blockquote {
     max-width: calc(64rem * 0.65 + 3.7rem) !important;
     min-width: calc(64rem * 0.65 + 3.7rem) !important;
@@ -227,14 +235,6 @@ export const PostContent = styled.div`
     border: 0.35rem solid rgb(0 12 26 / 60%);
     backdrop-filter: blur(2px);
     background: rgba(227, 233, 247, 0.05);
-
-    * {
-      font-family:
-        Fira Code VF,
-        monospace;
-      font-size: 0.8rem;
-      user-select: text;
-    }
   }
 
   pre[class*='language-'] {
@@ -249,7 +249,8 @@ export const PostContent = styled.div`
 
   :not(pre) > code[class*='language-'] {
     color: inherit;
-    background: var(--tertiary);
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
   }
 
   .gatsby-highlight pre[class*='language-'] {
@@ -293,12 +294,8 @@ export const PostContent = styled.div`
 
     img,
     blockquote,
+    .gatsby-highlight,
     .gatsby-highlight-code-line {
-      min-width: 100vw !important;
-      max-width: 100vw !important;
-    }
-
-    .gatsby-highlight {
       min-width: calc(100vw + 0.7rem) !important;
       max-width: calc(100vw + 0.7rem) !important;
     }

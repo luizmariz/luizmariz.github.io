@@ -9,6 +9,10 @@ export const ContainerTitle = styled.h5`
   margin-bottom: 0.5rem;
   display: block;
   opacity: 0.25;
+
+  @media (max-width: 1023px) {
+    opacity: 0.9;
+  }
 `;
 
 export const StyledLink = styled(Link)`

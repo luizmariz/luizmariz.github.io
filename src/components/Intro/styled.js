@@ -65,7 +65,7 @@ export const Column = styled.div`
     width: 100%;
 
     &:last-child {
-      min-height: 23rem;
+      min-height: 21rem;
     }
   }
 `;

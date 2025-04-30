@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import * as S from './styled';
 
-function AnimatedMenu({ classname, onClick, active }) {
+function AnimatedMenuIcon({ classname, onClick, active }) {
   return (
     <S.Container
       onClick={onClick}
@@ -17,14 +17,14 @@ function AnimatedMenu({ classname, onClick, active }) {
   );
 }
 
-AnimatedMenu.defaultProps = {
+AnimatedMenuIcon.defaultProps = {
   active: false
 };
 
-AnimatedMenu.propTypes = {
+AnimatedMenuIcon.propTypes = {
   classname: PropTypes.string,
   onClick: PropTypes.func,
   active: PropTypes.bool
 };
 
-export default AnimatedMenu;
+export default AnimatedMenuIcon;

@@ -73,8 +73,8 @@ export const CarouselContainer = styled.div`
   ${(props) =>
     props.vertical
       ? css`
-          writing-mode: sideways-lr;
-          height: 100%;
+          writing-mode: vertical-lr;
+          transform: rotate(180deg);
         `
       : css`
           width: 100%;

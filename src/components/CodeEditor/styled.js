@@ -95,6 +95,11 @@ export const EditorContent = styled.div`
   border-top: 1px solid #99999955;
   white-space: pre;
   letter-spacing: normal;
+
+  @media (max-width: 1023px) {
+    height: 252px;
+    overflow: hidden;
+  }
 `;
 
 export const LineNumbers = styled.div`
@@ -159,4 +164,8 @@ export const CodeInput = styled.textarea`
   white-space: inherit;
   letter-spacing: inherit;
   overflow: hidden;
+
+  @media (max-width: 1023px) {
+    display: none;
+  }
 `;

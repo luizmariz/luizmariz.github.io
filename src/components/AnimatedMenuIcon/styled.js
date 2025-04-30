@@ -3,8 +3,7 @@ import styled, { css } from 'styled-components';
 const Bar = styled.div`
   width: 100%;
   height: 2px;
-
-  background-color: rgb(var(--text), 0.9);
+  background-color: #ffffff66;
 `;
 
 export const MenuBarTop = styled(Bar)``;
@@ -17,8 +16,8 @@ export const MenuBarBottom = styled(Bar)``;
 
 export const Container = styled.div`
   display: flex;
-  width: 1.9rem;
-  height: 1.7rem;
+  min-width: 1.7rem;
+  min-height: 1.7rem;
   padding: 0.2rem 0.25rem;
   flex-direction: column;
   justify-content: center;
@@ -30,7 +29,7 @@ export const Container = styled.div`
     props.active
       ? css`
           ${MenuBarMiddle} {
-            margin: -3px 0;
+            margin: -2px;
             opacity: 0;
 
             @media (max-width: 770px) {
@@ -50,9 +49,5 @@ export const Container = styled.div`
       margin 0.2s ease-in-out,
       opacity 0.2s ease-in-out,
       transform 0.2s ease-in-out;
-  }
-
-  @media (max-width: 1023px) {
-    width: 100%;
   }
 `;
