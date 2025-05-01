@@ -58,6 +58,7 @@ const GlobalStyles = createGlobalStyle`
       monospace !important;
     font-size: 0.75rem !important;
     user-select: text !important;
+    line-height: 1.75 !important;
   }
 `;
 

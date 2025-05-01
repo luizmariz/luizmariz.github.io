@@ -123,7 +123,6 @@ export const CodeEditor = styled.pre`
   color: #d4d4d4;
   position: relative;
   font-size: inherit;
-  line-height: inherit;
   font-family: inherit;
   tab-size: inherit;
   white-space: inherit;
