@@ -40,6 +40,7 @@ export const MainWrapper = styled.div`
 
   @media (max-width: 1023px) {
     margin-bottom: 27rem;
+    margin-bottom: 0;
   }
 `;
 
@@ -53,6 +54,7 @@ export const VerticalText = styled.div`
   left: 0.4rem;
   text-transform: uppercase;
   height: 100%;
+  z-index: -1;
 
   @media (max-width: 1023px) {
     right: -2rem;

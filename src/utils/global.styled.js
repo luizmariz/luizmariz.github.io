@@ -46,6 +46,10 @@ const GlobalStyles = createGlobalStyle`
     text-decoration: none;
   }
 
+  input, button {
+    border-radius: 0;
+  }
+
   pre[class*='language-'],
   code[class*='language-'] *,
   code[class*='language-'] {

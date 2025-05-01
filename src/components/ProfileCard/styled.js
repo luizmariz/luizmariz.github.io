@@ -33,7 +33,7 @@ export const ProfileCardContainer = styled.div`
     opacity: 0;
     transition:
       opacity 500ms,
-      transform 800ms;
+      transform 875ms;
     transition-timing-function: cubic-bezier(0.12, 0.62, 0.12, 0.95);
     transition-delay: calc(1 * 0.075s);
     transform: translateX(100%) translateY(-100%);

@@ -16,9 +16,9 @@ export const MenuBarBottom = styled(Bar)``;
 
 export const Container = styled.div`
   display: flex;
-  min-width: 1.7rem;
-  min-height: 1.7rem;
-  padding: 0.2rem 0.25rem;
+  min-width: 1.2rem;
+  min-height: 1.2rem;
+  padding: 0;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -40,6 +40,10 @@ export const Container = styled.div`
 
           ${MenuBarBottom} {
             transform: rotate(90deg);
+          }
+
+          ${Bar} {
+            background-color: #ffffff;
           }
         `
       : ''}

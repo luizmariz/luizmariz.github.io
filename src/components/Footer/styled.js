@@ -12,6 +12,9 @@ export const ContainerTitle = styled.h5`
 
   @media (max-width: 1023px) {
     opacity: 0.9;
+    text-shadow:
+      0px 2px 4px rgba(255, 255, 255, 0.03),
+      0px 4px 15px rgba(255, 255, 255, 0.15);
   }
 `;
 
@@ -137,6 +140,8 @@ export const MainRow = styled.footer`
     height: 27rem;
     flex-direction: row;
     flex-wrap: wrap;
+    position: static;
+    bottom: unset;
   }
 `;
 

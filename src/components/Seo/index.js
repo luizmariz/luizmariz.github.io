@@ -76,7 +76,7 @@ function Seo({
         },
         {
           name: 'theme-color',
-          content: '#13244D'
+          content: '#000308'
         }
       ]
         .concat(

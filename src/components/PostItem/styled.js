@@ -31,35 +31,38 @@ export const CallToAction = styled.b`
   }
 
   @media (max-width: 1023px) {
-    transition:
-      opacity 375ms,
-      transform 375ms;
+    opacity: 0.8;
+    right: 0.5rem;
+
+    svg {
+      font-size: 1.05rem;
+    }
   }
 `;
 
 export const Title = styled.h2`
   font-size: 1.2rem;
   font-weight: 600;
-  line-height: 150%;
+  line-height: 130%;
   padding: 0;
   margin: 0;
   padding-top: 0.25rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
   letter-spacing: 0.02em;
 `;
 
 export const Time = styled.time`
   font-size: 0.875rem;
   font-weight: 200;
-  opacity: 0.6;
+  opacity: 0.5;
 `;
 
 export const Description = styled.p`
   font-size: 1rem;
-  line-height: 150%;
+  line-height: 130%;
   margin: 0;
   margin-bottom: 0.5rem;
-  opacity: 0.6;
+  opacity: 0.8;
   font-weight: 200;
 `;
 
@@ -89,10 +92,6 @@ const ContainerAnimation = css`
   }
 
   transform: translateX(2.5%) translateY(-5%);
-
-  @media (max-width: 1023px) {
-    transform: translateX(0) translateY(-10%);
-  }
 `;
 
 export const Container = styled.article`
@@ -102,7 +101,7 @@ export const Container = styled.article`
   text-decoration: none;
   color: #cfdae1;
   width: 100%;
-  height: 14rem;
+  height: 16rem;
   padding: 1rem 1.5rem;
   transition: transform 250ms cubic-bezier(0.68, -0.55, 0.27, 1.55);
 
@@ -119,6 +118,7 @@ export const Container = styled.article`
     pointer-events: none;
     overflow: clip;
     border: 0.0625rem rgba(255, 255, 255, 0.4) solid;
+    background-size: cover;
 
     opacity: 0;
     transition: opacity 180ms ease-in;
@@ -132,11 +132,14 @@ export const Container = styled.article`
   }
 
   @media (max-width: 1023px) {
-    height: 18rem;
-    transition: transform 375ms cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    & > * {
+      z-index: 2;
+    }
 
     &:before {
-      transition: opacity 275ms ease-in;
+      opacity: 0.3;
+      z-index: 1;
+      border: none;
     }
 
     ${(props) => props.active && ContainerAnimation}

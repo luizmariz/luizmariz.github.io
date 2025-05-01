@@ -9,11 +9,21 @@ export const Container = styled.div`
 
   @media (max-width: 1023px) {
     grid-template-columns: repeat(1, 1fr);
+    width: calc(100vw);
+    margin-left: -1.5rem;
+    gap: 0;
+    background: #000c1a;
   }
 `;
 
 export const Wrapper = styled.div`
   border: 1px solid #99999933;
+
+  @media (max-width: 1023px) {
+    &:not(:last-child) {
+      border: none;
+    }
+  }
 `;
 
 export const TitleContainer = styled.div`

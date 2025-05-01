@@ -147,6 +147,7 @@ export const Wrapper = styled.div`
     background-repeat: no-repeat;
     background-position: center;
     width: 8.4rem;
+    margin-top: 1rem;
 
     &:hover {
       opacity: 0.8;
