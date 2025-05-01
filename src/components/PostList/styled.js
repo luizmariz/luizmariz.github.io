@@ -11,7 +11,7 @@ export const Container = styled.div`
     grid-template-columns: repeat(1, 1fr);
     width: calc(100vw);
     margin-left: -1.5rem;
-    gap: 0;
+    gap: 0.75rem;
     background: #000c1a;
   }
 `;
@@ -20,12 +20,8 @@ export const Wrapper = styled.div`
   border: 1px solid #99999933;
 
   @media (max-width: 1023px) {
-    &:last-child {
-      border-bottom: 1px solid #99999933;
-    }
-
-    border: none;
-    border-top: 1px solid #99999933;
+    border-left: none;
+    border-right: none;
   }
 `;
 

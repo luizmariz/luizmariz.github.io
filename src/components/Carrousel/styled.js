@@ -69,16 +69,14 @@ export const CarouselItem = styled.div`
 export const CarouselContainer = styled.div`
   overflow: hidden;
   background: transparent;
+  width: 100%;
 
   ${(props) =>
-    props.$vertical
-      ? css`
-          writing-mode: vertical-lr;
-          -webkit-writing-mode: vertical-lr;
-          transform: rotate(180deg);
-          -webkit-transform: rotate(180deg);
-        `
-      : css`
-          width: 100%;
-        `}
+    props.$vertical &&
+    css`
+      writing-mode: vertical-lr;
+      -webkit-writing-mode: vertical-lr;
+      transform: rotate(180deg);
+      -webkit-transform: rotate(180deg);
+    `}
 `;

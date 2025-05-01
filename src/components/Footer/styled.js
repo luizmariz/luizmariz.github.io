@@ -137,7 +137,7 @@ export const MainRow = styled.footer`
   align-items: end;
 
   @media (max-width: 1023px) {
-    height: 27rem;
+    height: 28rem;
     flex-direction: row;
     flex-wrap: wrap;
     position: sticky;

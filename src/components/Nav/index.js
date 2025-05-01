@@ -67,7 +67,7 @@ function Nav({ location }) {
           <S.Row>
             <S.ToTopBtn onClick={scrollToTop} title="Ir para o topo" />
             <AnimatedMenuIcon
-              $active={showMobileMenu}
+              active={showMobileMenu}
               onClick={() => {
                 setShowMobileMenu((prev) => !prev);
               }}
