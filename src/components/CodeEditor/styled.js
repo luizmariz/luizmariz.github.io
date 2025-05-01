@@ -131,6 +131,8 @@ export const CodeEditor = styled.pre`
   min-height: 1rem;
   min-width: calc(100% - 4rem);
   padding: 0 !important;
+  margin: 0 !important;
+  margin-left: 1rem !important;
 
   code {
     display: block;
