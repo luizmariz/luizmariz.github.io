@@ -43,16 +43,16 @@ function Carousel({ items, duration = 40, vertical = false, reverse = false }) {
   return (
     <S.CarouselContainer
       ref={containerRef}
-      vertical={vertical ? 1 : 0}
+      $vertical={vertical}
       onMouseEnter={() => setAnimationState('paused')}
       onMouseLeave={() => setAnimationState('running')}
     >
       <S.CarouselTrack
         ref={trackRef}
-        animationstate={animationState}
-        vertical={vertical ? 1 : 0}
-        reverse={reverse ? 1 : 0}
-        duration={`${duration}s`}
+        $animationstate={animationState}
+        $vertical={vertical}
+        $reverse={reverse}
+        $duration={`${duration}s`}
       >
         {carouselItems}
       </S.CarouselTrack>

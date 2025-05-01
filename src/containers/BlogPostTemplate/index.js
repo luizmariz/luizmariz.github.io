@@ -1,6 +1,5 @@
 import { graphql } from 'gatsby';
 import React from 'react';
-import thumbnail from '../../assets/images/default-background.jpg';
 import BlogPost from '../../components/BlogPost';
 
 function BlogPostTemplate({ data, pageContext, location }) {
@@ -13,7 +12,6 @@ function BlogPostTemplate({ data, pageContext, location }) {
       location={location}
       title={frontmatter.title}
       summary={frontmatter.summary}
-      image={thumbnail}
       date={frontmatter.date}
       readingTime={markdownRemark.fields.readingTime.minutes}
       slug={slug}

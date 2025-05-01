@@ -46,7 +46,7 @@ export const StyledLink = styled(Link)`
 
   @media (max-width: 1023px) {
     width: 100%;
-    height: 5.5rem;
+    height: 5rem;
   }
 `;
 

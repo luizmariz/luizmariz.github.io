@@ -24,10 +24,10 @@ export const Container = styled.div`
   align-items: center;
   cursor: pointer;
 
-  transform: rotate(${(props) => (props.active ? '45deg' : '0')});
+  transform: rotate(${(props) => (props.$active ? '45deg' : '0')});
 
   ${(props) =>
-    props.active
+    props.$active
       ? css`
           ${MenuBarMiddle} {
             margin: -2px;

@@ -2,8 +2,7 @@ module.exports = {
   siteMetadata: {
     title: 'Luiz Ipsum',
     author: 'Luiz Mariz',
-    description:
-      'Blog e site pessoal de um desenvolvedor Front-end muito fã de React, JavaScript e Web design.',
+    description: 'Site pessoal de um desenvolvedor Full-stack muito fã de co.',
     siteUrl: 'https://luizipsum.com.br'
   },
   plugins: [
@@ -65,14 +64,6 @@ module.exports = {
             }
           },
           {
-            resolve: `gatsby-remark-prismjs-copy-button`,
-            options: {
-              buttonText: 'Copiar',
-              successText: 'Copiado ✅',
-              errorText: 'Erro ao copiar'
-            }
-          },
-          {
             resolve: 'gatsby-remark-prismjs',
             options: {
               inlineCodeMarker: '÷'
@@ -103,8 +94,8 @@ module.exports = {
         start_url: '/',
         display: 'minimal-ui',
         icon: 'src/assets/images/favicon.png',
-        background_color: `#000308`,
-        theme_color: `#000308`,
+        background_color: `#06121f`,
+        theme_color: `#06121f`,
         display: `minimal-ui`,
         theme_color_in_head: false
       }

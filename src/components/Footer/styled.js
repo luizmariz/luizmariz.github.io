@@ -140,7 +140,7 @@ export const MainRow = styled.footer`
     height: 27rem;
     flex-direction: row;
     flex-wrap: wrap;
-    position: static;
+    position: sticky;
     bottom: unset;
   }
 `;
@@ -201,21 +201,4 @@ export const NewsletterText = styled.p`
 export const NewsletterTextTitle = styled(NewsletterText)`
   font-weight: 600;
   opacity: 1;
-`;
-
-export const NewsletterBtn = styled(Link)`
-  line-height: 1.5rem;
-  text-decoration: none;
-  color: #5cbbab;
-  font-weight: 600;
-  border: 1px solid #5cbbab;
-  padding: 0.5rem 1rem;
-  opacity: 0.5;
-  display: inline-flex;
-  font-size: 0.9rem;
-  margin-top: 1rem;
-
-  &:hover {
-    opacity: 1;
-  }
 `;

@@ -75,7 +75,7 @@ function SignUpForm() {
               className="formkit-powered-by-convertkit"
               data-variant="light"
               target="_blank"
-              rel="nofollow"
+              rel="nofollow noopener noreferrer"
             >
               Powered by Kit
             </a>

@@ -40,7 +40,7 @@ function Nav({ location }) {
 
   return (
     <React.Fragment>
-      <S.Container show={show ? 1 : 0}>
+      <S.Container $show={show}>
         <S.Wrapper>
           <S.Row>
             <S.LogoContainer>
@@ -57,7 +57,7 @@ function Nav({ location }) {
           <S.Row>
             {_ROUTES.map((item) => (
               <S.NavLinkWrapper
-                selected={location.pathname === item.to}
+                $selected={location.pathname === item.to}
                 key={'nav-link-' + item.to.toLowerCase()}
               >
                 <S.NavLink to={item.to}>{item.name}</S.NavLink>
@@ -67,7 +67,7 @@ function Nav({ location }) {
           <S.Row>
             <S.ToTopBtn onClick={scrollToTop} title="Ir para o topo" />
             <AnimatedMenuIcon
-              active={showMobileMenu}
+              $active={showMobileMenu}
               onClick={() => {
                 setShowMobileMenu((prev) => !prev);
               }}
@@ -75,10 +75,10 @@ function Nav({ location }) {
           </S.Row>
         </S.Wrapper>
       </S.Container>
-      <S.MobileContainer show={showMobileMenu ? 1 : 0}>
+      <S.MobileContainer $show={showMobileMenu}>
         {_ROUTES.map((item) => (
           <S.NavLinkWrapper
-            selected={location.pathname === item.to}
+            $selected={location.pathname === item.to}
             key={'mobile-nav-link-' + item.to.toLowerCase()}
           >
             <S.NavLink to={item.to}>{item.name}</S.NavLink>

@@ -8,7 +8,7 @@ export const Container = styled.section`
 export const TechTag = styled.div`
   margin-right: 0.5rem;
   padding: 0.5rem 0.75rem;
-  color: ${(props) => props.color || '#000'};
+  color: ${(props) => props.$color || '#000'};
   display: flex;
   align-items: center;
   background: rgba(255, 255, 255, 0.1);

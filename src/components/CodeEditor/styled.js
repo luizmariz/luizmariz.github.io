@@ -27,7 +27,7 @@ export const Button = styled.div`
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  background: ${(props) => props.color};
+  background: ${(props) => props.$color};
   opacity: 0.5;
 
   &:hover {
@@ -50,7 +50,7 @@ export const Tab = styled.div`
   border-right: 1px solid #99999955;
 
   ${(props) =>
-    props.active
+    props.$active
       ? css`
           background: #1e1e1e;
           color: rgb(100, 223, 161);

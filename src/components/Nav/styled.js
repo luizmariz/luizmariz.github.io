@@ -23,7 +23,7 @@ export const Container = styled.nav`
   }
 
   ${(props) =>
-    props.show &&
+    props.$show &&
     css`
       transform: translateY(0);
     `}
@@ -44,7 +44,7 @@ export const NavLinkWrapper = styled.div`
   position: relative;
 
   ${(props) =>
-    props.selected
+    props.$selected
       ? css`
           &:before,
           &:after {
@@ -203,7 +203,7 @@ export const MobileContainer = styled.nav`
   }
 
   ${(props) =>
-    props.show &&
+    props.$show &&
     css`
       visibility: visible;
       transform: translateY(0);

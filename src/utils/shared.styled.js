@@ -29,16 +29,13 @@ export const ActionButtonStyles = css`
     content: '';
     background-color: #2a3177;
     width: 100%;
-    z-index: -2;
+    z-index: -1;
     position: absolute;
     height: 100%;
     top: 0.25rem;
     right: 0.25rem;
     transition: 375ms;
     opacity: 0.5;
-  }
-
-  &:hover {
     border-color: #99999988;
   }
 

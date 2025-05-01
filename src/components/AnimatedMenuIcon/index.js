@@ -7,7 +7,7 @@ function AnimatedMenuIcon({ classname, onClick, active = false }) {
     <S.Container
       onClick={onClick}
       title={`${active ? 'Fechar' : 'Abrir'} menu`}
-      active={active ? 1 : 0}
+      $active={active}
       classname={classname}
     >
       <S.MenuBarTop />

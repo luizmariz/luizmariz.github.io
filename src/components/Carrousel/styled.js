@@ -42,18 +42,18 @@ export const CarouselTrack = styled.div`
   flex-wrap: nowrap;
 
   animation: ${(props) =>
-      props.reverse
-        ? props.vertical
+      props.$reverse
+        ? props.$vertical
           ? scrollYReverse
           : scrollXReverse
-        : props.vertical
+        : props.$vertical
           ? scrollY
           : scrollX}
-    ${(props) => props.duration || '20s'} linear infinite;
-  animation-play-state: ${(props) => props.animationstate};
+    ${(props) => props.$duration || '20s'} linear infinite;
+  animation-play-state: ${(props) => props.$animationstate};
 
   ${(props) =>
-    props.vertical
+    props.$vertical
       ? css`
           height: min-content;
         `
@@ -71,7 +71,7 @@ export const CarouselContainer = styled.div`
   background: transparent;
 
   ${(props) =>
-    props.vertical
+    props.$vertical
       ? css`
           writing-mode: vertical-lr;
           -webkit-writing-mode: vertical-lr;

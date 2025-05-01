@@ -49,6 +49,7 @@ function AuthorInfo() {
           <img
             src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif"
             height="32px"
+            alt="Mão acenando animada"
           />{' '}
           Olá, eu sou o <S.TextBold>Luiz!</S.TextBold>
         </S.Text>

@@ -142,7 +142,7 @@ export const Container = styled.article`
       border: none;
     }
 
-    ${(props) => props.active && ContainerAnimation}
+    ${(props) => props.$active && ContainerAnimation}
   }
 `;
 

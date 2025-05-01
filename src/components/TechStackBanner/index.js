@@ -9,7 +9,7 @@ function TechStackBanner({ technologies = [], reverse = false }) {
     const IconComponent = SiIcons[tech.icon];
     return (
       <S.TechTag
-        color={tech.color}
+        $color={tech.color}
         key={`tech-${tech.icon.toLowerCase()}-${index}`}
       >
         <IconComponent />

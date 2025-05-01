@@ -30,7 +30,7 @@ function CodeEditorWindow({
     <S.EditorContainer>
       <S.EditorHeader>
         <S.TabsContainer>
-          <S.Tab active={1}>editor.js</S.Tab>
+          <S.Tab $active={1}>editor.js</S.Tab>
           <S.Tab>styles.css</S.Tab>
           <S.Tab>index.html</S.Tab>
         </S.TabsContainer>

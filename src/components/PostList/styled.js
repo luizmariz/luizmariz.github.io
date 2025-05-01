@@ -20,9 +20,12 @@ export const Wrapper = styled.div`
   border: 1px solid #99999933;
 
   @media (max-width: 1023px) {
-    &:not(:last-child) {
-      border: none;
+    &:last-child {
+      border-bottom: 1px solid #99999933;
     }
+
+    border: none;
+    border-top: 1px solid #99999933;
   }
 `;
 
