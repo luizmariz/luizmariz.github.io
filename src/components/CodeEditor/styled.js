@@ -130,6 +130,7 @@ export const CodeEditor = styled.pre`
   letter-spacing: inherit;
   min-height: 1rem;
   min-width: calc(100% - 4rem);
+  padding: 0 !important;
 
   code {
     display: block;
