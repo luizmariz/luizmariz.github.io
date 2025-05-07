@@ -106,7 +106,7 @@ function AuthorInfo() {
         <S.Text>
           <AnimatedText>Quer entrar em contato?</AnimatedText>
         </S.Text>
-        <S.Text>Fica a vontade para dar uma oi nas minhas redes.</S.Text>
+        <S.Text>Fica a vontade para dar um oi nas minhas redes.</S.Text>
         <S.ButtonContainer>
           <S.ActionButton
             href="https://linkedin.com/in/luiz-mariz/"
