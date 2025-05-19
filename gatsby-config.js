@@ -1,4 +1,5 @@
 module.exports = {
+  jsxRuntime: 'automatic',
   siteMetadata: {
     title: 'Luiz Ipsum',
     author: 'Luiz Mariz',

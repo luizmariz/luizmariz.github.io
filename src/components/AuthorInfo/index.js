@@ -3,6 +3,7 @@ import { SiGithub, SiLinkedin } from 'react-icons/si';
 
 import { AnimatedText } from '../../utils/shared.styled';
 import TechStackBanner from '../TechStackBanner';
+
 import * as S from './styled';
 
 function AuthorInfo() {
