@@ -1,8 +1,6 @@
 import { StaticImage } from 'gatsby-plugin-image';
 import { SiGithub, SiLinkedin } from 'react-icons/si';
 
-import React from 'react';
-
 import { AnimatedText } from '../../utils/shared.styled';
 import TechStackBanner from '../TechStackBanner';
 import * as S from './styled';
@@ -59,15 +57,7 @@ function AuthorInfo() {
         </S.Text>
         <S.Text>
           Nasci no interior de Minas Gerais e atualmente trabalho como
-          desenvolvedor de software na{' '}
-          <a
-            href="https://www.totvs.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            TOTVS
-          </a>
-          , no Rio de Janeiro/RJ.
+          desenvolvedor de software no Rio de Janeiro/RJ.
         </S.Text>
         <S.Text>
           Acredito que uma das melhores sensações do mundo é poder ver algo que
