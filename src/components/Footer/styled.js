@@ -77,6 +77,7 @@ export const AuxiliarText = styled.span`
 
 export const Container = styled.section`
   display: block;
+  min-height: 40%;
 
   &:first-child {
     margin-right: 1.5rem;
