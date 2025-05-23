@@ -1,5 +1,4 @@
 import { Link } from 'gatsby';
-import React from 'react';
 import Logo from '../../assets/svgs/logo-default.svg';
 
 import * as S from './styled';
@@ -32,13 +31,13 @@ function Footer() {
         </S.Container>
         <S.Container>
           <S.ContainerTitle>Redes</S.ContainerTitle>
-          <S.AnchorStyledLink
+          {/* <S.AnchorStyledLink
             href="https://linkedin.com/in/luiz-mariz/"
             target="_blank"
             rel="noopener noreferrer"
           >
             LinkedIn
-          </S.AnchorStyledLink>
+          </S.AnchorStyledLink> */}
           <S.AnchorStyledLink
             href="https://github.com/luizmariz/"
             target="_blank"

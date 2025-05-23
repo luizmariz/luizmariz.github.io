@@ -1,5 +1,5 @@
 import { StaticImage } from 'gatsby-plugin-image';
-import { SiGithub, SiLinkedin } from 'react-icons/si';
+import { SiGithub } from 'react-icons/si';
 
 import { AnimatedText } from '../../utils/shared.styled';
 import TechStackBanner from '../TechStackBanner';
@@ -99,13 +99,13 @@ function AuthorInfo() {
         </S.Text>
         <S.Text>Fica a vontade para dar um oi nas minhas redes.</S.Text>
         <S.ButtonContainer>
-          <S.ActionButton
+          {/* <S.ActionButton
             href="https://linkedin.com/in/luiz-mariz/"
             target="_blank"
             rel="noopener noreferrer"
           >
             <SiLinkedin />
-          </S.ActionButton>
+          </S.ActionButton> */}
           <S.ActionButton
             href="https://github.com/luizmariz/"
             target="_blank"

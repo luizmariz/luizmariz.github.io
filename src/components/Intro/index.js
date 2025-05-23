@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import CodeEditorWindow from '../CodeEditor';
 import ProfileCard from '../ProfileCard';
 
@@ -43,13 +43,21 @@ console.log(message);
         <S.Text>
           É também um playground pessoal, então não espere muita coerência.
         </S.Text>
-        <S.ActionButton
+        {/* <S.ActionButton
           href="https://linkedin.com/in/luiz-mariz/"
           target="_blank"
           title="LinkedIn"
           rel="noopener noreferrer"
         >
           Me adiciona lá!
+        </S.ActionButton> */}
+        <S.ActionButton
+          href="https://github.com/luizmariz/"
+          target="_blank"
+          title="LinkedIn"
+          rel="noopener noreferrer"
+        >
+          Tenho uns projetos aqui!
         </S.ActionButton>
       </S.Column>
       <S.Column>
