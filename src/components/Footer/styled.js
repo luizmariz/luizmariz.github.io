@@ -78,6 +78,7 @@ export const AuxiliarText = styled.span`
 export const Container = styled.section`
   display: block;
   min-height: 40%;
+  
 
   &:first-child {
     margin-right: 1.5rem;
@@ -91,6 +92,8 @@ export const Container = styled.section`
   }
 
   @media (max-width: 1023px) {
+    min-height: unset;
+
     &:first-child {
       width: 100%;
     }
