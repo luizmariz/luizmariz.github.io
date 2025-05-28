@@ -56,9 +56,13 @@ export const VerticalText = styled.div`
   height: 100%;
   z-index: -1;
 
+  @supports (-webkit-touch-callout: none) {
+    display: -webkit-box;
+  }
+
+
   @media (max-width: 1023px) {
     right: -2rem;
     left: unset;
-    display: --webkit-box;
   }
 `;
