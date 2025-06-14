@@ -21,7 +21,7 @@
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
     "clean": "rm -rf ./public && rm -rf ./cache",
-    "deploy": "yarn clean && gatsby build && echo luizipsum.com.br > ./public/CNAME && gh-pages -d public -b master"
+    "deploy": "yarn clean && gatsby build && echo luizipsum.com > ./public/CNAME && gh-pages -d public -b master"
   },
   "dependencies": {
     "babel-plugin-styled-components": "^2.1.4",
