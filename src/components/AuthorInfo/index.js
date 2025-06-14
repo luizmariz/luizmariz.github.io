@@ -1,7 +1,5 @@
 import { StaticImage } from 'gatsby-plugin-image';
-import { SiGithub } from 'react-icons/si';
 
-import { AnimatedText } from '../../utils/shared.styled';
 import TechStackBanner from '../TechStackBanner';
 
 import * as S from './styled';
@@ -92,28 +90,6 @@ function AuthorInfo() {
         <TechStackBanner technologies={technologies.slice(0, 5)} />
         <TechStackBanner technologies={technologies.slice(6, 16)} reverse />
         <TechStackBanner technologies={technologies.slice(17)} />
-      </S.Row>
-      <S.Row>
-        <S.Text>
-          <AnimatedText>Quer entrar em contato?</AnimatedText>
-        </S.Text>
-        <S.Text>Fica a vontade para dar um oi nas minhas redes.</S.Text>
-        <S.ButtonContainer>
-          {/* <S.ActionButton
-            href="https://linkedin.com/in/luiz-mariz/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <SiLinkedin />
-          </S.ActionButton> */}
-          <S.ActionButton
-            href="https://github.com/luizmariz/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <SiGithub />
-          </S.ActionButton>
-        </S.ButtonContainer>
       </S.Row>
     </S.Container>
   );
